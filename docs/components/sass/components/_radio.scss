@@ -1,0 +1,41 @@
+input[type="radio"]{
+    border:.5px solid $radio-color;
+    border-radius: 50%;
+    width: 26px;
+    margin-right: 5px;
+    accent-color: red;
+    appearance: none;
+    -webkit-appearance: none;
+    
+    
+    &:disabled {
+        background: #c6c6c6;
+    }
+    &.hover{
+        opacity: .3;
+    }
+    
+}
+
+input[type="radio"]:checked {
+    width: 26px;
+    margin-right: 5px;
+    accent-color: $radio-color;
+    background-color: $radio-color;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 0 1px $radio-color;
+    
+
+    &.disabled,
+    :disabled{
+        accent-color: #6f6f6f;
+    }
+    &.hover,
+    :hover{
+        opacity: .3;
+    }
+
+}
+
+
+
