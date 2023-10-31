@@ -43,7 +43,7 @@ hide:
     === "CSS"
 
         ``` css
-
+        --8<-- "_buttons.scss:16"
         .btn-sm{
             background-color: #247984;
             height: 40px;
@@ -104,6 +104,7 @@ hide:
     === "CSS"
 
         ``` css
+        --8<-- "_buttons.scss:16"
 
         .btn-md{
             background-color: #247984;
