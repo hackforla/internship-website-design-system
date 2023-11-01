@@ -166,7 +166,7 @@ hide:
     === "CSS"
 
         ``` css
-
+        --8<-- "_buttons.scss:16"
         .btn-lg{
             background-color: #247984;
             height: 72px;
