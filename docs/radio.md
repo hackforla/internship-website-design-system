@@ -78,7 +78,7 @@ hide:
 === "Button Selected"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <input type="radio" class="radio-btn">
+            <input type="radio" checked="checked" class="radio-btn">
             <label for="option">Option</label>
         </div>
     </div>
@@ -90,15 +90,15 @@ hide:
         <div class="grid-items">Pressed</div>
         <div class="grid-items">Disabled</div>
         <div class="grid-items"> 
-            <input type="radio" >
+            <input type="radio" checked="checked">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio" class="hover">
+            <input type="radio" checked="checked"class="hover">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio">
+            <input type="radio"checked="checked">
             <label for="option" class="pressed">Option</label>
         </div>
         <div class="grid-items"> 

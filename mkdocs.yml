@@ -38,7 +38,7 @@ theme:
     - content.code.select
   palette: 
     primary: white
-    accent: teal
+    # accent: teal
 extra_css:
   - components/sass/main.css
   - stylesheets/extra.css
