@@ -13,6 +13,7 @@
   * Use on all buttons
 ---------------------------*/
 
+// --8<-- [start:btn]
 .btn {
   border: 0;
   box-shadow: 0 0 8px 0 rgba($color-black, 0.2);
@@ -54,8 +55,10 @@
   }
   &:hover,
   &:active, 
+  &:visited,
   &.hover,
-  &.active {
+  &.active,
+  &.visited{
     background: $button-hovercolor;
     color: $color-white !important;
     text-decoration: none;
@@ -70,26 +73,33 @@
 /*---------------------------
   Button Sizes
 ---------------------------*/
+// --8<-- [end:btn]
 
+// --8<-- [start:btnSm]
 .btn-sm {
   height: 40px;
   padding: 0 32px;
   border-radius: 20px;
   font-size: 1rem;
 }
+// --8<-- [end:btnSm]
 
+// --8<-- [start:btnMed]
 .btn-md {
   height: 60px;
   padding: 0 50px;
   border-radius: 60px;
   font-size: 1.25rem;
 }
+// --8<-- [end:btnMed]
 
+// --8<-- [start:btnLg]
 .btn-lg {
   height: 72px;
   padding: 0 60px;
   border-radius: 100px;
   font-size: 1.5rem;
+  // --8<-- [end:btnLg]
 
   @media #{$bp-below-tablet} {
     height: 60px;

@@ -10,6 +10,7 @@ hide:
             <a href="#" class= "btn-sm btn">Button</a> 
         </div>
     </div>
+    <br>
     # **STATES**
     <div class="btn-grid-3">
         <div class="grid-items">Hover<br></div>
@@ -43,28 +44,8 @@ hide:
     === "CSS"
 
         ``` css
-        --8<-- "_buttons.scss:16"
-        .btn-sm{
-            background-color: #247984;
-            height: 40px;
-            border-radius: 20px;
-            padding: 0px 32px;
-            color: white;
-            line-height: 40px;
-            width: fit-content;
-        }
-
-        .btn .hover{
-            background: #0D5761;
-        }
-        .btn .focused{
-            border-color: #0D5761;
-            outline-color: #0D5761;
-        }
-        .btn .disabled{
-            background: #c6c6c6;
-        }
-        
+        --8<-- "_buttons.scss:btn"
+        --8<-- "_buttons.scss:btnSm"
         ```
 === "Medium"
     <div class="btn-grid-1">
@@ -72,6 +53,7 @@ hide:
             <a href="#" class="btn-md btn ">Button</a> 
         </div>
     </div>
+    <br>
     # **STATES**
     <div class="btn-grid-3">
         <div class="grid-items">Hover<br></div>
@@ -104,28 +86,8 @@ hide:
     === "CSS"
 
         ``` css
-        --8<-- "_buttons.scss:16"
-
-        .btn-md{
-            background-color: #247984;
-            height: 60px;
-            border-radius: 60px;
-            padding: 0px 50px;
-            line-height: 60px;
-            width: fit-content;
-        }
-
-        .btn .hover{
-            background: #0D5761;
-        }
-        .btn .focus{
-            border-color: #0D5761;
-            outline-color: #0D5761;
-        }
-        .btn .disabled{
-            background: #c6c6c6;
-        }
-        
+        --8<-- "_buttons.scss:btn"
+        --8<-- "_buttons.scss:btnMed"
         ```
 === "Large"
     <div class="btn-grid-1">
@@ -133,6 +95,7 @@ hide:
             <a href="#" class="btn-lg btn">Button</a> 
         </div>
     </div>
+    <br>
     # **STATES**
     <div class="btn-grid-3">
         <div class="grid-items">Hover<br></div>
@@ -166,27 +129,8 @@ hide:
     === "CSS"
 
         ``` css
-        --8<-- "_buttons.scss:16"
-        .btn-lg{
-            background-color: #247984;
-            height: 72px;
-            border-radius: 100px;
-            padding: 0px 72px;
-            color: white;
-            line-height: 72px;
-            width: fit-content;
-        }
-
-        .btn .hover{
-            background: #0D5761;
-        }
-        .btn .focus{
-            border-color: #0D5761;
-            outline-color: #0D5761;
-        }
-        .btn .disabled{
-            background: #c6c6c6;
-        }
+        --8<-- "_buttons.scss:btn"
+        --8<-- "_buttons.scss:btnLg"
         
         ```
 
