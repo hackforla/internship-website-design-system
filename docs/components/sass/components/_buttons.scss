@@ -55,13 +55,15 @@
   }
   &:hover,
   &:active, 
-  &:visited,
   &.hover,
-  &.active,
-  &.visited{
+  &.active {
     background: $button-hovercolor;
     color: $color-white !important;
     text-decoration: none;
+  }
+  &:visited,
+  &.visited {
+    color: $color-white !important;
   }
 } 
 
