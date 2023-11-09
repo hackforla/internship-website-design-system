@@ -9,6 +9,46 @@ body {
   padding: 0;
 }
 
+.tabbed-labels:before {
+  background-color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  color: #0D5761;
+}
+
+.md-typeset .tabbed-set > input:first-child:checked ~ .tabbed-labels > :first-child {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > :nth-child(4) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > :nth-child(5) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(6):checked ~ .tabbed-labels > :nth-child(6) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(7):checked ~ .tabbed-labels > :nth-child(7) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(8):checked ~ .tabbed-labels > :nth-child(8) {
+  color: #0D5761 !important;
+}
+
 /*================================================================
   Buttons
   To create a button: add the base button class, a color
@@ -425,4 +465,44 @@ input[type=radio]:checked :hover {
 .grid-1-5 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.tabbed-labels:before {
+  background-color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  color: #0D5761;
+}
+
+.md-typeset .tabbed-set > input:first-child:checked ~ .tabbed-labels > :first-child {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > :nth-child(4) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > :nth-child(5) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(6):checked ~ .tabbed-labels > :nth-child(6) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(7):checked ~ .tabbed-labels > :nth-child(7) {
+  color: #0D5761 !important;
+}
+
+.md-typeset .tabbed-set > input:nth-child(8):checked ~ .tabbed-labels > :nth-child(8) {
+  color: #0D5761 !important;
 }/*# sourceMappingURL=main.css.map */

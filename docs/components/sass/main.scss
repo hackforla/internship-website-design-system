@@ -3,7 +3,8 @@
 
 @import
   'base/typography',
-  'base/reset';
+  'base/reset',
+  'layout/tabs';
 
 @import
   'components/buttons',
@@ -13,4 +14,5 @@
   'components/dropdowns';
 
 @import
-  'layout/grid'
+  'layout/grid',
+  'layout/tabs';
