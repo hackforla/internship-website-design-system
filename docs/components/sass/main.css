@@ -97,7 +97,7 @@ body {
 }
 .btn:hover, .btn:active, .btn.hover, .btn.active {
   background: #0D5761;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
 }
 

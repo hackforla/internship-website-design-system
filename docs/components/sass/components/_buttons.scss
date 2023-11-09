@@ -57,7 +57,7 @@
   &.hover,
   &.active {
     background: $button-hovercolor;
-    color: $color-white;
+    color: $color-white !important;
     text-decoration: none;
   }
 } 
