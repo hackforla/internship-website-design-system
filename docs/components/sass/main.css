@@ -361,16 +361,6 @@ input[type=radio]:checked :hover {
   line-height: 48px;
 }
 
-.custom-option:hover {
-  cursor: pointer;
-  background-color: #CFE1E4;
-}
-
-.custom-option.selected {
-  color: #6F6F6F;
-  background-color: #A0C4C9;
-}
-
 .arrow {
   position: relative;
   height: 15px;
@@ -413,17 +403,31 @@ input[type=radio]:checked :hover {
   opacity: 1;
 }
 
-.dropdown-placeholder-hover-color {
-  background-color: #CFE1E4;
-}
-
 .dropdown-grid {
   height: 30vh;
   justify-content: flex-start !important;
 }
 
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #CFE1E4;
+}
+
 .custom-option.hovered {
   background-color: #CFE1E4;
+}
+
+.dropdown-placeholder-hover-color {
+  background-color: #CFE1E4;
+}
+
+.custom-option.selected {
+  color: #6F6F6F;
+  background-color: #A0C4C9;
+}
+
+.dropdown-placeholder-selected-color {
+  background-color: #A0C4C9;
 }
 
 .btn-grid-1 {

@@ -1,3 +1,4 @@
+// --8<-- [start:dropdown-formatting]
 .dropdowns{
     max-width: 348px;
     width: 100%;
@@ -85,14 +86,6 @@
     line-height: 48px;
     
 }
-.custom-option:hover {
-    cursor: pointer;
-    background-color: $dropdown-hover-color;
-}
-.custom-option.selected {
-    color: $dropdown-placeholder-color;
-    background-color: $dropdown-select-color;
-}
 .arrow {
     position: relative;
     height: 15px;
@@ -129,14 +122,35 @@
     opacity: 1;
 }
 
-.dropdown-placeholder-hover-color{
-    background-color: $dropdown-hover-color;
-} 
 .dropdown-grid{
     height: 30vh;
     justify-content: flex-start !important;
+}
+// --8<-- [end:dropdown-formatting]
+
+// --8<-- [start:dropdown-hover]
+// hover
+.custom-option:hover {
+    cursor: pointer;
+    background-color: $dropdown-hover-color;
 }
 
 .custom-option.hovered {
     background-color: $dropdown-hover-color;
 }
+// --8<-- [end:dropdown-hover]
+
+.dropdown-placeholder-hover-color{
+    background-color: $dropdown-hover-color;
+} 
+
+// --8<-- [start:dropdown-selected]
+// selected
+.custom-option.selected {
+    color: $dropdown-placeholder-color;
+    background-color: $dropdown-select-color;
+}
+// --8<-- [end:dropdown-selected]
+.dropdown-placeholder-selected-color{
+    background-color: $dropdown-select-color;
+} 
