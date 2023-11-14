@@ -8,7 +8,7 @@ nav:
     - Buttons: buttons.md
     - Radio Buttons: radio.md
     - Input Fields: input-fields.md
-    - Text Area: textarea.md
+    - Text Area: text-area.md
     - Dropdowns: dropdowns.md
     - Checkboxes: checkboxes.md
     - Toggles: toggles.md

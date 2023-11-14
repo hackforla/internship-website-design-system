@@ -1,3 +1,4 @@
+
 .input-field-container {
     display: grid;
     padding: 5%;
@@ -16,23 +17,27 @@
     font-weight: bold;
     
 }
+// --8<-- [start:input-fields]
 .input-box{
-    height: 48px;
-    width: 348px;
-    border-radius: 4px;
+    height: $input-field-box-height;
+    width: $input-field-box-width;
+    border-radius: $input-field-border-radius;
     &.default{
         border: lightgrey 2px solid;
         background-color: #FAFAFA;
     }
-    &.hover{
+    &.hover,
+    :hover{
         border: black 2px solid;
         background-color: #FAFAFA;
     }
-    &.focused{
+    &.focused,
+    :focus{
         border: black 2px solid;
         background-color: #E7F0F1;
     }
-    &.alert{
+    &.alert
+    {
         border: red 2px solid;
         background-color: #FAFAFA;
     }
@@ -41,3 +46,4 @@
         background-color: #FAFAFA;
     }
 }
+// --8<-- [end:input-fields]

@@ -215,11 +215,13 @@ input[type=radio]:checked :hover {
   border: lightgrey 2px solid;
   background-color: #FAFAFA;
 }
-.input-box.hover {
+.input-box.hover,
+.input-box :hover {
   border: black 2px solid;
   background-color: #FAFAFA;
 }
-.input-box.focused {
+.input-box.focused,
+.input-box :focus {
   border: black 2px solid;
   background-color: #E7F0F1;
 }

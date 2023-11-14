@@ -71,6 +71,11 @@ hide:
             }
             
             ```
+        === "JS"
+
+            ``` js
+            --8<-- "dropdown.js:dropdown-js"
+            ```
     === "Selected"
         <div class="btn-grid-1">
             <div class="grid-items-flex">
@@ -118,6 +123,11 @@ hide:
                 background: #c6c6c6;
             }
             
+            ```
+        === "JS"
+
+            ``` js
+            --8<-- "dropdown.js:dropdown-js"
             ```
 === "Drop Down Open"
     <div class="btn-grid-1">
@@ -181,6 +191,11 @@ hide:
             }
             
             ```
+        === "JS"
+
+            ``` js
+            --8<-- "dropdown.js:dropdown-js"
+            ```
     === "Selected"
         <div class="btn-grid-1">
             <div class="grid-items-flex">
@@ -230,4 +245,9 @@ hide:
                 background: #c6c6c6;
             }
             
+            ```
+        === "JS"
+
+            ``` js
+            --8<-- "dropdown.js:dropdown-js"
             ```

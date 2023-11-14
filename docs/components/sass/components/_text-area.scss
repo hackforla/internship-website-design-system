@@ -16,11 +16,12 @@
     font-weight: bold;
     
 }
+// --8<-- [start:text-area]
 .textarea-box{
-    height: 122px;
-    width: 348px;
-    padding: 12px 0 0 12px;
-    border-radius: 4px;
+    height: $text-area-height;
+    width: $text-area-width;
+    padding: $text-area-padding;
+    border-radius: $text-area-border-radius;
     &.default{
         border:#E7F0F1 2px solid;
         background-color:#E7F0F1;
@@ -34,3 +35,4 @@
         background-color:#FAFAFA;
     }
 }
+// --8<-- [end:text-area]
