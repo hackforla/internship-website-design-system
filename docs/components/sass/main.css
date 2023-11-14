@@ -159,20 +159,19 @@ input[type=radio] {
   border-radius: 50%;
   width: 26px;
   margin-right: 5px;
-  accent-color: red;
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
 }
 input[type=radio]:disabled {
-  background: #c6c6c6;
+  background-color: #c6c6c6;
 }
-input[type=radio].hover {
+input[type=radio].hover,
+input[type=radio] :hover {
   opacity: 0.3;
 }
 
 input[type=radio]:checked {
-  width: 26px;
   margin-right: 5px;
   accent-color: #247984;
   background-color: #247984;
@@ -181,7 +180,7 @@ input[type=radio]:checked {
 }
 input[type=radio]:checked.disabled,
 input[type=radio]:checked :disabled {
-  accent-color: #6f6f6f;
+  background-color: #c6c6c6;
 }
 input[type=radio]:checked.hover,
 input[type=radio]:checked :hover {

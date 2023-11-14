@@ -52,27 +52,8 @@ hide:
     === "CSS"
 
         ``` css
-
-        .btn-sm{
-            background-color: #247984;
-            height: 40px;
-            border-radius: 20px;
-            padding: 0px 32px;
-            color: white;
-            line-height: 40px;
-            width: fit-content;
-        }
-
-        .btn .hover{
-            background: #0D5761;
-        }
-        .btn .focused{
-            border-color: #0D5761;
-            outline-color: #0D5761;
-        }
-        .btn .disabled{
-            background: #c6c6c6;
-        }
+            --8<-- "_radio.scss:unchecked"
+        
         
         ```
 === "Button Selected"
@@ -124,24 +105,6 @@ hide:
 
         ``` css
 
-        .btn-md{
-            background-color: #247984;
-            height: 60px;
-            border-radius: 60px;
-            padding: 0px 50px;
-            line-height: 60px;
-            width: fit-content;
-        }
-
-        .btn .hover{
-            background: #0D5761;
-        }
-        .btn .focus{
-            border-color: #0D5761;
-            outline-color: #0D5761;
-        }
-        .btn .disabled{
-            background: #c6c6c6;
-        }
+        --8<-- "_radio.scss:checked"
         
         ```       
