@@ -2,6 +2,7 @@
 .input-field-container {
     display: grid;
     padding: 5%;
+    text-align: left;
     
 }
 .input-main{
@@ -22,6 +23,7 @@
     height: $input-field-box-height;
     width: $input-field-box-width;
     border-radius: $input-field-border-radius;
+    padding-left:10px;
     &.default{
         border: lightgrey 2px solid;
         background-color: #FAFAFA;

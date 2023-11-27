@@ -190,6 +190,7 @@ input[type=radio]:checked :hover {
 .input-field-container {
   display: grid;
   padding: 5%;
+  text-align: left;
 }
 
 .input-main {
@@ -210,6 +211,7 @@ input[type=radio]:checked :hover {
   height: 48px;
   width: 348px;
   border-radius: 4px;
+  padding-left: 10px;
 }
 .input-box.default {
   border: lightgrey 2px solid;
