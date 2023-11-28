@@ -8,12 +8,14 @@
 }
 .md-nav__link a{
     text-align: center;
+    padding-left: 20%;
 }
 
 .md-nav__item a:hover{
     background-color: #A0C4C9;
     border-radius: 6px;
-    width: 70%;
+    width: fit-content;
+    padding: 0 10px;
     
 }
 
