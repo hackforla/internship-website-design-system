@@ -1,8 +1,7 @@
 site_name: TWE Design System
 repo_url: https://github.com/hackforla/internship
 nav:
-- Home: index.md
-- Getting Started: getting-started.md
+- Getting Started: index.md
 - Components:
   - Inputs:
     - Buttons: buttons.md

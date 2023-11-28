@@ -24,8 +24,9 @@
 }
 
 
+.md-nav__link:not(.md-nav__container):focus, 
 .md-nav__link:not(.md-nav__container):hover {
-    color: black;
+    color: black !important;
 }
 
 li.md-tabs__item:hover { 
@@ -34,4 +35,8 @@ li.md-tabs__item:hover {
 
 .md-icon{
     visibility: hidden;
+}
+
+.md-nav__item .md-nav__link--active{
+    color: black;
 }
