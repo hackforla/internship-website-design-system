@@ -31,7 +31,7 @@ hide:
     === "HTML"
 
         ``` html
-        <a href="#" class="btn-sm ">Button</a>
+        <a href="#" class="btn-sm">Button</a>
 
         <a href="#" class="btn-sm hover">Button</a>
 
@@ -50,7 +50,7 @@ hide:
 === "Medium"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <a href="#" class="btn-md btn ">Button</a> 
+            <a href="#" class="btn-md btn">Button</a> 
         </div>
     </div>
     <br>
@@ -116,7 +116,7 @@ hide:
     === "HTML"
 
         ``` html
-        <a href="#"><div class="btn-lg ">Button</div></a>
+        <a href="#"><div class="btn-lg">Button</div></a>
 
         <a href="#"><div class="btn-lg btn-hover">Button</div></a>
 
