@@ -5,32 +5,26 @@ This design system is a project of Hack for LA. It helps teams customize and dev
 ### Technology used
 
 - [GitHub Pages](https://pages.github.com/)
-- ([Jekyll](https://jekyllrb.com/docs/))
-- [MK Docs]([url](https://www.mkdocs.org/))
-- [SASS]([url](https://sass-lang.com/))
-- Material for MK Docs
-
+- [Jekyll](https://jekyllrb.com/docs/)
+- [MK Docs]((https://www.mkdocs.org/)
+- [SASS](https://sass-lang.com/)
+- [Material for MK Docs](https://squidfunk.github.io/mkdocs-material/)
 
 
 # How to contribute
 
 Explain the different ways people can contribute. For example:
 
-- Join the team {on Slack/at our weekly hack night/etc}.
-- To help with user research, {do ABC}.
-- To provide design support, {do XYZ}.
-- To contribute to the code, follow the instructions below.
-
-Remember to provide direct links to each channel.
+- This is a project of Hack for LA, please [Join here](https://www.hackforla.org/join)
+- Join the team on Slack on [#internship](https://hackforla.slack.com/archives/C01VAUPU788)
 
 
 
 ## Installation instructions
 
-1. Step-by-step instructions help new contributors get a development environment up and running quickly.
-2. You'll want to find the balance between being specific enough for novices to follow, without being so specific that you reinvent the wheel by providing overly-basic instructions that can be found elsewhere.
-3. Feel free to adapt this section and its sub-sections to your own processes.
-4. Alternatively, you can move everything from *Installation instructions* through *Testing* to a separate **Contributing.md** file to keep your **ReadMe.md** more succinct.
+1. Pull The Repo
+2. Install Dependecies
+3. Launch Local Server
 
 
 ### Working with issues
