@@ -6,9 +6,9 @@ This design system is a project of Hack for LA. It helps teams customize and dev
 
 - [GitHub Pages](https://pages.github.com/)
 - [Jekyll](https://jekyllrb.com/docs/)
-- [MK Docs]((https://www.mkdocs.org/)
-- [SASS](https://sass-lang.com/)
+- [MK Docs](https://www.mkdocs.org/)
 - [Material for MK Docs](https://squidfunk.github.io/mkdocs-material/)
+- [SASS](https://sass-lang.com/)
 
 
 # How to contribute
