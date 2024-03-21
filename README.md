@@ -109,6 +109,6 @@ After pushing your branch to the fork, navigate to the [original repository](htt
 
 ### Licensing
 
-Include details about the project's open source status.
+[GPL-2.0 license](https://github.com/hackforla/internship-website-design-system#GPL-2.0-1-ov-file)
 
 _this readme file sourced from [Jessica Sand](http://jessicasand.com/other-stuff/just-enough-docs/)_
