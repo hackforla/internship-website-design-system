@@ -395,6 +395,119 @@ hide:
         ```
 
 === "Tablet"
+    <div class="type-grid-6">
+        <p class="type-grid-items">Class</p>
+        <p class="type-grid-items">Font Family</p>
+        <p class="type-grid-items">Size</p>
+        <p class="type-grid-items">Line height</p>
+        <p class="type-grid-items">Weight</p>
+        <p class="type-grid-items">Style</p>
+        <!-- Hero Section / H1 -->
+        <p class="type-grid-items">Hero Section/<br>H1</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">48px / 3rem</p>
+        <p class="type-grid-items">120%</p>
+        <p class="type-grid-items">Bold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Hero Section / p -->
+        <p class="type-grid-items">Hero Section/<br/>p</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">20px / 1.25rem</p>
+        <p class="type-grid-items">130%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">-</p>
+        <!-- Hero Section / p/bold -->
+        <p class="type-grid-items">Hero Section/<br/>p/semibold</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">20px / 1.25rem</p>
+        <p class="type-grid-items">130%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Hero Section / p/italic -->
+        <p class="type-grid-items">Hero Section/<br/>p/italic</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">20px / 1.25rem</p>
+        <p class="type-grid-items">130%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">Italic</p>
+        <!-- Body Section / H1 -->
+        <p class="type-grid-items">Body/<br/>H1</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">40px / 2.5rem</p>
+        <p class="type-grid-items">120%</p>
+        <p class="type-grid-items">Bold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / H2 -->
+        <p class="type-grid-items">Body/<br/>H2</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">32px / 2rem</p>
+        <p class="type-grid-items">125%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / H3 -->
+        <p class="type-grid-items">Body/<br/>H3</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">24px / 1.5rem</p>
+        <p class="type-grid-items">130%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / H4 -->
+        <p class="type-grid-items">Body/<br/>H4</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">20px / 1.25rem</p>
+        <p class="type-grid-items">130%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / H5 -->
+        <p class="type-grid-items">Body/<br/>H5</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">16px / 1rem</p>
+        <p class="type-grid-items">135%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / p -->
+        <p class="type-grid-items">Body/<br/>p</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">16px / 1rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / p/semibold -->
+        <p class="type-grid-items">Body/<br/>p/semibold</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">16px / 1rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / p/italic -->
+        <p class="type-grid-items">Body/<br/>p/italic</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">16px / 1rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">Italic</p>
+        <!-- Body Section / p/small -->
+        <p class="type-grid-items">Body/<br/>p/small</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">12px / 0.75rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / p/small-semibold -->
+        <p class="type-grid-items">Body/<br/>p/small-semibold</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">12px / 1rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Semibold</p>
+        <p class="type-grid-items">-</p>
+        <!-- Body Section / p/small-italic -->
+        <p class="type-grid-items">Body/<br/>p/small-italic</p>
+        <p class="type-grid-items">Roboto</p>
+        <p class="type-grid-items">12px / 1rem</p>
+        <p class="type-grid-items">150%</p>
+        <p class="type-grid-items">Regular</p>
+        <p class="type-grid-items">Italic</p>
+    </div>
 
     # Code
 
