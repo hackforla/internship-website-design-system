@@ -12,7 +12,7 @@ This design system is a project of _Hack for LA_. It helps teams customize and d
 
 
 # Contributing
-- [How to Contribute](#CONTRIBUTING)
+- [How to Contribute](CONTRIBUTING.md)
 
 # Contact info
 
