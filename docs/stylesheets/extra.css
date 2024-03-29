@@ -37,8 +37,9 @@ li.md-tabs__item:hover {
     color: black;
 }
 
-/* Override md-typeset styles */
+/* md-typeset heading styles */
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
     text-transform: none;
     letter-spacing: 0;
+    color: black;
 }
