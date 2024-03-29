@@ -347,3 +347,20 @@
   }
 // --8<-- [end:tablet-body-p-small-italic]
 }
+
+// styles for template page
+.template-h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  line-height: 57.6px !important;
+  color: black;
+}
+
+.template-h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600 !important;
+  font-size: 40px !important;
+  line-height: 50px !important;
+  color: #263238 !important;
+}
