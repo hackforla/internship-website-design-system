@@ -3,9 +3,11 @@ hide:
   - toc
 ---
 
-# **Type Scale**
+<!-- # Type Scale -->
+<h1 class="template-h1">Type Scale</h1>
 
-# Device
+<!-- ## Device -->
+<h2 class="template-h2">Device</h2>
 
 === "Desktop"
     <div class="type-grid-6">
@@ -123,7 +125,7 @@ hide:
     </div>
     <br/>
 
-    # **Example**
+    <h2 class="template-h2">Example</h2>
 
     === "Hero Section/H1"
         <div class="btn-grid-1">
@@ -133,7 +135,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -151,7 +153,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -168,7 +170,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -186,7 +188,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -204,7 +206,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -222,7 +224,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -240,7 +242,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -258,7 +260,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -276,7 +278,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -294,7 +296,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -312,7 +314,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -330,7 +332,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -348,7 +350,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -366,7 +368,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -384,7 +386,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -510,7 +512,7 @@ hide:
     </div>
     <br/>
 
-    # Example
+    <h2 class="template-h2">Example</h2>
 
     === "Hero Section/H1"
         <div class="btn-grid-1">
@@ -520,7 +522,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -538,7 +540,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -555,7 +557,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -573,7 +575,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -591,7 +593,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -609,7 +611,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -627,7 +629,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -645,7 +647,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -663,7 +665,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -681,7 +683,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -699,7 +701,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -717,7 +719,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -735,7 +737,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -753,7 +755,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
@@ -771,7 +773,7 @@ hide:
         </div>
         <br/>
 
-        # **Code**
+        <h2 class="template-h2">Code</h2>
 
         ```html
             <style>
