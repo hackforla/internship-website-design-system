@@ -91,3 +91,6 @@ After pushing your branch to the fork, navigate to the [original repository](htt
 
 - Run the site locally with `mkdocs serve` and navigate to `http://localhost:8000` in your web browser.
 - Observe visual changes for desktop sized screens as well as mobile.
+
+## Resources
+- [Snippets](SNIPPETS.md)
