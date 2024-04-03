@@ -19,6 +19,21 @@
     text-align: center;
 }
 
+.type-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.type-grid-items {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: left;
+    background-color: #F3F3F3;
+    flex-wrap: wrap;
+}
+
 .grid-items {
     border: 1px solid #ccc;
     padding: 20px;
