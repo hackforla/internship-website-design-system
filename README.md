@@ -21,13 +21,6 @@ For more information on contributing
 - This is a project of _Hack for LA_, please [Join here](https://www.hackforla.org/join)
 - Join the team on Slack on [#internship](https://hackforla.slack.com/archives/C01VAUPU788)
 
-
-### Notes
-
-- If you make changes to the documentation source files, you will need to rebuild the Docker image to see the changes.
-- If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 mkdocs-site`.
-  -If you get a `ERROR [internal] load metadata for docker.io/library/python:3.8-slim ` error run `docker pull python:3.8-slim`
-
 ### Working with issues
 
 <!-- - Explain how to submit a bug.
