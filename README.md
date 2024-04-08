@@ -2,6 +2,10 @@
 
 This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.
 
+### Wiki
+For more information on contributing
+[Software Engineer Wiki](https://github.com/hackforla/internship/wiki/Software-Engineer)
+
 ### Technology used
 
 - [GitHub Pages](https://pages.github.com/)
@@ -17,26 +21,6 @@ This design system is a project of _Hack for LA_. It helps teams customize and d
 - This is a project of _Hack for LA_, please [Join here](https://www.hackforla.org/join)
 - Join the team on Slack on [#internship](https://hackforla.slack.com/archives/C01VAUPU788)
 
-## Installation instructions
-
-### Prerequisites
-
-- Install [Docker](https://www.docker.com/get-started) on your machine.
-
-### Setting up the development environment
-
-1. Fork and Clone this Repository (see **Working with forks and branches** below)
-   `git clone <your-forked-repository-url>`
-   `cd <repository-name>`
-2. Build the Docker image. `docker build -t mkdocs-site .`
-   This command builds a Docker image named `mkdocs-site` from the Dockerfile in the current directory.
-3. Run the Docker container.
-   `docker run -p 8000:8000 mkdocs-site`
-   This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the MkDocs server.
-
-4. View the site by navigating to `http://localhost:8000` in your web browser.
-
-You should see your MkDocs site being served from the Docker container.
 
 ### Notes
 
