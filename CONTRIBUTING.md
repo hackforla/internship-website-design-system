@@ -9,9 +9,9 @@
 ## Installation instructions
 
 1. Fork and Clone this Repository (see **Working with forks and branches** below)
-2. Install Dependecies
-3. Launch Local Server `mkdocs serve`.
-4. View the site by navigating to `http://localhost:8000` in your web browser.
+2. [Setup Docker](https://github.com/hackforla/internship/wiki/Setup-the-Microsite-Locally-with-Docker)
+4. Launch Local Server `docker run -p 8000:8000 mkdocs-site`.
+5. View the site by navigating to `http://localhost:8000` in your web browser.
 
 ### Working with issues
 
