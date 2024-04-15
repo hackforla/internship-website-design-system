@@ -53,7 +53,7 @@ upstream        https://github.com/hackforla/internship-website-design-system.gi
 upstream        https://github.com/hackforla/internship-website-design-system.git (push)
 ```
 
-- **Branches**: a separate line of development created to work on new features or fixes independently from the main codebase.
+- **Branches**: a separate line of development created to work on new features or fixes independently from the main codebase.  Unless specified in your issue, you can name your branch anything you want.  Just be aware that name is visable to other people and is permanently attached to the PR (so please don't use swear words, etc.)
 
 When working in your fork, feature development/fixes should occur in dedicated branches rather than the `main` branch.
 
