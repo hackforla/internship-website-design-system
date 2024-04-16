@@ -1,5 +1,6 @@
 site_name: TWE Design System
 repo_url: https://github.com/hackforla/internship-website-design-system
+site_url: https://hackforla.github.io/internship-website-design-system/
 nav:
 - Getting Started: index.md
 - Styles:
