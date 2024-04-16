@@ -1,0 +1,44 @@
+// --8<-- [start:unchecked]
+input[type="radio"]{
+    border:.5px solid $radio-color;
+    border-radius: 50%;
+    width: $radio-button-width;
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    
+    
+    &:disabled {
+        background-color: $radio-disabled;
+    }
+    &.hover,
+    :hover{
+        opacity: .3;
+    }
+    
+}
+// --8<-- [end:unchecked]
+
+// --8<-- [start:checked]
+input[type="radio"]:checked {
+    
+    margin-right: 5px;
+    accent-color: $radio-color;
+    background-color: $radio-color;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 0 1px $radio-color;
+    
+
+    &.disabled,
+    :disabled{
+        background-color: $radio-disabled;
+    }
+    &.hover,
+    :hover{
+        opacity: .3;
+    }
+
+}
+// --8<-- [end:checked]
+
+
