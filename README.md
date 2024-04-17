@@ -2,6 +2,9 @@
 
 This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.
 
+It runs on docker like so - 'docker run -p 8000:8000 mkdocs-site'
+
+
 ### Wiki
 For more information on contributing
 [Software Engineer Wiki](https://github.com/hackforla/internship/wiki/Software-Engineer)
