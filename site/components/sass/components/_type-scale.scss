@@ -1,0 +1,366 @@
+.desktop-examples {
+// --8<-- [start:desktop-hero-h1]
+  .desktop-hero-h1 {
+    display: block;
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-hero-h1]
+// --8<-- [start:desktop-hero-p]
+  .desktop-hero-p{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-hero-p]
+// --8<-- [start:desktop-hero-p-semibold]
+  .desktop-hero-p-semibold{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-hero-p-semibold]
+// --8<-- [start:desktop-hero-p-italic]
+  .desktop-hero-p-italic{
+    display: block;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-hero-p-italic]
+// --8<-- [start:desktop-body-h1]
+  .desktop-body-h1{
+    display: block;
+    font-size: 3rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-h1]
+// --8<-- [start:desktop-body-h2]
+  .desktop-body-h2{
+    display: block;
+    font-size: 2.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-h2]
+// --8<-- [start:desktop-body-h3]
+  .desktop-body-h3{
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-h3]
+// --8<-- [start:desktop-body-h4]
+  .desktop-body-h4{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-h4]
+// --8<-- [start:desktop-body-h5]
+  .desktop-body-h5{
+    display: block;
+    font-size: 1.25rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-h5]
+// --8<-- [start:desktop-body-p]
+  .desktop-body-p{
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p]
+// --8<-- [start:desktop-body-p-semibold]
+  .desktop-body-p-semibold{
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p-semibold]
+// --8<-- [start:desktop-body-p-italic]
+  .desktop-body-p-italic{
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p-italic]
+// --8<-- [start:desktop-body-p-small]
+  .desktop-body-p-small{
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p-small]
+// --8<-- [start:desktop-body-p-small-semibold]
+  .desktop-body-p-small-semibold{
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p-small-semibold]
+// --8<-- [start:desktop-body-p-small-italic]
+  .desktop-body-p-small-italic{
+    display: block;
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:desktop-body-p-small-italic]
+}
+
+.tablet-example {
+  // --8<-- [start:tablet-hero-h1]
+  .tablet-hero-h1 {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-hero-h1]
+// --8<-- [start:tablet-hero-p]
+  .tablet-hero-p{
+    display: block;
+    font-size: 1.25rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-hero-p]
+// --8<-- [start:tablet-hero-p-semibold]
+  .tablet-hero-p-semibold{
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-hero-p-semibold]
+// --8<-- [start:tablet-hero-p-italic]
+  .tablet-hero-p-italic{
+    display: block;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-hero-p-italic]
+// --8<-- [start:tablet-body-h1]
+  .tablet-body-h1{
+    display: block;
+    font-size: 2.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-h1]
+// --8<-- [start:tablet-body-h2]
+  .tablet-body-h2{
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-h2]
+// --8<-- [start:tablet-body-h3]
+  .tablet-body-h3{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-h3]
+// --8<-- [start:tablet-body-h4]
+  .tablet-body-h4{
+    display: block;
+    font-size: 1.25rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-h4]
+// --8<-- [start:tablet-body-h5]
+  .tablet-body-h5{
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-h5]
+// --8<-- [start:tablet-body-p]
+  .tablet-body-p{
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p]
+// --8<-- [start:tablet-body-p-semibold]
+  .tablet-body-p-semibold{
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p-semibold]
+// --8<-- [start:tablet-body-p-italic]
+  .tablet-body-p-italic{
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p-italic]
+// --8<-- [start:tablet-body-p-small]
+  .tablet-body-p-small{
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p-small]
+// --8<-- [start:tablet-body-p-small-semibold]
+  .tablet-body-p-small-semibold{
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p-small-semibold]
+// --8<-- [start:tablet-body-p-small-italic]
+  .tablet-body-p-small-italic{
+    display: block;
+    font-size: 0.75rem;
+    font-style: italic;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    color: $color-black;
+  }
+// --8<-- [end:tablet-body-p-small-italic]
+}
+
+// styles for template page
+.template-h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  line-height: 57.6px !important;
+  color: black;
+}
+
+.template-h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600 !important;
+  font-size: 40px !important;
+  line-height: 50px !important;
+  color: #263238 !important;
+}
