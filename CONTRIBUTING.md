@@ -22,7 +22,7 @@
    This command builds a Docker image named `mkdocs-site` from the Dockerfile in the current directory.
    Note: If you have a permissions error run `sudo docker build -t mkdocs-site .` and enter your machines password.
 5. Run the Docker container.
-   `docker run -p 8000:8000 -v $(pwd):/app internship-website-design-system`
+   `docker run -p 8000:8000 -v $(pwd):/mkdocs-site`
    This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the MkDocs server.
 
 ### Notes
