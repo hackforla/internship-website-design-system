@@ -2,10 +2,13 @@
 
 This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.
 
-It runs on docker like so - 'docker run -p 8000:8000 mkdocs-site'
-
+It runs on docker like so: 
+```bash
+docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site
+```
 
 ### Wiki
+
 For more information on contributing
 [Software Engineer Wiki](https://github.com/hackforla/internship/wiki/Software-Engineer)
 
@@ -18,16 +21,14 @@ For more information on contributing
 - [SASS](https://sass-lang.com/)
 - [Docker](https://docker.com)
 
-
-
 <!-- Explain the different ways people can contribute. For example: -->
 
 - This is a project of _Hack for LA_, please [Join here](https://www.hackforla.org/join)
 - Join the team on Slack on [#internship](https://hackforla.slack.com/archives/C01VAUPU788)
 
 # Contributing
-- [How to Contribute](CONTRIBUTING.md)
 
+- [How to Contribute](CONTRIBUTING.md)
 
 # Contact info
 
