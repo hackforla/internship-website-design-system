@@ -2,7 +2,10 @@
 
 This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.
 
-It runs on docker like so - 'docker run -p 8000:8000 -v $(pwd):/app {your-project-name}'
+It runs on docker like so: 
+```bash
+docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site
+```
 
 ### Wiki
 
