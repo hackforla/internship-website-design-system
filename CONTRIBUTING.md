@@ -80,6 +80,7 @@
    Note: If you have a permissions error run `sudo docker build -t mkdocs-site .` and enter your machines password.
    
 #### 3. **Starting Docker**
+**IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
 - #### Run the Docker container.
    ```bash
    docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site
@@ -91,7 +92,7 @@
    
 #### Docker Notes:
 
-- If you make changes to the documentation source files, you will need to rebuild the Docker image to see the changes.
+- Changes to the documentation source files will automatically be displayed if ran with `docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site` as previously mentioned.
 - If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first   `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 mkdocs-site`.
 - If you get an `ERROR [internal] load metadata for docker.io/library/python:3.8-slim ` error, run `docker pull python:3.8-slim`
 
