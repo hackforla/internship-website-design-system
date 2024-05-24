@@ -145,7 +145,7 @@ After pushing your branch to the fork, navigate to the [original repository](htt
 ## Testing
 <!-- Talk about Accessibility Testing -->
 
-- Run and view the site locally. See [Starting Docker](#starting-docker)
+- Run and view the site locally. See [Starting Docker](#3-starting-docker)
 - Observe visual changes for desktop-sized screens as well as mobile.
 
 ## Resources
