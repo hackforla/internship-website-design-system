@@ -20,6 +20,7 @@
 - [**Create an issue**](#create-an-issue)
 - [**Working with pull requests and reviews**](#working-with-pull-requests-and-reviews)
 - [**Testing**](#testing)
+   - [**Automated Accessibility Testing**](#automated-accessibility-testing)
 - [**Resources**](#resources)
 
 
@@ -138,17 +139,39 @@ For more information please refer to ["Git feature branch workflow"](https://www
 
 ## Working with pull requests and reviews
 
-- Branches make **code reviews** possible through **pull requests** (PR).
+- Branches facilitate **code reviews** through **pull requests** (PRs).
 
-After pushing your branch to the fork, navigate to the [original repository](https://github.com/hackforla/internship-website-design-system) on GitHub. You'll see an option to **"Compare & pull request"** for the branch you've just updated. Follow the prompts to submit your pull request for review.
+After pushing your branch to your fork, navigate to the [original repository](https://github.com/hackforla/internship-website-design-system) on GitHub. You'll see an option to **"Compare & pull request"** for the branch you've just updated. Follow the prompts to submit your pull request for review.
 
 ## Testing
 <!-- Talk about Accessibility Testing -->
 
 - Run and view the site locally. See [Starting Docker](#3-starting-docker)
 - Observe visual changes for desktop-sized screens as well as mobile.
+  
+### Automated Accessibility Testing
+
+Before any code is committed, an automated [Pa11y](https://pa11y.org/) accessibility test runs via a pre-commit hook. This helps us maintain a high level of accessibility across the entire project. The test results are saved in a CSV file located in the `/output` folder at the root of the repository.
+
+#### Viewing Pa11y Test Results
+
+To view the Pa11y test results, you can easily open the CSV file within your IDE. We recommend using the [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer) for a smooth experience.
+
+#### Instructions to View the CSV File with Excel Viewer by GrapeCity:
+
+1. **Install the Extension:**
+   - Search for "Excel Viewer" by GrapeCity in your IDE’s extension marketplace and install it.
+
+2. **Open the CSV File:**
+   - Navigate to the `/output` folder in the root of the repository.
+   - Right-click on the `pa11y-results.csv` file.
+   - Click `Open With`.
+   - Select `CSV Editor`.
+
+Following these steps will allow you to easily view and analyze the Pa11y test results.
 
 ## Resources
 - [Hack for LA's Internship Wiki]()
 - [Snippets](SNIPPETS.md)
+- [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
 
