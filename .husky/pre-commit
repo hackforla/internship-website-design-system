@@ -12,9 +12,6 @@ mkdocs serve --quiet &
 # Capture the PID of the MkDocs server
 MKDOCS_PID=$!
 
-# Wait for a few seconds to ensure MkDocs is up
-sleep 5
-
 # Run the accessibility test script
 npm run pa11y
 
@@ -24,5 +21,4 @@ kill $MKDOCS_PID
 # Stage the generated CSV file
 git add output/pa11y-results.csv
 
-# Exit the script without committing
 exit 0
