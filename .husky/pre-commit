@@ -1,6 +1,10 @@
-if [ "$SKIP_HOOK" = true ]; then
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Check if the hook should be skipped
+if [ "$SKIP_HOOK" = "true" ]; then
   exit 0
-fi 
+fi
 
 # Start MkDocs in the background
 mkdocs serve --quiet &
@@ -9,7 +13,7 @@ mkdocs serve --quiet &
 MKDOCS_PID=$!
 
 # Wait for a few seconds to ensure MkDocs is up
-sleep 1
+sleep 5
 
 # Run the accessibility test script
 npm run pa11y
@@ -18,7 +22,7 @@ npm run pa11y
 kill $MKDOCS_PID
 
 # Stage the generated CSV file
-# git add output/pa11y-results.csv
+git add output/pa11y-results.csv
 
-# Commit the CSV file with a specific message
-# SKIP_HOOK=true git commit -m "chore- add pa11y accessibility test results"
+# Exit the script without committing
+exit 0
