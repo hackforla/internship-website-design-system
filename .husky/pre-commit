@@ -1,0 +1,24 @@
+if [ "$SKIP_HOOK" = true ]; then
+  exit 0
+fi 
+
+# Start MkDocs in the background
+mkdocs serve --quiet &
+
+# Capture the PID of the MkDocs server
+MKDOCS_PID=$!
+
+# Wait for a few seconds to ensure MkDocs is up
+sleep 1
+
+# Run the accessibility test script
+npm run pa11y
+
+# Stop MkDocs server
+kill $MKDOCS_PID
+
+# Stage the generated CSV file
+# git add output/pa11y-results.csv
+
+# Commit the CSV file with a specific message
+# SKIP_HOOK=true git commit -m "chore- add pa11y accessibility test results"
