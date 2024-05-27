@@ -21,6 +21,7 @@
 - [**Working with pull requests and reviews**](#working-with-pull-requests-and-reviews)
 - [**Testing**](#testing)
    - [**Automated Accessibility Testing**](#automated-accessibility-testing)
+   - [**Bypassing Pre-Commit Hooks**](#bypassing-pre-commit-hooks)
 - [**Resources**](#resources)
 
 
@@ -168,10 +169,16 @@ To view the Pa11y test results, you can easily open the CSV file within your IDE
    - Click `Open With`.
    - Select `CSV Editor`.
 
-Following these steps will allow you to easily view and analyze the Pa11y test results.
+### Bypassing Pre-Commit Hooks
 
+We use [Husky](https://typicode.github.io/husky/) to enforce a pre-commit hook that runs the Pa11y accessibility test. In certain situations, you might want to bypass these hooks (like when working on something not directly related to the pages of the microsite). You can do this by:
+   - #### Using ` HUSKY=0 `
+      Example: `HUSKY=0 git commit -m 'message'`
+   - #### Using ` -n ` after your Git command
+      Example: `git commit -m 'message' -n`
 ## Resources
 - [Hack for LA's Internship Wiki]()
 - [Snippets](SNIPPETS.md)
 - [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
+- [Husky](https://typicode.github.io/husky/)
 
