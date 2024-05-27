@@ -10,18 +10,19 @@
 - [**Setting up the development environment**](#setting-up-the-development-environment)
    - [**Prerequisites**](#prerequisites)
    - [**Setup Instructions**](#setup-instructions)
-        - [1. Fork and Clone this repository](#1-fork-and-clone-this-repository)
-        - [2. Docker Setup](#2-docker-setup)
-        - [3. Starting Docker](#3-starting-docker)
-        - [4. Stopping Docker](#4-stopping-docker)
-        - [Docker Notes](#docker-notes)
+      - [1. Fork and Clone this repository](#1-fork-and-clone-this-repository)
+      - [2. Docker Setup](#2-docker-setup)
+      - [3. Starting Docker](#3-starting-docker)
+      - [4. Stopping Docker](#4-stopping-docker)
+      - [Docker Notes](#docker-notes)
 - [**Working on issues**](#working-on-issues)
    - [**Branch Workflow**](#branch-workflow)
 - [**Create an issue**](#create-an-issue)
 - [**Working with pull requests and reviews**](#working-with-pull-requests-and-reviews)
 - [**Testing**](#testing)
    - [**Automated Accessibility Testing**](#automated-accessibility-testing)
-   - [**Bypassing Pre-Commit Hooks**](#bypassing-pre-commit-hooks)
+      - [Bypassing Pre-Commit Hooks](#bypassing-pre-commit-hooks)
+   - [**Running Accessibility Check Manually**](#running-accessibility-checks-manually)
 - [**Resources**](#resources)
 
 
@@ -169,13 +170,24 @@ To view the Pa11y test results, you can easily open the CSV file within your IDE
    - Click `Open With`.
    - Select `CSV Editor`.
 
-### Bypassing Pre-Commit Hooks
+#### Bypassing Pre-Commit Hooks
 
 We use [Husky](https://typicode.github.io/husky/) to enforce a pre-commit hook that runs the Pa11y accessibility test. In certain situations, you might want to bypass these hooks (like when working on something not directly related to the pages of the microsite). You can do this by:
    - #### Using ` HUSKY=0 `
       Example: `HUSKY=0 git commit -m 'message'`
    - #### Using ` -n ` after your Git command
       Example: `git commit -m 'message' -n`
+
+### Running Accessibility Checks Manually
+
+In addition to the automated pre-commit accessibility check, you can run the Pa11y accessibility test manually at any time. This is useful if you want to monitor accessibility errors as you work.
+
+To run the Pa11y accessibility check manually, use the following command:
+
+```bash
+npm run pa11y
+```
+
 ## Resources
 - [Hack for LA's Internship Wiki]()
 - [Snippets](SNIPPETS.md)
