@@ -11,8 +11,8 @@
     "prepare": "husky",
     "pa11y": "node scripts/pa11y-test.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "hackforla",
+  "license": "GPL-2.0",
   "devDependencies": {
     "csv-writer": "^1.6.0",
     "husky": "^9.0.11",
