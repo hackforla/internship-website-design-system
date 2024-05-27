@@ -11,9 +11,10 @@
    - [**Prerequisites**](#prerequisites)
    - [**Setup Instructions**](#setup-instructions)
       - [1. Fork and Clone this repository](#1-fork-and-clone-this-repository)
-      - [2. Docker Setup](#2-docker-setup)
-      - [3. Starting Docker](#3-starting-docker)
-      - [4. Stopping Docker](#4-stopping-docker)
+      - [2. Install Dependencies](#2-install-dependencies)
+      - [3. Docker Setup](#3-docker-setup)
+      - [4. Starting Docker](#4-starting-docker)
+      - [5. Stopping Docker](#5-stopping-docker)
       - [Docker Notes](#docker-notes)
 - [**Working on issues**](#working-on-issues)
    - [**Branch Workflow**](#branch-workflow)
@@ -66,7 +67,13 @@
    upstream        https://github.com/hackforla/internship-website-design-system.git (push)
    ```
 
-#### 2. **Docker Setup**
+#### 2. **Install Dependencies**
+- In your terminal, run:
+   ```bash
+   npm install
+   ```
+
+#### 3. **Docker Setup**
 - #### **Enter repo directory:**
    ```bash 
    cd internship-website-design-system
@@ -82,7 +89,7 @@
    This command builds a Docker image named `mkdocs-site` from the Dockerfile in the current directory.
    Note: If you have a permissions error run `sudo docker build -t mkdocs-site .` and enter your machines password.
    
-#### 3. **Starting Docker**
+#### 4. **Starting Docker**
 **IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
 - #### Run the Docker container.
    ```bash
@@ -90,7 +97,7 @@
    ```
    This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `http://localhost:8000` in your web browser. You should see your MkDocs site being served from the Docker           container.
    
-#### 4. **Stopping Docker**
+#### 5. **Stopping Docker**
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. 
    
 #### Docker Notes:
@@ -157,7 +164,7 @@ Before any code is committed, an automated [Pa11y](https://pa11y.org/) accessibi
 
 #### Viewing Pa11y Test Results
 
-To view the Pa11y test results, you can easily open the CSV file within your IDE. We recommend using the [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer) for a smooth experience.
+To view the Pa11y test results, you can easily open the CSV file within your IDE. We recommend using the [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer) for a smooth experience. Excel Viewer also supports organizing and filtering the values within the CSV file, making it easy to filter by accessibility error or see errors for a specific microsite page.
 
 #### Instructions to View the CSV File with Excel Viewer by GrapeCity:
 
@@ -187,6 +194,7 @@ To run the Pa11y accessibility check manually, use the following command:
 ```bash
 npm run pa11y
 ```
+This will output the results in the same `pa11y-results.csv` file located in the `/output` folder. Note that this file will be overwritten the next time the pre-commit hook runs when you commit and push changes.
 
 ## Resources
 - [Hack for LA's Internship Wiki]()
