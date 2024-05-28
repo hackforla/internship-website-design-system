@@ -1,0 +1,8 @@
+{
+    "level": "error",
+    "defaults": {
+      "standard": "WCAG2AAA",
+      "wait": 2000
+    },
+    "urls": ["http://localhost:8000/"]
+  }

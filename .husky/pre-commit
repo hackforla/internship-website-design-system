@@ -1,0 +1,24 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Check if the hook should be skipped
+if [ "$SKIP_HOOK" = "true" ]; then
+  exit 0
+fi
+
+# Start MkDocs in the background
+mkdocs serve --quiet &
+
+# Capture the PID of the MkDocs server
+MKDOCS_PID=$!
+
+# Run the accessibility test script
+npm run pa11y
+
+# Stop MkDocs server
+kill $MKDOCS_PID
+
+# Stage the generated CSV file
+git add output/pa11y-results.csv
+
+exit 0
