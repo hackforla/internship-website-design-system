@@ -93,7 +93,7 @@ body {
   outline-color: #0D5761;
 }
 .btn:disabled {
-  background: #c6c6c6;
+  background: #949494;
 }
 .btn:hover, .btn:active, .btn.hover, .btn.active {
   background: #0D5761;
@@ -105,7 +105,7 @@ body {
 }
 
 .disabled {
-  background: #c6c6c6;
+  background: #949494;
 }
 
 /*---------------------------
@@ -163,7 +163,7 @@ input[type=radio] {
   -webkit-appearance: none;
 }
 input[type=radio]:disabled {
-  background-color: #c6c6c6;
+  background-color: #949494;
 }
 input[type=radio].hover,
 input[type=radio] :hover {
@@ -179,7 +179,7 @@ input[type=radio]:checked {
 }
 input[type=radio]:checked.disabled,
 input[type=radio]:checked :disabled {
-  background-color: #c6c6c6;
+  background-color: #949494;
 }
 input[type=radio]:checked.hover,
 input[type=radio]:checked :hover {
@@ -716,6 +716,7 @@ input[type=radio]:checked :hover {
 
 .custom-option.hovered {
   background-color: #CFE1E4;
+  color: #626262;
 }
 
 .dropdown-placeholder-hover-color {
