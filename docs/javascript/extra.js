@@ -27,14 +27,24 @@ window.addEventListener('click', function(e) {
     }
 });
 
+// Debounce function to limit the rate at which a function is executed
+function debounce(fn, delay) {
+    let timeoutID;
+    return function(...args) {
+        clearTimeout(timeoutID);
+        timeoutID = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
 function handleAccessibilityTasks() {
+
     // Handle accessibility for mkdocs generated codeblock
     const codeLineAnchors = document.querySelectorAll('span > a[href*="__codelineno"]');
     codeLineAnchors.forEach(anchor => {
         anchor.removeAttribute('href');
     });
 
-    // Handle accessibility for table of content input checkbox
+    // Handle accessibility for table of contents input checkbox
     const tocInput = document.getElementById('__toc');
     if (tocInput) {
         const activeLink = document.querySelector('.md-nav__link--active');
@@ -45,12 +55,14 @@ function handleAccessibilityTasks() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', handleAccessibilityTasks);
+const debouncedHandleAccessibilityTasks = debounce(handleAccessibilityTasks, 300);
+
+document.addEventListener('DOMContentLoaded', debouncedHandleAccessibilityTasks);
 
 const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            requestAnimationFrame(handleAccessibilityTasks);
+            debouncedHandleAccessibilityTasks();
         }
     }
 });
