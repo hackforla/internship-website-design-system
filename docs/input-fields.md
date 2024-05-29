@@ -6,7 +6,7 @@ hide:
 === "Default"
     <div class="input-main">
         <div class="grid-1-5">
-            <div class="input-vari">DEFAULT</div>
+            <div>DEFAULT</div>
             <div>
                 <div class = "input-field-container">
                     <label for ="label">Label</label>
@@ -14,7 +14,7 @@ hide:
                     <p>Hint text</p>
                 </div>
             </div>
-            <div class="input-vari">HOVER</div>
+            <div>HOVER</div>
             <div>
                 <div class = "input-field-container">
                     <label for ="label">Label</label>
@@ -22,7 +22,7 @@ hide:
                     <p>Hint text</p>
                 </div>
             </div>
-            <div class="input-vari">FOCUSED</div>
+            <div>FOCUSED</div>
             <div>
                 <div class = "input-field-container">
                     <label for ="label">Label</label>
@@ -30,7 +30,7 @@ hide:
                     <p>Hint text</p>
                 </div>
             </div>
-            <div class="input-vari">ALERT</div>
+            <div>ALERT</div>
             <div>
                 <div class = "input-field-container">
                     <label for ="label">Label</label>
@@ -38,7 +38,7 @@ hide:
                     <p>Hint text</p>
                 </div>
             </div>
-            <div class="input-vari">SUCCESS</div>
+            <div>SUCCESS</div>
             <div>
                 <div class = "input-field-container">
                     <label for ="label">Label</label>
