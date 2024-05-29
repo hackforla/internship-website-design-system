@@ -27,20 +27,30 @@ window.addEventListener('click', function(e) {
     }
 });
 
-// Function to handle accessibility error in mkdocs generated codeblock
-function handleAccessibilityErrors() {
+function handleAccessibilityTasks() {
+    // Handle accessibility for mkdocs generated codeblock
     const codeLineAnchors = document.querySelectorAll('span > a[href*="__codelineno"]');
     codeLineAnchors.forEach(anchor => {
         anchor.removeAttribute('href');
     });
+
+    // Handle accessibility for table of content input checkbox
+    const tocInput = document.getElementById('__toc');
+    if (tocInput) {
+        const activeLink = document.querySelector('.md-nav__link--active');
+        if (activeLink) {
+            const pageName = activeLink.textContent.trim();
+            tocInput.setAttribute('aria-label', `${pageName} page`);
+        }
+    }
 }
 
-document.addEventListener('DOMContentLoaded', handleAccessibilityErrors);
+document.addEventListener('DOMContentLoaded', handleAccessibilityTasks);
 
 const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            handleAccessibilityErrors();
+            requestAnimationFrame(handleAccessibilityTasks);
         }
     }
 });
