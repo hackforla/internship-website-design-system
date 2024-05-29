@@ -26,3 +26,26 @@ window.addEventListener('click', function(e) {
         e.target.classList.add('selected');
     }
 });
+
+// Function to handle accessibility error in mkdocs generated codeblock
+function handleAccessibilityErrors() {
+    const codeLineAnchors = document.querySelectorAll('span > a[href*="__codelineno"]');
+    codeLineAnchors.forEach(anchor => {
+        anchor.removeAttribute('href');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', handleAccessibilityErrors);
+
+const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            handleAccessibilityErrors();
+        }
+    }
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
