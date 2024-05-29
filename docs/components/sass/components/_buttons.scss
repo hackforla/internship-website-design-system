@@ -23,7 +23,7 @@
   transition: all 100ms ease-in;
   white-space: nowrap;
   align-items: center;
-  display: inline-flex; 
+  display: inline-flex;
   justify-content: center;
   margin: 5px 0;
   color: white;
@@ -39,22 +39,22 @@
 .btn {
   background: $button-color;
   color: $button-text-color;
-  border:4px solid transparent;
+  border: 4px solid transparent;
 
-//   &:link,
-//   &:visited {
-//     color: $color-white;
-//   }
-  &:focus, 
+  //   &:link,
+  //   &:visited {
+  //     color: $color-white;
+  //   }
+  &:focus,
   &.focus {
     border-color: $button-hovercolor;
     outline-color: $button-hovercolor;
   }
   &:disabled {
-    background: #c6c6c6;
+    background: #949494 !important;
   }
   &:hover,
-  &:active, 
+  &:active,
   &.hover,
   &.active {
     background: $button-hovercolor;
@@ -65,12 +65,11 @@
   &.visited {
     color: $color-white !important;
   }
-} 
+}
 
-.disabled{
-  background: #c6c6c6;
-  }
-
+.disabled {
+  background: #949494 !important;
+}
 
 /*---------------------------
   Button Sizes
@@ -125,4 +124,3 @@
   EXAMPLE: btn--home-getting-started
 - Page-specific class names should live in that specific page's .scss file.
 */
-

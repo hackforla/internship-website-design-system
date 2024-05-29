@@ -7,7 +7,7 @@ hide:
 === "Small"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <a href="#" class= "btn-sm btn">Button</a> 
+            <a href="#" class="btn-sm btn">Button</a> 
         </div>
     </div>
     <br>
@@ -20,7 +20,7 @@ hide:
             <a href="#"class="btn-sm btn hover">Button</a> 
         </div>
         <div class="grid-items"> 
-            <a href="#" class= "btn-sm btn focus">Button</a> 
+            <a href="#" class="btn-sm btn focus">Button</a> 
         </div>
         <div class="grid-items"> 
             <a href="#" class="btn-sm btn disabled">Button</a> 
