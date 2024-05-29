@@ -6,7 +6,7 @@ hide:
 === "Button Unselected"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <input type="radio">
+            <input type="radio" aria-label="example unselected radio button">
             <label for="option">Option</label>
         </div>
     </div>
@@ -18,19 +18,19 @@ hide:
         <div class="grid-items">Pressed</div>
         <div class="grid-items">Disabled</div>
         <div class="grid-items"> 
-            <input type="radio" >
+            <input type="radio" aria-label="example unselected radio button">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio" class="hover">
+            <input type="radio" class="hover" aria-label="example hovered radio button">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio">
+            <input type="radio" aria-label="example pressed radio button">
             <label for="option" class="pressed">Option</label>
         </div>
         <div class="grid-items"> 
-            <input disabled type="radio">
+            <input disabled type="radio" aria-label="example disabled radio button">
             <label for="option">Option</label>
         </div>
     </div>
@@ -59,7 +59,7 @@ hide:
 === "Button Selected"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <input type="radio" checked="checked" class="radio-btn">
+            <input type="radio" checked="checked" class="radio-btn" aria-label="example checked radio button">
             <label for="option">Option</label>
         </div>
     </div>
@@ -71,19 +71,19 @@ hide:
         <div class="grid-items">Pressed</div>
         <div class="grid-items">Disabled</div>
         <div class="grid-items"> 
-            <input type="radio" checked="checked">
+            <input type="radio" checked="checked" aria-label="example checked radio button">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio" checked="checked"class="hover">
+            <input type="radio" checked="checked"class="hover" aria-label="example of hovering over checked radio button">
             <label for="option">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio"checked="checked">
+            <input type="radio"checked="checked" aria-label="example checked radio button">
             <label for="option" class="pressed">Option</label>
         </div>
         <div class="grid-items"> 
-            <input type="radio" class="disabled">
+            <input type="radio" class="disabled" aria-label="example of disabled checked radio button">
             <label for="option">Option</label>
         </div>
     </div>
