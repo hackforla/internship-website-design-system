@@ -13,7 +13,7 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    color: #9F9F9F;
+    color: $color-dark-grey;
     font-size: 45px;
     font-weight: bold;
     
@@ -46,6 +46,9 @@
     &.success{
         border: #73A03B 2px solid;
         background-color: #FAFAFA;
+    }
+    &:placeholder{
+        color: $color-dark-grey;
     }
 }
 // --8<-- [end:input-fields]

@@ -1,25 +1,25 @@
 # **STATES**
 <div class="input-main">
     <div class="grid-1-5">
-        <div class="textarea-vari">DEFAULT</div>
+        <div>DEFAULT</div>
         <div>
             <div class = "textarea-field-container">
                 <label for ="label">Label</label>
-                <textarea class ="textarea-box default" placeholder="Placeholder"></textarea>
+                <textarea class ="textarea-box default" placeholder="Placeholder" aria-label="example default text area"></textarea>
             </div>
         </div>
-        <div class="textarea-vari">HOVER</div>
+        <div>HOVER</div>
         <div>
             <div class = "textarea-field-container">
                 <label for ="label">Label</label>
-                <textarea class ="textarea-box hover" type="textarea" placeholder="Placeholder"></textarea>
+                <textarea class ="textarea-box hover" type="textarea" placeholder="Placeholder" aria-label="example hovered text area"></textarea>
             </div>
         </div>
-        <div class="textarea-vari">FOCUSED</div>
+        <div>FOCUSED</div>
         <div>
             <div class = "textarea-field-container">
                 <label for ="label">Label</label>
-                <textarea class ="textarea-box focused" type="textarea" placeholder="Placeholder"></textarea>
+                <textarea class ="textarea-box focused" type="textarea" placeholder="Placeholder" aria-label="example focused text area"></textarea>
             </div>
         </div>
     </div>
