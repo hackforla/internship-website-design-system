@@ -98,7 +98,7 @@
    This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `http://localhost:8000` in your web browser. You should see your MkDocs site being served from the Docker           container.
    
 #### 5. **Stopping Docker**
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. 
+Simply press `CTRL + C` in the terminal where the container is running. This sends a SIGINT signal, initiating a graceful shutdown of the container. If it doesn't stop, pressing `CTRL + C` again forces a more abrupt termination.
    
 #### Docker Notes:
 
