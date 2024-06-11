@@ -115,7 +115,7 @@ Simply press `CTRL + C` in the terminal where the container is running. This sen
 To create a new issue, please use the blank issue template (available when you click "New Issue"). If you want to create an issue for other projects to use, please create the issue in your own repository and send a Slack message to one of your hack night hosts with the link.
 
 ## Create an issue
-Create an issue using one of the templates found [here](https://github.com/hackforla/internship/blob/main/.github/ISSUE_TEMPLATE/dev--create-design-system-microsite-component.md)
+Create an issue using the template found [here](https://github.com/hackforla/internship/blob/main/.github/ISSUE_TEMPLATE/dev--create-design-system-microsite-component.md)
 
 ## Branch Workflow
 
