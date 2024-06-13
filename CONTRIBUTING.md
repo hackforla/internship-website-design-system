@@ -23,7 +23,7 @@
 - [**Testing**](#testing)
    - [**Automated Accessibility Testing**](#automated-accessibility-testing)
       - [Bypassing Pre-Commit Hooks](#bypassing-pre-commit-hooks)
-   - [**Running Accessibility Check Manually**](#running-accessibility-checks-manually)
+   - [**Running Accessibility Test Manually**](#running-accessibility-test-manually)
 - [**Resources**](#resources)
 
 
@@ -186,7 +186,7 @@ We use [Husky](https://typicode.github.io/husky/) to enforce a pre-commit hook t
    - #### Using ` -n ` after your Git command
       Example: `git commit -m 'message' -n`
 
-### Running Accessibility Checks Manually
+### Running Accessibility Test Manually
 
 In addition to the automated pre-commit accessibility check, you can run the Pa11y accessibility test manually at any time. This is useful if you want to monitor accessibility errors as you work.
 
