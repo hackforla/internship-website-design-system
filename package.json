@@ -3,19 +3,27 @@
   "version": "1.0.0",
   "description": "This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.",
   "main": "index.js",
+  "author": "hackforla",
+  "license": "GPL-2.0",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "pa11y": "node scripts/pa11y-test.js"
+    "pa11y": "node scripts/pa11y-test.js",
+    "build-css": "sass docs/components/sass/main.scss components/sass/main.css",
+    "watch-sass": "sass --watch docs/components/sass:docs/components/sass --style compressed",
+    "serve-mkdocs": "mkdocs serve --dev-addr 0.0.0.0:8000",
+    "dev": "concurrently \"sass --watch docs/components/sass/main.scss:docs/components/sass/main.css\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
+    "start": "npm run watch-sass & npm run serve-mkdocs"
   },
-  "author": "hackforla",
-  "license": "GPL-2.0",
+
   "devDependencies": {
+    "concurrently": "^6.2.0",
     "csv-writer": "^1.6.0",
     "husky": "^9.0.11",
-    "pa11y": "^8.0.0"
+    "pa11y": "^8.0.0",
+    "sass": "^1.77.8"
   }
 }
