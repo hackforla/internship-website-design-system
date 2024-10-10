@@ -78,13 +78,9 @@
    ```bash 
    cd internship-website-design-system
    ```
-- #### **Run the following to pull down the Python base image:**
-   ```bash 
-   docker pull python:3.8-slim
-   ```
 - #### **Build the Docker image:** 
    ```bash 
-   docker build -t mkdocs-site .
+   docker build -t ds .
    ```
    This command builds a Docker image named `mkdocs-site` from the Dockerfile in the current directory.
    Note: If you have a permissions error run `sudo docker build -t mkdocs-site .` and enter your machines password.
@@ -93,7 +89,7 @@
 **IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
 - #### Run the Docker container.
    ```bash
-   docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site
+   ddocker run -p 8000:8000 -v $(pwd):/docs
    ```
    This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `http://localhost:8000` in your web browser. You should see your MkDocs site being served from the Docker           container.
    
@@ -102,9 +98,8 @@ Simply press `CTRL + C` in the terminal where the container is running. This sen
    
 #### Docker Notes:
 
-- Changes to any files will automatically be displayed in your browser if the Docker image is ran with `docker run -p 8000:8000 -v ${PWD}:/app mkdocs-site` as previously mentioned.
+- Changes to any files will automatically be displayed in your browser if the Docker image is ran with `ddocker run -p 8000:8000 -v $(pwd):/docs` as previously mentioned.
 - If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first   `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 mkdocs-site`.
-- If you get an `ERROR [internal] load metadata for docker.io/library/python:3.8-slim ` error, run `docker pull python:3.8-slim`
 
 ## Working on issues
 
