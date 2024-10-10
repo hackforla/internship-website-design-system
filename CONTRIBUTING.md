@@ -82,8 +82,8 @@
    ```bash 
    docker build -t ds .
    ```
-   This command builds a Docker image named `mkdocs-site` from the Dockerfile in the current directory.
-   Note: If you have a permissions error run `sudo docker build -t mkdocs-site .` and enter your machines password.
+   This command builds a Docker image named `ds` from the Dockerfile in the current directory.
+   Note: If you have a permissions error run `sudo docker build -t ds .` and enter your machines password.
    
 #### 4. **Starting Docker**
 **IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
