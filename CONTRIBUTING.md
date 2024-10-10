@@ -67,13 +67,7 @@
    upstream        https://github.com/hackforla/internship-website-design-system.git (push)
    ```
 
-#### 2. **Install Dependencies**
-- In your terminal, run:
-   ```bash
-   npm install
-   ```
-
-#### 3. **Docker Setup**
+#### 1. **Docker Setup**
 - #### **Enter repo directory:**
    ```bash 
    cd internship-website-design-system
@@ -83,23 +77,23 @@
    docker build -t ds .
    ```
    This command builds a Docker image named `ds` from the Dockerfile in the current directory.
-   Note: If you have a permissions error run `sudo docker build -t ds .` and enter your machines password.
+   Note: If you have a permissions error run `sudo docker build -t ds .` and enter your machine's admin password.
    
-#### 4. **Starting Docker**
+#### 2. **Starting Docker**
 **IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
 - #### Run the Docker container.
    ```bash
-   ddocker run -p 8000:8000 -v $(pwd):/docs
+   docker run -p 8000:8000 -v $(pwd):/docs ds
    ```
-   This command runs the `mkdocs-site` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `http://localhost:8000` in your web browser. You should see your MkDocs site being served from the Docker           container.
+   This command runs the `ds` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `[http://localhost:8000](http://0.0.0.0:8000/internship-website-design-system/)` in your web browser. You should see your MkDocs site being served from the Docker           container.
    
 #### 5. **Stopping Docker**
 Simply press `CTRL + C` in the terminal where the container is running. This sends a SIGINT signal, initiating a graceful shutdown of the container. If it doesn't stop, pressing `CTRL + C` again forces a more abrupt termination.
    
 #### Docker Notes:
 
-- Changes to any files will automatically be displayed in your browser if the Docker image is ran with `ddocker run -p 8000:8000 -v $(pwd):/docs` as previously mentioned.
-- If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first   `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 mkdocs-site`.
+- Changes to any files will automatically be displayed in your browser if the Docker image is ran with `docker run -p 8000:8000 -v $(pwd):/docs ds` as previously mentioned.
+- If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first   `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 ds`.
 
 ## Working on issues
 
