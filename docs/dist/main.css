@@ -65,9 +65,8 @@ body {
 ---------------------------*/
 .btn {
   border: 0;
-  box-shadow: 0 0 8px 0 rgba(51, 51, 51, 0.2);
   display: inline-block;
-  font-weight: 700;
+  font-weight: 100;
   text-decoration: none;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -77,6 +76,7 @@ body {
   margin: 5px 0;
   color: white;
   --md-typeset-a-color: white;
+  color: black !important;
 }
 
 /*---------------------------
@@ -84,16 +84,15 @@ body {
 ---------------------------*/
 /*   Primary Button  ---  Green   */
 .btn {
-  background: #247984;
+  background: #0D5761;
   color: #ffffff;
-  border: 4px solid transparent;
 }
-.btn:focus, .btn.focus {
+gi .btn:focus, .btn.focus {
   border-color: #0D5761;
   outline-color: #0D5761;
 }
-.btn:disabled {
-  background: #c6c6c6;
+.btn:disabled, .btn.disabled {
+  background: #989898 !important;
 }
 .btn:hover, .btn:active, .btn.hover, .btn.active {
   background: #0D5761;
@@ -102,10 +101,6 @@ body {
 }
 .btn:visited, .btn.visited {
   color: #ffffff !important;
-}
-
-.disabled {
-  background: #c6c6c6;
 }
 
 /*---------------------------
@@ -201,7 +196,7 @@ input[type=radio]:checked :hover {
   display: grid;
   justify-content: center;
   align-content: center;
-  color: #9F9F9F;
+  color: #989898;
   font-size: 45px;
   font-weight: bold;
 }
@@ -233,6 +228,9 @@ input[type=radio]:checked :hover {
 .input-box.success {
   border: #73A03B 2px solid;
   background-color: #FAFAFA;
+}
+.input-box:placeholder {
+  color: #989898;
 }
 
 .textarea-field-container {
@@ -580,7 +578,7 @@ input[type=radio]:checked :hover {
   width: 100%;
   height: 48px;
   border-radius: 4px;
-  border: 2px solid #6F6F6F;
+  border: 2px solid #989898;
   background-color: #FAFAFA;
 }
 .dropdowns.selected {
@@ -608,7 +606,7 @@ input[type=radio]:checked :hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-color: #6F6F6F;
+  border-color: #989898;
 }
 
 .select__trigger {
@@ -619,12 +617,12 @@ input[type=radio]:checked :hover {
   padding: 0 12px;
   font-size: 16px;
   font-weight: 300;
-  color: #6F6F6F;
+  color: #989898;
   height: 48px;
   background: #ffffff;
   cursor: pointer;
   border: solid 2px;
-  border-color: #6F6F6F;
+  border-color: #989898;
   line-height: 48px;
 }
 
@@ -634,7 +632,7 @@ input[type=radio]:checked :hover {
   top: 100%;
   left: 0;
   right: 0;
-  border: 2px solid #6F6F6F;
+  border: 2px solid #989898;
   border-top: 0;
   background: #fff;
   transition: all 0.5s;
@@ -656,7 +654,7 @@ input[type=radio]:checked :hover {
   padding: 0 22px 0 22px;
   font-size: 18px;
   font-weight: 300;
-  color: #6F6F6F;
+  color: #989898;
   cursor: pointer;
   transition: all 0.5s;
   line-height: 48px;
@@ -680,13 +678,13 @@ input[type=radio]:checked :hover {
 .arrow::before {
   left: -5px;
   transform: rotate(-45deg);
-  background-color: #6F6F6F;
+  background-color: #989898;
 }
 
 .arrow::after {
   left: 5px;
   transform: rotate(45deg);
-  background-color: #6F6F6F;
+  background-color: #989898;
 }
 
 .open .arrow::before {
@@ -723,7 +721,7 @@ input[type=radio]:checked :hover {
 }
 
 .custom-option.selected {
-  color: #6F6F6F;
+  color: #989898;
   background-color: #A0C4C9;
 }
 

@@ -1,25 +1,21 @@
 # Start with a Python base image
 FROM squidfunk/mkdocs-material
 
-#COPY . /app
 
 RUN apk add --no-cache nodejs npm
 
 WORKDIR /docs
 
 COPY package.json .
-RUN npm install
-
+RUN npm install --save-dev
 
 COPY requirements.txt .
-
 RUN pip install -r requirements.txt
 
 COPY . .
 
 # Expose the port MkDocs will run on
 EXPOSE 8000 35729
-
 
 # Create a startup script
 RUN echo '#!/bin/sh' > /start.sh && \

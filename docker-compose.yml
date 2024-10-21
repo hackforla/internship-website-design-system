@@ -4,7 +4,10 @@ services:
     image: squidfunk/mkdocs-material
     volumes:
       - .:/docs
-      - .:/node_modules # Persist node_modules for faster subsequent builds
+      - /node_modules # Persist node_modules for faster subsequent builds
     stdin_open: true
     tty: true
 command: mkdocs serve --dev-addr=0.0.0.0:8000
+watch:
+  - action: rebuild
+    path: package.json

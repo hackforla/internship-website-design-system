@@ -1,2 +1,20 @@
 # Node modules directory
 node_modules/
+
+# Build directory
+site/
+
+# Cache
+.cache/
+
+# Python virtual environment
+venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+*.swp
+*.swo

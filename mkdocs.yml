@@ -34,7 +34,7 @@ theme:
     primary: white
     # accent: teal
 extra_css:
-  - components/sass/main.css
+  - dist/main.css
   - stylesheets/extra.css
   # - /bootstrap/css/bootstrap.min.css
 extra_javascript:

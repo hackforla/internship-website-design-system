@@ -12,11 +12,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "pa11y": "node scripts/pa11y-test.js",
-    "build-css": "sass docs/components/sass/main.scss components/sass/main.css",
-    "watch-sass": "sass --watch docs/components/sass:docs/components/sass --style compressed",
+    "build-css": "sass docs/components/sass/main.scss docs/dist/main.css",
+    "watch-sass": "sass --watch docs/components/sass:docs/dist --verbose",
     "serve-mkdocs": "mkdocs serve --dev-addr 0.0.0.0:8000",
-    "dev": "concurrently \"sass --watch docs/components/sass/main.scss:docs/components/sass/main.css\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
-    "start": "npm run watch-sass & npm run serve-mkdocs"
+    "dev": "concurrently \"sass --watch docs/components/sass:docs/dist\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
+    "start": "npm run watch-sass & npm run serve-mkdocs",
+    "postinstall": "npm install -g sass"
   },
 
   "devDependencies": {
@@ -24,6 +25,6 @@
     "csv-writer": "^1.6.0",
     "husky": "^9.0.11",
     "pa11y": "^8.0.0",
-    "sass": "^1.77.8"
+    "sass": "^1.79.4"
   }
 }
