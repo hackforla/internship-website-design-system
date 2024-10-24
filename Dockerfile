@@ -1,16 +1,28 @@
 # Start with a Python base image
 FROM squidfunk/mkdocs-material
 
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPYCACHEPREFIX=/root/.cache/pycache/
 
-RUN apk add --no-cache nodejs npm
+RUN \
+    --mount=type=cache,target=/var/cache/apk \
+    --mount=type=cache,target=/etc/apk/cache \
+    apk add nodejs npm
 
 WORKDIR /docs
 
 COPY package.json .
-RUN npm install --save-dev
+RUN --mount=type=cache,target=/docs/node_modules \
+    --mount=type=cache,target=/root/.cache \
+    --mount=type=cache,target=/root/.npm \
+    npm install --save-dev
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN \
+    --mount=type=cache,target=/root/.cache \
+    pip install -r requirements.txt
 
 COPY . .
 
