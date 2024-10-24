@@ -29,12 +29,5 @@ COPY . .
 # Expose the port MkDocs will run on
 EXPOSE 8000 35729
 
-# Create a startup script
-RUN echo '#!/bin/sh' > /start.sh && \
-    echo 'npm run watch-sass &' >> /start.sh && \
-    echo 'mkdocs serve --dev-addr 0.0.0.0:8000' >> /start.sh && \
-    chmod +x /start.sh
-
 # Set the startup script as the entry point
-ENTRYPOINT ["/start.sh"]
-
+ENTRYPOINT ["./entrypoint.sh"]
