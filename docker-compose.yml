@@ -1,11 +1,7 @@
-version: '3.9'
 services:
   mkdocs:
     build: .
     volumes:
       - .:/docs
-      - /node_modules # Persist node_modules for faster subsequent builds
-    stdin_open: true
-    tty: true
     ports:
       - 8000:8000
