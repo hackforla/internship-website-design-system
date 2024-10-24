@@ -19,11 +19,6 @@ RUN --mount=type=cache,target=/docs/node_modules \
     --mount=type=cache,target=/root/.npm \
     npm install --save-dev
 
-COPY requirements.txt .
-RUN \
-    --mount=type=cache,target=/root/.cache \
-    pip install -r requirements.txt
-
 COPY . .
 
 # Expose the port MkDocs will run on
