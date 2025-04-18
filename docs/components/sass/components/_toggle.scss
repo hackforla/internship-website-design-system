@@ -95,6 +95,7 @@
   box-shadow: none;
   background-color: $color-old-mid-grey;
   cursor: not-allowed;
+  color: $color-old-grey;
 }
 
 .toggle:has(input:disabled) {
@@ -104,19 +105,19 @@
 }
 
 // --8<-- [end:toggle]
-.toggle input:checked + .slider svg {
+.toggle input:checked + .slider span {
   color: $color-darkgreen
 }
 
-.toggle .slider svg.checked {
+.toggle .slider span.checked {
   display: none;
 }
 .toggle input:checked + .slider {
-  & svg.checked {
+  & span.checked {
     display: block;
   }
   
-  & svg.unchecked {
+  & span.unchecked {
     display: none;
   }
 }
