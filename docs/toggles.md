@@ -84,7 +84,7 @@ hide:
     <div class="btn-grid-1">
         <div class="grid-items"> 
             <label class='toggle' >
-                <input type='checkbox' >
+                <input type='checkbox' checked>
                 <span class='slider'>
                     :material-check:{.checked}
                     :octicons-x-16:{.unchecked}
@@ -94,48 +94,66 @@ hide:
     </div>
     <br>
     # **States**
-    <div class="btn-grid-4">
-        <div class="grid-items">Hovering<br></div>
-        <div class="grid-items">Focused</div>
-        <div class="grid-items">Pressed</div>
-        <div class="grid-items">Disabled</div>
-        <div class="grid-items"> 
-            <label class='toggle hover' >
-                <input type='checkbox' checked>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Default"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle' >
+                    <input type='checkbox' checked>
+                    <span class='slider'>
+                      :material-check:{.checked}
+                      :octicons-x-16:{.unchecked}
+                    </span>
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle focus' >
-                <input type='checkbox' checked>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Hover"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle hover' >
+                    <input type='checkbox' checked>
+                    <span class='slider'>
+                      :material-check:{.checked}
+                      :octicons-x-16:{.unchecked}
+                    </span>
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle active'>
-                <input type='checkbox' checked>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Focused"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle focus'>
+                    <input type='checkbox'checked>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>                
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle' >
-                <input type='checkbox' disabled>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Pressed"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle active'>
+                    <input type='checkbox'checked>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>   
+                </label>
+            </div>
         </div>
-    </div>
+    === "Disabled"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle' >
+                    <input type='checkbox' disabled>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>   
+                </label>
+            </div>
+        </div>
     <br>
 
     === "HTML"
@@ -245,48 +263,66 @@ hide:
     </div>
     <br>
     # **States**
-    <div class="btn-grid-4">
-        <div class="grid-items">Hovering<br></div>
-        <div class="grid-items">Focused</div>
-        <div class="grid-items">Pressed</div>
-        <div class="grid-items">Disabled</div>
-        <div class="grid-items"> 
-            <label class='toggle hover' >
-                <input type='checkbox' >
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Default"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle' >
+                    <input type='checkbox'>
+                    <span class='slider'>
+                      :material-check:{.checked}
+                      :octicons-x-16:{.unchecked}
+                    </span>
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle focus' >
-                <input type='checkbox' >
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Hover"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle hover' >
+                    <input type='checkbox'>
+                    <span class='slider'>
+                      :material-check:{.checked}
+                      :octicons-x-16:{.unchecked}
+                    </span>
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle active'>
-                <input type='checkbox'>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Focused"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle focus'>
+                    <input type='checkbox'>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>                
+                </label>
+            </div>
         </div>
-        <div class="grid-items"> 
-            <label class='toggle' >
-                <input type='checkbox' disabled>
-                <span class='slider'>
-                    :material-check:{.checked}
-                    :octicons-x-16:{.unchecked}
-                </span>
-            </label>
+    === "Pressed"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle active'>
+                    <input type='checkbox'>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>   
+                </label>
+            </div>
         </div>
-    </div>
+    === "Disabled"
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class='toggle' >
+                    <input type='checkbox' disabled>
+                    <span class='slider'>
+                        :material-check:{.checked}
+                        :octicons-x-16:{.unchecked}
+                    </span>   
+                </label>
+            </div>
+        </div>
     <br>
 
     === "HTML"
