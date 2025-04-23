@@ -57,7 +57,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items"> 
                 <label class='toggle' >
-                    <input type='checkbox' disabled>
+                    <input type='checkbox' checked disabled>
                     <span class='slider'></span>
                 </label>
             </div>
@@ -66,18 +66,17 @@ hide:
 
 
     # **Code**
+    === "CSS"
+        ``` css
+        --8<-- "components/sass/components/_toggle.scss:toggle"
+        ```
+
     === "HTML"
-        ``` html
+        ``` { .html .copy }
         <label class='toggle'>
             <input type='checkbox'>
             <span class='slider'></span>
         </label>
-        
-        ```
-
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_toggle.scss:toggle"
         ```
 
 === "Selected w/ Icon"
@@ -146,7 +145,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items"> 
                 <label class='toggle' >
-                    <input type='checkbox' disabled>
+                    <input type='checkbox' checked disabled>
                     <span class='slider'>
                         :material-check:{.checked}
                         :octicons-x-16:{.unchecked}
@@ -156,9 +155,13 @@ hide:
         </div>
     <br>
 
-    === "HTML"
+    === "CSS" 
+        ``` css
+        --8<-- "components/sass/components/_toggle.scss:toggle-icon"
+        ```
 
-        ``` html
+    === "HTML"
+        ``` html  
         <label class='toggle' >
             <input type='checkbox' disabled>
             <span class='slider'>
@@ -166,14 +169,8 @@ hide:
                 :octicons-x-16:{.unchecked}
             </span>
         </label>
-        
         ```
 
-    === "CSS"
-
-        ``` css
-        --8<-- "components/sass/components/_toggle.scss:toggle-icon"
-        ```
 === "De-Selected No Icon"
     <div class="btn-grid-1">
         <div class="grid-items"> 
@@ -235,19 +232,18 @@ hide:
 
 
     # **Code**
-    === "HTML"
-        ``` html
-        <label class='toggle'>
-            <input type='checkbox'>
-            <span class='slider'></span>
-        </label>
-        
-        ```
 
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_toggle.scss:toggle"
         ```
+    === "HTML"
+      ``` html
+      <label class='toggle'>
+          <input type='checkbox'>
+          <span class='slider'></span>
+      </label>
+      ```
 
 === "De-Selected w/ Icon"
     <div class="btn-grid-1">
@@ -325,8 +321,12 @@ hide:
         </div>
     <br>
 
-    === "HTML"
+    === "CSS"
+        ``` css
+        --8<-- "components/sass/components/_toggle.scss:toggle-icon"
+        ```
 
+    === "HTML"
         ``` html
         <label class='toggle' >
             <input type='checkbox' disabled>
@@ -335,11 +335,4 @@ hide:
                 :octicons-x-16:{.unchecked}
             </span>
         </label>
-        
-        ```
-
-    === "CSS"
-
-        ``` css
-        --8<-- "components/sass/components/_toggle.scss:toggle-icon"
         ```
