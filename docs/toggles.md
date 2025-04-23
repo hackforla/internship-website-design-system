@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# **Toggles**
+# **TOGGLES**
 # Class
 === "Selected No Icon"
     <div class="btn-grid-1">
