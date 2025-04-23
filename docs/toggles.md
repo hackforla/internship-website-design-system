@@ -4,7 +4,7 @@ hide:
 ---
 
 # **TOGGLES**
-# Class
+## Class
 === "Selected No Icon"
     <div class="btn-grid-1">
         <div class="grid-items"> 
@@ -16,7 +16,7 @@ hide:
         </div>
     </div>
     <br>
-    # **States**
+    ## **States**
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items"> 
@@ -65,7 +65,7 @@ hide:
     <br>
 
 
-    # **Code**
+    ## Code
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_toggle.scss:toggle"
@@ -92,7 +92,7 @@ hide:
         </div>
     </div>
     <br>
-    # **States**
+    ## **States**
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items"> 
@@ -182,7 +182,7 @@ hide:
         </div>
     </div>
     <br>
-    # **States**
+    ## **States**
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items"> 
@@ -231,7 +231,7 @@ hide:
     <br>
 
 
-    # **Code**
+    ## Code
 
     === "CSS"
         ``` css
@@ -258,7 +258,7 @@ hide:
         </div>
     </div>
     <br>
-    # **States**
+    ## **States**
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items"> 
