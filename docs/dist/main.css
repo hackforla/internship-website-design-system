@@ -304,18 +304,18 @@ input[type=radio]:checked :hover {
   justify-content: center;
 }
 
-.toggle:hover input:not(:disabled) + .slider,
-.toggle:focus input:not(:disabled) + .slider,
-.toggle.hover input:not(:disabled) + .slider,
-.toggle.focus input:not(:disabled) + .slider {
-  box-shadow: 0 0 0 12px rgba(160, 196, 201, 0.5019607843);
-}
-
 .toggle:hover input:not(:disabled):checked + .slider,
 .toggle:focus input:not(:disabled):checked + .slider,
 .toggle.hover input:not(:disabled):checked + .slider,
 .toggle.focus input:not(:disabled):checked + .slider {
   box-shadow: 0 0 0 6px rgba(160, 196, 201, 0.5019607843);
+}
+
+.toggle:hover input:not(:disabled):not(:checked) + .slider,
+.toggle:focus input:not(:disabled):not(:checked) + .slider,
+.toggle.hover input:not(:disabled):not(:checked) + .slider,
+.toggle.focus input:not(:disabled):not(:checked) + .slider {
+  box-shadow: 0 0 0 8px rgba(160, 196, 201, 0.5019607843);
 }
 
 .toggle:active input:not(:disabled) + .slider,
@@ -339,7 +339,7 @@ input[type=radio]:checked :hover {
   background-color: #ffffff;
 }
 
-.toggle:has(> input:checked) {
+.toggle:has(input:checked) {
   background-color: #247984;
   border-color: transparent;
 }
@@ -357,8 +357,26 @@ input[type=radio]:checked :hover {
   background-color: #DDD;
 }
 
+.toggle:has(input:disabled:checked) {
+  background-color: #6F6F6F;
+  border-color: #6F6F6F;
+}
+
+.toggle input:disabled:checked + .slider {
+  background-color: #DDD;
+  color: #6F6F6F;
+}
+
 .toggle input:checked + .slider span {
   color: #0D5761;
+}
+
+.toggle input:disabled + .slider span {
+  color: #DDD;
+}
+
+.toggle input:disabled:checked + .slider span {
+  color: #6F6F6F;
 }
 
 .toggle .slider span.checked {
