@@ -39,30 +39,27 @@
 }
 
 
-.toggle:hover input:not(:disabled):checked + .slider,
-.toggle:focus input:not(:disabled):checked + .slider,
-.toggle.hover input:not(:disabled):checked + .slider,
-.toggle.focus input:not(:disabled):checked + .slider {
-  box-shadow: 0 0 0 6px $toggle-shadow-color;
-}
-
 .toggle:hover,
 .toggle:focus,
 .toggle.hover,
 .toggle.focus {
-  & input:not(:disabled):not(:checked) + .slider {
+  & input:not(:disabled) + .slider {
     box-shadow: 0 0 0 8px $toggle-shadow-color;
+  }
+  & input:not(:disabled):checked + .slider {
+    box-shadow: 0 0 0 6px $toggle-shadow-color;
   }
 }
 
-.toggle:active input:not(:disabled) + .slider,
-.toggle.active input:not(:disabled) + .slider {
-  height: 28px;
-  width: 28px;
-  bottom: 0px;
-  left: 0px;
-  
-  box-shadow: 0 0 0 6px $toggle-shadow-color;
+.toggle:active,
+.toggle.active {
+  & input:not(:disabled) + .slider {
+    height: 28px;
+    width: 28px;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 0 0 0 6px $toggle-shadow-color;
+  }
 }
 
 .toggle input:checked + .slider {
@@ -74,7 +71,6 @@
   width: 24px;
   bottom: 2px;
   left: 2px;
-
   background-color: $color-white;
 }
 

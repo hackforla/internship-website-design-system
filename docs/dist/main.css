@@ -304,18 +304,17 @@ input[type=radio]:checked :hover {
   justify-content: center;
 }
 
+.toggle:hover input:not(:disabled) + .slider,
+.toggle:focus input:not(:disabled) + .slider,
+.toggle.hover input:not(:disabled) + .slider,
+.toggle.focus input:not(:disabled) + .slider {
+  box-shadow: 0 0 0 8px rgba(160, 196, 201, 0.5019607843);
+}
 .toggle:hover input:not(:disabled):checked + .slider,
 .toggle:focus input:not(:disabled):checked + .slider,
 .toggle.hover input:not(:disabled):checked + .slider,
 .toggle.focus input:not(:disabled):checked + .slider {
   box-shadow: 0 0 0 6px rgba(160, 196, 201, 0.5019607843);
-}
-
-.toggle:hover input:not(:disabled):not(:checked) + .slider,
-.toggle:focus input:not(:disabled):not(:checked) + .slider,
-.toggle.hover input:not(:disabled):not(:checked) + .slider,
-.toggle.focus input:not(:disabled):not(:checked) + .slider {
-  box-shadow: 0 0 0 8px rgba(160, 196, 201, 0.5019607843);
 }
 
 .toggle:active input:not(:disabled) + .slider,
