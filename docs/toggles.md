@@ -74,7 +74,7 @@ hide:
     === "HTML"
         ``` { .html .copy }
         <label class='toggle'>
-            <input type='checkbox'>
+            <input type='checkbox' checked>
             <span class='slider'></span>
         </label>
         ```
@@ -163,7 +163,7 @@ hide:
     === "HTML"
         ``` html  
         <label class='toggle' >
-            <input type='checkbox' disabled>
+            <input type='checkbox' checked>
             <span class='slider'>
                 :material-check:{.checked}
                 :octicons-x-16:{.unchecked}
@@ -329,7 +329,7 @@ hide:
     === "HTML"
         ``` html
         <label class='toggle' >
-            <input type='checkbox' disabled>
+            <input type='checkbox'>
             <span class='slider'>
                 :material-check:{.checked}
                 :octicons-x-16:{.unchecked}
