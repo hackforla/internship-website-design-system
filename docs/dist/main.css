@@ -49,24 +49,14 @@ body {
   color: #0D5761 !important;
 }
 
-/*================================================================
-  Buttons
-  To create a button: add the base button class, a color
-  class, a size class, and (when needed) a page-specific class.
-  Index:
-  - Base class
-  - Color classes
-  - Size classes
-  - Page-specific classes
-=================================================================*/
 /*---------------------------
-  Button Base class
-  * Use on all buttons
+  Button Base Class
 ---------------------------*/
 .btn {
   border: 0;
-  display: inline-block;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -74,81 +64,248 @@ body {
   display: inline-flex;
   justify-content: center;
   margin: 5px 0;
-  color: white;
-  --md-typeset-a-color: white;
-  color: black !important;
-}
-
-/*---------------------------
-  Button Colors
----------------------------*/
-/*   Primary Button  ---  Green   */
-.btn {
-  background: #0D5761;
-  color: #ffffff;
-}
-gi .btn:focus, .btn.focus {
-  border-color: #0D5761;
-  outline-color: #0D5761;
-}
-.btn:disabled, .btn.disabled {
-  background: #989898 !important;
-}
-.btn:hover, .btn:active, .btn.hover, .btn.active {
-  background: #0D5761;
-  color: #ffffff !important;
-  text-decoration: none;
-}
-.btn:visited, .btn.visited {
-  color: #ffffff !important;
-}
-
-/*---------------------------
-  Button Sizes
----------------------------*/
-.btn-sm {
+  width: 83px;
   height: 40px;
-  padding: 0 32px;
-  border-radius: 20px;
-  font-size: 1rem;
-}
-
-.btn-md {
-  height: 60px;
-  padding: 0 50px;
-  border-radius: 60px;
-  font-size: 1.25rem;
-}
-
-.btn-lg {
-  height: 72px;
-  padding: 0 60px;
   border-radius: 100px;
-  font-size: 1.5rem;
-}
-@media (max-width: 767px) {
-  .btn-lg {
-    height: 60px;
-    padding: 0 50px;
-    border-radius: 60px;
-    font-size: 1.25rem;
-  }
 }
 
-/*----------------------------------------------------
-  Page-Specific Button Classes
-  * Use when special styling is needed for a button
-  on a specific page (usually placement)
------------------------------------------------------*/
-/*
-- Page-specific class name formatting should be:
-  btn--page-name
-  EXAMPLE: btn--wins
-- If there is more than one button in the page, formatting for each button should be:
-  btn--page-name-button-function
-  EXAMPLE: btn--home-getting-started
-- Page-specific class names should live in that specific page's .scss file.
-*/
+/*---------------------------
+  Button Filled Class
+---------------------------*/
+.btn-filled {
+  background-color: #006973;
+  color: #FFFFFF;
+  --md-typeset-a-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.btn-filled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-filled:hover, .btn-filled.hover {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843);
+}
+.btn-filled:hover::after, .btn-filled.hover::after {
+  opacity: 0.08;
+}
+.btn-filled:focus::after, .btn-filled.focus::after {
+  opacity: 0.12;
+}
+.btn-filled:active::after, .btn-filled.pressed::after {
+  opacity: 0.16;
+}
+.btn-filled:disabled, .btn-filled.disabled {
+  background-color: #FFFFFF;
+  color: #8B8E8E;
+  pointer-events: none;
+}
+.btn-filled:disabled::after, .btn-filled.disabled::after {
+  background-color: #1E2324;
+  opacity: 0.12;
+}
+
+.md-typeset a.btn.btn-filled:hover,
+.md-typeset a.btn.btn-filled.hover {
+  color: #FFFFFF;
+}
+
+/*---------------------------
+  Button Outline Class
+---------------------------*/
+.btn-outline {
+  background-color: #FFFFFF;
+  color: #006973;
+  --md-typeset-a-color: #006973;
+  border: 1px solid #6F797A;
+  position: relative;
+  overflow: hidden;
+}
+.btn-outline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-outline:hover::after, .btn-outline.hover::after {
+  background-color: #247984;
+  opacity: 0.08;
+}
+.btn-outline:focus, .btn-outline.focus {
+  border-color: #006973;
+}
+.btn-outline:focus::after, .btn-outline.focus::after {
+  background-color: #247984;
+  opacity: 0.12;
+}
+.btn-outline:active::after, .btn-outline.pressed::after {
+  background-color: #247984;
+  opacity: 0.16;
+}
+.btn-outline:disabled, .btn-outline.disabled {
+  color: #9D9F9F;
+  --md-typeset-a-color: #9D9F9F;
+  border-color: #E0E0E0;
+  pointer-events: none;
+}
+
+.md-typeset a.btn.btn-outline:hover,
+.md-typeset a.btn.btn-outline.hover {
+  color: #006973;
+}
+
+/*---------------------------
+  Button Tonal Class
+---------------------------*/
+.btn-tonal {
+  background-color: #CDE7EB;
+  color: #051F22;
+  --md-typeset-a-color: #051F22;
+  position: relative;
+  overflow: hidden;
+}
+.btn-tonal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-tonal:hover, .btn-tonal.hover {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843);
+}
+.btn-tonal:hover::after, .btn-tonal.hover::after {
+  background-color: #19292B;
+  opacity: 0.08;
+}
+.btn-tonal:focus::after, .btn-tonal.focus::after {
+  background-color: #19292B;
+  opacity: 0.1;
+}
+.btn-tonal:active::after, .btn-tonal.pressed::after {
+  background-color: #19292B;
+  opacity: 0.12;
+}
+.btn-tonal:disabled, .btn-tonal.disabled {
+  color: #9D9F9F;
+  --md-typeset-a-color: #9D9F9F;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.md-typeset a.btn.btn-tonal:hover,
+.md-typeset a.btn.btn-tonal.hover {
+  color: #051F22;
+}
+
+/*---------------------------
+  Button Text Class
+---------------------------*/
+.btn-text {
+  color: #006973;
+  --md-typeset-a-color: #006973;
+  position: relative;
+  overflow: hidden;
+}
+.btn-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-text:hover::after, .btn-text.hover::after {
+  background-color: #247984;
+  opacity: 0.08;
+}
+.btn-text:focus::after, .btn-text.focus::after {
+  background-color: #247984;
+  opacity: 0.12;
+}
+.btn-text:active::after, .btn-text.pressed::after {
+  background-color: #247984;
+  opacity: 0.16;
+}
+.btn-text:disabled, .btn-text.disabled {
+  color: #9D9F9F;
+  --md-typeset-a-color: #9D9F9F;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.md-typeset a.btn.btn-text:hover,
+.md-typeset a.btn.btn-text.hover {
+  color: #006973;
+}
+
+/*---------------------------
+  Button X-Large Class
+---------------------------*/
+.btn-xlarge {
+  background-color: #006973;
+  color: #FFFFFF;
+  --md-typeset-a-color: #FFFFFF;
+  font-size: 24px;
+  width: 147px;
+  height: 72px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-xlarge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-xlarge:hover, .btn-xlarge.hover {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843);
+}
+.btn-xlarge:hover::after, .btn-xlarge.hover::after {
+  opacity: 0.08;
+}
+.btn-xlarge:focus::after, .btn-xlarge.focus::after {
+  opacity: 0.1;
+}
+.btn-xlarge:active::after, .btn-xlarge.pressed::after {
+  opacity: 0.16;
+}
+.btn-xlarge:disabled, .btn-xlarge.disabled {
+  background-color: #FFFFFF;
+  color: #8B8E8E;
+  pointer-events: none;
+}
+.btn-xlarge:disabled::after, .btn-xlarge.disabled::after {
+  background-color: #1E2324;
+  opacity: 0.12;
+}
+
+.md-typeset a.btn.btn-xlarge:hover,
+.md-typeset a.btn.btn-xlarge.hover {
+  color: #FFFFFF;
+}
+
 input[type=radio] {
   border: 0.5px solid #247984;
   border-radius: 50%;
