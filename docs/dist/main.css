@@ -66,7 +66,7 @@ body {
 .btn {
   border: 0;
   display: inline-block;
-  font-weight: 100;
+  font-weight: 7git 0;
   text-decoration: none;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -76,7 +76,6 @@ body {
   margin: 5px 0;
   color: white;
   --md-typeset-a-color: white;
-  color: black !important;
 }
 
 /*---------------------------
@@ -149,6 +148,54 @@ gi .btn:focus, .btn.focus {
   EXAMPLE: btn--home-getting-started
 - Page-specific class names should live in that specific page's .scss file.
 */
+.accordion {
+  width: 512px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #247984;
+}
+
+.accordion-button {
+  font-size: 24px;
+  color: #333333;
+  cursor: pointer;
+  width: 100%;
+  height: 88px;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-family: "Roboto SemiBold";
+}
+
+.accordion .panel {
+  padding: 16px 20px 24px;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion-button.active + .panel {
+  display: block;
+  text-align: left;
+}
+
+.accordion .accordion-button span {
+  line-height: 40px;
+}
+.accordion .accordion-button .twemoji {
+  color: #247984;
+  --md-icon-size: 1.75em;
+  margin: auto 0;
+}
+.accordion .accordion-button:not(.active) .open {
+  display: none;
+}
+.accordion .accordion-button.active .close {
+  display: none;
+}
+
 input[type=radio] {
   border: 0.5px solid #247984;
   border-radius: 50%;
