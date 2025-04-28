@@ -74,8 +74,8 @@ body {
 ---------------------------*/
 .btn-filled {
   background-color: #006973;
-  color: #FFFFFF;
-  --md-typeset-a-color: #FFFFFF;
+  color: #ffffff;
+  --md-typeset-a-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -86,7 +86,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 0;
   pointer-events: none;
 }
@@ -103,7 +103,7 @@ body {
   opacity: 0.16;
 }
 .btn-filled:disabled, .btn-filled.disabled {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #8B8E8E;
   pointer-events: none;
 }
@@ -114,14 +114,14 @@ body {
 
 .md-typeset a.btn.btn-filled:hover,
 .md-typeset a.btn.btn-filled.hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /*---------------------------
   Button Outline Class
 ---------------------------*/
 .btn-outline {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #006973;
   --md-typeset-a-color: #006973;
   border: 1px solid #6F797A;
@@ -155,7 +155,7 @@ body {
 }
 .btn-outline:disabled, .btn-outline.disabled {
   color: #9D9F9F;
-  --md-typeset-a-color: #9D9F9F;
+  --md-typeset-a-color: $button-disabled-text;
   border-color: #E0E0E0;
   pointer-events: none;
 }
@@ -194,15 +194,15 @@ body {
 }
 .btn-tonal:focus::after, .btn-tonal.focus::after {
   background-color: #19292B;
-  opacity: 0.1;
+  opacity: 0.12;
 }
 .btn-tonal:active::after, .btn-tonal.pressed::after {
   background-color: #19292B;
-  opacity: 0.12;
+  opacity: 0.16;
 }
 .btn-tonal:disabled, .btn-tonal.disabled {
   color: #9D9F9F;
-  --md-typeset-a-color: #9D9F9F;
+  --md-typeset-a-color: $button-disabled-text;
   background-color: transparent;
   pointer-events: none;
 }
@@ -245,7 +245,7 @@ body {
 }
 .btn-text:disabled, .btn-text.disabled {
   color: #9D9F9F;
-  --md-typeset-a-color: #9D9F9F;
+  --md-typeset-a-color: $button-disabled-text;
   background-color: transparent;
   pointer-events: none;
 }
@@ -260,8 +260,8 @@ body {
 ---------------------------*/
 .btn-xlarge {
   background-color: #006973;
-  color: #FFFFFF;
-  --md-typeset-a-color: #FFFFFF;
+  color: #ffffff;
+  --md-typeset-a-color: #ffffff;
   font-size: 24px;
   width: 147px;
   height: 72px;
@@ -275,7 +275,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 0;
   pointer-events: none;
 }
@@ -286,13 +286,13 @@ body {
   opacity: 0.08;
 }
 .btn-xlarge:focus::after, .btn-xlarge.focus::after {
-  opacity: 0.1;
+  opacity: 0.12;
 }
 .btn-xlarge:active::after, .btn-xlarge.pressed::after {
   opacity: 0.16;
 }
 .btn-xlarge:disabled, .btn-xlarge.disabled {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #8B8E8E;
   pointer-events: none;
 }
@@ -303,7 +303,7 @@ body {
 
 .md-typeset a.btn.btn-xlarge:hover,
 .md-typeset a.btn.btn-xlarge.hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 input[type=radio] {

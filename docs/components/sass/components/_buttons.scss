@@ -1,3 +1,5 @@
+@import '../abstracts/variables.scss';
+
 /*---------------------------
   Button Base Class
 ---------------------------*/
@@ -6,7 +8,7 @@
   border: 0;
   font-weight: 500;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: $text-font-stack;
   text-decoration: none;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -25,9 +27,9 @@
 ---------------------------*/
 // --8<-- [start:btnFilled]
 .btn-filled {
-  background-color: #006973;
-  color: #FFFFFF;
-  --md-typeset-a-color: #FFFFFF;
+  background-color: $button-primary-color;
+  color: #{$color-white};
+  --md-typeset-a-color: #{$color-white};
   position: relative;
   overflow: hidden;
 
@@ -38,42 +40,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: $color-white;
     opacity: 0;
     pointer-events: none;
   }
 
   &:hover,
   &.hover {
-    box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+    box-shadow: $button-shadow;
 
     &::after {
-      opacity: 0.08;
+      opacity: $button-overlay-hover;
     }
   }
 
   &:focus,
   &.focus {
     &::after {
-      opacity: 0.12;
+      opacity: $button-overlay-focus;
     }
   }
 
   &:active,
   &.pressed {
     &::after {
-      opacity: 0.16;
+      opacity: $button-overlay-active;
     }
   }
 
   &:disabled, 
   &.disabled {
-    background-color: #FFFFFF;
-    color: #8B8E8E;
+    background-color: $color-white;
+    color: $button-disabled-text-secondary;
     pointer-events: none;
 
     &::after {
-      background-color: #1E2324;
+      background-color: $button-disabled-overlay;
       opacity: 0.12;
     }
   }
@@ -81,7 +83,7 @@
 
 .md-typeset a.btn.btn-filled:hover,
 .md-typeset a.btn.btn-filled.hover {
-  color: #FFFFFF;
+  color: $color-white;
 }
 // --8<-- [end:btnFilled]
 
@@ -90,9 +92,9 @@
 ---------------------------*/
 // --8<-- [start:btnOutline]
 .btn-outline {
-  background-color: #FFFFFF;
-  color: #006973;
-  --md-typeset-a-color: #006973;
+  background-color: $color-white;
+  color: #{$button-primary-color};
+  --md-typeset-a-color: #{$button-primary-color};
   border: 1px solid #6F797A;
   position: relative;
   overflow: hidden;
@@ -111,33 +113,33 @@
   &:hover,
   &.hover {
     &::after {
-      background-color: #247984;
-      opacity: 0.08;
+      background-color: $color-green;
+      opacity: $button-overlay-hover;
     }
   }
 
   &:focus,
   &.focus {
-    border-color: #006973;
+    border-color: $button-primary-color;
 
     &::after {
-      background-color: #247984;
-      opacity: 0.12;
+      background-color: $color-green;
+      opacity: $button-overlay-focus;
     }
   }
 
   &:active,
   &.pressed {
     &::after {
-      background-color: #247984;
-      opacity: 0.16;
+      background-color: $color-green;
+      opacity: $button-overlay-active;
     }
   }
 
   &:disabled,
   &.disabled {
-    color: #9D9F9F;
-    --md-typeset-a-color: #9D9F9F;
+    color: $button-disabled-text;
+    --md-typeset-a-color: $button-disabled-text;
     border-color: #E0E0E0;
     pointer-events: none;
   }
@@ -145,7 +147,7 @@
 
 .md-typeset a.btn.btn-outline:hover,
 .md-typeset a.btn.btn-outline.hover {
-  color: #006973;
+  color: $button-primary-color;
 }
 // --8<-- [end:btnOutline]
 
@@ -154,9 +156,9 @@
 ---------------------------*/
 // --8<-- [start:btnTonal]
 .btn-tonal {
-  background-color: #CDE7EB;
-  color: #051F22;
-  --md-typeset-a-color: #051F22;
+  background-color: $button-secondary-color;
+  color: #{$button-tonal-text};
+  --md-typeset-a-color: #{$button-tonal-text};
   position: relative;
   overflow: hidden;
 
@@ -173,34 +175,34 @@
 
   &:hover,
   &.hover {
-    box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+    box-shadow: $button-shadow;
 
     &::after {
-      background-color: #19292B;
-      opacity: 0.08;
+      background-color: $button-tonal-overlay;
+      opacity: $button-overlay-hover;
     }
   }
 
   &:focus,
   &.focus {
     &::after {
-      background-color: #19292B;
-      opacity: 0.10;
+      background-color: $button-tonal-overlay;
+      opacity: $button-overlay-focus;
     }
   }
 
   &:active,
   &.pressed {
     &::after {
-      background-color: #19292B;
-      opacity: 0.12;
+      background-color: $button-tonal-overlay;
+      opacity: $button-overlay-active;
     }
   }
 
   &:disabled,
   &.disabled {
-    color: #9D9F9F;
-    --md-typeset-a-color: #9D9F9F;
+    color: $button-disabled-text;
+    --md-typeset-a-color: $button-disabled-text;
     background-color: transparent;
     pointer-events: none;
   }
@@ -208,7 +210,7 @@
 
 .md-typeset a.btn.btn-tonal:hover,
 .md-typeset a.btn.btn-tonal.hover {
-  color: #051F22;
+  color: $button-tonal-text;
 }
 // --8<-- [end:btnTonal]
 
@@ -217,8 +219,8 @@
 ---------------------------*/
 // --8<-- [start:btnText]
 .btn-text {
-  color: #006973;
-  --md-typeset-a-color: #006973;
+  color: #{$button-primary-color};
+  --md-typeset-a-color: #{$button-primary-color};
   position: relative;
   overflow: hidden;
 
@@ -236,31 +238,31 @@
   &:hover,
   &.hover {
     &::after {
-      background-color: #247984;
-      opacity: 0.08;
+      background-color: $color-green;
+      opacity: $button-overlay-hover;
     }
   }
 
   &:focus,
   &.focus {
     &::after {
-      background-color: #247984;
-      opacity: 0.12;
+      background-color: $color-green;
+      opacity: $button-overlay-focus;
     }
   }
 
   &:active,
   &.pressed {
     &::after {
-      background-color: #247984;
-      opacity: 0.16;
+      background-color: $color-green;
+      opacity: $button-overlay-active;
     }
   }
 
   &:disabled,
   &.disabled {
-    color: #9D9F9F;
-    --md-typeset-a-color: #9D9F9F;
+    color: $button-disabled-text;
+    --md-typeset-a-color: $button-disabled-text;
     background-color: transparent;
     pointer-events: none;
   }
@@ -268,7 +270,7 @@
 
 .md-typeset a.btn.btn-text:hover,
 .md-typeset a.btn.btn-text.hover {
-  color: #006973;
+  color: $button-primary-color;
 }
 // --8<-- [end:btnText]
 
@@ -277,9 +279,9 @@
 ---------------------------*/
 // --8<-- [start:btnXlarge]
 .btn-xlarge {
-  background-color: #006973;
-  color: #FFFFFF;
-  --md-typeset-a-color: #FFFFFF;
+  background-color: $button-primary-color;
+  color: #{$color-white};
+  --md-typeset-a-color: #{$color-white};
   font-size: 24px;
   width: 147px;
   height: 72px;
@@ -293,42 +295,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: $color-white;
     opacity: 0;
     pointer-events: none;
   }
 
   &:hover,
   &.hover {
-    box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+    box-shadow: $button-shadow;
 
     &::after {
-      opacity: 0.08;
+      opacity: $button-overlay-hover;
     }
   }
 
   &:focus,
   &.focus {
     &::after {
-      opacity: 0.10;
+      opacity: $button-overlay-focus;
     }
   }
   
   &:active,
   &.pressed {
     &::after {
-      opacity: 0.16;
+      opacity: $button-overlay-active;
     }
   }
 
   &:disabled, 
   &.disabled {
-    background-color: #FFFFFF;
-    color: #8B8E8E;
+    background-color: $color-white;
+    color: $button-disabled-text-secondary;
     pointer-events: none;
 
     &::after {
-      background-color: #1E2324;
+      background-color: $button-disabled-overlay;
       opacity: 0.12;
     }
   }
@@ -336,6 +338,6 @@
 
 .md-typeset a.btn.btn-xlarge:hover,
 .md-typeset a.btn.btn-xlarge.hover {
-  color: #FFFFFF;
+  color: $color-white;
 }
 // --8<-- [end:btnXlarge]

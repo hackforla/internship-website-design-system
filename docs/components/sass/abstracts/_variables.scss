@@ -22,12 +22,17 @@ $line-height-base: 1.5;
 $line-height-computed: 1.5rem;
 $body-bg: $color-white;
 
-$button-border-radius-sm: 20px;
-$button-border-radius-md: 60px;
-$button-border-radius-lg: 100px;
-$button-text-color: $color-white;
-$button-color: $color-green;
-$button-hovercolor: $color-darkgreen;
+$button-primary-color: #006973;
+$button-secondary-color: #CDE7EB;
+$button-tonal-text: #051F22;
+$button-tonal-overlay: #19292B;
+$button-disabled-text: #9D9F9F;
+$button-disabled-text-secondary: #8B8E8E;
+$button-disabled-overlay: #1E2324;
+$button-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+$button-overlay-hover: 0.08;
+$button-overlay-focus: 0.12;
+$button-overlay-active: 0.16;
 
 $radio-color: $color-green;
 $radio-hovercolor: $color-darkgreen;
