@@ -47,8 +47,8 @@ hide:
     ## Code
     === "CSS"
         ``` css
-        --8<-- "_buttons.scss:btn"
-        --8<-- "_buttons.scss:btnFilled"
+        --8<-- "components/sass/components/_buttons.scss:btn"
+        --8<-- "components/sass/components/_buttons.scss:btnFilled"
         ```
     === "HTML"
         ``` html
@@ -105,8 +105,8 @@ hide:
     ## Code
     === "CSS"
         ``` css
-        --8<-- "_buttons.scss:btn"
-        --8<-- "_buttons.scss:btnOutline"
+        --8<-- "components/sass/components/_buttons.scss:btn"
+        --8<-- "components/sass/components/_buttons.scss:btnOutline"
         ```
     === "HTML"
         ``` html
@@ -163,8 +163,8 @@ hide:
     ## Code
     === "CSS"
         ``` css
-        --8<-- "_buttons.scss:btn"
-        --8<-- "_buttons.scss:btnTonal"
+        --8<-- "components/sass/components/_buttons.scss:btn"
+        --8<-- "components/sass/components/_buttons.scss:btnTonal"
         ```
     === "HTML"
         ``` html
@@ -221,8 +221,8 @@ hide:
     ## Code
     === "CSS"
         ``` css
-        --8<-- "_buttons.scss:btn"
-        --8<-- "_buttons.scss:btnText"
+        --8<-- "components/sass/components/_buttons.scss:btn"
+        --8<-- "components/sass/components/_buttons.scss:btnText"
         ```
     === "HTML"
         ``` html
@@ -279,8 +279,8 @@ hide:
     ## Code
     === "CSS"
         ``` css
-        --8<-- "_buttons.scss:btn"
-        --8<-- "_buttons.scss:btnXlarge"
+        --8<-- "components/sass/components/_buttons.scss:btn"
+        --8<-- "components/sass/components/_buttons.scss:btnXlarge"
         ```
     === "HTML"
         ``` html
