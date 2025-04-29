@@ -49,9 +49,6 @@ body {
   color: #0D5761 !important;
 }
 
-/*---------------------------
-  Button Base Class
----------------------------*/
 .btn {
   border: 0;
   font-weight: 500;
@@ -69,9 +66,6 @@ body {
   border-radius: 100px;
 }
 
-/*---------------------------
-  Button Filled Class
----------------------------*/
 .btn-filled {
   background-color: #006973;
   color: #ffffff;
@@ -117,9 +111,6 @@ body {
   color: #ffffff;
 }
 
-/*---------------------------
-  Button Outline Class
----------------------------*/
 .btn-outline {
   background-color: #ffffff;
   color: #006973;
@@ -135,22 +126,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #247984;
   opacity: 0;
   pointer-events: none;
 }
 .btn-outline:hover::after, .btn-outline.hover::after {
-  background-color: #247984;
   opacity: 0.08;
 }
 .btn-outline:focus, .btn-outline.focus {
   border-color: #006973;
 }
 .btn-outline:focus::after, .btn-outline.focus::after {
-  background-color: #247984;
   opacity: 0.12;
 }
 .btn-outline:active::after, .btn-outline.pressed::after {
-  background-color: #247984;
   opacity: 0.16;
 }
 .btn-outline:disabled, .btn-outline.disabled {
@@ -165,9 +154,6 @@ body {
   color: #006973;
 }
 
-/*---------------------------
-  Button Tonal Class
----------------------------*/
 .btn-tonal {
   background-color: #CDE7EB;
   color: #051F22;
@@ -182,6 +168,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #19292B;
   opacity: 0;
   pointer-events: none;
 }
@@ -189,15 +176,12 @@ body {
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843);
 }
 .btn-tonal:hover::after, .btn-tonal.hover::after {
-  background-color: #19292B;
   opacity: 0.08;
 }
 .btn-tonal:focus::after, .btn-tonal.focus::after {
-  background-color: #19292B;
   opacity: 0.12;
 }
 .btn-tonal:active::after, .btn-tonal.pressed::after {
-  background-color: #19292B;
   opacity: 0.16;
 }
 .btn-tonal:disabled, .btn-tonal.disabled {
@@ -212,9 +196,6 @@ body {
   color: #051F22;
 }
 
-/*---------------------------
-  Button Text Class
----------------------------*/
 .btn-text {
   color: #006973;
   --md-typeset-a-color: #006973;
@@ -228,19 +209,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #247984;
   opacity: 0;
   pointer-events: none;
 }
 .btn-text:hover::after, .btn-text.hover::after {
-  background-color: #247984;
   opacity: 0.08;
 }
 .btn-text:focus::after, .btn-text.focus::after {
-  background-color: #247984;
   opacity: 0.12;
 }
 .btn-text:active::after, .btn-text.pressed::after {
-  background-color: #247984;
   opacity: 0.16;
 }
 .btn-text:disabled, .btn-text.disabled {
@@ -255,9 +234,6 @@ body {
   color: #006973;
 }
 
-/*---------------------------
-  Button X-Large Class
----------------------------*/
 .btn-xlarge {
   background-color: #006973;
   color: #ffffff;

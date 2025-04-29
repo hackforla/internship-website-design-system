@@ -1,8 +1,3 @@
-@import '../abstracts/variables.scss';
-
-/*---------------------------
-  Button Base Class
----------------------------*/
 // --8<-- [start:btn]
 .btn {
   border: 0;
@@ -22,13 +17,10 @@
 }
 // --8<-- [end:btn]
 
-/*---------------------------
-  Button Filled Class
----------------------------*/
 // --8<-- [start:btnFilled]
 .btn-filled {
   background-color: $button-primary-color;
-  color: #{$color-white};
+  color: $color-white;
   --md-typeset-a-color: #{$color-white};
   position: relative;
   overflow: hidden;
@@ -87,13 +79,10 @@
 }
 // --8<-- [end:btnFilled]
 
-/*---------------------------
-  Button Outline Class
----------------------------*/
 // --8<-- [start:btnOutline]
 .btn-outline {
   background-color: $color-white;
-  color: #{$button-primary-color};
+  color: $button-primary-color;
   --md-typeset-a-color: #{$button-primary-color};
   border: 1px solid #6F797A;
   position: relative;
@@ -106,6 +95,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: $color-green;
     opacity: 0;
     pointer-events: none;
   }
@@ -113,7 +103,6 @@
   &:hover,
   &.hover {
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-hover;
     }
   }
@@ -123,7 +112,6 @@
     border-color: $button-primary-color;
 
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-focus;
     }
   }
@@ -131,7 +119,6 @@
   &:active,
   &.pressed {
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-active;
     }
   }
@@ -151,13 +138,10 @@
 }
 // --8<-- [end:btnOutline]
 
-/*---------------------------
-  Button Tonal Class
----------------------------*/
 // --8<-- [start:btnTonal]
 .btn-tonal {
   background-color: $button-secondary-color;
-  color: #{$button-tonal-text};
+  color: $button-tonal-text;
   --md-typeset-a-color: #{$button-tonal-text};
   position: relative;
   overflow: hidden;
@@ -169,6 +153,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: $button-tonal-overlay;
     opacity: 0;
     pointer-events: none;
   }
@@ -178,7 +163,6 @@
     box-shadow: $button-shadow;
 
     &::after {
-      background-color: $button-tonal-overlay;
       opacity: $button-overlay-hover;
     }
   }
@@ -186,7 +170,6 @@
   &:focus,
   &.focus {
     &::after {
-      background-color: $button-tonal-overlay;
       opacity: $button-overlay-focus;
     }
   }
@@ -194,7 +177,6 @@
   &:active,
   &.pressed {
     &::after {
-      background-color: $button-tonal-overlay;
       opacity: $button-overlay-active;
     }
   }
@@ -214,12 +196,9 @@
 }
 // --8<-- [end:btnTonal]
 
-/*---------------------------
-  Button Text Class
----------------------------*/
 // --8<-- [start:btnText]
 .btn-text {
-  color: #{$button-primary-color};
+  color: $button-primary-color;
   --md-typeset-a-color: #{$button-primary-color};
   position: relative;
   overflow: hidden;
@@ -231,6 +210,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: $color-green;
     opacity: 0;
     pointer-events: none;
   }
@@ -238,7 +218,6 @@
   &:hover,
   &.hover {
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-hover;
     }
   }
@@ -246,7 +225,6 @@
   &:focus,
   &.focus {
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-focus;
     }
   }
@@ -254,7 +232,6 @@
   &:active,
   &.pressed {
     &::after {
-      background-color: $color-green;
       opacity: $button-overlay-active;
     }
   }
@@ -274,13 +251,10 @@
 }
 // --8<-- [end:btnText]
 
-/*---------------------------
-  Button X-Large Class
----------------------------*/
 // --8<-- [start:btnXlarge]
 .btn-xlarge {
   background-color: $button-primary-color;
-  color: #{$color-white};
+  color: $color-white;
   --md-typeset-a-color: #{$color-white};
   font-size: 24px;
   width: 147px;
