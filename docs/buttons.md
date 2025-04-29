@@ -48,6 +48,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_buttons.scss:btn"
+
         --8<-- "components/sass/components/_buttons.scss:btnFilled"
         ```
         <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
@@ -108,6 +109,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_buttons.scss:btn"
+
         --8<-- "components/sass/components/_buttons.scss:btnOutline"
         ```
         <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
@@ -168,6 +170,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_buttons.scss:btn"
+
         --8<-- "components/sass/components/_buttons.scss:btnTonal"
         ```
         <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
@@ -228,6 +231,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_buttons.scss:btn"
+
         --8<-- "components/sass/components/_buttons.scss:btnText"
         ```
         <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
@@ -288,6 +292,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_buttons.scss:btn"
+        
         --8<-- "components/sass/components/_buttons.scss:btnXlarge"
         ```
         <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
