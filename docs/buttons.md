@@ -51,7 +51,6 @@ hide:
 
         --8<-- "components/sass/components/_buttons.scss:btnFilled"
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
     === "HTML"
         ``` html
         <a href="#" class="btn btn-filled">Label</a>
@@ -64,7 +63,6 @@ hide:
 
         <a href="#" class="btn btn-filled disabled">Label</a>
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/buttons.md?plain=1" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
 
 === "Outline"
     <div class="btn-grid-1">
@@ -112,7 +110,6 @@ hide:
 
         --8<-- "components/sass/components/_buttons.scss:btnOutline"
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
     === "HTML"
         ``` html
         <a href="#" class="btn btn-outline">Label</a>
@@ -125,7 +122,6 @@ hide:
 
         <a href="#" class="btn btn-outline disabled">Label</a>
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/buttons.md?plain=1" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
 
 === "Tonal"
     <div class="btn-grid-1">
@@ -173,7 +169,6 @@ hide:
 
         --8<-- "components/sass/components/_buttons.scss:btnTonal"
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
     === "HTML"
         ``` html
         <a href="#" class="btn btn-tonal">Label</a>
@@ -186,7 +181,6 @@ hide:
 
         <a href="#" class="btn btn-tonal disabled">Label</a>
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/buttons.md?plain=1" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
 
 === "Text"
     <div class="btn-grid-1">
@@ -234,7 +228,6 @@ hide:
 
         --8<-- "components/sass/components/_buttons.scss:btnText"
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
     === "HTML"
         ``` html
         <a href="#" class="btn btn-text">Label</a>
@@ -247,7 +240,6 @@ hide:
 
         <a href="#" class="btn btn-text disabled">Label</a>
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/buttons.md?plain=1" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
 
 === "X-Large"
     <div class="btn-grid-1">
@@ -295,7 +287,6 @@ hide:
         
         --8<-- "components/sass/components/_buttons.scss:btnXlarge"
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/components/sass/components/_buttons.scss" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
     === "HTML"
         ``` html
         <a href="#" class="btn btn-xlarge">Label</a>
@@ -308,4 +299,3 @@ hide:
 
         <a href="#" class="btn btn-xlarge disabled">Label</a>
         ```
-        <a href="https://github.com/hackforla/internship-website-design-system/blob/main/docs/buttons.md?plain=1" target="_blank" rel="noopener noreferrer">View source file on GitHub ↗️</a>
