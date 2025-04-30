@@ -1,15 +1,12 @@
 // --8<-- [start:unchecked]
 input[type="radio"]{
-    border:.5px solid $radio-color;
-    font-weight: 2;
+    border:1px solid $radio-color;
     border-radius: 50%;
     width: $radio-button-width;
     height: $radio-button-height;
     margin-right: 5px;
     appearance: none;
     -webkit-appearance: none;
-
-    
 
     &:disabled {
         stroke: gray;
@@ -48,4 +45,12 @@ input[type="radio"]:checked {
 }
 // --8<-- [end:checked]
 
+//apply class to div containing input and label.
+.radio-box{
+    font-weight: bold;
+}
+
+.radio-box input[disabled] + label{
+    color:gray;
+}
 

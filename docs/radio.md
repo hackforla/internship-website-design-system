@@ -5,7 +5,7 @@ hide:
 # **RADIO BUTTONS**
 === "Button Unselected"
     <div class="btn-grid-1">
-        <div class="grid-items"> 
+        <div class="grid-items radio-box"> 
             <input type="radio" aria-label="example unselected radio button">
             <label for="option">Option</label>
         </div>
@@ -17,19 +17,19 @@ hide:
         <div class="grid-items">Hover</div>
         <div class="grid-items">Pressed</div>
         <div class="grid-items">Disabled</div>
-        <div class="grid-items"> 
+        <div class="grid-items radio-box"> 
             <input type="radio" aria-label="example unselected radio button">
             <label for="option">Option</label>
         </div>
-        <div class="grid-items"> 
+        <div class="grid-items radio-box"> 
             <input type="radio" class="hover" aria-label="example hovered radio button">
             <label for="option">Option</label>
         </div>
-        <div class="grid-items"> 
+        <div class="grid-items radio-box"> 
             <input type="radio" aria-label="example pressed radio button">
             <label for="option" class="pressed">Option</label>
         </div>
-        <div class="grid-items"> 
+        <div class="grid-items radio-box"> 
             <input disabled type="radio" aria-label="example disabled radio button">
             <label for="option">Option</label>
         </div>
@@ -39,22 +39,29 @@ hide:
     === "HTML"
 
         ``` html
-        <a href="#" class="btn-sm ">Button</a>
-
-        <a href="#" class="btn-sm hover">Button</a>
-
-        <a href="#" class="btn-sm focus">Button</a>
-
-        <a href="#" class="btn-sm disabled">Button</a>
+        <div class="grid-items radio-box"> 
+            <input type="radio" aria-label="example unselected radio button">
+            <label for="option">Option</label>
+        </div>
+        <div class="grid-items radio-box"> 
+            <input type="radio" class="hover" aria-label="example hovered radio button">
+            <label for="option">Option</label>
+        </div>
+        <div class="grid-items radio-box"> 
+            <input type="radio" aria-label="example pressed radio button">
+            <label for="option" class="pressed">Option</label>
+        </div>
+        <div class="grid-items radio-box"> 
+            <input disabled type="radio" aria-label="example disabled radio button">
+            <label for="option">Option</label>
+        </div>
         
         ```
 
     === "CSS"
 
         ``` css
-            --8<-- "_radio.scss:unchecked"
-        
-        
+          
         ```
 === "Button Selected"
     <div class="btn-grid-1">
