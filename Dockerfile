@@ -1,26 +1,31 @@
 # Start with a Python base image
 FROM squidfunk/mkdocs-material
 
-
+# Install Node.js and npm
 RUN apk add --no-cache nodejs npm
 
 WORKDIR /docs
 
-COPY package.json .
-RUN npm install --save-dev
+# Copy package files and install dependencies
+COPY package.json package-lock.json* ./
+RUN npm install
 
+# Install global packages needed for development
+RUN npm install -g sass concurrently
+
+# Copy Python requirements and install
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+# Copy the entire application
 COPY . .
 
-# Expose the port MkDocs will run on
+# Expose the ports MkDocs will run on
 EXPOSE 8000 35729
 
-# Create a startup script
+# Create a startup script that uses our dev command from package.json
 RUN echo '#!/bin/sh' > /start.sh && \
-    echo 'npm run watch-sass &' >> /start.sh && \
-    echo 'mkdocs serve --dev-addr 0.0.0.0:8000' >> /start.sh && \
+    echo 'npm run dev' >> /start.sh && \
     chmod +x /start.sh
 
 # Set the startup script as the entry point
