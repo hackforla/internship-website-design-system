@@ -1,0 +1,131 @@
+// --8<-- [start:toggle]
+// --8<-- [start:toggle-icon]
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  padding: 2px 4px;
+  color: $color-white;
+
+  background-color: $color-whitegreen;
+  border: 2px solid $color-darkgreen;
+  border-radius: 100px;
+
+  -webkit-transition: $toggle-animation-duration;
+  transition: $toggle-animation-duration;
+
+  & input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  & .slider{
+    position: absolute;
+    cursor: pointer;
+    left: 6px;
+    bottom: 6px;
+    height: 16px;
+    width: 16px;
+    background-color: $color-darkgreen;
+    -webkit-transition: $toggle-animation-duration;
+    transition: $toggle-animation-duration;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.toggle:hover,
+.toggle:focus,
+.toggle.hover,
+.toggle.focus {
+  & input:not(:disabled) + .slider {
+    box-shadow: 0 0 0 8px $toggle-shadow-color;
+  }
+  & input:not(:disabled):checked + .slider {
+    box-shadow: 0 0 0 6px $toggle-shadow-color;
+  }
+}
+
+.toggle:active,
+.toggle.active {
+  & input:not(:disabled) + .slider {
+    height: 28px;
+    width: 28px;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 0 0 0 6px $toggle-shadow-color;
+  }
+}
+
+.toggle input:checked + .slider {
+  background-color: $toggle-color;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  height: 24px;
+  width: 24px;
+  bottom: 2px;
+  left: 2px;
+  background-color: $color-white;
+}
+
+.toggle:has(input:checked) {
+  background-color: $toggle-color;
+  border-color: transparent;
+}
+
+.toggle input:disabled + .slider{
+  box-shadow: none;
+  background-color: $color-old-mid-grey;
+  cursor: not-allowed;
+  color: $color-old-grey;
+}
+
+.toggle:has(input:disabled) {
+  cursor: not-allowed;
+  border-color: $color-old-grey;
+  background-color: $color-old-light-grey;
+}
+
+.toggle:has(input:disabled:checked) {
+  background-color: $color-old-mid-grey;
+  border-color: $color-old-mid-grey;
+}
+
+.toggle input:disabled:checked + .slider {
+  background-color: $color-old-light-grey;
+  color: $color-old-mid-grey;
+}
+
+// --8<-- [end:toggle]
+// Additional Styles for Slider Icons
+.toggle input:checked + .slider span {
+  color: $color-darkgreen;
+}
+
+.toggle input:disabled + .slider span {
+  color: $color-old-light-grey;
+}
+
+.toggle input:disabled:checked + .slider span {
+  color: $color-old-mid-grey;
+}
+
+.toggle .slider span.checked {
+  display: none;
+}
+.toggle input:checked + .slider {
+  & span.checked {
+    display: block;
+  }
+  
+  & span.unchecked {
+    display: none;
+  }
+}
+// --8<-- [end:toggle-icon]

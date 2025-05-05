@@ -7,9 +7,15 @@ $color-white: #ffffff;
 $color-black: #263238;
 $color-light-grey:#F8F9FC;
 $color-dark-grey: #989898;
+
+$color-old-grey: #C6C6C6;
+$color-old-light-grey: #DDD;
+$color-old-mid-grey: #6F6F6F;
+
 $color-black: #333333;
 $color-green: #247984;
 $color-darkgreen: #0D5761;
+$color-whitegreen: #E7F0F1;
 /// Font family
 $text-font-stack: (
   'Roboto',  
@@ -45,6 +51,10 @@ $dropdown-arrow-color: $color-dark-grey;
 $tab-text-color: $color-darkgreen;
 $tab-underline-color: $color-darkgreen;
 $tab-hover-color: $color-darkgreen;
+
+$toggle-color: $color-green;
+$toggle-shadow-color: #A0C4C980;
+$toggle-animation-duration: .4s;
 
 $input-field-box-width: 348px;
 $input-field-box-height: 48px;

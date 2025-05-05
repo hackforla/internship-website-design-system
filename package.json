@@ -19,9 +19,8 @@
     "start": "npm run watch-sass & npm run serve-mkdocs",
     "postinstall": "npm install -g sass"
   },
-
   "devDependencies": {
-    "concurrently": "^6.2.0",
+    "concurrently": "^6.5.1",
     "csv-writer": "^1.6.0",
     "husky": "^9.0.11",
     "pa11y": "^8.0.0",

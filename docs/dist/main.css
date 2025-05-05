@@ -66,7 +66,7 @@ body {
 .btn {
   border: 0;
   display: inline-block;
-  font-weight: 100;
+  font-weight: 7git 0;
   text-decoration: none;
   transition: all 100ms ease-in;
   white-space: nowrap;
@@ -76,7 +76,6 @@ body {
   margin: 5px 0;
   color: white;
   --md-typeset-a-color: white;
-  color: black !important;
 }
 
 /*---------------------------
@@ -269,6 +268,125 @@ input[type=radio]:checked :hover {
 .textarea-box.focused {
   border: #A0C4C9 2px solid;
   background-color: #FAFAFA;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  padding: 2px 4px;
+  color: #ffffff;
+  background-color: #E7F0F1;
+  border: 2px solid #0D5761;
+  border-radius: 100px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  left: 6px;
+  bottom: 6px;
+  height: 16px;
+  width: 16px;
+  background-color: #0D5761;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle:hover input:not(:disabled) + .slider,
+.toggle:focus input:not(:disabled) + .slider,
+.toggle.hover input:not(:disabled) + .slider,
+.toggle.focus input:not(:disabled) + .slider {
+  box-shadow: 0 0 0 8px rgba(160, 196, 201, 0.5019607843);
+}
+.toggle:hover input:not(:disabled):checked + .slider,
+.toggle:focus input:not(:disabled):checked + .slider,
+.toggle.hover input:not(:disabled):checked + .slider,
+.toggle.focus input:not(:disabled):checked + .slider {
+  box-shadow: 0 0 0 6px rgba(160, 196, 201, 0.5019607843);
+}
+
+.toggle:active input:not(:disabled) + .slider,
+.toggle.active input:not(:disabled) + .slider {
+  height: 28px;
+  width: 28px;
+  bottom: 0px;
+  left: 0px;
+  box-shadow: 0 0 0 6px rgba(160, 196, 201, 0.5019607843);
+}
+
+.toggle input:checked + .slider {
+  background-color: #247984;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  height: 24px;
+  width: 24px;
+  bottom: 2px;
+  left: 2px;
+  background-color: #ffffff;
+}
+
+.toggle:has(input:checked) {
+  background-color: #247984;
+  border-color: transparent;
+}
+
+.toggle input:disabled + .slider {
+  box-shadow: none;
+  background-color: #6F6F6F;
+  cursor: not-allowed;
+  color: #C6C6C6;
+}
+
+.toggle:has(input:disabled) {
+  cursor: not-allowed;
+  border-color: #C6C6C6;
+  background-color: #DDD;
+}
+
+.toggle:has(input:disabled:checked) {
+  background-color: #6F6F6F;
+  border-color: #6F6F6F;
+}
+
+.toggle input:disabled:checked + .slider {
+  background-color: #DDD;
+  color: #6F6F6F;
+}
+
+.toggle input:checked + .slider span {
+  color: #0D5761;
+}
+
+.toggle input:disabled + .slider span {
+  color: #DDD;
+}
+
+.toggle input:disabled:checked + .slider span {
+  color: #6F6F6F;
+}
+
+.toggle .slider span.checked {
+  display: none;
+}
+
+.toggle input:checked + .slider span.checked {
+  display: block;
+}
+.toggle input:checked + .slider span.unchecked {
+  display: none;
 }
 
 .desktop-examples .desktop-hero-h1 {
