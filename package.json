@@ -1,29 +1,31 @@
 {
   "name": "internship-website-design-system",
   "version": "1.0.0",
-  "description": "This design system is a project of _Hack for LA_. It helps teams customize and develop their websites and applications. This design system is meant to provide necessary web components and make them easy to customize.",
+  "description": "Design System for the Tech Work Experience Website",
   "main": "index.js",
-  "author": "hackforla",
-  "license": "GPL-2.0",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
-    "pa11y": "node scripts/pa11y-test.js",
-    "build-css": "sass docs/components/sass/main.scss docs/dist/main.css",
-    "watch-sass": "sass --watch docs/components/sass:docs/dist --verbose",
-    "serve-mkdocs": "mkdocs serve --dev-addr 0.0.0.0:8000",
     "dev": "concurrently \"sass --watch docs/components/sass:docs/dist\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
-    "start": "npm run watch-sass & npm run serve-mkdocs",
-    "postinstall": "npm install -g sass"
+    "build-sass": "sass docs/components/sass:docs/dist",
+    "pa11y-test": "node scripts/pa11y-test.js",
+    "prepare": "husky install"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackforla/internship-website-design-system.git"
+  },
+  "keywords": [
+    "design-system"
+  ],
+  "author": "",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/hackforla/internship-website-design-system/issues"
+  },
+  "homepage": "https://github.com/hackforla/internship-website-design-system#readme",
   "devDependencies": {
-    "concurrently": "^6.5.1",
-    "csv-writer": "^1.6.0",
-    "husky": "^9.0.11",
-    "pa11y": "^8.0.0",
-    "sass": "^1.79.4"
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "pa11y-ci": "^3.0.1"
   }
 }
