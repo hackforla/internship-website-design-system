@@ -149,14 +149,17 @@ gi .btn:focus, .btn.focus {
 - Page-specific class names should live in that specific page's .scss file.
 */
 input[type=radio] {
-  border: 0.5px solid #247984;
+  border: 1px solid #247984;
   border-radius: 50%;
   width: 26px;
+  height: 26px;
   margin-right: 5px;
   appearance: none;
   -webkit-appearance: none;
 }
 input[type=radio]:disabled {
+  stroke: gray;
+  border-color: gray;
   background-color: #c6c6c6;
 }
 input[type=radio].hover,
@@ -165,6 +168,7 @@ input[type=radio] :hover {
 }
 
 input[type=radio]:checked {
+  font-weight: 2;
   margin-right: 5px;
   accent-color: #247984;
   background-color: #247984;
@@ -173,11 +177,21 @@ input[type=radio]:checked {
 }
 input[type=radio]:checked.disabled,
 input[type=radio]:checked :disabled {
+  stroke: gray;
   background-color: #c6c6c6;
+  color: gray;
 }
 input[type=radio]:checked.hover,
 input[type=radio]:checked :hover {
   opacity: 0.3;
+}
+
+.radio-box {
+  font-weight: bold;
+}
+
+.radio-box input[disabled] + label {
+  color: gray;
 }
 
 .input-field-container {

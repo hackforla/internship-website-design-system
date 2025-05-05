@@ -6,10 +6,6 @@ RUN apk add --no-cache nodejs npm
 
 WORKDIR /docs
 
-# Copy package files and install dependencies
-COPY package.json package-lock.json* ./
-RUN npm install
-
 # Install global packages needed for development
 RUN npm install -g sass concurrently
 
@@ -23,9 +19,10 @@ COPY . .
 # Expose the ports MkDocs will run on
 EXPOSE 8000 35729
 
-# Create a startup script that uses our dev command from package.json
+# Create a startup script
 RUN echo '#!/bin/sh' > /start.sh && \
-    echo 'npm run dev' >> /start.sh && \
+    echo 'sass --watch /docs/docs/components/sass:/docs/docs/dist &' >> /start.sh && \
+    echo 'mkdocs serve --dev-addr 0.0.0.0:8000' >> /start.sh && \
     chmod +x /start.sh
 
 # Set the startup script as the entry point
