@@ -4,15 +4,12 @@ site_url: https://hackforla.github.io/internship-website-design-system/
 nav:
   - Getting Started: index.md
   - Styles:
-      - Type Scale: type-scale.md
+      - Typography: type-scale.md
   - Components:
-      - Inputs:
-          - Buttons: buttons.md
-          - Radio Buttons: radio.md
-          - Input Fields: input-fields.md
-          - Text Area: text-area.md
-          - Toggles: toggles.md
-          - Dropdowns: dropdowns.md
+    - Button: buttons.md
+    - Radio Button: radio.md
+    - Text Area: text-area.md
+    - Toggles: toggles.md
 plugins:
   - search:
       lang: en
