@@ -1,9 +1,10 @@
 // -----------------------------------------------------------------------------
 // Basic typography style for copy text
 // -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
 
 body {
-    color: $text-color;
+    color: var(--text-color, $text-color);
     font: normal 125% / 1.4 $text-font-stack;
   }
 

@@ -2,7 +2,7 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Colors
+/// Colors as SASS variables
 $color-white: #ffffff;
 $color-black: #263238;
 $color-light-grey:#F8F9FC;
@@ -16,11 +16,12 @@ $color-black: #333333;
 $color-green: #247984;
 $color-darkgreen: #0D5761;
 $color-whitegreen: #E7F0F1;
+
 /// Font family
 $text-font-stack: (
   'Roboto',  
   sans-serif
-  );
+);
 $text-color: $color-black;
 $text-muted: $color-dark-grey;
 
@@ -70,8 +71,84 @@ $text-area-width: 348px;
 $text-area-border-radius: 4px;
 $text-area-padding: 12px 0 0 12px;
 
+$screen-tablet: 768px;
+$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
 
-
+// CSS Custom Properties (CSS Variables)
+:root {
+  // Colors
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-light-grey: #{$color-light-grey};
+  --color-dark-grey: #{$color-dark-grey};
+  
+  --color-old-grey: #{$color-old-grey};
+  --color-old-light-grey: #{$color-old-light-grey};
+  --color-old-mid-grey: #{$color-old-mid-grey};
+  
+  --color-green: #{$color-green};
+  --color-darkgreen: #{$color-darkgreen};
+  --color-whitegreen: #{$color-whitegreen};
+  
+  // Typography
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --line-height-base: #{$line-height-base};
+  --line-height-computed: #{$line-height-computed};
+  --body-bg: #{$body-bg};
+  
+  // Button styles
+  --button-primary-color: #{$button-primary-color};
+  --button-secondary-color: #{$button-secondary-color};
+  --button-tonal-text: #{$button-tonal-text};
+  --button-tonal-overlay: #{$button-tonal-overlay};
+  --button-disabled-text: #{$button-disabled-text};
+  --button-disabled-text-secondary: #{$button-disabled-text-secondary};
+  --button-disabled-overlay: #{$button-disabled-overlay};
+  --button-shadow: #{$button-shadow};
+  --button-overlay-hover: #{$button-overlay-hover};
+  --button-overlay-focus: #{$button-overlay-focus};
+  --button-overlay-active: #{$button-overlay-active};
+  
+  // Radio buttons
+  --radio-color: #{$radio-color};
+  --radio-hovercolor: #{$radio-hovercolor};
+  --radio-disabled: #{$radio-disabled};
+  --radio-disabled-stroke: #{$radio-disabled-stroke};
+  --radio-button-width: #{$radio-button-width};
+  --radio-button-height: #{$radio-button-height};
+  
+  // Dropdowns
+  --dropdown-hover-color: #{$dropdown-hover-color};
+  --dropdown-select-color: #{$dropdown-select-color};
+  --dropdown-placeholder-color: #{$dropdown-placeholder-color};
+  --drowpdown-border-color: #{$drowpdown-border-color};
+  --dropdown-arrow-color: #{$dropdown-arrow-color};
+  
+  // Tabs
+  --tab-text-color: #{$tab-text-color};
+  --tab-underline-color: #{$tab-underline-color};
+  --tab-hover-color: #{$tab-hover-color};
+  
+  // Toggle
+  --toggle-color: #{$toggle-color};
+  --toggle-shadow-color: #{$toggle-shadow-color};
+  --toggle-animation-duration: #{$toggle-animation-duration};
+  
+  // Input fields
+  --input-field-box-width: #{$input-field-box-width};
+  --input-field-box-height: #{$input-field-box-height};
+  --input-field-border-radius: #{$input-field-border-radius};
+  
+  // Text area
+  --text-area-height: #{$text-area-height};
+  --text-area-width: #{$text-area-width};
+  --text-area-border-radius: #{$text-area-border-radius};
+  --text-area-padding: #{$text-area-padding};
+  
+  // Breakpoints
+  --screen-tablet: #{$screen-tablet};
+}
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -81,6 +158,3 @@ $text-area-padding: 12px 0 0 12px;
 //   'medium': 768px,
 //   'large': 1024px,
 // ) !default;
-
-$screen-tablet: 768px;
-$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
