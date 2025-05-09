@@ -1,2 +1,2 @@
-pymdown-extensions==10.7.1
-
+mkdocs>=1.4.0
+markdown>=3.3 

@@ -2,20 +2,27 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Colors
+/// Colors as SASS variables
 $color-white: #ffffff;
 $color-black: #263238;
 $color-light-grey:#F8F9FC;
 $color-dark-grey: #989898;
+
+$color-old-grey: #C6C6C6;
+$color-old-light-grey: #DDD;
+$color-old-mid-grey: #6F6F6F;
+
 $color-black: #333333;
 $color-green: #247984;
 $color-darkgreen: #0D5761;
 $color-old-green:#247984;
+$color-whitegreen: #E7F0F1;
+
 /// Font family
 $text-font-stack: (
   'Roboto',  
   sans-serif
-  );
+);
 $text-color: $color-black;
 $text-muted: $color-dark-grey;
 
@@ -23,17 +30,24 @@ $line-height-base: 1.5;
 $line-height-computed: 1.5rem;
 $body-bg: $color-white;
 
-$button-border-radius-sm: 20px;
-$button-border-radius-md: 60px;
-$button-border-radius-lg: 100px;
-$button-text-color: $color-white;
-$button-color: $color-green;
-$button-hovercolor: $color-darkgreen;
+$button-primary-color: #006973;
+$button-secondary-color: #CDE7EB;
+$button-tonal-text: #051F22;
+$button-tonal-overlay: #19292B;
+$button-disabled-text: #9D9F9F;
+$button-disabled-text-secondary: #8B8E8E;
+$button-disabled-overlay: #1E2324;
+$button-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+$button-overlay-hover: 0.08;
+$button-overlay-focus: 0.12;
+$button-overlay-active: 0.16;
 
 $radio-color: $color-green;
 $radio-hovercolor: $color-darkgreen;
 $radio-disabled: #c6c6c6;
+$radio-disabled-stroke: gray;
 $radio-button-width: 26px;
+$radio-button-height: 26px;
 
 $dropdown-hover-color: #CFE1E4;
 $dropdown-select-color: #A0C4C9;
@@ -45,6 +59,10 @@ $tab-text-color: $color-darkgreen;
 $tab-underline-color: $color-darkgreen;
 $tab-hover-color: $color-darkgreen;
 
+$toggle-color: $color-green;
+$toggle-shadow-color: #A0C4C980;
+$toggle-animation-duration: .4s;
+
 $input-field-box-width: 348px;
 $input-field-box-height: 48px;
 $input-field-border-radius: 4px;
@@ -54,8 +72,84 @@ $text-area-width: 348px;
 $text-area-border-radius: 4px;
 $text-area-padding: 12px 0 0 12px;
 
+$screen-tablet: 768px;
+$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
 
-
+// CSS Custom Properties (CSS Variables)
+:root {
+  // Colors
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-light-grey: #{$color-light-grey};
+  --color-dark-grey: #{$color-dark-grey};
+  
+  --color-old-grey: #{$color-old-grey};
+  --color-old-light-grey: #{$color-old-light-grey};
+  --color-old-mid-grey: #{$color-old-mid-grey};
+  
+  --color-green: #{$color-green};
+  --color-darkgreen: #{$color-darkgreen};
+  --color-whitegreen: #{$color-whitegreen};
+  
+  // Typography
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --line-height-base: #{$line-height-base};
+  --line-height-computed: #{$line-height-computed};
+  --body-bg: #{$body-bg};
+  
+  // Button styles
+  --button-primary-color: #{$button-primary-color};
+  --button-secondary-color: #{$button-secondary-color};
+  --button-tonal-text: #{$button-tonal-text};
+  --button-tonal-overlay: #{$button-tonal-overlay};
+  --button-disabled-text: #{$button-disabled-text};
+  --button-disabled-text-secondary: #{$button-disabled-text-secondary};
+  --button-disabled-overlay: #{$button-disabled-overlay};
+  --button-shadow: #{$button-shadow};
+  --button-overlay-hover: #{$button-overlay-hover};
+  --button-overlay-focus: #{$button-overlay-focus};
+  --button-overlay-active: #{$button-overlay-active};
+  
+  // Radio buttons
+  --radio-color: #{$radio-color};
+  --radio-hovercolor: #{$radio-hovercolor};
+  --radio-disabled: #{$radio-disabled};
+  --radio-disabled-stroke: #{$radio-disabled-stroke};
+  --radio-button-width: #{$radio-button-width};
+  --radio-button-height: #{$radio-button-height};
+  
+  // Dropdowns
+  --dropdown-hover-color: #{$dropdown-hover-color};
+  --dropdown-select-color: #{$dropdown-select-color};
+  --dropdown-placeholder-color: #{$dropdown-placeholder-color};
+  --drowpdown-border-color: #{$drowpdown-border-color};
+  --dropdown-arrow-color: #{$dropdown-arrow-color};
+  
+  // Tabs
+  --tab-text-color: #{$tab-text-color};
+  --tab-underline-color: #{$tab-underline-color};
+  --tab-hover-color: #{$tab-hover-color};
+  
+  // Toggle
+  --toggle-color: #{$toggle-color};
+  --toggle-shadow-color: #{$toggle-shadow-color};
+  --toggle-animation-duration: #{$toggle-animation-duration};
+  
+  // Input fields
+  --input-field-box-width: #{$input-field-box-width};
+  --input-field-box-height: #{$input-field-box-height};
+  --input-field-border-radius: #{$input-field-border-radius};
+  
+  // Text area
+  --text-area-height: #{$text-area-height};
+  --text-area-width: #{$text-area-width};
+  --text-area-border-radius: #{$text-area-border-radius};
+  --text-area-padding: #{$text-area-padding};
+  
+  // Breakpoints
+  --screen-tablet: #{$screen-tablet};
+}
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length

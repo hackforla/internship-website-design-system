@@ -13,7 +13,7 @@ mkdocs serve --quiet &
 MKDOCS_PID=$!
 
 # Run the accessibility test script
-npm run pa11y
+npm run pa11y-test
 
 # Stop MkDocs server
 kill $MKDOCS_PID

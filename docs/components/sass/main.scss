@@ -1,21 +1,16 @@
-@import
-  'abstracts/variables';
+@use 'abstracts/variables' as *;
+@forward 'abstracts/variables';
 
-@import
-  'base/typography',
-  'base/reset',
-  'layout/tabs';
+@use 'base/typography';
+@use 'base/reset';
+@use 'layout/tabs';
 
-@import
-'components/buttons',
-'components/accordion',
-'components/radio',
-'components/input-fields',
-'components/text-area',
-'components/type-scale',
-  'components/dropdowns';
+@use 'components/buttons';
+@use 'components/radio';
+@use 'components/input-fields';
+@use 'components/text-area';
+@use 'components/toggle';
+@use 'components/type-scale';
+@use 'components/dropdowns';
 
-@import
-  'layout/grid',
-  'layout/tabs';
-  
+@use 'layout/grid';

@@ -10,6 +10,7 @@ site/
 # Python virtual environment
 venv/
 
+
 # OS generated files
 .DS_Store
 Thumbs.db
@@ -18,3 +19,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Include CSS dist files
+!docs/dist/

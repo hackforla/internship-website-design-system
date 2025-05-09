@@ -4,7 +4,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const path = require('path')
 
 const docsFolder = path.join(__dirname, '../docs');
-const baseUrl = 'http://127.0.0.1:8000/internship-website-design-system/';
+const baseUrl = 'http://localhost:8001/internship-website-design-system/';
 
 function getMarkdownFiles(dir) {
     const mdFilesToIgnore = ['index.md'];
