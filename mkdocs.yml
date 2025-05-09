@@ -10,6 +10,8 @@ nav:
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
+    - Accordion: accordion.md
+
 plugins:
   - search:
       lang: en
