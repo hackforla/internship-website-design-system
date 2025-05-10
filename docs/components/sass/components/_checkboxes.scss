@@ -1,0 +1,105 @@
+// --8<-- [start:checkbox]
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+}
+// --8<-- [end:checkbox]
+
+// --8<-- [start:checked]
+.checkbox input[type="checkbox"]:checked {
+    accent-color: #247984;
+    cursor: pointer;
+}
+
+// Hover state
+.checkbox input[type="checkbox"]:not(:disabled):hover {
+    position: relative;
+}
+
+// Hover circle
+.checkbox input[type="checkbox"]:not(:disabled):hover::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #CFE1E4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+// Disabled state
+.checkbox input[type="checkbox"]:disabled {
+    accent-color: #C6C6C6;
+    cursor: not-allowed;
+}
+// --8<-- [end:checked]
+
+// --8<-- [start:unchecked]
+.checkbox input[type="checkbox"]:not(:checked) {
+    appearance: none;
+    border: 2px solid #263238;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+// Hover state
+.checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover {
+    position: relative;
+}
+
+// Hover state
+.checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #DDDDDD;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+// Disabled state
+.checkbox input[type="checkbox"]:not(:checked):disabled {
+    border-color: #C6C6C6;
+    cursor: not-allowed;
+}
+// --8<-- [end:unchecked]
+
+// --8<-- [start:hasText]
+.checkbox label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #263238;
+    margin-left: 8px;
+}
+
+// Disabled state label styling
+.checkbox input[type="checkbox"]:disabled + label {
+    color: #6F6F6F;
+    cursor: not-allowed;
+}
+// --8<-- [end:hasText]
+
+// --8<-- [start:noText]
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+// --8<-- [end:noText]
