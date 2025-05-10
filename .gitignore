@@ -10,11 +10,6 @@ site/
 # Python virtual environment
 venv/
 
-# Compiled CSS files
-docs/dist/main.css
-docs/dist/main.css.map
-docs/dist/*.css
-docs/dist/*.css.map
 
 # OS generated files
 .DS_Store
@@ -24,3 +19,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Include CSS dist files
+!docs/dist/

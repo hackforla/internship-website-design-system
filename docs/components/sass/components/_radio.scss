@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 // --8<-- [start:unchecked]
 input[type="radio"]{
     border:1px solid $radio-color;

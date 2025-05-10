@@ -4,5 +4,5 @@
       "standard": "WCAG2AAA",
       "wait": 2000
     },
-    "urls": ["http://localhost:8000/"]
+    "urls": ["http://localhost:8001/internship-website-design-system/"]
   }
