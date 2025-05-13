@@ -340,6 +340,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .checkbox-base {
@@ -347,96 +349,94 @@ body {
   height: 18px;
   border-radius: 2px;
   cursor: pointer;
+  position: relative;
 }
 .checkbox-base:disabled {
   cursor: not-allowed;
 }
 
+.checkbox::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Container for checkbox and label */
+.checkbox-with-text {
+  display: inline-flex;
+  margin: 0 auto;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+/* Adjust hover position for checkbox with text */
+.checkbox.checkbox-with-text::before {
+  left: calc(50% - 30px);
+}
+
+/* Show hover effect on hover or when checkbox-hover class is present */
+.checkbox:hover:not(:has(input:disabled))::before,
+.checkbox.checkbox-hover:not(:has(input:disabled))::before {
+  opacity: 1;
+}
+
 .checkbox-base:checked {
-  accent-color: #247984;
+  appearance: none;
+  background-color: #247984;
+  border: none;
+  position: relative;
+}
+.checkbox-base:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 .checkbox-base:checked:disabled {
-  accent-color: #C6C6C6;
+  background-color: #C6C6C6;
+  border: none;
+}
+
+.checkbox:has(input:checked)::before {
+  background-color: #CFE1E4;
 }
 
 .checkbox-base:not(:checked) {
   appearance: none;
-  border: 2px solid #263238;
+  border: 2px solid #333333;
   background-color: transparent;
 }
 .checkbox-base:not(:checked):disabled {
   border-color: #C6C6C6;
 }
 
-.grid-items.checkbox:has(#checkbox-checked-hover),
-.grid-items.checkbox:has(#checkbox-text-checked-hover) {
-  position: relative;
-  z-index: 0;
-}
-.grid-items.checkbox:has(#checkbox-checked-hover)::before,
-.grid-items.checkbox:has(#checkbox-text-checked-hover)::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background-color: #CFE1E4;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-.grid-items.checkbox:has(#checkbox-text-checked-hover)::before {
-  left: 47.3%;
-}
-
-.grid-items.checkbox:has(#checkbox-checked-hover)::before {
-  left: 50%;
-}
-
-.grid-items.checkbox:has(#checkbox-unchecked-hover),
-.grid-items.checkbox:has(#checkbox-text-unchecked-hover) {
-  position: relative;
-  z-index: 0;
-}
-.grid-items.checkbox:has(#checkbox-unchecked-hover)::before,
-.grid-items.checkbox:has(#checkbox-text-unchecked-hover)::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background-color: #DDDDDD;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
-.grid-items.checkbox:has(#checkbox-text-unchecked-hover)::before {
-  left: 47.3%;
-}
-
-.grid-items.checkbox:has(#checkbox-unchecked-hover)::before {
-  left: 50%;
-}
-
-#checkbox-checked-hover,
-#checkbox-text-checked-hover,
-#checkbox-unchecked-hover,
-#checkbox-text-unchecked-hover {
-  position: relative;
-  z-index: 1;
+.checkbox:has(input:not(:checked))::before {
+  background-color: #DDD;
 }
 
 .checkbox label {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #263238;
-  margin-left: 14px;
-}
-.checkbox label:not(.visually-hidden) {
+  color: #333333;
+  margin-left: 19px; /* 11px (hover circle extension) + 8px (desired padding) */
   cursor: pointer;
+  line-height: 18px; /* Match checkbox height */
+}
+.checkbox label.visually-hidden {
+  cursor: default;
 }
 
 .checkbox-base:disabled + label {
