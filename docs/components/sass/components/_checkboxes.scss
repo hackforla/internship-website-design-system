@@ -1,97 +1,132 @@
-// --8<-- [start:checkbox]
+@use '../abstracts/variables' as *;
+
+// Base checkbox container
 .checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// Base checkbox styles
+.checkbox-base {
     width: 18px;
     height: 18px;
     border-radius: 2px;
-}
-// --8<-- [end:checkbox]
-
-// --8<-- [start:checked]
-.checkbox input[type="checkbox"]:checked {
-    accent-color: #247984;
     cursor: pointer;
+
+    // Checked state
+    &:checked {
+        accent-color: #247984;
+
+        &:disabled {
+            accent-color: #C6C6C6;
+        }
+    }
+
+    // Unchecked state
+    &:not(:checked) {
+        appearance: none;
+        border: 2px solid #263238;
+        background-color: transparent;
+
+        &:disabled {
+            border-color: #C6C6C6;
+        }
+    }
+
+    // Disabled state
+    &:disabled {
+        cursor: not-allowed;
+    }
 }
 
-// Hover state
-.checkbox input[type="checkbox"]:not(:disabled):hover {
-    position: relative;
-}
-
-// Hover circle
-.checkbox input[type="checkbox"]:not(:disabled):hover::before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background-color: #CFE1E4;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-// Disabled state
-.checkbox input[type="checkbox"]:disabled {
-    accent-color: #C6C6C6;
-    cursor: not-allowed;
-}
-// --8<-- [end:checked]
-
-// --8<-- [start:unchecked]
-.checkbox input[type="checkbox"]:not(:checked) {
-    appearance: none;
-    border: 2px solid #263238;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-// Hover state
-.checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover {
-    position: relative;
-}
-
-// Hover state
-.checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover::before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background-color: #DDDDDD;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-// Disabled state
-.checkbox input[type="checkbox"]:not(:checked):disabled {
-    border-color: #C6C6C6;
-    cursor: not-allowed;
-}
-// --8<-- [end:unchecked]
-
-// --8<-- [start:hasText]
+// Label styles
 .checkbox label {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 16px;
     color: #263238;
-    margin-left: 8px;
+    margin-left: 14px;
+
+    &:not(.visually-hidden) {
+        cursor: pointer;
+    }
 }
 
-// Disabled state label styling
-.checkbox input[type="checkbox"]:disabled + label {
+// Disabled label state
+.checkbox-base:disabled + label {
     color: #6F6F6F;
     cursor: not-allowed;
 }
-// --8<-- [end:hasText]
 
-// --8<-- [start:noText]
+// Hover states for checked checkboxes
+.grid-items.checkbox:has(#checkbox-checked-hover),
+.grid-items.checkbox:has(#checkbox-text-checked-hover) {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        background-color: #CFE1E4;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+}
+
+// Adjust position for text variant of checked hover
+.grid-items.checkbox:has(#checkbox-text-checked-hover)::before {
+    left: 47.3%;
+}
+
+// Default position for non-text variant of checked hover
+.grid-items.checkbox:has(#checkbox-checked-hover)::before {
+    left: 50%;
+}
+
+// Hover states for unchecked checkboxes
+.grid-items.checkbox:has(#checkbox-unchecked-hover),
+.grid-items.checkbox:has(#checkbox-text-unchecked-hover) {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        background-color: #DDDDDD;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+}
+
+// Adjust position for text variant of unchecked hover
+.grid-items.checkbox:has(#checkbox-text-unchecked-hover)::before {
+    left: 47.3%;
+}
+
+// Default position for non-text variant of unchecked hover
+.grid-items.checkbox:has(#checkbox-unchecked-hover)::before {
+    left: 50%;
+}
+
+// Ensure checkboxes stay above hover effects
+#checkbox-checked-hover,
+#checkbox-text-checked-hover,
+#checkbox-unchecked-hover,
+#checkbox-text-unchecked-hover {
+    position: relative;
+    z-index: 1;
+}
+
+// Utility class for visually hidden elements
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -102,4 +137,3 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-// --8<-- [end:noText]

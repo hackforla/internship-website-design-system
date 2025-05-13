@@ -336,6 +336,123 @@ body {
   color: #ffffff;
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-base {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.checkbox-base:checked {
+  accent-color: #247984;
+}
+.checkbox-base:checked:disabled {
+  accent-color: #C6C6C6;
+}
+.checkbox-base:not(:checked) {
+  appearance: none;
+  border: 2px solid #263238;
+  background-color: transparent;
+}
+.checkbox-base:not(:checked):disabled {
+  border-color: #C6C6C6;
+}
+.checkbox-base:disabled {
+  cursor: not-allowed;
+}
+
+.checkbox label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #263238;
+  margin-left: 14px;
+}
+.checkbox label:not(.visually-hidden) {
+  cursor: pointer;
+}
+
+.checkbox-base:disabled + label {
+  color: #6F6F6F;
+  cursor: not-allowed;
+}
+
+.grid-items.checkbox:has(#checkbox-checked-hover),
+.grid-items.checkbox:has(#checkbox-text-checked-hover) {
+  position: relative;
+  z-index: 0;
+}
+.grid-items.checkbox:has(#checkbox-checked-hover)::before,
+.grid-items.checkbox:has(#checkbox-text-checked-hover)::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #CFE1E4;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.grid-items.checkbox:has(#checkbox-text-checked-hover)::before {
+  left: 47.3%;
+}
+
+.grid-items.checkbox:has(#checkbox-checked-hover)::before {
+  left: 50%;
+}
+
+.grid-items.checkbox:has(#checkbox-unchecked-hover),
+.grid-items.checkbox:has(#checkbox-text-unchecked-hover) {
+  position: relative;
+  z-index: 0;
+}
+.grid-items.checkbox:has(#checkbox-unchecked-hover)::before,
+.grid-items.checkbox:has(#checkbox-text-unchecked-hover)::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #DDDDDD;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.grid-items.checkbox:has(#checkbox-text-unchecked-hover)::before {
+  left: 47.3%;
+}
+
+.grid-items.checkbox:has(#checkbox-unchecked-hover)::before {
+  left: 50%;
+}
+
+#checkbox-checked-hover,
+#checkbox-text-checked-hover,
+#checkbox-unchecked-hover,
+#checkbox-text-unchecked-hover {
+  position: relative;
+  z-index: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 input[type=radio] {
   border: 1px solid #247984;
   border-radius: 50%;

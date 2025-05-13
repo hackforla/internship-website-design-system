@@ -6,21 +6,11 @@ nav:
   - Styles:
       - Typography: type-scale.md
   - Components:
-<<<<<<< HEAD
-      - Inputs:
-          - Buttons: buttons.md
-          - Checkboxes: checkboxes.md
-          - Radio Buttons: radio.md
-          - Input Fields: input-fields.md
-          - Text Area: text-area.md
-          - Toggles: toggles.md
-          - Dropdowns: dropdowns.md
-=======
     - Button: buttons.md
+    - Checkbox: checkboxes.md
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
->>>>>>> main
 plugins:
   - search:
       lang: en
