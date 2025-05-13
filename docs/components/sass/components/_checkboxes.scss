@@ -1,64 +1,47 @@
 @use '../abstracts/variables' as *;
 
-// Base checkbox container
+// --8<-- [start:checkbox-base]
 .checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-// Base checkbox styles
 .checkbox-base {
     width: 18px;
     height: 18px;
     border-radius: 2px;
     cursor: pointer;
 
-    // Checked state
-    &:checked {
-        accent-color: #247984;
-
-        &:disabled {
-            accent-color: #C6C6C6;
-        }
-    }
-
-    // Unchecked state
-    &:not(:checked) {
-        appearance: none;
-        border: 2px solid #263238;
-        background-color: transparent;
-
-        &:disabled {
-            border-color: #C6C6C6;
-        }
-    }
-
-    // Disabled state
     &:disabled {
         cursor: not-allowed;
     }
 }
+// --8<-- [end:checkbox-base]
 
-// Label styles
-.checkbox label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #263238;
-    margin-left: 14px;
+// --8<-- [start:checkbox-checked]
+.checkbox-base:checked {
+    accent-color: #247984;
 
-    &:not(.visually-hidden) {
-        cursor: pointer;
+    &:disabled {
+        accent-color: #C6C6C6;
     }
 }
+// --8<-- [end:checkbox-checked]
 
-// Disabled label state
-.checkbox-base:disabled + label {
-    color: #6F6F6F;
-    cursor: not-allowed;
+// --8<-- [start:checkbox-unchecked]
+.checkbox-base:not(:checked) {
+    appearance: none;
+    border: 2px solid #263238;
+    background-color: transparent;
+
+    &:disabled {
+        border-color: #C6C6C6;
+    }
 }
+// --8<-- [end:checkbox-unchecked]
 
+// --8<-- [start:checkbox-hover]
 // Hover states for checked checkboxes
 .grid-items.checkbox:has(#checkbox-checked-hover),
 .grid-items.checkbox:has(#checkbox-text-checked-hover) {
@@ -125,7 +108,30 @@
     position: relative;
     z-index: 1;
 }
+// --8<-- [end:checkbox-hover]
 
+// --8<-- [start:checkbox-label]
+// Label styles
+.checkbox label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #263238;
+    margin-left: 14px;
+
+    &:not(.visually-hidden) {
+        cursor: pointer;
+    }
+}
+
+// Disabled label state
+.checkbox-base:disabled + label {
+    color: #6F6F6F;
+    cursor: not-allowed;
+}
+// --8<-- [end:checkbox-label]
+
+// --8<-- [start:checkbox-utility]
 // Utility class for visually hidden elements
 .visually-hidden {
     position: absolute;
@@ -137,3 +143,4 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+// --8<-- [end:checkbox-utility]

@@ -39,9 +39,17 @@ hide:
     ## Code
     === "CSS"
         ``` css
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-checked"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-hover"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-utility"
         ```
     === "HTML"
         ``` html
+        <div class="grid-items checkbox">
+            <input type="checkbox" class="checkbox-base" id="checkbox-checked" checked>
+            <label for="checkbox-checked" class="visually-hidden">Checked checkbox</label>
+        </div>
         ```
 
 === "Unchecked"
@@ -78,9 +86,17 @@ hide:
     ## Code
     === "CSS"
         ``` css
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-unchecked"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-hover"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-utility"
         ```
     === "HTML"
         ``` html
+        <div class="grid-items checkbox">
+            <input type="checkbox" class="checkbox-base" id="checkbox-unchecked">
+            <label for="checkbox-unchecked" class="visually-hidden">Unchecked checkbox</label>
+        </div>
         ```
 
 === "Checked+Text"
@@ -117,9 +133,17 @@ hide:
     ## Code
     === "CSS"
         ``` css
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-checked"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-hover"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-label"
         ```
     === "HTML"
         ``` html
+        <div class="grid-items checkbox checkbox-with-text">
+            <input type="checkbox" class="checkbox-base" id="checkbox-text-checked" checked>
+            <label for="checkbox-text-checked">Label</label>
+        </div>
         ```
 
 === "Unchecked+Text"
@@ -156,7 +180,15 @@ hide:
     ## Code
     === "CSS"
         ``` css
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-unchecked"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-hover"
+        --8<-- "components/sass/components/_checkboxes.scss:checkbox-label"
         ```
     === "HTML"
         ``` html
+        <div class="grid-items checkbox checkbox-with-text">
+            <input type="checkbox" class="checkbox-base" id="checkbox-text-unchecked">
+            <label for="checkbox-text-unchecked">Label</label>
+        </div>
         ```

@@ -348,12 +348,17 @@ body {
   border-radius: 2px;
   cursor: pointer;
 }
+.checkbox-base:disabled {
+  cursor: not-allowed;
+}
+
 .checkbox-base:checked {
   accent-color: #247984;
 }
 .checkbox-base:checked:disabled {
   accent-color: #C6C6C6;
 }
+
 .checkbox-base:not(:checked) {
   appearance: none;
   border: 2px solid #263238;
@@ -361,25 +366,6 @@ body {
 }
 .checkbox-base:not(:checked):disabled {
   border-color: #C6C6C6;
-}
-.checkbox-base:disabled {
-  cursor: not-allowed;
-}
-
-.checkbox label {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #263238;
-  margin-left: 14px;
-}
-.checkbox label:not(.visually-hidden) {
-  cursor: pointer;
-}
-
-.checkbox-base:disabled + label {
-  color: #6F6F6F;
-  cursor: not-allowed;
 }
 
 .grid-items.checkbox:has(#checkbox-checked-hover),
@@ -440,6 +426,22 @@ body {
 #checkbox-text-unchecked-hover {
   position: relative;
   z-index: 1;
+}
+
+.checkbox label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #263238;
+  margin-left: 14px;
+}
+.checkbox label:not(.visually-hidden) {
+  cursor: pointer;
+}
+
+.checkbox-base:disabled + label {
+  color: #6F6F6F;
+  cursor: not-allowed;
 }
 
 .visually-hidden {
