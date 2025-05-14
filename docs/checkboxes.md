@@ -8,7 +8,7 @@ hide:
 === "Checked"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox">
+            <label class="checkbox" aria-label="Checkbox">
                 <div class="checkbox-container">
                     <input type="checkbox" checked>
                     <span class="checkbox-visual"></span>
@@ -21,7 +21,7 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <label class="checkbox" aria-label="Enabled checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox" checked>
                         <span class="checkbox-visual"></span>
@@ -32,7 +32,7 @@ hide:
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox checkbox-hover">
+                <label class="checkbox checkbox-hover" aria-label="Hover checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox" checked>
                         <span class="checkbox-visual"></span>
@@ -43,7 +43,7 @@ hide:
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <label class="checkbox" aria-label="Disabled checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox" checked disabled>
                         <span class="checkbox-visual"></span>
@@ -57,11 +57,10 @@ hide:
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-checked"
-        --8<-- "components/sass/components/_checkboxes.scss:checkbox-utility"
         ```
     === "HTML"
         ``` html
-        <label class="checkbox">
+        <label class="checkbox" aria-label="Checkbox">
             <div class="checkbox-container">
                 <input type="checkbox" checked>
                 <span class="checkbox-visual"></span>
@@ -72,7 +71,7 @@ hide:
 === "Unchecked"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox">
+            <label class="checkbox" aria-label="Checkbox">
                 <div class="checkbox-container">
                     <input type="checkbox">
                     <span class="checkbox-visual"></span>
@@ -85,7 +84,7 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <label class="checkbox" aria-label="Enabled checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox">
                         <span class="checkbox-visual"></span>
@@ -96,7 +95,7 @@ hide:
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox checkbox-hover">
+                <label class="checkbox checkbox-hover" aria-label="Hover checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox">
                         <span class="checkbox-visual"></span>
@@ -107,7 +106,7 @@ hide:
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <label class="checkbox" aria-label="Disabled checkbox">
                     <div class="checkbox-container">
                         <input type="checkbox" disabled>
                         <span class="checkbox-visual"></span>
@@ -121,11 +120,10 @@ hide:
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-unchecked"
-        --8<-- "components/sass/components/_checkboxes.scss:checkbox-utility"
         ```
     === "HTML"
         ``` html
-        <label class="checkbox">
+        <label class="checkbox" aria-label="Checkbox">
             <div class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkbox-visual"></span>

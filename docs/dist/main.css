@@ -447,17 +447,6 @@ body {
   cursor: not-allowed;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
 input[type=radio] {
   border: 1px solid #247984;
   border-radius: 50%;

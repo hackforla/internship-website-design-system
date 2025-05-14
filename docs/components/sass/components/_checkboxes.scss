@@ -127,17 +127,3 @@
     cursor: not-allowed;
 }
 // --8<-- [end:checkbox-label]
-
-// --8<-- [start:checkbox-utility]
-// Utility class for visually hidden elements
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-// --8<-- [end:checkbox-utility]
