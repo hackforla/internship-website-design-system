@@ -61,7 +61,7 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox" aria-label="Checkbox">
+        <label class="checkbox checkbox-hover" aria-label="Checkbox">
             <div class="checkbox-container">
                 <input type="checkbox" checked>
                 <span class="checkbox-visual"></span>
@@ -125,7 +125,7 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox" aria-label="Checkbox">
+        <label class="checkbox checkbox-hover" aria-label="Checkbox">
             <div class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkbox-visual"></span>
@@ -195,7 +195,7 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox">
+        <label class="checkbox checkbox-hover">
             <div class="checkbox-container">
                 <input type="checkbox" checked>
                 <span class="checkbox-visual"></span>
@@ -266,7 +266,7 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox">
+        <label class="checkbox checkbox-hover">
             <div class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkbox-visual"></span>
