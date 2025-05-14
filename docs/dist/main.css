@@ -337,22 +337,40 @@ body {
 }
 
 .checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  /* Container for the actual checkbox */
+  /* Base checkbox input */
+  /* Custom checkbox appearance */
+}
+.checkbox .checkbox-container {
+  position: relative;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  width: 100%;
+  margin-right: 19px; /* 11px (hover circle extension) + 8px (desired spacing) */
 }
-
-.checkbox-base {
+.checkbox input[type=checkbox] {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox input[type=checkbox]:disabled {
+  cursor: not-allowed;
+}
+.checkbox .checkbox-visual {
+  position: absolute;
   width: 18px;
   height: 18px;
   border-radius: 2px;
-  cursor: pointer;
-  position: relative;
-}
-.checkbox-base:disabled {
-  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .checkbox::before {
@@ -363,48 +381,35 @@ body {
   border-radius: 100px;
   opacity: 0;
   transition: opacity 0.2s ease;
+  left: -11px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   pointer-events: none;
 }
 
-/* Container for checkbox and label */
-.checkbox-with-text {
-  display: inline-flex;
-  margin: 0 auto;
-  align-items: center; /* Ensure vertical alignment */
-}
-
-/* Adjust hover position for checkbox with text */
-.checkbox.checkbox-with-text::before {
-  left: calc(50% - 30px);
-}
-
-/* Show hover effect on hover or when checkbox-hover class is present */
+/* Show hover effect on hover */
 .checkbox:hover:not(:has(input:disabled))::before,
 .checkbox.checkbox-hover:not(:has(input:disabled))::before {
   opacity: 1;
 }
 
-.checkbox-base:checked {
-  appearance: none;
+.checkbox input[type=checkbox]:checked + .checkbox-visual {
   background-color: #247984;
   border: none;
-  position: relative;
 }
-.checkbox-base:checked::after {
+.checkbox input[type=checkbox]:checked + .checkbox-visual::after {
   content: "";
   position: absolute;
   left: 6px;
   top: 2px;
   width: 6px;
   height: 11px;
-  border: solid white;
+  border: solid #ffffff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.checkbox-base:checked:disabled {
+
+.checkbox input[type=checkbox]:checked:disabled + .checkbox-visual {
   background-color: #C6C6C6;
   border: none;
 }
@@ -413,12 +418,12 @@ body {
   background-color: #CFE1E4;
 }
 
-.checkbox-base:not(:checked) {
-  appearance: none;
+.checkbox input[type=checkbox]:not(:checked) + .checkbox-visual {
   border: 2px solid #333333;
   background-color: transparent;
 }
-.checkbox-base:not(:checked):disabled {
+
+.checkbox input[type=checkbox]:not(:checked):disabled + .checkbox-visual {
   border-color: #C6C6C6;
 }
 
@@ -426,20 +431,18 @@ body {
   background-color: #DDD;
 }
 
-.checkbox label {
+.checkbox {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #333333;
-  margin-left: 19px; /* 11px (hover circle extension) + 8px (desired padding) */
-  cursor: pointer;
-  line-height: 18px; /* Match checkbox height */
+  /* Text content spacing */
 }
-.checkbox label.visually-hidden {
-  cursor: default;
+.checkbox .checkbox-text {
+  line-height: 18px;
 }
 
-.checkbox-base:disabled + label {
+.checkbox:has(input:disabled) {
   color: #6F6F6F;
   cursor: not-allowed;
 }

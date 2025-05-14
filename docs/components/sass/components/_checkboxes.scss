@@ -2,26 +2,47 @@
 
 // --8<-- [start:checkbox-base]
 .checkbox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    width: 100%;
-}
-
-.checkbox-base {
-    width: 18px;
-    height: 18px;
-    border-radius: 2px;
     cursor: pointer;
-    position: relative;
+    
+    /* Container for the actual checkbox */
+    .checkbox-container {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 19px; /* 11px (hover circle extension) + 8px (desired spacing) */
+    }
 
-    &:disabled {
-        cursor: not-allowed;
+    /* Base checkbox input */
+    input[type="checkbox"] {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    /* Custom checkbox appearance */
+    .checkbox-visual {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        pointer-events: none;
     }
 }
 
-// Hover container
+// Hover effect container
 .checkbox::before {
     content: "";
     position: absolute;
@@ -30,27 +51,13 @@
     border-radius: 100px;
     opacity: 0;
     transition: opacity 0.2s ease;
+    left: -11px; // Centers the 40px circle around the 18px checkbox
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     pointer-events: none;
 }
 
-/* Container for checkbox and label */
-.checkbox-with-text {
-    display: inline-flex;
-    margin: 0 auto;
-    align-items: center; /* Ensure vertical alignment */
-}
-
-/* Adjust hover position for checkbox with text */
-.checkbox.checkbox-with-text {
-    &::before {
-        left: calc(50% - 30px);
-    }
-}
-
-/* Show hover effect on hover or when checkbox-hover class is present */
+/* Show hover effect on hover */
 .checkbox:hover:not(:has(input:disabled))::before,
 .checkbox.checkbox-hover:not(:has(input:disabled))::before {
     opacity: 1;
@@ -58,11 +65,9 @@
 // --8<-- [end:checkbox-base]
 
 // --8<-- [start:checkbox-checked]
-.checkbox-base:checked {
-    appearance: none;
+.checkbox input[type="checkbox"]:checked + .checkbox-visual {
     background-color: $color-green;
     border: none;
-    position: relative;
 
     &::after {
         content: "";
@@ -71,15 +76,15 @@
         top: 2px;
         width: 6px;
         height: 11px;
-        border: solid white;
+        border: solid $color-white;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
     }
+}
 
-    &:disabled {
-        background-color: $color-old-grey;
-        border: none;
-    }
+.checkbox input[type="checkbox"]:checked:disabled + .checkbox-visual {
+    background-color: $color-old-grey;
+    border: none;
 }
 
 .checkbox:has(input:checked)::before {
@@ -88,14 +93,13 @@
 // --8<-- [end:checkbox-checked]
 
 // --8<-- [start:checkbox-unchecked]
-.checkbox-base:not(:checked) {
-    appearance: none;
+.checkbox input[type="checkbox"]:not(:checked) + .checkbox-visual {
     border: 2px solid $color-black;
     background-color: transparent;
+}
 
-    &:disabled {
-        border-color: $color-old-grey;
-    }
+.checkbox input[type="checkbox"]:not(:checked):disabled + .checkbox-visual {
+    border-color: $color-old-grey;
 }
 
 .checkbox:has(input:not(:checked))::before {
@@ -104,23 +108,21 @@
 // --8<-- [end:checkbox-unchecked]
 
 // --8<-- [start:checkbox-label]
-// Label styles
-.checkbox label {
+// Label text styles
+.checkbox {
     font-family: $text-font-stack;
     font-weight: 600;
     font-size: 16px;
     color: $color-black;
-    margin-left: 19px; /* 11px (hover circle extension) + 8px (desired padding) */
-    cursor: pointer;
-    line-height: 18px; /* Match checkbox height */
-
-    &.visually-hidden {
-        cursor: default;
+    
+    /* Text content spacing */
+    .checkbox-text {
+        line-height: 18px;
     }
 }
 
 // Disabled label state
-.checkbox-base:disabled + label {
+.checkbox:has(input:disabled) {
     color: $color-old-mid-grey;
     cursor: not-allowed;
 }
