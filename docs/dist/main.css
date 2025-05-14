@@ -341,9 +341,6 @@ body {
   align-items: center;
   position: relative;
   cursor: pointer;
-  /* Container for the actual checkbox */
-  /* Base checkbox input */
-  /* Custom checkbox appearance */
 }
 .checkbox .checkbox-container {
   position: relative;
@@ -352,7 +349,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 19px; /* 11px (hover circle extension) + 8px (desired spacing) */
+  margin-right: 19px;
 }
 .checkbox input[type=checkbox] {
   position: absolute;
@@ -387,7 +384,6 @@ body {
   pointer-events: none;
 }
 
-/* Show hover effect on hover */
 .checkbox:hover:not(:has(input:disabled))::before,
 .checkbox.checkbox-hover:not(:has(input:disabled))::before {
   opacity: 1;
@@ -436,7 +432,6 @@ body {
   font-weight: 600;
   font-size: 16px;
   color: #333333;
-  /* Text content spacing */
 }
 .checkbox .checkbox-text {
   line-height: 18px;

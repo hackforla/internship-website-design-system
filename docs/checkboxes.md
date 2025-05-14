@@ -56,6 +56,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-checked"
         ```
     === "HTML"
@@ -119,6 +120,7 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-unchecked"
         ```
     === "HTML"
@@ -186,7 +188,9 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-checked"
+
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-label"
         ```
     === "HTML"
@@ -255,7 +259,9 @@ hide:
     === "CSS"
         ``` css
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-base"
+
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-unchecked"
+        
         --8<-- "components/sass/components/_checkboxes.scss:checkbox-label"
         ```
     === "HTML"
