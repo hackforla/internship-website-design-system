@@ -7,6 +7,7 @@ nav:
       - Typography: type-scale.md
   - Components:
     - Button: buttons.md
+    - Checkbox: checkboxes.md
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
