@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as *;
+
+.textarea-field-container {
+    display: grid;
+    padding: 5%;
+    
+}
+.input-main{
+    display: flex;
+    justify-content: center;
+}
+.textarea-vari{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: #9F9F9F;
+    font-size: 45px;
+    font-weight: bold;
+    
+}
+// --8<-- [start:text-area]
+.textarea-box{
+    height: $text-area-height;
+    width: $text-area-width;
+    padding: $text-area-padding;
+    border-radius: $text-area-border-radius;
+    &.default{
+        border:#E7F0F1 2px solid;
+        background-color:#E7F0F1;
+    }
+    &.hover{
+        border: lightgray 2px solid;
+        background-color:#FAFAFA;
+    }
+    &.focused{
+        border: #A0C4C9 2px solid;
+        background-color:#FAFAFA;
+    }
+}
+// --8<-- [end:text-area]
