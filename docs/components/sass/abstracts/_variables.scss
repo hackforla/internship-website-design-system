@@ -15,6 +15,7 @@ $color-old-mid-grey: #6F6F6F;
 $color-black: #333333;
 $color-green: #247984;
 $color-darkgreen: #0D5761;
+$color-old-green:#247984;
 $color-whitegreen: #E7F0F1;
 
 /// Font family
@@ -155,8 +156,27 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-// $breakpoints: (
-//   'small': 320px,
-//   'medium': 768px,
-//   'large': 1024px,
-// ) !default;
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+$screen-tablet: 768px;
+$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';

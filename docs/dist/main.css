@@ -1167,6 +1167,96 @@ input[type=radio]:checked :hover {
   background-color: #A0C4C9;
 }
 
+.accordion {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #247984;
+}
+
+.panel {
+  font-size: 16px;
+  padding: 0px 12px 16px;
+}
+
+.accordion-button {
+  font-size: 24px;
+  color: #333333;
+  cursor: pointer;
+  width: 100%;
+  height: 64px;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding: 24px 20px 0px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-family: "Roboto SemiBold";
+}
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 20px;
+    height: 44px;
+    padding: 16px 12px 0px;
+    margin-bottom: 16px;
+  }
+}
+
+.accordion .panel {
+  padding: 0px 20px 24px;
+  display: none;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .accordion .panel {
+    font-size: 16px;
+    padding: 0px 12px 16px;
+  }
+}
+
+.accordion-button.active + .panel {
+  display: block;
+  text-align: left;
+}
+
+.accordion .accordion-button.active {
+  margin-bottom: 16px;
+}
+.accordion .accordion-button span {
+  line-height: 40px;
+}
+@media (max-width: 768px) {
+  .accordion .accordion-button span {
+    line-height: 26px;
+  }
+}
+.accordion .accordion-button .twemoji {
+  color: #247984;
+  --md-icon-size: 1.75em;
+  margin: auto 0;
+}
+.accordion .accordion-button:not(.active) .open {
+  display: none;
+}
+.accordion .accordion-button.active .close {
+  display: none;
+}
+
+.accordion.mobile .accordion-button {
+  font-size: 20px;
+  height: 44px;
+  padding: 16px 12px 0px;
+  margin-bottom: 16px;
+}
+.accordion.mobile .panel {
+  font-size: 16px;
+  padding: 0px 12px 16px;
+}
+.accordion.mobile span {
+  line-height: 26px;
+}
+
 .btn-grid-1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
