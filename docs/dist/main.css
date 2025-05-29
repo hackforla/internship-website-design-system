@@ -336,6 +336,112 @@ body {
   color: #ffffff;
 }
 
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox .checkbox-container {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 19px;
+}
+.checkbox input[type=checkbox] {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox input[type=checkbox]:disabled {
+  cursor: not-allowed;
+}
+.checkbox .checkbox-visual {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  left: -11px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.checkbox:hover:not(:has(input:disabled))::before,
+.checkbox.checkbox-hover:not(:has(input:disabled))::before {
+  opacity: 1;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-visual {
+  background-color: #247984;
+  border: none;
+}
+.checkbox input[type=checkbox]:checked + .checkbox-visual::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input[type=checkbox]:checked:disabled + .checkbox-visual {
+  background-color: #C6C6C6;
+  border: none;
+}
+
+.checkbox:has(input:checked)::before {
+  background-color: #CFE1E4;
+}
+
+.checkbox input[type=checkbox]:not(:checked) + .checkbox-visual {
+  border: 2px solid #333333;
+  background-color: transparent;
+}
+
+.checkbox input[type=checkbox]:not(:checked):disabled + .checkbox-visual {
+  border-color: #C6C6C6;
+}
+
+.checkbox:has(input:not(:checked))::before {
+  background-color: #DDD;
+}
+
+.checkbox {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+}
+.checkbox .checkbox-text {
+  line-height: 18px;
+}
+
+.checkbox:has(input:disabled) {
+  color: #6F6F6F;
+  cursor: not-allowed;
+}
+
 input[type=radio] {
   border: 1px solid #247984;
   border-radius: 50%;
