@@ -23,7 +23,6 @@
   "homepage": "https://github.com/hackforla/internship-website-design-system#readme",
   "dependencies": {
     "@parcel/watcher": "^2.5.1",
-    "concurrently": "^8.2.2",
     "sass": "^1.89.2"
   }
 }
