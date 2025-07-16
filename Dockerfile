@@ -16,13 +16,12 @@ WORKDIR /docs
 
 # Copy package files and install dependencies with caching
 COPY package.json .
-RUN --mount=type=cache,target=/docs/node_modules \
-    --mount=type=cache,target=/root/.cache \
-    --mount=type=cache,target=/root/.npm \
-    npm install --save-dev
+RUN echo "Cache bust for npm install"
+RUN npm install --save-dev
 
 # Copy Python requirements and install
 COPY requirements.txt .
+RUN echo "Cache bust for pip install"
 RUN pip install -r requirements.txt
 
 # Copy the entire application
