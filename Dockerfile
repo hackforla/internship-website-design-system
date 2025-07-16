@@ -10,7 +10,7 @@ ENV PYTHONPYCACHEPREFIX=/root/.cache/pycache/
 RUN \
     --mount=type=cache,target=/var/cache/apk \
     --mount=type=cache,target=/etc/apk/cache \
-    apk add nodejs npm
+    apk add nodejs npm build-base python3
 
 WORKDIR /docs
 
