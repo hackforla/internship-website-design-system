@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"sass --watch docs/components/sass:docs/dist\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
+    "dev": "sass --watch docs/components/sass:docs/dist",
     "build-sass": "sass docs/components/sass:docs/dist"
   },
   "repository": {
@@ -21,10 +21,9 @@
     "url": "https://github.com/hackforla/internship-website-design-system/issues"
   },
   "homepage": "https://github.com/hackforla/internship-website-design-system#readme",
-  "devDependencies": {
+  "dependencies": {
     "@parcel/watcher": "^2.5.1",
     "concurrently": "^8.2.2",
-    "sass": "^1.89.2",
-    "watch": "^1.0.2"
+    "sass": "^1.89.2"
   }
 }
