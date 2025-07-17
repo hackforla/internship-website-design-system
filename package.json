@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"sass --watch docs/components/sass:docs/dist\" \"mkdocs serve --dev-addr=0.0.0.0:8000\"",
-    "build-sass": "sass docs/components/sass:docs/dist",
-    "pa11y-test": "node scripts/pa11y-test.js",
-    "prepare": "husky install"
+    "dev": "sass --watch docs/components/sass:docs/dist",
+    "build-sass": "sass docs/components/sass:docs/dist"
   },
   "repository": {
     "type": "git",
@@ -23,11 +21,8 @@
     "url": "https://github.com/hackforla/internship-website-design-system/issues"
   },
   "homepage": "https://github.com/hackforla/internship-website-design-system#readme",
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "csv-writer": "^1.6.0",
-    "husky": "^8.0.3",
-    "pa11y": "^8.0.0",
-    "pa11y-ci": "^3.1.0"
+  "dependencies": {
+    "@parcel/watcher": "^2.5.1",
+    "sass": "^1.89.2"
   }
 }

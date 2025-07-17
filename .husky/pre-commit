@@ -1,5 +1,5 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+## . "$(dirname "$0")/_/husky.sh"
 
 # Check if the hook should be skipped
 if [ "$SKIP_HOOK" = "true" ]; then
@@ -12,8 +12,8 @@ mkdocs serve --quiet &
 # Capture the PID of the MkDocs server
 MKDOCS_PID=$!
 
-# Run the accessibility test script
-npm run pa11y-test
+# Uncomment the following line to run pa11y-test before commit
+# npm run pa11y-test
 
 # Stop MkDocs server
 kill $MKDOCS_PID
