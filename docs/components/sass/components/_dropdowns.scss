@@ -42,16 +42,16 @@
 // hover
 .custom-option:hover {
     cursor: pointer;
-    background-color: $dropdown-hover-color;
+    //background-color: $dropdown-hover-color;
 }
 
 .custom-option.hovered {
-    background-color: $dropdown-hover-color;
+    //background-color: $dropdown-hover-color;
 }
 // --8<-- [end:dropdown-hover]
 
 .dropdown-placeholder-hover-color{
-    background-color: $dropdown-hover-color;
+    //background-color: $dropdown-hover-color;
 } 
 
 // --8<-- [start:dropdown-selected]
