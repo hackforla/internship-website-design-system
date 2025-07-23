@@ -1,66 +1,39 @@
 @use '../abstracts/variables' as *;
 
-// --8<-- [start:menu-item-formatting]
+// --8<-- [start:menu-item]
 .menu-item{
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-.item-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 12px;
-    height: 32px;
-    cursor: pointer;
-}
-.left-icon, .right-icon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.item-label {
-    text-align: left;
-    flex-grow: 1;
-    flex-shrink: 1;
-    font-size: 14px;
-}
-
-.divider {
+    & .item-wrapper {
+        padding: 8px 12px;
+        gap: 12px;
+        height: 32px;
+    }
+    & .divider {
     border: none;
     border-bottom: 1px solid $dropdown-divider-color;
     padding: 8px 0px; //TODO okay to define in inner element? or move to layout container
 }
+}
 
-// --8<-- [end:menu-item-formatting]
-
-// --8<-- [start:dropdown-hover]
-// hover
-.custom-option:hover {
+& .item-wrapper {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    //background-color: $dropdown-hover-color;
+    & .left-icon, .right-icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    & .item-label {
+        text-align: left;
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 14px;
+    }
 }
 
-.custom-option.hovered {
-    //background-color: $dropdown-hover-color;
-}
-// --8<-- [end:dropdown-hover]
-
-.dropdown-placeholder-hover-color{
-    //background-color: $dropdown-hover-color;
-} 
-
-// --8<-- [start:dropdown-selected]
-// selected
-.custom-option.selected {
-    color: $dropdown-placeholder-color;
-    background-color: $dropdown-select-color;
-}
-// --8<-- [end:dropdown-selected]
-.dropdown-placeholder-selected-color{
-    background-color: $dropdown-select-color;
-} 
+// --8<-- [end:menu-item]
