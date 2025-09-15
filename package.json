@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sass --watch docs/components/sass:docs/dist",
-    "build-sass": "sass docs/components/sass:docs/dist"
+    "build-sass": "sass docs/components/sass:docs/dist",
+    "build": "npm run build-sass && mkdocs build",
+    "clean": "rm -rf docs/dist/*.css docs/dist/*.css.map"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
   "dependencies": {
     "@parcel/watcher": "^2.5.1",
     "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
