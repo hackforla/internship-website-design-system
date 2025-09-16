@@ -4,7 +4,7 @@
 .btn {
   border: 0;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: $text-font-stack;
   text-decoration: none;
   transition: all 100ms ease-in;
@@ -12,9 +12,10 @@
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  margin: 5px 0;
-  width: 83px;
-  height: 40px; 
+  margin: 0.5rem 0;
+  width: auto;
+  padding: 0.5rem 1.5rem;
+  height: 2.5rem; 
   border-radius: 100px; 
 }
 // --8<-- [end:btn]
@@ -51,6 +52,7 @@
   &:focus,
   &.focus {
     &::after {
+      color: var(--color-white, $color-white);
       opacity: var(--button-overlay-focus, $button-overlay-focus);
     }
   }
@@ -58,6 +60,7 @@
   &:active,
   &.pressed {
     &::after {
+      color: var(--color-white, $color-white);
       opacity: var(--button-overlay-active, $button-overlay-active);
     }
   }
@@ -258,9 +261,8 @@
   background-color: $button-primary-color;
   color: $color-white;
   --md-typeset-a-color: #{$color-white};
-  font-size: 24px;
-  width: 147px;
-  height: 72px;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
   position: relative;
   overflow: hidden;
 

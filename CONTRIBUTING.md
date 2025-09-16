@@ -11,11 +11,10 @@
    - [**Prerequisites**](#prerequisites)
    - [**Setup Instructions**](#setup-instructions)
       - [1. Fork and Clone this repository](#1-fork-and-clone-this-repository)
-      - [2. Install Dependencies](#2-install-dependencies)
-      - [3. Docker Setup](#3-docker-setup)
-      - [4. Starting Docker](#4-starting-docker)
-      - [5. Stopping Docker](#5-stopping-docker)
-      - [Docker Notes](#docker-notes)
+      - [2. Starting the Development Environment](#2-starting-the-development-environment)
+      - [3. Stopping Docker](#3-stopping-docker)
+      - [4. Development Workflow](#4-development-workflow)
+      - [Docker Development Notes](#docker-development-notes)
 - [**Working on issues**](#working-on-issues)
    - [**Branch Workflow**](#branch-workflow)
 - [**Create an issue**](#create-an-issue)
@@ -67,33 +66,74 @@
    upstream        https://github.com/hackforla/internship-website-design-system.git (push)
    ```
 
-#### 1. **Docker Setup**
-- #### **Enter repo directory:**
+#### 2. **Starting the Development Environment**
+
+**IMPORTANT:** Make sure **Docker Desktop** is running on your computer before executing the commands below.
+
+- #### **Navigate to the project directory:**
    ```bash 
    cd internship-website-design-system
    ```
-- #### **Build the Docker image:** 
-   ```bash 
-   docker build -t ds .
-   ```
-   This command builds a Docker image named `ds` from the Dockerfile in the current directory.
-   Note: If you have a permissions error run `sudo docker build -t ds .` and enter your machine's admin password.
-   
-#### 2. **Starting Docker**
-**IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.
-- #### Run the Docker container.
-   ```bash
-   docker run -p 8000:8000 -v $(pwd):/docs ds
-   ```
-   This command runs the `ds` image as a container and maps the container's port 8000 to port 8000 on your host machine, allowing you to access the          MkDocs server. View the site by navigating to `[http://localhost:8000](http://0.0.0.0:8000/internship-website-design-system/)` in your web browser. You should see your MkDocs site being served from the Docker           container.
-   
-#### 5. **Stopping Docker**
-Simply press `CTRL + C` in the terminal where the container is running. This sends a SIGINT signal, initiating a graceful shutdown of the container. If it doesn't stop, pressing `CTRL + C` again forces a more abrupt termination.
-   
-#### Docker Notes:
 
-- Changes to any files will automatically be displayed in your browser if the Docker image is ran with `docker run -p 8000:8000 -v $(pwd):/docs ds` as previously mentioned.
-- If the default port (8000) is already in use on your machine, you can map the container's port to a different port on your host machine by changing the first   `8000` in the `docker run` command to a free port, e.g., `docker run -p 8001:8000 ds`.
+- #### **Start the development environment:**
+   ```bash
+   docker compose up
+   ```
+   This command will:
+   - Build the Docker image automatically
+   - Install all npm dependencies
+   - Compile Sass files initially
+   - Start the Sass watcher for live CSS compilation
+   - Start MkDocs server with live reload
+   - Set up file watching for automatic updates
+
+- #### **View the site:**
+   Open your browser and navigate to: **http://localhost:8000**
+   
+   Both Sass changes and documentation changes will automatically reload in your browser.
+
+- #### **Alternative Docker Commands:**
+   ```bash
+   # Start in background (detached mode)
+   docker compose up -d
+   
+   # Build fresh and start
+   docker compose up --build
+   
+   # View logs while running in background
+   docker compose logs -f
+   
+   # Check container status
+   docker compose ps
+   ```
+   
+#### 3. **Stopping Docker**
+- **If running in foreground:** Press `Ctrl + C` in the terminal
+- **If running in background:** Run `docker compose down`
+   
+#### 4. **Development Workflow**
+
+1. **Edit Sass files** in `docs/components/sass/`
+2. **Changes auto-compile** and browser refreshes automatically
+3. **Edit documentation** in `docs/*.md` files  
+4. **Changes auto-reload** in the browser
+
+#### Docker Development Notes:
+
+- **Live reload works for both CSS and documentation** - no manual refresh needed
+- **File changes are instant** - the container watches your local files
+- **Port 8000** serves the MkDocs site, **port 35729** handles live reload
+- **If port 8000 is busy:** Stop other services using that port or change the port mapping in `docker-compose.yml`
+- **Container commands:** If you need to run commands inside the container:
+  ```bash
+  # Access container shell
+  docker compose exec mkdocs sh
+  
+  # Inside container you can run:
+  npm run dev          # Start only Sass watcher
+  npm run build-sass   # Build Sass once
+  npm run clean        # Clean compiled CSS
+  ```
 
 ## Working on issues
 
@@ -145,7 +185,7 @@ After pushing your branch to your fork, navigate to the [original repository](ht
 ## Testing
 <!-- Talk about Accessibility Testing -->
 
-- Run and view the site locally. See [Starting Docker](#3-starting-docker)
+- Run and view the site locally. See [Starting the Development Environment](#2-starting-the-development-environment)
 - Observe visual changes for desktop-sized screens as well as mobile.
   
 ### Automated Accessibility Testing

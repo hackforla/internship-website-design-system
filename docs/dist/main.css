@@ -106,7 +106,7 @@ body {
 .btn {
   border: 0;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   transition: all 100ms ease-in;
@@ -114,9 +114,10 @@ body {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  margin: 5px 0;
-  width: 83px;
-  height: 40px;
+  margin: 0.5rem 0;
+  width: auto;
+  padding: 0.5rem 1.5rem;
+  height: 2.5rem;
   border-radius: 100px;
 }
 
@@ -145,9 +146,11 @@ body {
   opacity: var(--button-overlay-hover, 0.08);
 }
 .btn-filled:focus::after, .btn-filled.focus::after {
+  color: var(--color-white, #ffffff);
   opacity: var(--button-overlay-focus, 0.12);
 }
 .btn-filled:active::after, .btn-filled.pressed::after {
+  color: var(--color-white, #ffffff);
   opacity: var(--button-overlay-active, 0.16);
 }
 .btn-filled:disabled, .btn-filled.disabled {
@@ -292,9 +295,8 @@ body {
   background-color: #006973;
   color: #ffffff;
   --md-typeset-a-color: #ffffff;
-  font-size: 24px;
-  width: 147px;
-  height: 72px;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
   position: relative;
   overflow: hidden;
 }
