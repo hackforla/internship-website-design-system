@@ -49,11 +49,7 @@ $radio-disabled-stroke: gray;
 $radio-button-width: 26px;
 $radio-button-height: 26px;
 
-$dropdown-hover-color: #CFE1E4;
-$dropdown-select-color: #A0C4C9;
-$dropdown-placeholder-color: $color-dark-grey;
-$drowpdown-border-color: $color-dark-grey;
-$dropdown-arrow-color: $color-dark-grey;
+$dropdown-divider-color: $color-old-grey;
 
 $tab-text-color: $color-darkgreen;
 $tab-underline-color: $color-darkgreen;
@@ -120,11 +116,7 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --radio-button-height: #{$radio-button-height};
   
   // Dropdowns
-  --dropdown-hover-color: #{$dropdown-hover-color};
-  --dropdown-select-color: #{$dropdown-select-color};
-  --dropdown-placeholder-color: #{$dropdown-placeholder-color};
-  --drowpdown-border-color: #{$drowpdown-border-color};
-  --dropdown-arrow-color: #{$dropdown-arrow-color};
+  --dropdown-divider-color: #{$dropdown-divider-color};
   
   // Tabs
   --tab-text-color: #{$tab-text-color};

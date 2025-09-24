@@ -12,6 +12,8 @@ nav:
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
+    - Dropdowns:
+      - 'Atoms: Menu Item': menu-items.md
    
 
 plugins:
