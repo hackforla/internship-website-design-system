@@ -3,26 +3,14 @@ hide:
   - toc
 ---
 
-# **Menu Items**
+# **Dropdown Bases**
 ## Guidelines
-**Menu items** are the building blocks of the Menu. Divider, Left icon/element, Content, and Right icon
-can all be modified or hidden.
+Drop down bases are one of the options for making a menu appear. **These dropdown bases require no inputs.** As soon as the user makes a selection, the text field is populated and the label text moves to the top left.
+
 ## Class
-=== "Menu Item"
+=== "Dropdown Base - No Input"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <div class="menu-item" role="menuitem">
-                <div class="item-wrapper">
-                    <span class="left-icon" aria-hidden="true">
-                    :material-heart:{.visible}
-                    </span>
-                    <span class="item-label">Menu Item</span>
-                    <span class="right-icon" aria-hidden="true">
-                    :material-chevron-right:{.visible}
-                    </span>
-                </div>
-                <hr class="divider">
-            </div>
         </div>
     </div>
     <br>
@@ -117,3 +105,5 @@ can all be modified or hidden.
 
     <br>
     ## Example
+
+=== "Dropdown Base - Input"

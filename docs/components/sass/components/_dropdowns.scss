@@ -4,7 +4,6 @@
 .menu-item{
     display: flex;
     flex-direction: column;
-    width: 100%;
     & .item-wrapper {
         padding: 8px 12px;
         gap: 12px;
@@ -14,6 +13,7 @@
     border: none;
     border-bottom: 1px solid $dropdown-divider-color;
     padding: 8px 0px; //TODO okay to define in inner element? or move to layout container
+    margin: 0;
 }
 }
 
@@ -35,5 +35,8 @@
         font-size: 14px;
     }
 }
-
+.divider {
+    display: flex;
+    justify-content: center;
+}
 // --8<-- [end:menu-item]
