@@ -1,10 +1,11 @@
-/* Nav Bar Formmatting */
+/* Nav Bar Formatting */
 
 .md-nav__item a {
   height: 2.1rem;
   line-height: 2rem;
   text-align: center;
 }
+
 .md-nav__link a {
   text-align: center;
   padding-left: 20%;
@@ -26,26 +27,102 @@
   width: 15vw;
 }
 
-/* .md-nav__link:not(.md-nav__container):focus,
-.md-nav__link:not(.md-nav__container):hover {
-  color: black !important;
-} */
-
+/* Tabs hover underline */
 li.md-tabs__item:hover {
   box-shadow: inset 0 -3px 0 0 rgb(123, 178, 162);
 }
 
+/* Hide most icons, except clipboard */
 .md-icon {
   visibility: hidden;
 }
 
+.md-clipboard.md-icon {
+  visibility: visible !important;
+}
+
+/* Active nav link color */
 .md-nav__item .md-nav__link--active {
   color: black;
 }
 
-/* md-typeset heading styles */
-.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
-    text-transform: none;
-    letter-spacing: 0;
-    color: black;
+/* Headings in content */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  text-transform: none;
+  letter-spacing: 0;
+  color: black;
+}
+
+/* Header container */
+.page-header {
+  display: flex;
+  justify-content: space-between; /* push Figma link to the right */
+  align-items: center;
+}
+
+/* Style Figma link */
+.page-header .figma-link {
+  font-size: 0.9rem;      /* smaller than heading */
+  font-weight: 500;
+  color: #1565c0;         /* Material blue */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;               /* space between text and icon */
+}
+
+.page-header .figma-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Copy button (clipboard) styling --- */
+.md-clipboard {
+  background: none !important;     /* remove grey box */
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px !important;
+  margin: 4px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;   /* icon container size */
+  height: 28px;
+
+  color: #1a1a1a;                  /* icon color */
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.md-clipboard:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Resize the clipboard SVG icon */
+.md-clipboard svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2px;
+}
+
+/* Reduce spacing between tab headers and preview content */
+.md-typeset .tabbed-set {
+  margin-bottom: 0;   /* remove bottom margin of tab wrapper */
+}
+
+.md-typeset .tabbed-content {
+  margin-top: 0 !important;   /* remove top margin of tab content */
+}
+
+/* Optional: tighten state-box spacing */
+.state-box {
+  margin-top: 0 !important;
+  margin-bottom: 16px; /* keep just a little breathing room */
 }
