@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+// --8<-- [start:pagination]
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    list-style: none;
+}
+
+.pagination li a {
+    display: block;
+}
