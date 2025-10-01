@@ -67,6 +67,28 @@ $input-field-box-width: 348px;
 $input-field-box-height: 48px;
 $input-field-border-radius: 4px;
 
+// Input field states
+$input-border-color-default: $color-dark-grey;
+$input-border-color-hover: #6F6F6F;   // or use $color-old-mid-grey
+$input-border-color-focus: $color-green;  // matches system accent
+$input-border-color-error: #B00020;   // add red tone if not defined yet
+$input-border-color-disabled: $color-old-light-grey;
+
+$input-label-color-default: $color-dark-grey;
+$input-label-color-error: #B00020;
+$input-label-color-disabled: $color-old-grey;
+
+$input-supporting-text-color: $color-dark-grey;
+$input-supporting-text-error: #B00020;
+
+$input-padding-x: 12px;   // horizontal padding
+$input-padding-y: 8px;    // vertical padding
+$input-icon-gap: 8px;     // space between icon and text
+$input-font-size: 16px;
+$input-label-font-size: 14px;
+$input-supporting-font-size: 12px;
+
+
 $text-area-height: 122px;
 $text-area-width: 348px;
 $text-area-border-radius: 4px;
@@ -140,6 +162,27 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --input-field-box-width: #{$input-field-box-width};
   --input-field-box-height: #{$input-field-box-height};
   --input-field-border-radius: #{$input-field-border-radius};
+
+  --input-border-color-default: #{$input-border-color-default};
+--input-border-color-hover: #{$input-border-color-hover};
+--input-border-color-focus: #{$input-border-color-focus};
+--input-border-color-error: #{$input-border-color-error};
+--input-border-color-disabled: #{$input-border-color-disabled};
+
+--input-label-color-default: #{$input-label-color-default};
+--input-label-color-error: #{$input-label-color-error};
+--input-label-color-disabled: #{$input-label-color-disabled};
+
+--input-supporting-text-color: #{$input-supporting-text-color};
+--input-supporting-text-error: #{$input-supporting-text-error};
+
+--input-padding-x: #{$input-padding-x};
+--input-padding-y: #{$input-padding-y};
+--input-icon-gap: #{$input-icon-gap};
+--input-font-size: #{$input-font-size};
+--input-label-font-size: #{$input-label-font-size};
+--input-supporting-font-size: #{$input-supporting-font-size};
+
   
   // Text area
   --text-area-height: #{$text-area-height};
