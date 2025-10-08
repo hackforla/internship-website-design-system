@@ -2,11 +2,14 @@ services:
   mkdocs:
     build: .
     volumes:
-      - .:/docs
+      - .:/docs:delegated
       - /docs/node_modules # Persist node_modules for faster subsequent builds
     ports:
       - "8000:8000"
       - "35729:35729"
     stdin_open: true
     tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=1
+      - CHOKIDAR_INTERVAL=300
     # Use container entrypoint to run processes
