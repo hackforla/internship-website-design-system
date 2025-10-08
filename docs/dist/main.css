@@ -45,6 +45,7 @@
   --input-field-box-width: 348px;
   --input-field-box-height: 48px;
   --input-field-border-radius: 4px;
+  --pagination-on-surface: #171D1E;
   --text-area-height: 122px;
   --text-area-width: 348px;
   --text-area-border-radius: 4px;
@@ -1152,16 +1153,25 @@ input[type=radio]:checked :hover {
   line-height: 26px;
 }
 
-.pagination .pagination-items {
+.grid-items .pagination .pagination-items {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 0px;
   list-style-type: none;
+  gap: 6px;
 }
 
-.pagination li a {
+.pagination-items li {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(23, 29, 30, 0.12);
+  border-radius: 16px;
+}
+
+.pagination-items li a {
   display: block;
+  color: #171D1E;
 }
 
 .btn-grid-1 {
