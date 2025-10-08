@@ -1,6 +1,7 @@
 site_name: TWE Design System
 repo_url: https://github.com/hackforla/internship-website-design-system
 site_url: https://hackforla.github.io/internship-website-design-system/
+
 nav:
   - Getting Started: index.md
   - Styles:
@@ -19,10 +20,8 @@ plugins:
   - search:
       lang: en
 
-
 theme:
   name: material
-  custom_dir: docs/overrides
   font:
     text: roboto
   logo: Logo Flatten White.png
@@ -30,16 +29,19 @@ theme:
     # - navigation.expand
     - navigation.instant
     - navigation.path
-    # - navigation.sections
     - content.code.copy
     - content.code.select
   palette:
     primary: white
     # accent: teal
+  custom_dir: docs/overrides
+
 extra_css:
+  - https://fonts.googleapis.com/icon?family=Material+Icons+Outlined
   - dist/main.css
   - stylesheets/extra.css
   # - /bootstrap/css/bootstrap.min.css
+
 extra_javascript:
   - javascript/extra.js
   # - javascript/bootstrap.min.js
