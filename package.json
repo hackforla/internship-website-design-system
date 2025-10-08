@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "sass --watch docs/components/sass:docs/dist",
     "build-sass": "sass docs/components/sass:docs/dist",
+    "watch:sass": "sass --watch docs/components/sass:docs/dist",
     "build": "npm run build-sass && mkdocs build",
     "clean": "rm -rf docs/dist/*.css docs/dist/*.css.map"
   },
