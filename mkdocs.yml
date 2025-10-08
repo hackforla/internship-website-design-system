@@ -12,6 +12,7 @@ nav:
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
+    - Pagination: pagination.md
    
 
 plugins:

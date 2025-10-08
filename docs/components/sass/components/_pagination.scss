@@ -1,12 +1,30 @@
 @use '../abstracts/variables' as *;
+
 // --8<-- [start:pagination]
-.pagination {
+.grid-items .pagination .pagination-items {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     padding: 0px;
-    list-style: none;
+    list-style-type: none;
+    gap: 6px;
+}
+.pagination-items li {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(23, 29, 30, 0.12);
+    border-radius: 16px;
+}
+.pagination-items li a {
+    display: block;
+    color: #171D1E;
 }
 
-.pagination li a {
-    display: block;
+.pagination-items .control-btn {
+    
 }
+.pagination-items .page-btn {
+
+}
+
+// --8<-- [end:pagination]

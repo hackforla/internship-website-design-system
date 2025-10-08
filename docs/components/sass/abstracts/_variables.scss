@@ -67,6 +67,9 @@ $input-field-box-width: 348px;
 $input-field-box-height: 48px;
 $input-field-border-radius: 4px;
 
+$pagination-on-surface: #171D1E;
+
+
 $text-area-height: 122px;
 $text-area-width: 348px;
 $text-area-border-radius: 4px;
@@ -140,6 +143,9 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --input-field-box-width: #{$input-field-box-width};
   --input-field-box-height: #{$input-field-box-height};
   --input-field-border-radius: #{$input-field-border-radius};
+
+  //Pagination
+  --pagination-on-surface: #{$pagination-on-surface};
   
   // Text area
   --text-area-height: #{$text-area-height};
