@@ -9,5 +9,4 @@ services:
       - "35729:35729"
     stdin_open: true
     tty: true
-    # Override the default command to ensure both Sass and MkDocs run
-    command: sh -c "npm run dev & mkdocs serve --dev-addr=0.0.0.0:8000 --livereload"
+    # Use container entrypoint to run processes
