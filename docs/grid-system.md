@@ -7,8 +7,11 @@ hide:
 ## Class
 
 === "Compact"
-    <div class="btn-grid-1">
-        <div class="grid-items">Compact Grid (4 columns)</div>
+    <div class="grid-demo compact">
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
     </div>
 
     ## Code
@@ -28,16 +31,17 @@ hide:
         --8<-- "components/sass/layout/_grid.scss:compact"
         ```
 
-    ## Image
-
-    <div class="grid-example">
-        <img src="../assets/grid-system-compact.png" alt="">
-    </div>
-
 
 === "Medium"
-    <div class="btn-grid-1">
-        <div class="grid-items">Medium Grid (8 columns)</div>
+    <div class="grid-demo medium">
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
     </div>
 
     ## Code
@@ -61,15 +65,17 @@ hide:
         --8<-- "components/sass/layout/_grid.scss:medium"
         ```
 
-    ## Image
-
-    <div class="grid-example">
-        <img src="../assets/grid-system-medium.png" alt="">
-    </div>
 
 === "Expanded"
-    <div class="btn-grid-1">
-        <div class="grid-items">Expanded Grid (12 columns)</div>
+    <div class="grid-demo expanded">
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
     </div>
 
     ## Code
@@ -97,17 +103,22 @@ hide:
         --8<-- "components/sass/layout/_grid.scss:expanded"
         ```
     
-    ## Image
-
-    <div class="grid-example">
-        <img src="../assets/grid-system-expanded.png" alt="">
-    </div>
 
 === "Large"
-    <div class="btn-grid-1">
-        <div class="grid-items">Large Grid (12 columns with wider margins)</div>
+    <div class="grid-demo large">
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
+      <div class="grid-box"></div>
     </div>
-
 
     ## Code
 
@@ -133,8 +144,3 @@ hide:
         ```scss
         --8<-- "components/sass/layout/_grid.scss:large"
         ```
-    ## Image
-
-    <div class="grid-example">
-        <img src="../assets/grid-system-large.png" alt="">
-    </div>
