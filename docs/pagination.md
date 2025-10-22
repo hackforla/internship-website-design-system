@@ -52,6 +52,6 @@ helping them navigate large sets of content in a clear and manageable way.
         ```
     === "JS"
         ``` js
-            --8<-- "components/sass/components/_pagination.js:pagination-js"
+            --8<-- "javascript/pagination.js:pagination-js"
         ```
     

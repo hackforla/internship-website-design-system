@@ -20,7 +20,7 @@
 
 }
 .pagination-items .pagebutton .pageicon {
-    color: rgba(23, 29, 30, 1);
+    color: $pagination-icon-color-default;
 
 }
 .pagination-items .pagebutton {
@@ -31,23 +31,23 @@
     justify-content: center;
     align-items: center;    
     &.-ctrl .pageicon .twemoji, &.-more .pageicon .twemoji {
-        size: 0.75rem;
+        size: 0.75rem; 
     }
 }
 .pagination-items .pagebutton.-page {
     &:hover,
     &.hover {
-        background-color: rgba(36, 121, 132, 0.08);
+        background-color: $pagination-button-bg-hover;
     }
     &:focus,
     &.focused {
-        background-color: rgba(36, 121, 132, 0.12);
+        background-color: $pagination-button-bg-focused;
     }
     &:active, 
     &.selected {
-        background-color: rgba(36, 121, 132);
+        background-color: $pagination-button-bg-selected;
         .pageicon {
-            color: rgba(245,250,251);
+            color: $pagination-icon-color-active;
         }
     }
     &:disabled,
@@ -57,18 +57,18 @@
 }
 .pagination-items .pagebutton.-ctrl {
     background-color: transparent; 
-    border: .0625rem solid rgba(23, 29, 30, 0.12);
+    border: $pagination-button-border-ctrl-default;
     &:hover, 
     &.hover {
         border: 0;
-        background-color: rgba(36, 121, 132, 0.08);
+        background-color: $pagination-button-bg-hover;
     }
     &:disabled,
     &.disabled {
-        border: 1px solid rgba(23, 29, 30, 0.12);
+        border: $pagination-button-border-ctrl-disabled;
         background-color: transparent;
         .pageicon {
-            color: rgba(23, 29, 30, 0.38);
+            color: $pagination-icon-color-disabled;
         }
     }
 }
