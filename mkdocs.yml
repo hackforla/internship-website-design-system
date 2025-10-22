@@ -44,6 +44,7 @@ extra_css:
 
 extra_javascript:
   - javascript/extra.js
+  - javascript/pagination.js
   # - javascript/bootstrap.min.js
   # - https://code.jquery.com/jquery-1.12.4.min.js
 

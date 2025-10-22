@@ -21,15 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //Click listeners
-    prevButton.addEventListener("click", () => {
+    prevControl.addEventListener("click", () => {
         //in case of CSS class but no HTML attribute
-        if (prevButton.contains("disabled")) return; 
+        if (prevControl.classList.contains("disabled")) return; 
         currentIndex++;
         updatePagination();
     });
-    nextButton.addEventListener("click", () => {
+    nextControl.addEventListener("click", () => {
         //in case of CSS class but no HTML attribute
-        if (nextButton.contains("disabled")) return; 
+        if (nextControl.classList.contains("disabled")) return; 
         currentIndex--;
         updatePagination();
     });
