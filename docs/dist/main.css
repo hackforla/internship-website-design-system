@@ -1671,25 +1671,66 @@ input[type=radio]:checked :hover {
   line-height: 26px;
 }
 
-.grid-items .pagination .pagination-items {
+.pagination ul.pagination-items {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0px;
+  padding: 0;
   list-style-type: none;
-  gap: 6px;
+  gap: 0.5rem;
+  margin: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.pagination-items li {
-  width: 32px;
-  height: 32px;
+.pagination .pagination-items .pagebutton {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+}
+
+.pagination-items .pagebutton .pageicon {
+  color: rgb(23, 29, 30);
+}
+
+.pagination-items .pagebutton {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-items .pagebutton.-ctrl .pageicon .twemoji, .pagination-items .pagebutton.-more .pageicon .twemoji {
+  size: 0.75rem;
+}
+
+.pagination-items .pagebutton.-page:hover, .pagination-items .pagebutton.-page.hover {
+  background-color: rgba(36, 121, 132, 0.08);
+}
+.pagination-items .pagebutton.-page:focus, .pagination-items .pagebutton.-page.focused {
+  background-color: rgba(36, 121, 132, 0.12);
+}
+.pagination-items .pagebutton.-page:active, .pagination-items .pagebutton.-page.selected {
+  background-color: rgb(36, 121, 132);
+}
+.pagination-items .pagebutton.-page:active .pageicon, .pagination-items .pagebutton.-page.selected .pageicon {
+  color: rgb(245, 250, 251);
+}
+.pagination-items .pagebutton.-ctrl {
+  background-color: transparent;
+  border: 0.0625rem solid rgba(23, 29, 30, 0.12);
+}
+.pagination-items .pagebutton.-ctrl:hover, .pagination-items .pagebutton.-ctrl.hover {
+  border: 0;
+  background-color: rgba(36, 121, 132, 0.08);
+}
+.pagination-items .pagebutton.-ctrl:disabled, .pagination-items .pagebutton.-ctrl.disabled {
   border: 1px solid rgba(23, 29, 30, 0.12);
-  border-radius: 16px;
+  background-color: transparent;
 }
-
-.pagination-items li a {
-  display: block;
-  color: #171D1E;
+.pagination-items .pagebutton.-ctrl:disabled .pageicon, .pagination-items .pagebutton.-ctrl.disabled .pageicon {
+  color: rgba(23, 29, 30, 0.38);
 }
 
 .btn-grid-1 {

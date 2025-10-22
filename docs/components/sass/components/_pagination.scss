@@ -1,30 +1,76 @@
 @use '../abstracts/variables' as *;
 
 // --8<-- [start:pagination]
-.grid-items .pagination .pagination-items {
+.pagination ul.pagination-items {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0px;
+    padding: 0;
     list-style-type: none;
-    gap: 6px;
-}
-.pagination-items li {
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(23, 29, 30, 0.12);
-    border-radius: 16px;
-}
-.pagination-items li a {
-    display: block;
-    color: #171D1E;
-}
+    gap: 0.5rem;
+    margin: 0;
 
-.pagination-items .control-btn {
-    
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
-.pagination-items .page-btn {
+.pagination .pagination-items .pagebutton {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
 
+}
+.pagination-items .pagebutton .pageicon {
+    color: rgba(23, 29, 30, 1);
+
+}
+.pagination-items .pagebutton {
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    &.-ctrl .pageicon .twemoji, &.-more .pageicon .twemoji {
+        size: 0.75rem;
+    }
+}
+.pagination-items .pagebutton.-page {
+    &:hover,
+    &.hover {
+        background-color: rgba(36, 121, 132, 0.08);
+    }
+    &:focus,
+    &.focused {
+        background-color: rgba(36, 121, 132, 0.12);
+    }
+    &:active, 
+    &.selected {
+        background-color: rgba(36, 121, 132);
+        .pageicon {
+            color: rgba(245,250,251);
+        }
+    }
+    &:disabled,
+    &.disabled {
+
+    }
+}
+.pagination-items .pagebutton.-ctrl {
+    background-color: transparent; 
+    border: .0625rem solid rgba(23, 29, 30, 0.12);
+    &:hover, 
+    &.hover {
+        border: 0;
+        background-color: rgba(36, 121, 132, 0.08);
+    }
+    &:disabled,
+    &.disabled {
+        border: 1px solid rgba(23, 29, 30, 0.12);
+        background-color: transparent;
+        .pageicon {
+            color: rgba(23, 29, 30, 0.38);
+        }
+    }
 }
 
 // --8<-- [end:pagination]

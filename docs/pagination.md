@@ -2,12 +2,12 @@
 hide:
   - toc
 ---
-# **Pagination**
+# Pagination
 ## Guidelines
 The Pagination component enables users to select a specific page from a range of pages,
 helping them navigate large sets of content in a clear and manageable way.
 
-## Class
+## Main Component
 === "Default"
     <style>
     --8<-- "components/sass/components/_pagination.scss:pagination"
@@ -15,18 +15,21 @@ helping them navigate large sets of content in a clear and manageable way.
     <div class="btn-grid-1">
         <div class="grid-items">
             <div class="pagination">
-            <ul class="pagination-items">
-                <li class="control-btn"><a>&lt;</a></li>
-                <li class="page-btn"><a>1</a></li>
-                <li class="page-btn"><a>2</a></li>
-                <li class="page-btn"><a>3</a></li>
-                <li class="page-btn"><a>4</a></li>
-                <li class="page-btn"><a>...</a></li>
-                <li class="page-btn"><a>10</a></li>
-                <li class="control-btn"><a>&gt;</a></li>
-            </ul>
+                <ul class="pagination-items">
+                    <li class="pagebutton -ctrl disabled"><a class="pageicon">:material-chevron-left:</a></li>
+                    <li class="pagebutton -page selected"><a class="pageicon">1</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">2</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">3</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">4</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">5</a></li>
+                    <li class="pagebutton -more"><a class="pageicon">:material-dots-horizontal:</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">10</a></li>
+                    <li class="pagebutton -ctrl"><a class="pageicon">:material-chevron-right:</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+    <br>
     ## Code
     === "CSS"
 
@@ -36,7 +39,19 @@ helping them navigate large sets of content in a clear and manageable way.
 
     === "HTML"
         ``` html
-    
+            <div class="pagination">
+                <ul class="pagination-items">
+                    <li class="pagebutton -ctrl"><a class="pageicon">:material-chevron-left:</a></li>
+                    <li class="pagebutton -page selected"><a class="pageicon">1</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">2</a></li>
+                    <li class="pagebutton -more"><a class="pageicon">:material-dots-horizontal:</a></li>
+                    <li class="pagebutton -page"><a class="pageicon">5</a></li>
+                    <li class="pagebutton -ctrl"><a class="pageicon">:material-chevron-right:</a></li>
+                </ul>
+            </div>
         ```
-    ## Example
+    === "JS"
+        ``` js
+            --8<-- "components/sass/components/_pagination.js:pagination"
+        ```
     
