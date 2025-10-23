@@ -52,7 +52,7 @@ hide:
 === "Sizing"
     <div class="grid-demo">
         <div class="page-grid">
-            <div class="grid-box highlight span4"></div>
+            <div class="grid-box grid-highlight span4">.span4</div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>
@@ -70,7 +70,7 @@ hide:
         ```html
         <div class="grid-demo">
             <div class="page-grid">
-                <div class="grid-box highlight span4"></div>
+                <div class="grid-box highlight span4">.span4</div>
                 <div class="grid-box"></div>
                 <div class="grid-box"></div>
                 <div class="grid-box"></div>
@@ -91,7 +91,7 @@ hide:
     <div class="grid-demo">
         <div class="page-grid">
             <div class="grid-box"></div>
-            <div class="grid-box highlight push2"></div>
+            <div class="grid-box grid-highlight push2">.push2</div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>
             <div class="grid-box"></div>

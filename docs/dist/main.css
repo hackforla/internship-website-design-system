@@ -1690,14 +1690,14 @@ input[type=radio]:checked :hover {
   transition: all 0.3s ease;
 }
 
-.page-grid > * {
+.grid-box {
   background-color: rgba(255, 149, 149, 0.35);
   border-radius: 0.5rem;
   min-height: 20rem;
   transition: background-color 0.25s ease;
 }
 
-.page-grid > *:hover {
+.grid-box:hover {
   background-color: rgba(255, 149, 149, 0.5);
 }
 
@@ -1841,10 +1841,17 @@ input[type=radio]:checked :hover {
 }
 
 /* --8<-- [end:push] */
-.highlight {
+.grid-highlight {
   background-color: rgba(100, 149, 237, 0.6); /* light blue */
   color: #fff;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
