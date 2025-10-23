@@ -1,101 +1,98 @@
 @use '../abstracts/variables' as *;
 
 /* --------------------------------------------------------------------------
-   Base Demo Grid (shared)
+   12-COLUMN GRID (ALWAYS 12)
    -------------------------------------------------------------------------- */
-
-$grid-gap: 1rem; /* adjustable via variable */
-
-.grid-demo {
+/* --8<-- [start:grid] */
+.page-grid {
   display: grid;
-  gap: $grid-gap;
-  justify-content: center;
-  background-color: #f7faff;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem; /* gutter spacing */
+  background-color: #fafaff;
   border-radius: 0.75rem;
-  padding: 1rem;
   border: 1px solid #e0e0e0;
   box-shadow: 0 0 0 1px #e6e6e6 inset;
+  padding: 1rem;
   margin: 1.5rem auto;
   transition: all 0.3s ease;
 }
 
-/* --------------------------------------------------------------------------
-   Individual Grid Classes (Compact / Medium / Expanded / Large)
-   -------------------------------------------------------------------------- */
-
-// --8<-- [start:compact]
-.grid-demo.compact {
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 16rem; /* 256px */
-}
-.grid-demo.compact .grid-box {
-  min-height: 18rem;
-}
-// --8<-- [end:compact]
-
-// --8<-- [start:medium]
-.grid-demo.medium {
-  grid-template-columns: repeat(8, 1fr);
-  max-width: 36rem; /* 576px */
-}
-.grid-demo.medium .grid-box {
-  min-height: 20rem;
-}
-// --8<-- [end:medium]
-
-// --8<-- [start:expanded]
-.grid-demo.expanded {
-  grid-template-columns: repeat(8, 1fr);
-  max-width: 48rem; /* 768px */
-}
-.grid-demo.expanded .grid-box {
-  min-height: 16rem;
-}
-// --8<-- [end:expanded]
-
-// --8<-- [start:large]
-.grid-demo.large {
-  grid-template-columns: repeat(12, 1fr);
-  max-width: 64rem; /* 1024px */
-}
-.grid-demo.large .grid-box {
-  min-height: 22rem;
-}
-// --8<-- [end:large]
-
-/* --------------------------------------------------------------------------
-   Grid Column Box Styles (pink columns)
-   -------------------------------------------------------------------------- */
-
-.grid-box {
-  background-color: rgba(255, 149, 149, 0.3);
+.page-grid > * {
+  background-color: rgba(255, 149, 149, 0.35);
   border-radius: 0.5rem;
-  min-height: 12rem;
+  min-height: 20rem;
   transition: background-color 0.25s ease;
-
-  &:hover {
-    background-color: rgba(255, 149, 149, 0.45);
-  }
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Demo Behavior (Optional)
-   -------------------------------------------------------------------------- */
+.page-grid > *:hover {
+  background-color: rgba(255, 149, 149, 0.5);
+}
 
+/* Responsive behavior — keeps 12 columns but adjusts gutter and margins */
 @media (max-width: 600px) {
-  .grid-demo {
-    grid-template-columns: repeat(4, 1fr);
+  .page-grid {
+    gap: 0.5rem;
   }
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
-  .grid-demo {
-    grid-template-columns: repeat(8, 1fr);
+  .page-grid {
+    gap: 0.75rem;
   }
 }
 
 @media (min-width: 1201px) {
-  .grid-demo {
-    grid-template-columns: repeat(12, 1fr);
+  .page-grid {
+    gap: 1rem;
   }
+}
+/* --8<-- [end:grid] */
+
+/* --------------------------------------------------------------------------
+   Utility Overlay Grid (for .span / .push examples)
+   -------------------------------------------------------------------------- */
+.grid-overlay {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.demo-box {
+  background-color: rgba(255, 149, 149, 0.35);
+  border-radius: 6px;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   Span utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:span] */
+@for $i from 1 through 12 {
+  .span#{$i} {
+    grid-column: span #{$i};
+  }
+}
+/* --8<-- [end:span] */
+
+/* --------------------------------------------------------------------------
+   Push utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:push] */
+@for $i from 1 through 11 {
+  .push#{$i} {
+    grid-column-start: #{$i + 1};
+  }
+}
+/* --8<-- [end:push] */
+
+.highlight {
+  background-color: rgba(100, 149, 237, 0.6); /* light blue */
+  color: #fff;
+  font-weight: 700;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-white: #ffffff;
   --color-black: #333333;
@@ -70,7 +71,7 @@
 
 body {
   color: var(--text-color, #333333);
-  font: normal 125%/1.4 "Roboto", sans-serif;
+  font: normal 100%/1.4 "Roboto", sans-serif;
 }
 
 * {
@@ -1673,91 +1674,177 @@ input[type=radio]:checked :hover {
 }
 
 /* --------------------------------------------------------------------------
-   Base Demo Grid (shared)
+   12-COLUMN GRID (ALWAYS 12)
    -------------------------------------------------------------------------- */
-/* adjustable via variable */
-.grid-demo {
+/* --8<-- [start:grid] */
+.page-grid {
   display: grid;
-  gap: 1rem;
-  justify-content: center;
-  background-color: #f7faff;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem; /* gutter spacing */
+  background-color: #fafaff;
   border-radius: 0.75rem;
-  padding: 1rem;
   border: 1px solid #e0e0e0;
   box-shadow: 0 0 0 1px #e6e6e6 inset;
+  padding: 1rem;
   margin: 1.5rem auto;
   transition: all 0.3s ease;
 }
 
-/* --------------------------------------------------------------------------
-   Individual Grid Classes (Compact / Medium / Expanded / Large)
-   -------------------------------------------------------------------------- */
-.grid-demo.compact {
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 16rem; /* 256px */
-}
-
-.grid-demo.compact .grid-box {
-  min-height: 18rem;
-}
-
-.grid-demo.medium {
-  grid-template-columns: repeat(8, 1fr);
-  max-width: 36rem; /* 576px */
-}
-
-.grid-demo.medium .grid-box {
-  min-height: 20rem;
-}
-
-.grid-demo.expanded {
-  grid-template-columns: repeat(8, 1fr);
-  max-width: 48rem; /* 768px */
-}
-
-.grid-demo.expanded .grid-box {
-  min-height: 16rem;
-}
-
-.grid-demo.large {
-  grid-template-columns: repeat(12, 1fr);
-  max-width: 64rem; /* 1024px */
-}
-
-.grid-demo.large .grid-box {
-  min-height: 22rem;
-}
-
-/* --------------------------------------------------------------------------
-   Grid Column Box Styles (pink columns)
-   -------------------------------------------------------------------------- */
-.grid-box {
-  background-color: rgba(255, 149, 149, 0.3);
+.page-grid > * {
+  background-color: rgba(255, 149, 149, 0.35);
   border-radius: 0.5rem;
-  min-height: 12rem;
+  min-height: 20rem;
   transition: background-color 0.25s ease;
 }
-.grid-box:hover {
-  background-color: rgba(255, 149, 149, 0.45);
+
+.page-grid > *:hover {
+  background-color: rgba(255, 149, 149, 0.5);
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Demo Behavior (Optional)
-   -------------------------------------------------------------------------- */
+/* Responsive behavior — keeps 12 columns but adjusts gutter and margins */
 @media (max-width: 600px) {
-  .grid-demo {
-    grid-template-columns: repeat(4, 1fr);
+  .page-grid {
+    gap: 0.5rem;
   }
 }
 @media (min-width: 601px) and (max-width: 1200px) {
-  .grid-demo {
-    grid-template-columns: repeat(8, 1fr);
+  .page-grid {
+    gap: 0.75rem;
   }
 }
 @media (min-width: 1201px) {
-  .grid-demo {
-    grid-template-columns: repeat(12, 1fr);
+  .page-grid {
+    gap: 1rem;
   }
+}
+/* --8<-- [end:grid] */
+/* --------------------------------------------------------------------------
+   Utility Overlay Grid (for .span / .push examples)
+   -------------------------------------------------------------------------- */
+.grid-overlay {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.demo-box {
+  background-color: rgba(255, 149, 149, 0.35);
+  border-radius: 6px;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   Span utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:span] */
+.span1 {
+  grid-column: span 1;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+.span3 {
+  grid-column: span 3;
+}
+
+.span4 {
+  grid-column: span 4;
+}
+
+.span5 {
+  grid-column: span 5;
+}
+
+.span6 {
+  grid-column: span 6;
+}
+
+.span7 {
+  grid-column: span 7;
+}
+
+.span8 {
+  grid-column: span 8;
+}
+
+.span9 {
+  grid-column: span 9;
+}
+
+.span10 {
+  grid-column: span 10;
+}
+
+.span11 {
+  grid-column: span 11;
+}
+
+.span12 {
+  grid-column: span 12;
+}
+
+/* --8<-- [end:span] */
+/* --------------------------------------------------------------------------
+   Push utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:push] */
+.push1 {
+  grid-column-start: 2;
+}
+
+.push2 {
+  grid-column-start: 3;
+}
+
+.push3 {
+  grid-column-start: 4;
+}
+
+.push4 {
+  grid-column-start: 5;
+}
+
+.push5 {
+  grid-column-start: 6;
+}
+
+.push6 {
+  grid-column-start: 7;
+}
+
+.push7 {
+  grid-column-start: 8;
+}
+
+.push8 {
+  grid-column-start: 9;
+}
+
+.push9 {
+  grid-column-start: 10;
+}
+
+.push10 {
+  grid-column-start: 11;
+}
+
+.push11 {
+  grid-column-start: 12;
+}
+
+/* --8<-- [end:push] */
+.highlight {
+  background-color: rgba(100, 149, 237, 0.6); /* light blue */
+  color: #fff;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */
