@@ -28,20 +28,20 @@ hide:
     === "HTML"
         ```html
         <div class="grid-demo">
-        <div class="page-grid">
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-            <div class="grid-box"></div>
-        </div>
+            <div class="page-grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div>
         </div>
         ```
     === "CSS"
@@ -71,14 +71,16 @@ hide:
         <div class="grid-demo">
             <div class="page-grid">
                 <div class="grid-box highlight span4">.span4</div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
         ```
@@ -90,6 +92,7 @@ hide:
 === "Position"
     <div class="grid-demo">
         <div class="page-grid">
+            <div class="grid-box"></div>
             <div class="grid-box"></div>
             <div class="grid-box grid-highlight push2">.push2</div>
             <div class="grid-box"></div>
@@ -110,18 +113,20 @@ hide:
         ```html
         <div class="grid-demo">
             <div class="page-grid">
-                <div class="grid-box highlight push2">.push2</div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
-                <div class="grid-box"></div>
+                <div class="push2">.push2</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
+
 
         ```
     === "CSS"
