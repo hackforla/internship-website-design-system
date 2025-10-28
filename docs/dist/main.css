@@ -1687,10 +1687,11 @@ input[type=radio]:checked :hover {
   width: 2rem;
   height: 2rem;
   margin: 0;
+  cursor: pointer;
 }
 
 .pagination-items .pagebutton .pageicon {
-  color: rgb(23, 29, 30);
+  color: #171D1E;
 }
 
 .pagination-items .pagebutton {
@@ -1706,31 +1707,40 @@ input[type=radio]:checked :hover {
 }
 
 .pagination-items .pagebutton.-page:hover, .pagination-items .pagebutton.-page.hover {
-  background-color: rgba(36, 121, 132, 0.08);
+  background-color: #83D3DE;
 }
 .pagination-items .pagebutton.-page:focus, .pagination-items .pagebutton.-page.focused {
-  background-color: rgba(36, 121, 132, 0.12);
+  background-color: #9FF0FA;
 }
 .pagination-items .pagebutton.-page:active, .pagination-items .pagebutton.-page.selected {
-  background-color: rgb(36, 121, 132);
+  background-color: #006973;
 }
 .pagination-items .pagebutton.-page:active .pageicon, .pagination-items .pagebutton.-page.selected .pageicon {
-  color: rgb(245, 250, 251);
+  color: #F5FAFB;
 }
+.pagination-items .pagebutton.-page:disabled, .pagination-items .pagebutton.-page.disabled {
+  cursor: not-allowed;
+}
+
 .pagination-items .pagebutton.-ctrl {
   background-color: transparent;
-  border: 0.0625rem solid rgba(23, 29, 30, 0.12);
+  border: 0.0625rem solid #7E7E7E;
 }
 .pagination-items .pagebutton.-ctrl:hover, .pagination-items .pagebutton.-ctrl.hover {
   border: 0;
-  background-color: rgba(36, 121, 132, 0.08);
+  background-color: #83D3DE;
 }
 .pagination-items .pagebutton.-ctrl:disabled, .pagination-items .pagebutton.-ctrl.disabled {
-  border: 1px solid rgba(23, 29, 30, 0.12);
+  border: 1px solid #7E7E7E;
   background-color: transparent;
+  cursor: not-allowed;
 }
 .pagination-items .pagebutton.-ctrl:disabled .pageicon, .pagination-items .pagebutton.-ctrl.disabled .pageicon {
-  color: rgba(23, 29, 30, 0.38);
+  color: #464B4C;
+}
+
+.pagebutton.-more {
+  cursor: default;
 }
 
 .btn-grid-1 {

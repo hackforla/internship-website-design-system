@@ -17,10 +17,11 @@
     width: 2rem;
     height: 2rem;
     margin: 0;
+    cursor: pointer;
 
 }
 .pagination-items .pagebutton .pageicon {
-    color: $pagination-icon-color-default;
+    color: $icon-color-default;
 
 }
 .pagination-items .pagebutton {
@@ -47,12 +48,12 @@
     &.selected {
         background-color: $pagination-button-bg-selected;
         .pageicon {
-            color: $pagination-icon-color-active;
+            color: $icon-color-active;
         }
     }
     &:disabled,
     &.disabled {
-
+        cursor: not-allowed;
     }
 }
 .pagination-items .pagebutton.-ctrl {
@@ -67,10 +68,14 @@
     &.disabled {
         border: $pagination-button-border-ctrl-disabled;
         background-color: transparent;
+        cursor: not-allowed;
         .pageicon {
-            color: $pagination-icon-color-disabled;
+            color: $icon-color-disabled;
         }
     }
 }
 
+.pagebutton.-more {
+    cursor: default;
+}
 // --8<-- [end:pagination]

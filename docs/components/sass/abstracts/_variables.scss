@@ -18,6 +18,23 @@ $color-darkgreen: #0D5761;
 $color-old-green:#247984;
 $color-whitegreen: #E7F0F1;
 
+$color-primary: #006973;
+$color-on-primary: #FFFFFF;
+$color-primary-container: #9FF0FA;
+$color-on-primary-container: #011F23;
+$color-primary-fixed: #9FF0FA;
+$color-primary-fixed-dim: #83D3DE;
+$color-on-primary-fixed: #011F23;
+$color-on-primary-fixed-variant: #044F57;
+
+
+$color-surface: #F5FAFB;
+$color-surface-dim: #DEDEDE;
+$color-on-surface: #171D1E;
+$color-on-surface-variant: #464B4C;
+$color-outline: #7E7E7E;
+$color-outline-variant: #CCCCCC;
+
 /// Font family
 $text-font-stack: (
   'Roboto',  
@@ -88,14 +105,15 @@ $input-font-size: 16px;
 $input-label-font-size: 14px;
 $input-supporting-font-size: 12px;
 
-$pagination-icon-color-default: rgba(23, 29, 30, 1);
-$pagination-icon-color-active: rgba(245,250,251);
-$pagination-icon-color-disabled: rgba(23, 29, 30, 0.38);
-$pagination-button-bg-hover: rgba(36, 121, 132, 0.08);
-$pagination-button-bg-selected: rgba(36, 121, 132);
-$pagination-button-bg-focused: rgba(36, 121, 132, 0.12);
-$pagination-button-border-ctrl-default: .0625rem solid rgba(23, 29, 30, 0.12);
-$pagination-button-border-ctrl-disabled: 1px solid rgba(23, 29, 30, 0.12);
+$icon-color-default: $color-on-surface;
+$icon-color-active: $color-surface;
+$icon-color-disabled: $color-on-surface-variant;
+
+$pagination-button-bg-hover: $color-primary-fixed-dim;
+$pagination-button-bg-selected: $color-primary;
+$pagination-button-bg-focused: $color-primary-fixed;
+$pagination-button-border-ctrl-default: .0625rem solid $color-outline;
+$pagination-button-border-ctrl-disabled: 1px solid $color-outline;
 
 $text-area-height: 122px;
 $text-area-width: 348px;
@@ -120,6 +138,23 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --color-green: #{$color-green};
   --color-darkgreen: #{$color-darkgreen};
   --color-whitegreen: #{$color-whitegreen};
+
+  --color-primary: #{$color-primary};
+  --color-on-primary: #{$color-on-primary};
+  --color-primary-container: #{$color-primary-container};
+  --color-on-primary-container: #{$color-on-primary-container};
+  --color-primary-fixed: #{$color-primary-fixed};
+  --color-primary-fixed-dim: #{$color-primary-fixed-dim};
+  --color-on-primary-fixed: #{$color-on-primary-fixed};
+  --color-on-primary-fixed-variant: #{$color-on-primary-fixed-variant};
+
+
+  --color-surface: #{$color-surface};
+  --color-surface-dim: #{$color-surface-dim};
+  --color-on-surface: #{$color-on-surface};
+  --color-on-surface-variant: #{$color-on-surface-variant};
+  --color-outline: #{$color-outline};
+  --color-outline-variant: #{$color-outline-variant};
   
   // Typography
   --text-color: #{$text-color};
@@ -172,26 +207,35 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --input-field-border-radius: #{$input-field-border-radius};
 
   --input-border-color-default: #{$input-border-color-default};
---input-border-color-hover: #{$input-border-color-hover};
---input-border-color-focus: #{$input-border-color-focus};
---input-border-color-error: #{$input-border-color-error};
---input-border-color-disabled: #{$input-border-color-disabled};
+  --input-border-color-hover: #{$input-border-color-hover};
+  --input-border-color-focus: #{$input-border-color-focus};
+  --input-border-color-error: #{$input-border-color-error};
+  --input-border-color-disabled: #{$input-border-color-disabled};
 
---input-label-color-default: #{$input-label-color-default};
---input-label-color-error: #{$input-label-color-error};
---input-label-color-disabled: #{$input-label-color-disabled};
+  --input-label-color-default: #{$input-label-color-default};
+  --input-label-color-error: #{$input-label-color-error};
+  --input-label-color-disabled: #{$input-label-color-disabled};
 
---input-supporting-text-color: #{$input-supporting-text-color};
---input-supporting-text-error: #{$input-supporting-text-error};
+  --input-supporting-text-color: #{$input-supporting-text-color};
+  --input-supporting-text-error: #{$input-supporting-text-error};
 
---input-padding-x: #{$input-padding-x};
---input-padding-y: #{$input-padding-y};
---input-icon-gap: #{$input-icon-gap};
---input-font-size: #{$input-font-size};
---input-label-font-size: #{$input-label-font-size};
---input-supporting-font-size: #{$input-supporting-font-size};
+  --input-padding-x: #{$input-padding-x};
+  --input-padding-y: #{$input-padding-y};
+  --input-icon-gap: #{$input-icon-gap};
+  --input-font-size: #{$input-font-size};
+  --input-label-font-size: #{$input-label-font-size};
+  --input-supporting-font-size: #{$input-supporting-font-size};
 
-  
+  //Pagination
+  --icon-color-default: #{$color-on-surface};
+  --icon-color-active: #{$color-surface};
+  --icon-color-disabled: #{$color-on-surface-variant};
+
+  --pagination-button-bg-hover: #{$color-primary-fixed-dim};
+  --pagination-button-bg-selected: #{$color-primary};
+  --pagination-button-bg-focused: #{$color-primary-fixed};
+  --pagination-button-border-ctrl-default: .0625rem solid #{$color-outline};
+  --pagination-button-border-ctrl-disabled: 1px solid #{$color-outline};  
   // Text area
   --text-area-height: #{$text-area-height};
   --text-area-width: #{$text-area-width};
