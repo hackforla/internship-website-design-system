@@ -19,6 +19,7 @@ $color-old-green:#247984;
 $color-whitegreen: #E7F0F1;
 
 $color-primary: #006973;
+$color-primary-hover: $color-whitegreen;
 $color-on-primary: #FFFFFF;
 $color-primary-container: #9FF0FA;
 $color-on-primary-container: #011F23;
@@ -41,7 +42,7 @@ $text-font-stack: (
   'Roboto',  
   sans-serif
 );
-$text-color: $color-black;
+$text-color: $color-on-primary-container;
 $text-muted: $color-dark-grey;
 
 $line-height-base: 1.5;

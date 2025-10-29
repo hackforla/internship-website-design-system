@@ -14,7 +14,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 0.5rem;
     }
 
     input[type="checkbox"] {
@@ -64,7 +63,7 @@
 
 // --8<-- [start:checkbox-checked]
 .checkbox input[type="checkbox"]:checked + .checkbox-visual {
-    background-color: $color-green;
+    background-color: $color-primary;
     border: none;
 
     &::after {
@@ -86,13 +85,13 @@
 }
 
 .checkbox:has(input:checked)::before {
-    background-color: $checkbox-hover-color;
+    background-color: $color-primary-hover;
 }
 // --8<-- [end:checkbox-checked]
 
 // --8<-- [start:checkbox-unchecked]
 .checkbox input[type="checkbox"]:not(:checked) + .checkbox-visual {
-    border: 2px solid $color-black;
+    border: 2px solid $input-border-color-default;
     background-color: transparent;
 }
 
@@ -109,11 +108,13 @@
 .checkbox {
     font-family: $text-font-stack;
     font-weight: 600;
-    font-size: 16px;
-    color: $color-black;
+    font-size: 0.9rem;
+    color: $text-color;
+    display: flex;
+    gap: 0.5rem;
     
     .checkbox-text {
-        line-height: 18px;
+        line-height: 1rem;
     }
 }
 

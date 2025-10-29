@@ -1,4 +1,4 @@
-git sa---
+---
 hide:
   - toc
 ---
@@ -8,12 +8,10 @@ hide:
 === "Checked"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox" aria-label="Checkbox">
-                <div class="checkbox-container">
-                    <input type="checkbox" checked>
-                    <span class="checkbox-visual"></span>
-                </div>
-            </label>
+            <div class="checkbox">
+                <input type="checkbox" checked id="checkbox-checked-1">
+                <span class="checkbox-visual"></span>
+            </div>
         </div>
     </div>
     <br>
@@ -21,34 +19,34 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox" aria-label="Enabled checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked id="checkbox-enabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox checkbox-hover" aria-label="Hover checkbox">
+                <div class="checkbox checkbox-hover">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked id="checkbox-hover-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox" aria-label="Disabled checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked disabled>
+                        <input type="checkbox" checked disabled id="checkbox-disabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     <br>
@@ -61,23 +59,23 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox checkbox-hover" aria-label="Checkbox">
+        <div class="checkbox checkbox-hover">
             <div class="checkbox-container">
                 <input type="checkbox" checked>
                 <span class="checkbox-visual"></span>
             </div>
-        </label>
+        </div>
         ```
 
 === "Unchecked"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox" aria-label="Checkbox">
+            <div class="checkbox">
                 <div class="checkbox-container">
-                    <input type="checkbox">
+                    <input type="checkbox" id="checkbox-unchecked-1">
                     <span class="checkbox-visual"></span>
                 </div>
-            </label>
+            </div>
         </div>
     </div>
     <br>
@@ -85,34 +83,34 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox" aria-label="Enabled checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox-unchecked-enabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox checkbox-hover" aria-label="Hover checkbox">
+                <div class="checkbox checkbox-hover">
                     <div class="checkbox-container">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox-unchecked-hover-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox" aria-label="Disabled checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled id="checkbox-unchecked-disabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                </label>
+                </div>
             </div>
         </div>
     <br>
@@ -125,24 +123,24 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox checkbox-hover" aria-label="Checkbox">
+        <div class="checkbox checkbox-hover">
             <div class="checkbox-container">
                 <input type="checkbox">
                 <span class="checkbox-visual"></span>
             </div>
-        </label>
+        </div>
         ```
 
 === "Checked+Text"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox">
+            <div class="checkbox">
                 <div class="checkbox-container">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" checked id="checkbox-checked-text-1">
                     <span class="checkbox-visual"></span>
                 </div>
-                <label class="checkbox-visual" for="name">Label</label>
-            </label>
+                <label for="checkbox-checked-text-1" class="checkbox-text">Label</label>
+            </div>
         </div>
     </div>
     <br>
@@ -150,13 +148,13 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked id="checkbox-checked-text-enabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
-                </label>
+                    <label for="checkbox-checked-text-enabled-1" class="checkbox-text">Label</label>
+                </div>
             </div>
         </div>
     === "Hover"
@@ -164,23 +162,23 @@ hide:
             <div class="grid-items">
                 <div class="checkbox checkbox-hover">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked id="checkbox-checked-text-hover-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
+                    <label for="checkbox-checked-text-hover-1" class="checkbox-text">Label</label>
                 </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" checked disabled>
+                        <input type="checkbox" checked disabled id="checkbox-checked-text-disabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
-                </label>
+                    <label for="checkbox-checked-text-disabled-1" class="checkbox-text">Label</label>
+                </div>
             </div>
         </div>
     <br>
@@ -195,25 +193,25 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox checkbox-hover">
+        <div class="checkbox checkbox-hover">
             <div class="checkbox-container">
-                <input type="checkbox" checked>
+                <input type="checkbox" checked id="checkbox-text-1">
                 <span class="checkbox-visual"></span>
             </div>
-            <label class="checkbox-visual" for="name">Label</label>
-        </label>
+            <label for="checkbox-text-1" class="checkbox-text">Label</label>
+        </div>
         ```
 
 === "Unchecked+Text"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <label class="checkbox">
+            <div class="checkbox">
                 <div class="checkbox-container">
-                    <input type="checkbox">
+                    <input type="checkbox" id="checkbox-unchecked-text-1">
                     <span class="checkbox-visual"></span>
                 </div>
-                <label class="checkbox-visual" for="name">Label</label>
-            </label>
+                <label for="checkbox-unchecked-text-1" class="checkbox-text">Label</label>
+            </div>
         </div>
     </div>
     <br>
@@ -221,37 +219,37 @@ hide:
     === "Enabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox-unchecked-text-enabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
-                </label>
+                    <label for="checkbox-unchecked-text-enabled-1" class="checkbox-text">Label</label>
+                </div>
             </div>
         </div>
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox checkbox-hover">
+                <div class="checkbox checkbox-hover">
                     <div class="checkbox-container">
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox-unchecked-text-hover-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
-                </label>
+                    <label for="checkbox-unchecked-text-hover-1" class="checkbox-text">Label</label>
+                </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <label class="checkbox">
+                <div class="checkbox">
                     <div class="checkbox-container">
-                        <input type="checkbox" disabled>
+                        <input type="checkbox" disabled id="checkbox-unchecked-text-disabled-1">
                         <span class="checkbox-visual"></span>
                     </div>
-                    <label class="checkbox-visual" for="name">Label</label>
-                </label>
+                    <label for="checkbox-unchecked-text-disabled-1" class="checkbox-text">Label</label>
+                </div>
             </div>
         </div>
     <br>
@@ -266,11 +264,11 @@ hide:
         ```
     === "HTML"
         ``` html
-        <label class="checkbox checkbox-hover">
+        <div class="checkbox checkbox-hover">
             <div class="checkbox-container">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox-text-2">
                 <span class="checkbox-visual"></span>
             </div>
-            <label class="checkbox-visual" for="name">Label</label>
-        </label>
+            <label for="checkbox-text-2" class="checkbox-text">Label</label>
+        </div>
         ```
