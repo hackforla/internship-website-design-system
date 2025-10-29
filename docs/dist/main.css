@@ -92,7 +92,7 @@
 
 body {
   color: var(--text-color, #333333);
-  font: normal 125%/1.4 "Roboto", sans-serif;
+  font: normal 100%/1.4 "Roboto", sans-serif;
 }
 
 * {
