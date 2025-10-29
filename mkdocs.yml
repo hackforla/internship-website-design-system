@@ -10,10 +10,12 @@ nav:
     - Accordion: accordion.md
     - Button: buttons.md
     - Checkbox: checkbox.md
+    - Grid System: grid-system.md
+    - Input Fields: input-fields.md
+    - Pagination: pagination.md
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
-    - Pagination: pagination.md
    
 
 plugins:

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-white: #ffffff;
   --color-black: #333333;
@@ -1773,62 +1774,207 @@ nav.pagination ul.pagination-items {
 
 .btn-grid-1 {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  text-align: center;
-  min-height: 15vh;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem; /* gutter spacing */
+  background-color: #fafaff;
+  border-radius: 0.75rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 0 0 1px #e6e6e6 inset;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  transition: all 0.3s ease;
 }
 
-.btn-grid-3 {
+.grid-box {
+  background-color: rgba(255, 149, 149, 0.35);
+  border-radius: 0.5rem;
+  min-height: 20rem;
+  transition: background-color 0.25s ease;
+}
+
+.grid-box:hover {
+  background-color: rgba(255, 149, 149, 0.5);
+}
+
+/* Responsive behavior — keeps 12 columns but adjusts gutter and margins */
+@media (max-width: 600px) {
+  .page-grid {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+  .page-grid {
+    gap: 0.75rem;
+  }
+}
+@media (min-width: 1201px) {
+  .page-grid {
+    gap: 1rem;
+  }
+}
+/* --8<-- [end:grid] */
+/* --------------------------------------------------------------------------
+   Utility Overlay Grid (for .span / .push examples)
+   -------------------------------------------------------------------------- */
+.grid-overlay {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr)); /* 👈 same fix */
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.demo-box {
+  background-color: rgba(255, 149, 149, 0.35);
+  border-radius: 6px;
   text-align: center;
-  min-height: 15vh;
+  padding: 1rem;
+  font-weight: 600;
+  color: #333;
+  min-width: 0; /* 👈 allows text shrink */
 }
 
-.btn-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
+/* --------------------------------------------------------------------------
+   Span utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:span] */
+.span1 {
+  grid-column: span 1;
 }
 
-.type-grid-6 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.span2 {
+  grid-column: span 2;
 }
 
-.type-grid-items {
-  border-bottom: 1px solid #ccc;
-  padding: 20px;
+.span3 {
+  grid-column: span 3;
+}
+
+.span4 {
+  grid-column: span 4;
+}
+
+.span5 {
+  grid-column: span 5;
+}
+
+.span6 {
+  grid-column: span 6;
+}
+
+.span7 {
+  grid-column: span 7;
+}
+
+.span8 {
+  grid-column: span 8;
+}
+
+.span9 {
+  grid-column: span 9;
+}
+
+.span10 {
+  grid-column: span 10;
+}
+
+.span11 {
+  grid-column: span 11;
+}
+
+.span12 {
+  grid-column: span 12;
+}
+
+/* --8<-- [end:span] */
+/* --------------------------------------------------------------------------
+   Push utilities
+   -------------------------------------------------------------------------- */
+/* --8<-- [start:push] */
+.push1 {
+  grid-column-start: 2;
+}
+
+.push2 {
+  grid-column-start: 3;
+}
+
+.push3 {
+  grid-column-start: 4;
+}
+
+.push4 {
+  grid-column-start: 5;
+}
+
+.push5 {
+  grid-column-start: 6;
+}
+
+.push6 {
+  grid-column-start: 7;
+}
+
+.push7 {
+  grid-column-start: 8;
+}
+
+.push8 {
+  grid-column-start: 9;
+}
+
+.push9 {
+  grid-column-start: 10;
+}
+
+.push10 {
+  grid-column-start: 11;
+}
+
+.push11 {
+  grid-column-start: 12;
+}
+
+/* --8<-- [end:push] */
+/* --------------------------------------------------------------------------
+   Highlight (blue span/push examples)
+   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Shared highlight styling (for both span and push)
+   -------------------------------------------------------------------------- */
+.grid-highlight {
+  background-color: rgba(100, 149, 237, 0.6);
+  color: #fff;
+  font-weight: 700;
   display: flex;
-  align-content: center;
-  justify-content: left;
-  background-color: #F3F3F3;
-  flex-wrap: wrap;
-}
-
-.grid-items {
-  border: 1px solid #ccc;
-  padding: 20px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background-color: #F3F3F3;
-  flex-wrap: wrap;
-}
-
-.grid-items-flex {
-  border: 1px solid #ccc;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #F3F3F3;
+  text-align: center;
+  border-radius: 0.5rem;
+  line-height: 1;
 }
 
-.grid-1-5 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* --------------------------------------------------------------------------
+   Responsive text behavior (only for PUSH)
+   -------------------------------------------------------------------------- */
+.push1.grid-highlight,
+.push2.grid-highlight,
+.push3.grid-highlight,
+.push4.grid-highlight,
+.push5.grid-highlight,
+.push6.grid-highlight,
+.push7.grid-highlight,
+.push8.grid-highlight,
+.push9.grid-highlight,
+.push10.grid-highlight,
+.push11.grid-highlight {
+  font-size: clamp(0.45rem, 1.2vw, 0.9rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  word-break: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
