@@ -39,10 +39,10 @@ helping them navigate large sets of content in a clear and manageable way.
             <div class="pagination">
                 <ul class="pagination-items">
                     <li class="pagebutton -ctrl"><a class="pageicon">:material-chevron-left:</a></li>
-                    <li class="pagebutton -page selected"><a class="pageicon">1</a></li>
-                    <li class="pagebutton -page"><a class="pageicon">2</a></li>
+                    <li class="pagebutton selected"><a class="pageicon">1</a></li>
+                    <li class="pagebutton"><a class="pageicon">2</a></li>
                     <li class="pagebutton -more"><a class="pageicon">:material-dots-horizontal:</a></li>
-                    <li class="pagebutton -page"><a class="pageicon">5</a></li>
+                    <li class="pagebutton"><a class="pageicon">5</a></li>
                     <li class="pagebutton -ctrl"><a class="pageicon">:material-chevron-right:</a></li>
                 </ul>
             </div>
