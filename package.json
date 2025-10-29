@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sass --watch docs/components/sass/main.scss docs/dist/main.css",
+    "dev": "sass --watch --poll docs/components/sass/main.scss docs/dist/main.css",
     "build-sass": "sass docs/components/sass/main.scss docs/dist/main.css",
-    "watch:sass": "sass --watch docs/components/sass/main.scss docs/dist/main.css",
+    "watch:sass": "sass --watch --poll docs/components/sass/main.scss docs/dist/main.css",
     "build": "npm run build-sass && mkdocs build",
     "clean": "rm -rf docs/dist/*.css docs/dist/*.css.map"
   },

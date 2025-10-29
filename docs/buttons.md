@@ -8,7 +8,7 @@ hide:
 === "Filled"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <a href="#" class="btn btn-filled">Label</a>
+            <a href="#" class="btn btn-filled">Labelzz</a>
         </div>
     </div>
     <br>
