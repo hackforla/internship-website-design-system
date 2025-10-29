@@ -6,7 +6,10 @@
 /* --8<-- [start:grid] */
 .page-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+
+  /* 👇 fix: ensure all columns stay equal even when content differs */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
   gap: 1rem; /* gutter spacing */
   background-color: #fafaff;
   border-radius: 0.75rem;
@@ -48,12 +51,13 @@
 }
 /* --8<-- [end:grid] */
 
+
 /* --------------------------------------------------------------------------
    Utility Overlay Grid (for .span / .push examples)
    -------------------------------------------------------------------------- */
 .grid-overlay {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr)); /* 👈 same fix */
   gap: 1rem;
   width: 100%;
   margin-top: 1rem;
@@ -67,7 +71,9 @@
   padding: 1rem;
   font-weight: 600;
   color: #333;
+  min-width: 0; /* 👈 allows text shrink */
 }
+
 
 /* --------------------------------------------------------------------------
    Span utilities
@@ -80,6 +86,7 @@
 }
 /* --8<-- [end:span] */
 
+
 /* --------------------------------------------------------------------------
    Push utilities
    -------------------------------------------------------------------------- */
@@ -91,6 +98,10 @@
 }
 /* --8<-- [end:push] */
 
+
+/* --------------------------------------------------------------------------
+   Highlight (blue span/push examples)
+   -------------------------------------------------------------------------- */
 .grid-highlight {
   background-color: rgba(100, 149, 237, 0.6); /* light blue */
   color: #fff;
@@ -99,8 +110,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  height: 100%;
-}
 
+  /* 👇 fix: text resizes so it never expands the column */
+  font-size: clamp(0.6rem, 1.8vw, 1rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* 👇 critical fix for equal column sizing */
+  min-width: 0;
+}
