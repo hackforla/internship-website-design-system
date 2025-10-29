@@ -1679,7 +1679,6 @@ input[type=radio]:checked :hover {
 /* --8<-- [start:grid] */
 .page-grid {
   display: grid;
-  /* 👇 fix: ensure all columns stay equal even when content differs */
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1rem; /* gutter spacing */
   background-color: #fafaff;
@@ -1846,21 +1845,41 @@ input[type=radio]:checked :hover {
 /* --------------------------------------------------------------------------
    Highlight (blue span/push examples)
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Shared highlight styling (for both span and push)
+   -------------------------------------------------------------------------- */
 .grid-highlight {
-  background-color: rgba(100, 149, 237, 0.6); /* light blue */
+  background-color: rgba(100, 149, 237, 0.6);
   color: #fff;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* 👇 fix: text resizes so it never expands the column */
-  font-size: clamp(0.6rem, 1.8vw, 1rem);
+  border-radius: 0.5rem;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive text behavior (only for PUSH)
+   -------------------------------------------------------------------------- */
+.push1.grid-highlight,
+.push2.grid-highlight,
+.push3.grid-highlight,
+.push4.grid-highlight,
+.push5.grid-highlight,
+.push6.grid-highlight,
+.push7.grid-highlight,
+.push8.grid-highlight,
+.push9.grid-highlight,
+.push10.grid-highlight,
+.push11.grid-highlight {
+  font-size: clamp(0.45rem, 1.2vw, 0.9rem);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* 👇 critical fix for equal column sizing */
   min-width: 0;
+  word-break: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
