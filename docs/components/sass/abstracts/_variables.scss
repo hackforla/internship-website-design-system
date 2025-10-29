@@ -27,13 +27,14 @@ $color-primary-fixed-dim: #83D3DE;
 $color-on-primary-fixed: #011F23;
 $color-on-primary-fixed-variant: #044F57;
 
-
 $color-surface: #F5FAFB;
 $color-surface-dim: #DEDEDE;
 $color-on-surface: #171D1E;
 $color-on-surface-variant: #464B4C;
 $color-outline: #7E7E7E;
 $color-outline-variant: #CCCCCC;
+$color-surface-container-high: #EBEBEB;
+$color-surface-container-highest: #E5E5E5;
 
 /// Font family
 $text-font-stack: (
@@ -107,13 +108,15 @@ $input-supporting-font-size: 12px;
 
 $icon-color-default: $color-on-surface;
 $icon-color-active: $color-surface;
-$icon-color-disabled: $color-on-surface-variant;
+$icon-color-disabled: $color-outline;
+$icon-size: 0.75rem;
 
-$pagination-button-bg-hover: $color-primary-fixed-dim;
+$pagination-button-bg-hover: $color-surface-container-high;
 $pagination-button-bg-selected: $color-primary;
-$pagination-button-bg-focused: $color-primary-fixed;
-$pagination-button-border-ctrl-default: .0625rem solid $color-outline;
-$pagination-button-border-ctrl-disabled: 1px solid $color-outline;
+$pagination-button-bg-focused: $color-surface-container-highest;
+$pagination-button-border-default: .0625rem solid $color-outline-variant;
+$pagination-button-border-disabled: .0625rem solid $color-outline-variant;
+$pagination-button-size: 2rem;
 
 $text-area-height: 122px;
 $text-area-width: 348px;
@@ -155,6 +158,8 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --color-on-surface-variant: #{$color-on-surface-variant};
   --color-outline: #{$color-outline};
   --color-outline-variant: #{$color-outline-variant};
+  --color-surface-container-high: #{$color-surface-container-high};
+  --color-surface-container-highest: #{$color-surface-container-highest};
   
   // Typography
   --text-color: #{$text-color};
@@ -234,8 +239,8 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --pagination-button-bg-hover: #{$color-primary-fixed-dim};
   --pagination-button-bg-selected: #{$color-primary};
   --pagination-button-bg-focused: #{$color-primary-fixed};
-  --pagination-button-border-ctrl-default: .0625rem solid #{$color-outline};
-  --pagination-button-border-ctrl-disabled: 1px solid #{$color-outline};  
+  --pagination-button-border-default: #{$pagination-button-border-default};
+  --pagination-button-border-disabled: #{$pagination-button-border-disabled};  
   // Text area
   --text-area-height: #{$text-area-height};
   --text-area-width: #{$text-area-width};

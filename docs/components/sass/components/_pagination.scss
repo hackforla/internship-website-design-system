@@ -9,13 +9,10 @@ nav.pagination ul.pagination-items {
     list-style: none;
     gap: 0.5rem;
     margin: 0;
-
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
 }
 .pagination .pagination-items .pagebutton {
-    width: 2rem;
-    height: 2rem;
+    width: $pagination-button-size;
+    height: $pagination-button-size;
     margin: 0;
     border-radius: 50%;
     display: flex;
@@ -25,6 +22,8 @@ nav.pagination ul.pagination-items {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 
     .pageicon {
         display: flex;
@@ -55,10 +54,10 @@ nav.pagination ul.pagination-items {
 }
 .pagination-items .pagebutton.-ctrl {
     background: none;
-    border: $pagination-button-border-ctrl-default;
+    border: $pagination-button-border-default;
     .pageicon .twemoji {
-        height: 0.75rem;
-        width: 0.75rem; 
+        height: $icon-size;
+        width: $icon-size;
     }
     &:hover, 
     &.hover {
@@ -67,8 +66,8 @@ nav.pagination ul.pagination-items {
     }
     &:disabled,
     &.disabled {
-        border: $pagination-button-border-ctrl-disabled;
-        background-color: transparent;
+        border: $pagination-button-border-disabled;
+        background: none;
         cursor: not-allowed;
         .pageicon {
             color: $icon-color-disabled;
@@ -79,8 +78,8 @@ nav.pagination ul.pagination-items {
     cursor: default;
     pointer-events: none;
     .pageicon .twemoji {
-        width: 0.75rem;
-        height: 0.75rem;
+        width: $icon-size;
+        height: $icon-size;
     }
 }
 // --8<-- [end:pagination]
