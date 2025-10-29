@@ -9,6 +9,20 @@
   --color-green: #247984;
   --color-darkgreen: #0D5761;
   --color-whitegreen: #E7F0F1;
+  --color-primary: #006973;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #9FF0FA;
+  --color-on-primary-container: #011F23;
+  --color-primary-fixed: #9FF0FA;
+  --color-primary-fixed-dim: #83D3DE;
+  --color-on-primary-fixed: #011F23;
+  --color-on-primary-fixed-variant: #044F57;
+  --color-surface: #F5FAFB;
+  --color-surface-dim: #DEDEDE;
+  --color-on-surface: #171D1E;
+  --color-on-surface-variant: #464B4C;
+  --color-outline: #7E7E7E;
+  --color-outline-variant: #CCCCCC;
   --text-color: #333333;
   --text-muted: #989898;
   --line-height-base: 1.5;
@@ -61,6 +75,14 @@
   --input-font-size: 16px;
   --input-label-font-size: 14px;
   --input-supporting-font-size: 12px;
+  --icon-color-default: #171D1E;
+  --icon-color-active: #F5FAFB;
+  --icon-color-disabled: #464B4C;
+  --pagination-button-bg-hover: #83D3DE;
+  --pagination-button-bg-selected: #006973;
+  --pagination-button-bg-focused: #9FF0FA;
+  --pagination-button-border-ctrl-default: .0625rem solid #7E7E7E;
+  --pagination-button-border-ctrl-disabled: 1px solid #7E7E7E;
   --text-area-height: 122px;
   --text-area-width: 348px;
   --text-area-border-radius: 4px;
@@ -70,7 +92,7 @@
 
 body {
   color: var(--text-color, #333333);
-  font: normal 125%/1.4 "Roboto", sans-serif;
+  font: normal 100%/1.4 "Roboto", sans-serif;
 }
 
 * {
@@ -1607,7 +1629,6 @@ input[type=radio]:checked :hover {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-family: "Roboto SemiBold";
 }
 @media (max-width: 768px) {
   .accordion-button {
@@ -1670,6 +1691,84 @@ input[type=radio]:checked :hover {
 }
 .accordion.mobile span {
   line-height: 26px;
+}
+
+nav.pagination ul.pagination-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pagination .pagination-items .pagebutton {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagination .pagination-items .pagebutton .pageicon {
+  display: flex;
+  color: #171D1E;
+}
+.pagination .pagination-items .pagebutton:hover, .pagination .pagination-items .pagebutton.hover {
+  background-color: #83D3DE;
+}
+.pagination .pagination-items .pagebutton:focus, .pagination .pagination-items .pagebutton.focused {
+  background-color: #9FF0FA;
+}
+.pagination .pagination-items .pagebutton:active, .pagination .pagination-items .pagebutton.selected {
+  background-color: #006973;
+}
+.pagination .pagination-items .pagebutton:active .pageicon, .pagination .pagination-items .pagebutton.selected .pageicon {
+  color: #F5FAFB;
+}
+.pagination .pagination-items .pagebutton:disabled, .pagination .pagination-items .pagebutton.disabled {
+  cursor: not-allowed;
+}
+.pagination .pagination-items .pagebutton:disabled .pageicon, .pagination .pagination-items .pagebutton.disabled .pageicon {
+  color: #464B4C;
+}
+
+.pagination-items .pagebutton.-ctrl {
+  background: none;
+  border: 0.0625rem solid #7E7E7E;
+}
+.pagination-items .pagebutton.-ctrl .pageicon .twemoji {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.pagination-items .pagebutton.-ctrl:hover, .pagination-items .pagebutton.-ctrl.hover {
+  border: 0;
+  background-color: #83D3DE;
+}
+.pagination-items .pagebutton.-ctrl:disabled, .pagination-items .pagebutton.-ctrl.disabled {
+  border: 1px solid #7E7E7E;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.pagination-items .pagebutton.-ctrl:disabled .pageicon, .pagination-items .pagebutton.-ctrl.disabled .pageicon {
+  color: #464B4C;
+}
+
+.pagination-items .pagebutton.-more {
+  cursor: default;
+  pointer-events: none;
+}
+.pagination-items .pagebutton.-more .pageicon .twemoji {
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 .btn-grid-1 {
