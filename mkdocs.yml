@@ -7,13 +7,16 @@ nav:
   - Styles:
       - Typography: type-scale.md
   - Components:
-      - Accordion: accordion.md
-      - Button: buttons.md
-      - Radio Button: radio.md
-      - Text Area: text-area.md
-      - Toggles: toggles.md
-      - Input Fields: input-fields.md
-      - Grid System: grid-system.md
+    - Accordion: accordion.md
+    - Button: buttons.md
+    - Checkbox: checkbox.md
+    - Grid System: grid-system.md
+    - Input Fields: input-fields.md
+    - Pagination: pagination.md
+    - Radio Button: radio.md
+    - Text Area: text-area.md
+    - Toggles: toggles.md
+   
 
 plugins:
   - search:
@@ -43,6 +46,7 @@ extra_css:
 
 extra_javascript:
   - javascript/extra.js
+  - javascript/pagination.js
   # - javascript/bootstrap.min.js
   # - https://code.jquery.com/jquery-1.12.4.min.js
 
