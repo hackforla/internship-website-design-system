@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pagination = document.querySelector(".pagination");
     if (!pagination) return;
 
-    const pages = pagination.querySelectorAll(".pagebutton.-page");
+    const pages = pagination.querySelectorAll(".pagebutton:not(.-more):not(.-ctrl)");
     const prevControl = pagination.querySelector(".pagebutton.-ctrl:first-child");
     const nextControl = pagination.querySelector(".pagebutton.-ctrl:last-child");
 
