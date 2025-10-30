@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as *;
+
+// --8<-- [start:unchecked]
+input[type="radio"]{
+    border:1px solid $radio-color;
+    border-radius: 50%;
+    width: $radio-button-width;
+    height: $radio-button-height;
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:disabled {
+        stroke: gray;
+        border-color: gray;
+        background-color: $radio-disabled;
+    }
+    &.hover,
+    :hover{
+        opacity: .3;
+    }
+
+    
+}
+// --8<-- [end:unchecked]
+
+// --8<-- [start:checked]
+input[type="radio"]:checked {
+    border: 4px solid #FFF;
+    font-weight: 2;
+    accent-color: $radio-color;
+    background-color: $radio-color;
+    box-shadow: 0 0 0 2px $radio-color;
+    
+
+    &.disabled,
+    :disabled{
+        stroke: gray;
+        background-color: $radio-disabled;
+        color: gray;
+    }
+    &.hover,
+    :hover{
+        opacity: .3;
+    }
+
+}
+// --8<-- [end:checked]
+
+//apply class to div containing input and label.
+// --8<-- [start:radio-box]
+.radio-box{
+    font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    align-content:center;
+
+    input{
+        margin:5px;
+
+    }
+        label{
+        margin:5px;
+    }
+
+}
+
+.radio-box input[disabled] + label{
+    color:gray;
+}
+
+.radio-box input:hover{
+    opacity: .3;
+}
+// --8<-- [end:radio-box]
