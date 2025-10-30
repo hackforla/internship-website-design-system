@@ -133,13 +133,3 @@ hide:
         ```css
         --8<-- "components/sass/layout/_grid.scss:push"
         ```
-
-
-## **Table**
-
-| Columns | Margin (px) | Gutter (px) | Window Class |
-|----------|--------------|--------------|--------------|
-| 4 | 16 | 16 | Compact |
-| 8 | 24 | 24 | Medium |
-| 8 | 24 | 48 | Expanded |
-| 12 | 72 | 24 | Large |

@@ -19,19 +19,6 @@
   transition: all 0.3s ease;
 }
 
-/* Button grid utilities */
-.grid-demo {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1rem;
-  border-radius: 0.75rem;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 0 0 1px #e6e6e6 inset;
-  padding: 1rem;
-  margin: 1.5rem auto;
-  transition: all 0.3s ease;
-}
-
 .grid-items {
   border: 1px solid #ccc;
   padding: 20px;
