@@ -16,6 +16,7 @@ nav:
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
+    - Chips: chips.md
    
 
 plugins:
