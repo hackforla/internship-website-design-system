@@ -275,13 +275,19 @@ hide:
 
         === "HTML"
             ```html
-            <div class="dropdown-wrapper">
-                <div id="dropdown-pee" class="dropdown-field error has-value">
-                    <span class="dropdown-value">Selected Item</span>
-                    <span class="dropdown-arrow">▾</span>
+            <div class="state-box">
+                <div class="dropdown-wrapper js-dropdown">
+                    <div id="dropdown-enabled" class="dropdown-field error has-value">
+                        <span class="dropdown-value">Selected Item</span>
+                        <span class="dropdown-arrow">▾</span>
+                    </div>
+                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
+                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
+                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                    </ul>
                 </div>
-                <label class="dropdown-label" for="dropdown-pee">Label text</label>
-                <div class="dropdown-helper error">Supporting text</div>
             </div>
             ```
         === "CSS"
