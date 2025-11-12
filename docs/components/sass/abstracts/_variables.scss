@@ -34,6 +34,7 @@ $color-on-surface: #171D1E;
 $color-on-surface-variant: #464B4C;
 $color-outline: #7E7E7E;
 $color-outline-variant: #CCCCCC;
+$color-surface-container: #F0F0F0;
 $color-surface-container-high: #EBEBEB;
 $color-surface-container-highest: #E5E5E5;
 
@@ -159,6 +160,7 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --color-on-surface-variant: #{$color-on-surface-variant};
   --color-outline: #{$color-outline};
   --color-outline-variant: #{$color-outline-variant};
+  --color-surface-container: #{$color-surface-container};
   --color-surface-container-high: #{$color-surface-container-high};
   --color-surface-container-highest: #{$color-surface-container-highest};
   

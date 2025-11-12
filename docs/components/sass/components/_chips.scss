@@ -2,33 +2,58 @@
 
 // --8<-- [start:chip]
 .chip {
-    
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid $color-outline;
+   .label {
+      color: $color-on-surface-variant;
+   }
+}
+.chip .icon {
+    &.-leading {
+      --md-icon-size: 1.125rem;
+      color: $color-primary;
+    }
+    &.-trailing {
+        --md-icon-size: 1.125rem;
+        color: $color-on-surface-variant;
+    }
+    &.-avatar{
+        --md-icon-size: 1.5rem; 
+    }
+    &.hidden{
+        display: none;
+    }
 }
 // --8<-- [end:chip]
 
 // --8<-- [start:chipLabel]
 .chip-label {
-
   &:hover,
   &.hover {
-
+    background-color: $color-surface-container;
   }
 
   &:focus,
   &.focus {
-
+    background-color: $color-surface-container-high;
   }
 
   &:active,
   &.pressed {
-   
+    background-color: $color-surface-container-highest;
   }
 
   &:disabled, 
   &.disabled {
-
-    &::after {
-      
+    border-color: $color-outline;
+    pointer-events:none;
+    .label {
+      color: $color-surface-container-highest;
     }
   }
 }
@@ -36,31 +61,30 @@
 
 // --8<-- [start:chipTrailing]
 .chip-trailing {
-
-  &::after {
-  }
-
+  padding-right: 0.5rem;
   &:hover,
   &.hover {
-    &::after {
-    }
+    background-color: $color-surface-container;
   }
 
   &:focus,
   &.focus {
-
-    &::after {
-    }
+    background-color: $color-surface-container-high;
   }
 
   &:active,
   &.pressed {
-    &::after {
-    }
+    background-color: $color-surface-container-highest;
   }
 
   &:disabled,
   &.disabled {
+    border-color: $color-outline;
+    pointer-events:none;
+    .label, .icon.-trailing {
+      color: $color-surface-container-highest;
+    }
+
   }
 }
 // --8<-- [end:chipTrailing]

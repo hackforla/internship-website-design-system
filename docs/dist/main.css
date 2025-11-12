@@ -24,6 +24,7 @@
   --color-on-surface-variant: #464B4C;
   --color-outline: #7E7E7E;
   --color-outline-variant: #CCCCCC;
+  --color-surface-container: #F0F0F0;
   --color-surface-container-high: #EBEBEB;
   --color-surface-container-highest: #E5E5E5;
   --text-color: #011F23;
@@ -1888,6 +1889,71 @@ nav.pagination ul.pagination-items {
 .checkbox:has(input:disabled) {
   color: #6F6F6F;
   cursor: not-allowed;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #7E7E7E;
+}
+.chip .label {
+  color: #464B4C;
+}
+
+.chip .icon.-leading {
+  --md-icon-size: 1.125rem;
+  color: #006973;
+}
+.chip .icon.-trailing {
+  --md-icon-size: 1.125rem;
+  color: #464B4C;
+}
+.chip .icon.-avatar {
+  --md-icon-size: 1.5rem;
+}
+.chip .icon.hidden {
+  display: none;
+}
+
+.chip-label:hover, .chip-label.hover {
+  background-color: #F0F0F0;
+}
+.chip-label:focus, .chip-label.focus {
+  background-color: #EBEBEB;
+}
+.chip-label:active, .chip-label.pressed {
+  background-color: #E5E5E5;
+}
+.chip-label:disabled, .chip-label.disabled {
+  border-color: #7E7E7E;
+  pointer-events: none;
+}
+.chip-label:disabled .label, .chip-label.disabled .label {
+  color: #E5E5E5;
+}
+
+.chip-trailing {
+  padding-right: 0.5rem;
+}
+.chip-trailing:hover, .chip-trailing.hover {
+  background-color: #F0F0F0;
+}
+.chip-trailing:focus, .chip-trailing.focus {
+  background-color: #EBEBEB;
+}
+.chip-trailing:active, .chip-trailing.pressed {
+  background-color: #E5E5E5;
+}
+.chip-trailing:disabled, .chip-trailing.disabled {
+  border-color: #7E7E7E;
+  pointer-events: none;
+}
+.chip-trailing:disabled .label, .chip-trailing:disabled .icon.-trailing, .chip-trailing.disabled .label, .chip-trailing.disabled .icon.-trailing {
+  color: #E5E5E5;
 }
 
 /* --------------------------------------------------------------------------

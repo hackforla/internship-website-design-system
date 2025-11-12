@@ -8,7 +8,12 @@ hide:
 === "Label Only"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <!---->
+            <div class="chip chip-label">
+                :material-taxi:{.icon .-leading .hidden}
+                :material-taxi:{.icon .-avatar .hidden}
+                <span class="label">Label</span>
+                :material-taxi:{.icon .-trailing .hidden}
+            </div>
         </div>
     </div>
     <br>
@@ -16,31 +21,56 @@ hide:
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-label">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing .hidden}
+                </div>
             </div>
         </div>
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-label hover">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing .hidden}
+                </div>
             </div>
         </div>
     === "Focused"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-label focus">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing .hidden}
+                </div>
             </div>
         </div>
     === "Pressed"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-label pressed">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing .hidden}
+                </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-label disabled">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing .hidden}
+                </div>
             </div>
         </div>
     <br>
@@ -53,13 +83,23 @@ hide:
         ```
     === "HTML"
         ``` html
-
+            <div class="chip chip-label">
+                :material-taxi:{.icon .-leading .hidden}
+                :material-account-circle:{.icon .-avatar .hidden}
+                <span class="label">Label</span>
+                :material-close:{.icon .-trailing .hidden}
+            </div>
         ```
 
 === "w/ Trailing Icon"
     <div class="btn-grid-1">
         <div class="grid-items">
-            <!---->
+            <div class="chip chip-trailing">
+                :material-taxi:{.icon .-leading .hidden}
+                :material-account-circle:{.icon .-avatar .hidden}
+                <span class="label">Label</span>
+                :material-close:{.icon .-trailing}
+            </div>
         </div>
     </div>
     <br>
@@ -67,31 +107,56 @@ hide:
     === "Default"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-trailing">
+                :material-taxi:{.icon .-leading .hidden}
+                :material-account-circle:{.icon .-avatar .hidden}
+                <span class="label">Label</span>
+                :material-close:{.icon .-trailing}
+            </div>
             </div>
         </div>
     === "Hover"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-trailing hover">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing}
+                </div>
             </div>
         </div>
     === "Focused"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-trailing focus">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing}
+                </div>
             </div>
         </div>
     === "Pressed"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-trailing pressed">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing}
+                </div>
             </div>
         </div>
     === "Disabled"
         <div class="btn-grid-1">
             <div class="grid-items">
-                <!---->
+                <div class="chip chip-trailing disabled">
+                    :material-taxi:{.icon .-leading .hidden}
+                    :material-account-circle:{.icon .-avatar .hidden}
+                    <span class="label">Label</span>
+                    :material-close:{.icon .-trailing}
+                </div>
             </div>
         </div>
     <br>
@@ -104,7 +169,12 @@ hide:
         ```
     === "HTML"
         ``` html
-
+            <div class="chip chip-trailing hover">
+                :material-taxi:{.icon .-leading .hidden}
+                :material-account-circle:{.icon .-avatar .hidden}
+                <span class="label">Label</span>
+                :material-close:{.icon .-trailing}
+            </div>
         ```
 
 === "w/ Leading Icon"
