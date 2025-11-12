@@ -7,7 +7,7 @@ hide:
 
 ## Class
 
-=== "Dropdown Base - No Input"
+=== "Dropdown Base"
     <div class="state-box">
         <div class="dropdown-wrapper">
             <div id="dropdown-preview" class="dropdown-field with-label">
@@ -46,6 +46,10 @@ hide:
         === "CSS"
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+            ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
             ```
 
     === "Populated/Enabled"
@@ -87,6 +91,10 @@ hide:
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
             ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
+            ```
 
     === "Unpopulated/Hovered"
         <div class="state-box">
@@ -114,6 +122,10 @@ hide:
         === "CSS"
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+            ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
             ```
 
     === "Populated/Hovered"
@@ -155,6 +167,10 @@ hide:
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
             ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
+            ```
 
     === "Unpopulated/Focused"
         <div class="state-box">
@@ -182,6 +198,10 @@ hide:
         === "CSS"
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+            ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
             ```
 
     === "Populated/Focused"
@@ -223,6 +243,10 @@ hide:
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
             ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
+            ```
 
     === "Unpopulated/Error"
         <div class="state-box">
@@ -253,6 +277,10 @@ hide:
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
             ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
+            ```
 
     === "Populated/Error"
         <div class="state-box">
@@ -267,6 +295,7 @@ hide:
                         <li class="dropdown-option" data-value="Option 2">Option 2</li>
                         <li class="dropdown-option" data-value="Option 3">Option 3</li>
                     </ul>
+                    <div class="dropdown-helper error">Supporting text</div>
                 </div>
         </div>
 
@@ -293,4 +322,8 @@ hide:
         === "CSS"
             ```css
             --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+            ```
+        === "JS"
+            ```js
+            --8<-- "javascript/dropdown.js:dropdown-js"
             ```

@@ -183,9 +183,14 @@
 /* Dropdown Menu (open state)                                                 */
 /* -------------------------------------------------------------------------- */
 .dropdown-wrapper.is-open .dropdown-field {
-  border-bottom: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+}
+
+.dropdown-menu {
+  top: 100%; /* instead of calc(100% + 3px) */
+  margin-top: 4px; /* tiny visual space between boxes */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -193,7 +198,7 @@
 /* -------------------------------------------------------------------------- */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 3px);
+  top: calc(100% + 4px);
   left: 0;
   width: 100%;
   box-sizing: border-box;
@@ -201,16 +206,27 @@
   padding: 0;
   list-style: none;
 
-  border: 1px solid #C6C6C6;
+  /* Slightly tinted border for that subtle 3D edge */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+
+  /* Layered shadow — light on top, deeper below */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),  /* soft top shadow */
+    0 6px 12px rgba(0, 0, 0, 0.12); /* deeper ambient shadow */
+
   background: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 
   max-height: 240px;
   overflow-y: auto;
   display: none !important;
   z-index: 20;
 }
+
+.dropdown-wrapper.is-open .dropdown-menu {
+  display: block !important;
+}
+
 
 .dropdown-wrapper.is-open .dropdown-menu {
   display: block !important;
@@ -234,6 +250,7 @@
   border: none;
   list-style: none;
   margin: 0;
+  text-indent: 16px;
 }
 
 /* Full-width hover, flush edges */
@@ -264,6 +281,19 @@
 /* Kill any rogue ::marker */
 .dropdown-option::marker {
   content: none !important;
+}
+
+.dropdown-helper {
+  position: absolute;
+  left: 16px;
+  top: 100%;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #989898;
+
+  &.error {
+    color: #D32F2F;
+  }
 }
 
 // --8<-- [end:dropdown-base]
