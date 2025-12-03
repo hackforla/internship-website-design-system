@@ -1,0 +1,112 @@
+@use '../abstracts/variables' as *;
+@mixin avatar-fallback{
+  img.icon.-avatar[src=""], img.icon.-avatar:not([src]),
+   img[src]:not([src=""]) + .icon.-avatar {
+    display: none;
+   }
+}
+@mixin all-states {
+  &:hover,
+  &.hover {
+    background-color: $chip-bg-hover;
+  }
+
+  &:focus,
+  &.focus {
+    background-color: $chip-bg-focused;
+  }
+
+  &:active,
+  &.pressed {
+    background-color: $chip-bg-selected;
+  }
+
+  &:disabled, 
+  &.disabled {
+    border-color: $chip-border-color-disabled;
+    pointer-events:none;
+    .label, .icon {
+      color: $chip-label-disabled;
+    }
+  }
+}
+// --8<-- [start:chip]
+.chip {
+    display: flex;
+    align-items: center;
+    gap: $chip-gap;
+    height: $chip-height;
+    padding: $chip-padding-default;
+    border-radius: $chip-border-radius;
+    border: $chip-border;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+   .label {
+      color: $color-on-surface-variant;
+   }
+}
+.chip .icon {
+    &.-leading {
+      --md-icon-size: var(--chip-icon-size);
+      color: $color-primary;
+    }
+    &.-trailing {
+        --md-icon-size: var(--chip-icon-size);
+        color: $color-on-surface-variant;
+    }
+    &.-avatar{
+        --md-icon-size: var(--chip-avatar-size);
+        width: $chip-avatar-size;
+        height: $chip-avatar-size;
+    }
+    &.hidden{
+        display: none;
+    }
+}
+// --8<-- [end:chip]
+
+// --8<-- [start:chipLabel]
+.chip-label {
+  @include all-states;
+}
+// --8<-- [end:chipLabel]
+
+// --8<-- [start:chipTrailing]
+.chip-trailing {
+  padding-right: $chip-padding-icon;
+  @include all-states;
+}
+// --8<-- [end:chipTrailing]
+
+// --8<-- [start:chipLeading]
+.chip-leading {
+  padding-left: $chip-padding-icon;
+  @include all-states;
+}
+// --8<-- [end:chipLeading]
+
+// --8<-- [start:chipTrailingLeading]
+.chip-leading-trailing {
+  padding-left: $chip-padding-icon;
+  @include all-states;
+}
+// --8<-- [end:chipTrailingLeading]
+
+// --8<-- [start:chipAvatar]
+.chip-avatar {
+  padding-top: $chip-padding-avatar;
+  padding-left: $chip-padding-avatar;
+  padding-bottom: $chip-padding-avatar;
+  @include avatar-fallback;
+  @include all-states;
+}
+// --8<-- [end:chipAvatar]
+
+// --8<-- [start:chipAvatarTrailing]
+.chip-avatar-trailing {
+  padding: $chip-padding-avatar;
+  padding-right: $chip-padding-icon;
+  @include avatar-fallback;
+  @include all-states;
+}
+// --8<-- [end:chipAvatarTrailing]
