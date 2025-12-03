@@ -297,6 +297,7 @@ hide:
     <div class="btn-grid-1">
         <div class="grid-items">
             <div class="chip chip-avatar">
+                <img src="" class="icon -avatar">
                 :material-account-circle:{.icon .-avatar}
                 <span class="label">Label</span>
             </div>
@@ -308,6 +309,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -317,6 +319,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar hover">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -326,6 +329,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar focus">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -335,6 +339,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar pressed">
+                    <img class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -344,6 +349,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar disabled">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -360,6 +366,7 @@ hide:
     === "HTML"
         ``` html
                 <div class="chip chip-avatar">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                 </div>
@@ -368,6 +375,7 @@ hide:
     <div class="btn-grid-1">
         <div class="grid-items">
             <div class="chip chip-avatar-trailing">
+                <img src="" class="icon -avatar">
                 :material-account-circle:{.icon .-avatar}
                 <span class="label">Label</span>
                 :material-close:{.icon .-trailing}
@@ -380,6 +388,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}
@@ -390,6 +399,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing hover">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}
@@ -400,6 +410,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing focus">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}
@@ -410,6 +421,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing pressed">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}
@@ -420,6 +432,7 @@ hide:
         <div class="btn-grid-1">
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing disabled">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}
@@ -437,6 +450,7 @@ hide:
     === "HTML"
         ``` html
                 <div class="chip chip-avatar-trailing">
+                    <img src="" class="icon -avatar">
                     :material-account-circle:{.icon .-avatar}
                     <span class="label">Label</span>
                     :material-close:{.icon .-trailing}

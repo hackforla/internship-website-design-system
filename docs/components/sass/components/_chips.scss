@@ -1,26 +1,32 @@
 @use '../abstracts/variables' as *;
+@mixin avatar-fallback{
+  img.icon.-avatar[src=""], img.icon.-avatar:not([src]),
+   img[src]:not([src=""]) + .icon.-avatar {
+    display: none;
+   }
+}
 @mixin all-states {
   &:hover,
   &.hover {
-    background-color: $color-surface-container;
+    background-color: $chip-bg-hover;
   }
 
   &:focus,
   &.focus {
-    background-color: $color-surface-container-high;
+    background-color: $chip-bg-focused;
   }
 
   &:active,
   &.pressed {
-    background-color: $color-surface-container-highest;
+    background-color: $chip-bg-selected;
   }
 
   &:disabled, 
   &.disabled {
-    border-color: $color-outline;
+    border-color: $chip-border-color-disabled;
     pointer-events:none;
     .label, .icon {
-      color: $color-surface-container-highest;
+      color: $chip-label-disabled;
     }
   }
 }
@@ -28,11 +34,11 @@
 .chip {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    height: 2rem;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.5rem;
-    border: 0.0625rem solid $color-outline;
+    gap: $chip-gap;
+    height: $chip-height;
+    padding: $chip-padding-default;
+    border-radius: $chip-border-radius;
+    border: $chip-border;
     -webkit-transition: 0.2s;
     transition: 0.2s;
    .label {
@@ -41,15 +47,17 @@
 }
 .chip .icon {
     &.-leading {
-      --md-icon-size: 1.125rem;
+      --md-icon-size: var(--chip-icon-size);
       color: $color-primary;
     }
     &.-trailing {
-        --md-icon-size: 1.125rem;
+        --md-icon-size: var(--chip-icon-size);
         color: $color-on-surface-variant;
     }
     &.-avatar{
-        --md-icon-size: 1.5rem; 
+        --md-icon-size: var(--chip-avatar-size);
+        width: $chip-avatar-size;
+        height: $chip-avatar-size;
     }
     &.hidden{
         display: none;
@@ -65,35 +73,40 @@
 
 // --8<-- [start:chipTrailing]
 .chip-trailing {
-  padding-right: 0.5rem;
+  padding-right: $chip-padding-icon;
   @include all-states;
 }
 // --8<-- [end:chipTrailing]
 
 // --8<-- [start:chipLeading]
 .chip-leading {
-  padding-left: 0.5rem;
+  padding-left: $chip-padding-icon;
   @include all-states;
 }
 // --8<-- [end:chipLeading]
 
 // --8<-- [start:chipTrailingLeading]
 .chip-leading-trailing {
-  padding-left: 0.5rem;
+  padding-left: $chip-padding-icon;
   @include all-states;
 }
 // --8<-- [end:chipTrailingLeading]
 
 // --8<-- [start:chipAvatar]
 .chip-avatar {
-  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  padding-top: $chip-padding-avatar;
+  padding-left: $chip-padding-avatar;
+  padding-bottom: $chip-padding-avatar;
+  @include avatar-fallback;
   @include all-states;
 }
 // --8<-- [end:chipAvatar]
 
 // --8<-- [start:chipAvatarTrailing]
 .chip-avatar-trailing {
-  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  padding: $chip-padding-avatar;
+  padding-right: $chip-padding-icon;
+  @include avatar-fallback;
   @include all-states;
 }
 // --8<-- [end:chipAvatarTrailing]
