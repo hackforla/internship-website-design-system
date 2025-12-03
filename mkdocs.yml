@@ -16,6 +16,7 @@ nav:
     - Radio Button: radio.md
     - Text Area: text-area.md
     - Toggles: toggles.md
+    - Dropdown: dropdowns.md
    
 
 plugins:
@@ -47,6 +48,7 @@ extra_css:
 extra_javascript:
   - javascript/extra.js
   - javascript/pagination.js
+  - javascript/dropdown.js
   # - javascript/bootstrap.min.js
   # - https://code.jquery.com/jquery-1.12.4.min.js
 
