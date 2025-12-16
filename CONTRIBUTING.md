@@ -1,38 +1,83 @@
 
-# How to contribute
+# How to Contribute
+The following is a set of guidelines for contributing to the **Tech Work Experience (TWE) Design System** respository, hosted on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in the form of a pull request.
 
-<!-- Explain the different ways people can contribute. For example: -->
+*The guide below assumes that you have completed the onboarding process, including: joining the Hack for LA Slack, GitHub, and Google Drive; as well as having been matched with the TWE team. If you have not been onboarded, please refer to the [Getting Started Page](https://www.hackforla.org/getting-started).*
 
-- This is a project of _Hack for LA_, please [join here](https://www.hackforla.org/join)
-- Join the team on Slack in the [#internship](https://hackforla.slack.com/archives/C01VAUPU788) channel
+If you need a text editor to work on code, VS Code is recommended by the team, but feel free to use a text editor of your choice.
+
+**If you have any other questions about contributing, feel free to reach out to the team in the [#internship](https://hackforla.slack.com/archives/C01VAUPU788) Slack channel.**
 
 ## **Table of Contents**
-- [**Setting up the development environment**](#setting-up-the-development-environment)
-   - [**Prerequisites**](#prerequisites)
-   - [**Setup Instructions**](#setup-instructions)
-      - [1. Fork and Clone this repository](#1-fork-and-clone-this-repository)
-      - [2. Starting the Development Environment](#2-starting-the-development-environment)
-      - [3. Stopping Docker](#3-stopping-docker)
-      - [4. Development Workflow](#4-development-workflow)
-      - [Docker Development Notes](#docker-development-notes)
-- [**Working on issues**](#working-on-issues)
-   - [**Branch Workflow**](#branch-workflow)
-- [**Create an issue**](#create-an-issue)
-- [**Working with pull requests and reviews**](#working-with-pull-requests-and-reviews)
-- [**Testing**](#testing)
-   - [**Automated Accessibility Testing**](#automated-accessibility-testing)
+- [How to Contribute](#how-to-contribute)
+  - [**Table of Contents**](#table-of-contents)
+  - [Setting up the development environment](#setting-up-the-development-environment)
+    - [Prerequisites](#prerequisites)
+      - [**1. Join the repository team**](#1-join-the-repository-team)
+      - [**2. Installing Git**](#2-installing-git)
+      - [**3. Installing Docker**](#3-installing-docker)
+        - [**Docker installation troubleshooting**](#docker-installation-troubleshooting)
+    - [**Setup instructions**](#setup-instructions)
+      - [1. **Fork and Clone this repository**](#1-fork-and-clone-this-repository)
+      - [2. **Starting the Development Environment**](#2-starting-the-development-environment)
+      - [3. **Stopping Docker**](#3-stopping-docker)
+      - [4. **Development Workflow**](#4-development-workflow)
+      - [Docker Development Notes:](#docker-development-notes)
+  - [Working on issues](#working-on-issues)
+  - [Create an issue](#create-an-issue)
+  - [Branch Workflow](#branch-workflow)
+  - [Working with pull requests and reviews](#working-with-pull-requests-and-reviews)
+  - [Testing](#testing)
+    - [Automated Accessibility Testing](#automated-accessibility-testing)
+      - [Viewing Pa11y Test Results](#viewing-pa11y-test-results)
+      - [Instructions to View the CSV File with Excel Viewer by GrapeCity:](#instructions-to-view-the-csv-file-with-excel-viewer-by-grapecity)
       - [Bypassing Pre-Commit Hooks](#bypassing-pre-commit-hooks)
-   - [**Running Accessibility Test Manually**](#running-accessibility-test-manually)
-- [**Resources**](#resources)
+    - [Running Accessibility Test Manually](#running-accessibility-test-manually)
+  - [Resources](#resources)
 
 
 
 ## Setting up the development environment
+### Prerequisites
+#### **1. Join the repository team**
+In the `#internship` Slack channel, send an introductory message with your GitHub handle/username asking to be added to the Hack for LA website GitHub repository (this repository).
 
-### **Prerequisites**
-- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your machine.
-- Install [Docker](https://www.docker.com/get-started) on your machine.
+NOTE: Once you have accepted the GitHub invite (comes via email or in your GitHub notifications), please do the following:
+**NOTE:** Once you have accepted the GitHub invite (comes via email or in your GitHub notifications), **please do the following**:
 
+1. Make your own Hack for LA GitHub organization membership public by following this [guide](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).
+2. Set up two-factor authentication on your account by following this [guide](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+#### **2. Installing Git**
+Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+
+Please note that if you have a Mac the page offers several options (see other option, if you need to conserve hard drive space) including:
+
+- an “easiest” option (this version is fine for use at hackforla): This option would take just over 4GB.
+- a “more up to date” option (not required but optional if you want it): This option prompts you to go to install an 8GB package manager called Homebrew.
+- Other option: If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+#### **3. Installing Docker**
+Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the design system repo on your computer so you can test out your code before submitting a pull request.
+
+The recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). <strong><em>Feel free to reach out in the [Hack for LA Slack channel](https://hackforla.slack.com/archives/C4UM52W93/) if you have trouble installing docker on your system</em></strong>
+
+More on using Docker and the concepts of containerization:
+
+* [Get started with Docker](https://docs.docker.com/get-started/)
+
+##### **Docker installation troubleshooting**
+
+If you are on Windows and get 'You are not allowed to use Docker, you must be in the "docker-users" group' as an error message, the following wiki page is a guide for solving the issue: [Windows docker-users group error guide](https://github.com/hackforla/website/wiki/Add-local-user-accounts-to-the-docker-users-group-on-Windows-10).
+
+If you are using [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and finding a permission error when running `docker-compose up`, the issue might be caused by a version of Docker that relies on a buggy version of Go. In your terminal, run `docker version` to see which `Go version` is listed. Any version less than `go1.20.0` has a problem and indicates that your Docker needs to be updated.
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 ### **Setup instructions**
 
 #### 1. **Fork and Clone this repository**
@@ -181,6 +226,7 @@ For more information please refer to ["Git feature branch workflow"](https://www
 - Branches facilitate **code reviews** through **pull requests** (PRs).
 
 After pushing your branch to your fork, navigate to the [original repository](https://github.com/hackforla/internship-website-design-system) on GitHub. You'll see an option to **"Compare & pull request"** for the branch you've just updated. Follow the prompts to submit your pull request for review.
+<!-- TODO -->
 
 ## Testing
 <!-- Talk about Accessibility Testing -->
