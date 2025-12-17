@@ -23,8 +23,25 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
       - [3. **Stopping Docker**](#3-stopping-docker)
       - [4. **Development Workflow**](#4-development-workflow)
       - [Docker Development Notes:](#docker-development-notes)
-  - [Working on issues](#working-on-issues)
-  - [Create an issue](#create-an-issue)
+  - [How the Internship Team works with GitHub Issues](#how-the-internship-team-works-with-github-issues)
+    - [Hack for LA Contributor Expectations](#hack-for-la-contributor-expectations)
+    - [Where can I find GitHub issues to work on?](#where-can-i-find-github-issues-to-work-on)
+      - [**Available issues for new members**](#available-issues-for-new-members)
+      - [**Available issues for returning members**](#available-issues-for-returning-members)
+    - [Claiming an Issue](#claiming-an-issue)
+      - [**Assign \& Unassign yourself to this issue**](#assign--unassign-yourself-to-this-issue)
+        - [**If you want to self assign an issue:**](#if-you-want-to-self-assign-an-issue)
+        - [**If you want to remove yourself from an issue:**](#if-you-want-to-remove-yourself-from-an-issue)
+      - [**Move this issue from the ‘Prioritized Backlog’ to the ‘In progress’ \& back**](#move-this-issue-from-the-prioritized-backlog-to-the-in-progress--back)
+        - [**After you claim an issue:**](#after-you-claim-an-issue)
+        - [**After you unassign yourself from an issue:**](#after-you-unassign-yourself-from-an-issue)
+    - [Working on an issue](#working-on-an-issue)
+      - [**Verify current branch is main**](#verify-current-branch-is-main)
+      - [**Creating your issue branch and testing your code changes**](#creating-your-issue-branch-and-testing-your-code-changes)
+      - [**Prepare your changes to push to your repository**](#prepare-your-changes-to-push-to-your-repository)
+      - [**Pulling from upstream before you push**](#pulling-from-upstream-before-you-push)
+      - [**Incorporating changes from upstream**](#incorporating-changes-from-upstream)
+    - [Create an issue](#create-an-issue)
   - [Branch Workflow](#branch-workflow)
   - [Working with pull requests and reviews](#working-with-pull-requests-and-reviews)
   - [Testing](#testing)
@@ -179,17 +196,127 @@ If you are using [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/
   npm run build-sass   # Build Sass once
   npm run clean        # Clean compiled CSS
   ```
+<!-- TODO consider adding local codebase spell checker>-->
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 
-## Working on issues
+## How the Internship Team works with GitHub Issues
+
+### Hack for LA Contributor Expectations
+In order to work on a `Complexity: Small`/`Complexity: Medium`/`Complexity: Large` label issue within this repo, it's recommended you complete the following:
+1. good first issue
+   - Self-assign an issue with the `good first issue` label.
+   - Complete steps in [Working on an issue](#working-on-an-issue) to create a solution for the issue
+   - Complete steps in [How to make a pull request](#how-to-make-a-pull-request) to get your solution reviewed by the website-merge team.
+   - Once your pull request is merged, you can work on your next issue.
+2. Repeat #1 with a new good first issue
+
+Progress through issues with increasing complexity in the following order:
+
+1. Good first issue (x2)
+2. Small
+3. Medium
+4. Large
+5. Extra Large
+
+The reasons for this progression are:
+
+- The issues start out as being prescriptive and become less so as you gain more experience by working through increasingly complex issues.
+- We are trying to teach you the team methodology through the issues themselves.
+- It ensures you understand what we expect and the quality of contributions.
+
+All website team members are required to attend at least 1 team meeting in a week (held on Wednesdays and Thursdays). In case, you are unable in any given week, you should reach out to the tech leadership team. Exceptions to this requirement may be provided on a case-by-case basis.
+
+All website team members are expected to devote a minimum of 6 hours per week while working on various assignments during their entire tenure on the internship team (excluding week offs and vacations).
+
+Also, please let the tech leadership team know (through a Slack message in the internship channel as well as an @ mention in a comment of the issue that you would be working on) if you are planning to take a week off or a longer vacation.
 
 <!-- - Explain how to submit a bug.
 - Explain how to submit a feature request.
 - Explain how to contribute to an existing issue. -->
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+### Where can I find GitHub issues to work on?
 
+The best way to view the issues available is our [GitHub Project Board](https://github.com/orgs/hackforla/projects/64/views/4)
+
+
+For the purpose of finding issues to work on, developers should focus exclusively on the `Prioritized Backlog` column, which contains all the available issues that have been approved and prioritized. 
+**Note:** The column is filtered so the first (top) issue has the highest priority and should be worked on next.
+
+#### **Available issues for new members**
+
+Use the link [`good first issues`]() to display "good first issues" (for both front end and back end roles) in the Prioritized Backlog column.  
+
+**Note:** The column is filtered so the first (top) issue has the highest priority and should be worked on next.
+
+#### **Available issues for returning members**
+
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Small** label]()
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Medium** label]()
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Large and XLarge** label]()
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+### Claiming an Issue
+Once you find an issue you want to work on, you need to self-assign to claim it and then move the issue from the `Prioritized Backlog` to  `In progress`. Both of these tasks can be accomplished within the issue. Please see the examples below. (Note: Any issue that you are working on besides the pre-work issue should remain in the `In progress` column and stay open. Once a tech lead merges your pull request associated with that issue, there is automation through GitHub Actions that will take care of moving the issue to a different column and closing the issue.)
+
+#### **Assign & Unassign yourself to this issue**
+<details>
+  <summary><strong>Click here</strong> to see how you assign & unassign yourself to an issue</summary>
+  <p><strong>Assign/Unassign demo</strong></p>
+  <img src="https://user-images.githubusercontent.com/21162229/137636320-e96ef70d-3c85-405e-90d2-ee7b3bba071f.gif">
+</details>
+
+##### **If you want to self assign an issue:**
+* Go to the issue you want to work on
+* Go to the right hand menu under `Assignees`
+   *  Click the `assign yourself` link
+
+##### **If you want to remove yourself from an issue:**
+* Go to the issue you are assigned to
+* Go to the right hand menu and click on the gear wheel (:gear:) to the right of `Assignees`
+  * Click on the `X clear assignees` link
+####  **Move this issue from the ‘Prioritized Backlog’ to the ‘In progress’ & back**
+<details>
+  <summary><strong>Click here</strong> to see how to move an issue from the ‘Prioritized Backlog’ to the ‘In progress (actively working)’ & back</summary>
+  <p><strong>Project Board column demo</strong></p>
+  <img src="https://user-images.githubusercontent.com/21162229/137693338-97fe5f6c-820d-41c9-8e93-57b70827e0cf.gif">
+</details>
+
+##### **After you claim an issue:**
+* Click on the dropdown menu within the `Projects` section of the right-hand menu (value will show `Prioritized Backlog` if unclaimed)
+  * Select `In progress (actively working)`
+
+##### **After you unassign yourself from an issue:**
+* Click on the dropdown menu within the `Projects` section of the right-hand menu (value will show `In progress (actively working)` if unclaimed)
+  * Select `Prioritized Backlog`
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+### Working on an issue
+#### **Verify current branch is main**
+
+#### **Creating your issue branch and testing your code changes**
+
+#### **Prepare your changes to push to your repository**
+
+#### **Pulling from upstream before you push**
+
+#### **Incorporating changes from upstream**
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+### Create an issue
 To create a new issue, please use the blank issue template (available when you click "New Issue"). If you want to create an issue for other projects to use, please create the issue in your own repository and send a Slack message to one of your hack night hosts with the link.
 
-## Create an issue
 Create an issue using the template found [here](https://github.com/hackforla/internship/blob/main/.github/ISSUE_TEMPLATE/dev--create-design-system-microsite-component.md)
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 
 ## Branch Workflow
 
