@@ -51,7 +51,18 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
         - [**If there are conflicting changes in the upstream repository**](#if-there-are-conflicting-changes-in-the-upstream-repository)
       - [**Incorporating changes from upstream**](#incorporating-changes-from-upstream)
         - [**Incorporating changes into your topic branch**](#incorporating-changes-into-your-topic-branch)
-  - [Working with pull requests and reviews](#working-with-pull-requests-and-reviews)
+  - [Pull Requests](#pull-requests)
+    - [How to make a pull request](#how-to-make-a-pull-request)
+      - [**Push all changes to your issue branch**](#push-all-changes-to-your-issue-branch)
+      - [**Complete pull request on HackforLA repo**](#complete-pull-request-on-hackforla-repo)
+        - [**Update pull request title**](#update-pull-request-title)
+        - [**Add issue number to pull request**](#add-issue-number-to-pull-request)
+        - [**Explain the changes you made, and why these changes were needed.**](#explain-the-changes-you-made-and-why-these-changes-were-needed)
+        - [**Include images (if available)**](#include-images-if-available)
+        - [**How to add a pull request to the project board**](#how-to-add-a-pull-request-to-the-project-board)
+        - [**After pull request is submitted/merged**](#after-pull-request-is-submittedmerged)
+      - [**Editing a submitted pull request**](#editing-a-submitted-pull-request)
+      - [**Dealing with merge conflicts**](#dealing-with-merge-conflicts)
   - [Testing](#testing)
     - [Automated Accessibility Testing](#automated-accessibility-testing)
       - [Viewing Pa11y Test Results](#viewing-pa11y-test-results)
@@ -538,12 +549,132 @@ git merge main
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
 
-## Working with pull requests and reviews
+## Pull Requests
+### How to make a pull request
+#### **Push all changes to your issue branch**
+Once you are satisfied with your changes, push them to the feature branch you made within your remote repository.
 
-- Branches facilitate **code reviews** through **pull requests** (PRs).
+```bash
+git push --set-upstream origin pagination
+```
 
-After pushing your branch to your fork, navigate to the [original repository](https://github.com/hackforla/internship-website-design-system) on GitHub. You'll see an option to **"Compare & pull request"** for the branch you've just updated. Follow the prompts to submit your pull request for review.
-<!-- TODO -->
+**Note:** We will use the pull request [Pagination #19](https://github.com/hackforla/internship-website-design-system/pull/19) as an example. This is tied to issue [#753 Create Pagination](https://github.com/hackforla/internship/issues/753).
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+#### **Complete pull request on HackforLA repo**
+<details>
+  <summary><strong>Click here</strong> to see a notification for a pull request</summary>
+  <img src="https://user-images.githubusercontent.com/21162229/137709888-77ccfd63-3921-4978-9fc0-6fbd703683b8.jpg">
+</details>
+<br>
+<details>
+  <summary><strong>Click here</strong> to see pull request markdown template</summary>
+
+  ```
+  <!--  Important! Add the number of the issue you worked on  --> 
+  Fixes #replace_this_text_with_the_issue_number
+
+  ### What changes did you make?
+  <!--  Note: add lines if needed, and remove any unused lines  -->  
+    - 
+    - 
+    - 
+
+  ### Why did you make the changes (we will use this info to test)?
+  <!--  Note: add lines if needed, and remove any unused lines  -->  
+    - 
+    - 
+    - 
+
+  ### Screenshots of Proposed Changes To The Website (if any, please do not include screenshots of code changes)
+  <!--  Notes: 
+    - If there are no visual changes to the website, delete all of the script below and replace with "- No visual changes to the website"
+    - If there are visual changes to the website, include the 'before' and 'after' screenshots below. 
+    - If your images are too big, use the <img src="" width="" length="" />  syntax instead of ![image](link) to format the images
+    - If images are not loading properly, you might need to double check the syntax or add a newline after the closing </summary> tag 
+  --> 
+
+  <details>
+    <summary>Visuals before changes are applied</summary>
+
+    ![image](Paste_Your_Image_Link_Here_After_Attaching_Files)
+
+  </details>
+
+  <details>
+    <summary>Visuals after changes are applied</summary>
+
+    ![image](Paste_Your_Image_Link_Here_After_Attaching_Files)
+
+  </details>
+  ```
+</details>
+<br>
+
+##### **Update pull request title**
+* When the pull request is opened, the cursor will be located in the title input box, and the default title will be your last commit message from your branch.
+* Change the title to a short summary of what you did on the issue: 
+  * **Advice:** Provide a 4-12 word description of your resolution to the issue
+  * Unlike our example, this would be an ideal version:
+
+      `Created Pagination component page`
+
+  * **Note:** Upon creation, the pull request number will be appended to the title automatically. To avoid confusion, please **do not include** the issue number like our example in the title. 
+  
+##### **Add issue number to pull request**
+We have a GitHub action that automatically closes all issues connected to a pull request. So for our example we need to make the following changes:
+
+**From**
+```
+Fixes #replace_this_text_with_the_issue_number
+```
+**To**
+```
+Fixes #753
+```
+
+**Note:** This will now connect the issue and pull request both close when the pull request is successfully merged.
+
+##### **Explain the changes you made, and why these changes were needed.**
+n bullet point form, explain the changes you made in order to complete the action items within your issue and why. [@adrianang](https://github.com/adrianang) provided the following summary in PR [Add Project to Website: Tech Work Experience #4911](https://github.com/hackforla/website/pull/4911):
+
+```
+What changes did you make?
+- Implemented a pagination component with functional nav buttons that iterate between active pages
+- Page and Control buttons are complete with proper sizing, positioning, and states matching design system
+- Added a proper documentation page demonstrating component and presenting HTML, CSS, JS code
+- Diverged from design system slightly with opacity values, added variables to more closely match design system color names
+- Removed inline style tag hack (pagination.scss) for working around ongoing live-reload issues
+
+Why did you make the changes (we will use this info to test)?
+- Pagination was unimplemented; added all functionality possible with current scope
+- Page, Control, and More buttons within pagination component have overlapping states, so Control and More are variants of a primary page button styling
+- Ready for Dev design page (Resource 1.01) is slightly outdated, kept microsite page consistent with other pages
+- Opacities were requiring too much variety to variables... see Buttons #10 for an alternate implementation with similar opacity values as variables?
+
+```
+
+**Note:** All the bullet points addressed the action items within that issue.
+
+##### **Include images (if available)**
+
+##### **How to add a pull request to the project board**
+##### **After pull request is submitted/merged**
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+#### **Editing a submitted pull request**
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+#### **Dealing with merge conflicts**
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 
 ## Testing
 <!-- Talk about Accessibility Testing -->
