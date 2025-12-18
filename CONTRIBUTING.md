@@ -35,14 +35,22 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
       - [**Move this issue from the ‘Prioritized Backlog’ to the ‘In progress’ \& back**](#move-this-issue-from-the-prioritized-backlog-to-the-in-progress--back)
         - [**After you claim an issue:**](#after-you-claim-an-issue)
         - [**After you unassign yourself from an issue:**](#after-you-unassign-yourself-from-an-issue)
+    - [Create an issue](#create-an-issue)
     - [Working on an issue](#working-on-an-issue)
       - [**Verify current branch is main**](#verify-current-branch-is-main)
       - [**Creating your issue branch and testing your code changes**](#creating-your-issue-branch-and-testing-your-code-changes)
+        - [**Creating your issue branch**](#creating-your-issue-branch)
+        - [**Testing your code changes**](#testing-your-code-changes)
       - [**Prepare your changes to push to your repository**](#prepare-your-changes-to-push-to-your-repository)
+        - [**Use the `git add` command to stage your changes.**](#use-the-git-add-command-to-stage-your-changes)
+        - [**Use the `git status` command to see what files are staged.**](#use-the-git-status-command-to-see-what-files-are-staged)
+        - [**Use the `git reset HEAD` command to remove a staged file.**](#use-the-git-reset-head-command-to-remove-a-staged-file)
+        - [**Use the `git commit` command**](#use-the-git-commit-command)
       - [**Pulling from upstream before you push**](#pulling-from-upstream-before-you-push)
+        - [**If there are no changes in the upstream repository**](#if-there-are-no-changes-in-the-upstream-repository)
+        - [**If there are conflicting changes in the upstream repository**](#if-there-are-conflicting-changes-in-the-upstream-repository)
       - [**Incorporating changes from upstream**](#incorporating-changes-from-upstream)
-    - [Create an issue](#create-an-issue)
-  - [Branch Workflow](#branch-workflow)
+        - [**Incorporating changes into your topic branch**](#incorporating-changes-into-your-topic-branch)
   - [Working with pull requests and reviews](#working-with-pull-requests-and-reviews)
   - [Testing](#testing)
     - [Automated Accessibility Testing](#automated-accessibility-testing)
@@ -225,11 +233,11 @@ The reasons for this progression are:
 - We are trying to teach you the team methodology through the issues themselves.
 - It ensures you understand what we expect and the quality of contributions.
 
-All website team members are required to attend at least 1 team meeting in a week (held on Wednesdays and Thursdays). In case, you are unable in any given week, you should reach out to the tech leadership team. Exceptions to this requirement may be provided on a case-by-case basis.
+All TWE team members are required to attend at least 1 team meeting in a week (held on Wednesdays and Thursdays). In case, you are unable in any given week, you should reach out to the tech leadership team. Exceptions to this requirement may be provided on a case-by-case basis.
 
-All website team members are expected to devote a minimum of 6 hours per week while working on various assignments during their entire tenure on the internship team (excluding week offs and vacations).
+All TWE team members are expected to devote a minimum of 6 hours per week while working on various assignments during their entire tenure on the internship team (excluding week offs and vacations).
 
-Also, please let the tech leadership team know (through a Slack message in the internship channel as well as an @ mention in a comment of the issue that you would be working on) if you are planning to take a week off or a longer vacation.
+Also, please let the tech leadership team know (through a Slack message in the `internship` channel as well as an @ mention in a comment of the issue that you would be working on) if you are planning to take a week off or a longer vacation.
 
 <!-- - Explain how to submit a bug.
 - Explain how to submit a feature request.
@@ -246,15 +254,15 @@ For the purpose of finding issues to work on, developers should focus exclusivel
 
 #### **Available issues for new members**
 
-Use the link [`good first issues`]() to display "good first issues" (for both front end and back end roles) in the Prioritized Backlog column.  
+Use the link [`good first issues`](https://github.com/orgs/hackforla/projects/64/views/4) to display "good first issues" (for both front end and back end roles) in the Prioritized Backlog column.  
 
 **Note:** The column is filtered so the first (top) issue has the highest priority and should be worked on next.
 
 #### **Available issues for returning members**
 
-* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Small** label]()
-* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Medium** label]()
-* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Large and XLarge** label]()
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Small** label](https://github.com/orgs/hackforla/projects/64/views/4)
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Medium** label](https://github.com/orgs/hackforla/projects/64/views/4)
+* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Large and XLarge** label](https://github.com/orgs/hackforla/projects/64/views/4)
 
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
@@ -295,21 +303,6 @@ Once you find an issue you want to work on, you need to self-assign to claim it 
 
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
-
-### Working on an issue
-#### **Verify current branch is main**
-
-#### **Creating your issue branch and testing your code changes**
-
-#### **Prepare your changes to push to your repository**
-
-#### **Pulling from upstream before you push**
-
-#### **Incorporating changes from upstream**
-
-<sub>[Back to Table of Contents](#table-of-contents)</sub>
-***
-
 ### Create an issue
 To create a new issue, please use the blank issue template (available when you click "New Issue"). If you want to create an issue for other projects to use, please create the issue in your own repository and send a Slack message to one of your hack night hosts with the link.
 
@@ -318,35 +311,232 @@ Create an issue using the template found [here](https://github.com/hackforla/int
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
 
-## Branch Workflow
+### Working on an issue
+#### **Verify current branch is main**
+The `git branch` command will let you know what branch you are in, and what branch names are already in use.
 
-- **Branches**: a separate line of development created to work on new features or fixes independently from the main codebase.  Unless specified in your issue, you can name your branch anything you want.  Just be aware that name is visable to other people and is permanently attached to the PR (so please don't use swear words, etc.)
+```bash
+git branch
+```
 
-When working in your fork, feature development/fixes should occur in dedicated branches rather than the `main` branch.
+You will see a list of all of your branches. There will be a star (`*`) next to the branch that you are currently in. By default you should start on the `main` branch.
 
-Once you have a feature/issue that you understand and are ready to work on:
+**Note:** When you work on future issues, you must always be in the `main` branch when creating a new branch.
 
-- Ensure your fork remains current by updating it with the latest changes from the original repository (the **upstream**).
+If you are not currently in the `main` branch, run the following command to return to it:
 
-  ```bash
-  git pull upstream main
-  ```
+```bash
+git checkout main
+```
 
-- Create a new branch
+Update your main branch with upstream changes:
 
-  ```bash
-  git checkout -b new-feat-branch
-  ```
+```bash
+git pull upstream main
+```
 
-- Make changes and review changed files with
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
 
-  ```bash
-  git status
-  ```
+#### **Creating your issue branch and testing your code changes**
+##### **Creating your issue branch**
 
-- **Add** `git add <file_name>`, **Commit** `git commit -m "{message}"`, and **Push** `git push -u origin new-feat-branch` changes when ready.
+If you have not already done so, run `git checkout main` to switch the working directory to the `main` branch and then update `main` with upstream changes as described [above](#verify-current-branch-is-main). 
 
-For more information please refer to ["Git feature branch workflow"](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow#:~:text=The%20core%20idea%20behind%20the,without%20disturbing%20the%20main%20codebase).
+Using the `-b` flag you can also use the `git checkout` command to create a new branch and immediately switch into it.  
+
+For example, if you create a new issue branch for [Create Pagination](https://github.com/hackforla/internship/issues/753):
+
+```bash
+git checkout -b pagination
+```
+
+ The text after the `-b`, in the example `pagination`, will be the name of your new branch.
+
+ **Note:** Choose a branch name that:
+ * matches the name in your issue, if specified; *OR*
+ * relates to the issue (No spaces!)
+
+**Note:** The format should look like the scheme above where the words are a brief description of the issue that will make sense at a glance to someone unfamiliar with the issue.
+
+We urge developers to be cautious using `git add`. In general it is not advisable to use `git add -all` or `git add .`. Rather, run `git status`, examine the output carefully, and then add only those files specifically related to the current issue. This will ensure that no extraneous files are included in the subsequent commit.  
+
+When you've finished working on your issue, follow the steps below to prepare your changes to push to your repository.
+
+##### **Testing your code changes**
+
+Testing is a fundamental step to ensure quality of code and that code changes are functioning as expected. We don't want to debug or find solutions for features while the code is already in a production environment in real time. For some it's not the most engaging step and skip it, others simply have not done it before, and some may see it as unecessary time consuming step.
+
+When testing, run your local microsite and view it in the [browser](http://localhost:8000). You will also want to open the [main microsite](https://hackforla.github.io/internship-website-design-system/) in a new tab. Locate your changes on both sites and consider whether these changes address the issue. Some important questions to ask are:
+
+1. Are the changes applicable to the issue?
+2. Are there changes beyond those applicable to the issue?
+3. Does the microsite appear less user-friendly?
+4. Do the links and components on the page still work as intended?
+
+In addition to viewing changes on your desktop browser, you must also assess these changes in multiple viewports (such as mobile or tablet), through your browser's developer mode.
+
+<details>
+   <summary> An example of developer mode in Microsoft Edge (90.0.818.51)</summary>
+   <img src=https://github.com/hackforla/website/wiki/images/how-to-review-pull-requests/step3-devmode-edge.png>
+</details>
+
+- Make sure to comment on your issue if you aren't sure how to test something, and then to put it in the **Questions / In Review column** and add the `ready for dev lead` label. Paste a link to your comments in the #hfla-site Slack channel asking peers for help.
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+#### **Prepare your changes to push to your repository**
+Once you are done with the work on your issue you will push it to your repository.  Before you can push your work to your repository, you will stage and commit your changes.  These two commands are similar to the save command that you have used to in other programs.
+
+**Note:** If you are using Visual studios code you can use the Git graphical user interface to stage your changes. For instructions check out the [Git Gui Wiki](https://github.com/hackforla/website/wiki/How-to-Use-Git-GUI-(Graphical-user-Interface)-in-Visual-Studios-Code)
+
+##### **Use the `git add` command to stage your changes.**
+
+This command prepares your changes before you commit them. You can stage files one at a time using the filename.
+
+Run this command if you want to **add changes from a specific file(s) to your commit record**:
+```bash
+git add “filename.ext”
+```
+##### **Use the `git status` command to see what files are staged.**
+
+This command will list the files that have been staged.  These are the files that will be committed (saved) when you run the next command, `git commit`. Please be sure all your staged changes are relevant to the issue you are working on. If you accidentally included unrelated changes, please unstage them before making this commit, and then make a new commit for the unrelated changes. (The commands for unstaging commits are provided in the output of your `git status` command.)
+
+```bash
+git status
+```
+##### **Use the `git reset HEAD` command to remove a staged file.**
+
+This command will remove a file that has been staged.  This file will not be committed (saved) when you run the next command, `git commit`. This only works if the wrong files were added, but they were not yet committed. The file will be removed from the staging area, but not actually deleted:
+
+```bash
+git reset HEAD “filename.ext”
+```
+
+##### **Use the `git commit` command**
+
+This command saves your work, and prepares it to push to your repository.  Use the `-m` flag to quickly add a message to your commit. Your message should be a short description of the issue you are working.  It will be extremely helpful if other people can understand your message, so try to resist the temptation to be overly cryptic.
+
+To commit your changes with a message, run:
+
+```bash
+git commit -m “insert message here”
+```
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+
+#### **Pulling from upstream before you push**
+**IMPORTANT:** Before you push your local commits to your repository, sync your fork to the main Hack For LA website repository. You can sync your fork directly on GitHub by clicking "Sync Fork" at the right of the screen and then clicking "Update Branch":
+
+<details>
+  <summary><strong>Click here</strong> to see how to sync the fork on GitHub</summary>
+  <img src="https://raw.githubusercontent.com/wiki/hackforla/website/images/how-to-review-pull-requests/step3-sync-demo.gif">
+</details>
+
+Next, bring upstream changes into your topic branch. With your topic branch checked out, run: 
+
+```bash
+git pull upstream main
+```
+
+
+##### **If there are no changes in the upstream repository**
+
+If you do not see any output, there have not been any changes in the main repository since the last time you checked. So it is safe to push your local commits to your fork.
+
+If you just type `git push` you will be prompted to create a new branch in your GitHub repository. The more complete command below will create a new branch on your copy of the website repository, and then push your local branch there. The name at the end of this command should be the same as the name of the local branch that you created back in step 3, as in the example below:
+
+```bash
+git push --set-upstream origin pagination
+```
+
+##### **If there are conflicting changes in the upstream repository**
+
+When you check the upstream repository, you may see output like this:
+
+```bash
+Fetching upstream
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 11 (delta 5), reused 7 (delta 4), pack-reused 0
+Unpacking objects: 100% (11/11), 8.25 KiB | 402.00 KiB/s, done.
+From https://github.com/hackforla/internship-website-design-system/
++ 770d667...14f9f46 Zeven     -> hackforla/Zeven  (forced update)
+* [new branch]      Zeven     -> hackforla/Zeven
+5773ebe..0c86ecd    main      -> main
+```
+
+
+**Note:** You can safely ignore changes in other issue branches, such as `Zeven` above. But if you see changes in main, as in `5773ebe..0c86ecd  main -> hackforla/main`, you should incorporate those changes into your repository before merging or rebasing your issue branch. Use the [instructions below](#incorporating-changes-from-upstream) to bring your fork up to date with the main repository.
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+
+#### **Incorporating changes from upstream**
+
+Your fork of this repository on GitHub, and your local clone of that fork, will get out of sync with this (upstream) repository from time to time. (That's what has happened when you see something like "This branch is 1 commit behind hackforla:main" on the GitHub website version of your repository.)
+
+One way to keep your fork up to date with this repository is to follow these instruction: [Syncing your fork to the original repository via the browser](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)
+
+You can also update your fork via the local clone of your fork, using these instructions. Assuming you have a local clone with remotes `upstream` (this repo) and `origin` (your GitHub fork of this repo):
+
+* First, you will need to create a local branch which tracks upstream/gh-pages.  You will only need to do this once; you do not need to do this every time you want to incorporate upstream changes.
+
+Run the following two commands:
+
+```bash
+git fetch upstream
+git checkout -b upstream-main --track upstream/main
+```
+
+If you have already created the branch upstream-main, the following commands will incorporate upstream changes:
+
+1. Move to the branch you want to merge with.
+```bash
+git checkout upstream-main
+```
+
+1. Update your tracking branch with the latest changes from the `main` branch in this repository
+```bash
+git pull  
+```
+
+1. Move back to your main branch
+```bash
+git checkout main
+```
+
+1. Merge your changes back into your `main` branch.
+```bash
+git merge upstream-main
+```
+If you do all your work on topic branches (as suggested above) and keep gh-pages free of local modifications, this merge should apply cleanly.
+
+Then push the merge changes to your GitHub fork:
+
+```bash
+git push
+```
+
+If you go to your online GitHub repository this should remove the message "This branch is x commit behind hackforla:main".
+
+##### **Incorporating changes into your topic branch**
+
+To incorporate these updates from the main GitHub repository into your topic branch, you can 'rebase' your branch onto your updated gh-pages branch. NOTE you should only rebase if you have never pushed your topic branch to GitHub (or shared it with another collaborator).
+
+```bash
+git checkout pagination
+git rebase main
+```
+
+If you receive warnings about conflicts, abort the rebase with `git rebase --abort` and instead merge gh-pages into your branch.
+
+```bash
+git checkout pagination
+git merge main
+```
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 
 ## Working with pull requests and reviews
 
