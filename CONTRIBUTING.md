@@ -59,17 +59,20 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
         - [**Add issue number to pull request**](#add-issue-number-to-pull-request)
         - [**Explain the changes you made, and why these changes were needed.**](#explain-the-changes-you-made-and-why-these-changes-were-needed)
         - [**Include images (if available)**](#include-images-if-available)
+    - [Screenshots of Proposed Changes Of The Website (if any, please do not include screenshots of code changes)](#screenshots-of-proposed-changes-of-the-website-if-any-please-do-not-include-screenshots-of-code-changes)
         - [**How to add a pull request to the project board**](#how-to-add-a-pull-request-to-the-project-board)
         - [**After pull request is submitted/merged**](#after-pull-request-is-submittedmerged)
       - [**Editing a submitted pull request**](#editing-a-submitted-pull-request)
       - [**Dealing with merge conflicts**](#dealing-with-merge-conflicts)
-  - [Testing](#testing)
+  - [Additional Testing](#additional-testing)
     - [Automated Accessibility Testing](#automated-accessibility-testing)
       - [Viewing Pa11y Test Results](#viewing-pa11y-test-results)
       - [Instructions to View the CSV File with Excel Viewer by GrapeCity:](#instructions-to-view-the-csv-file-with-excel-viewer-by-grapecity)
       - [Bypassing Pre-Commit Hooks](#bypassing-pre-commit-hooks)
     - [Running Accessibility Test Manually](#running-accessibility-test-manually)
-  - [Resources](#resources)
+  - [Resources and Documentation](#resources-and-documentation)
+    - [What do I do if I need help?](#what-do-i-do-if-i-need-help)
+    - [TWE Resources](#twe-resources)
 
 
 
@@ -638,7 +641,7 @@ Fixes #753
 **Note:** This will now connect the issue and pull request both close when the pull request is successfully merged.
 
 ##### **Explain the changes you made, and why these changes were needed.**
-n bullet point form, explain the changes you made in order to complete the action items within your issue and why. [@adrianang](https://github.com/adrianang) provided the following summary in PR [Add Project to Website: Tech Work Experience #4911](https://github.com/hackforla/website/pull/4911):
+In bullet point form, explain the changes you made in order to complete the action items within your issue and why. [@zvidmarb](https://github.com/zvidmarb) provided the following summary in PR [Pagination #19](https://github.com/hackforla/internship-website-design-system/pull/19):
 
 ```
 What changes did you make?
@@ -659,28 +662,86 @@ Why did you make the changes (we will use this info to test)?
 **Note:** All the bullet points addressed the action items within that issue.
 
 ##### **Include images (if available)**
+In the example above, changes are shown by adding images within the `<details>/<summary>` tags like so:
+### Screenshots of Proposed Changes Of The Website (if any, please do not include screenshots of code changes)
+```
+<!--  Notes: 
+  - If there are no visual changes to the website, delete all of the script below and replace with "- No visual changes to the website"
+  - If there are visual changes to the website, include the 'before' and 'after' screenshots below. 
+  - If your images are too big, use the <img src="" width="" length="" />  syntax instead of ![image](link) to format the images
+  - If images are not loading properly, you might need to double check the syntax or add a newline after the closing </summary> tag 
+ --> 
+
+<details>
+  <summary>Visuals before changes are applied</summary>
+
+  ![image](https://user-images.githubusercontent.com/77212035/130176122-aca18c1a-c883-48b3-987d-06342835017c.png)
+
+</details>
+
+<details>
+  <summary>Visuals after changes are applied</summary>
+
+  ![image](https://user-images.githubusercontent.com/77212035/130176069-9c1cc306-f930-43a5-9f93-1249466c81dc.png)
+
+</details>
+```
+**Note:** Not all pull requests will make visual changes to our website. **Please do not include screenshots from VSCode / other IDE.** If your pull request does not make visual changes to our website, please remove the entire `<details>/<summary>` section and replace it with a brief summary stating that there are no visual changes, for example:
+
+```
+### Screenshots of Proposed Changes Of The Website  (if any, please do not screen shot code changes)
+
+Moving files to another directory. No visual changes to the website.
+```
 
 ##### **How to add a pull request to the project board**
+**NOTE:** There is an automation for adding newly created pull requests to the Project Board. However, it still should be manually checked to make sure the pull request has been placed on the Project Board in case automation breaks.
+
+After you have submitted your pull request, add it to the project board by clicking the gear icon on the right under Projects and selecting 'Project Board.'
+
+<details>
+  <summary><strong>Click here</strong> to see how to add a pull request to the project board</summary>
+  <h4>Our GitHub project board</h4>
+  <img src="https://user-images.githubusercontent.com/81049661/161181526-23ae511c-e991-4cc6-a0a4-d8db19dd69ca.png">
+</details>
+
 ##### **After pull request is submitted/merged**
+
+**NOTE:** After completing your assignment and committing all of the changes, you must leave your current branch and return to the `main` branch.
+
+Run the following command to return to the main branch:
+```
+git checkout main
+```
+Once your pull request is merged you can delete your branch with the following command:
+```
+git branch -d pagination
+```
+Now you are all set to work on a new PR. Start over at [Where can I find GitHub issues to work on?](#where-can-i-find-github-issues-to-work-on) and repeat completing parts 2 and 3.
 
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
 
 #### **Editing a submitted pull request**
+If you find an error in your code or your reviewer asks you to make a change, please avoid editing your code directly from the pull request. Instead update it in your local branch first and then push it to your origin remote. This will update the original pull request.
 
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
 
 #### **Dealing with merge conflicts**
+Merge conflicts occur when two or more branches of code have been modified in conflicting ways, making it difficult for the version control system to automatically merge the changes together. This often happens when two developers modify the same line of code, when one developer deletes a file that another has modified, or when one developer renames a file while another is still working on it.
+
+Resolving merge conflicts typically involves reviewing the changes made in each branch, deciding which changes to keep, and manually editing the code to resolve the conflict.
+
+Please check out this [documentation from VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts) for more information on handling merge conflicts.
 
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
 
-## Testing
-<!-- Talk about Accessibility Testing -->
+## Additional Testing
+For help on testing with your issues, see [Testing your Code Changes](#testing-your-code-changes).
 
-- Run and view the site locally. See [Starting the Development Environment](#2-starting-the-development-environment)
-- Observe visual changes for desktop-sized screens as well as mobile.
+We also have a number of automated testing actions that apply when pull requesting and pushing changes. *As of Jan 2026, these actions are temporarily disabled. Below is the previous documentation for future reference.*
   
 ### Automated Accessibility Testing
 
@@ -709,6 +770,9 @@ We use [Husky](https://typicode.github.io/husky/) to enforce a pre-commit hook t
    - #### Using ` -n ` after your Git command
       Example: `git commit -m 'message' -n`
 
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
 ### Running Accessibility Test Manually
 
 In addition to the automated pre-commit accessibility check, you can run the Pa11y accessibility test manually at any time. This is useful if you want to monitor accessibility errors as you work.
@@ -720,9 +784,55 @@ npm run pa11y
 ```
 This will output the results in the same `pa11y-results.csv` file located in the `/output` folder. Note that this file will be overwritten the next time the pre-commit hook runs when you commit and push changes.
 
-## Resources
-- [Hack for LA's Internship Wiki]()
-- [Snippets](SNIPPETS.md)
-- [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
-- [Husky](https://typicode.github.io/husky/)
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
 
+## Resources and Documentation
+### What do I do if I need help?
+The best way to ask for help and provide as much information to the team is to do the following:
+<details>
+  <summary><strong>Click here</strong> for visual comment example</summary>
+  <img src="https://user-images.githubusercontent.com/21162229/137784250-96281332-9231-4c5d-aba2-0d4c36521b82.jpg" alt="Making a comment visual example">
+</details>
+1. Write down your blocker as a comment within your issue
+    * Describe the blocker and your approach to resolve the action items within the issue.
+2. Note which branch you are working on and make sure it has the changes you are referring to.
+
+<details>
+  <summary><strong>Click here</strong> to see how to copy a link that goes to an issue comment</summary>
+  <img src="https://user-images.githubusercontent.com/21162229/137784791-30871703-48de-4836-91ef-1268d86662a4.jpg" alt="Visual example of how to copy the comment link">
+</details>
+
+1. Click on the ellipsis (...) at the top right of the comment box
+2. Click on `Copy Link`
+3. Now paste that link in the [`hfla-site` Slack channel](https://hackforla.slack.com/archives/C4UM52W93)
+4. The Website Leadership/Merge Team will do its best to help resolve any blockers and provide guidance.
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+### TWE Resources
+- [Hack for LA Website Contribution file](https://github.com/zvidmarb/HackforLA-Website/blob/gh-pages/CONTRIBUTING.md)
+- Wiki Resources 
+  - [Homepage](https://github.com/hackforla/website/wiki)
+  - [Being a Part of the Hack For LA Team](https://github.com/hackforla/website/wiki/Being-a-Part-of-the-Hack-For-LA-Team)
+  - [How to review pull requests](https://github.com/hackforla/website/wiki/How-to-Review-Pull-Requests)
+  - [How to Create Issues](https://github.com/hackforla/website/wiki/How-to-create-issues)
+  - [How to read and interpret issue labels](https://github.com/hackforla/website/wiki/How-to-read-and-interpret-labels)
+  - [How to Create a Design System Microsite Page using Snippets](https://github.com/hackforla/internship/wiki/How-to-Create-a-Design-System-Microsite-Page-using-Snippets)
+- Design References
+  - [Figma - Design Systems](https://www.figma.com/file/TTRS2FWXsrymHYpPJL1IdH/Internship-Team-Main-file?type=design&node-id=2%3A45&mode=design&t=jgMN8QdoLnh9F7MT-1)
+  - [Figma - Microsite pages](https://www.figma.com/design/TTRS2FWXsrymHYpPJL1IdH/Internship-Team-Main-file?node-id=2-54&p=f&t=d9p36VpyFreC0BBo-0)
+- Tools and Extensions
+  - [Github Pages](https://pages.github.com/)
+  - [Jekyll](https://jekyllrb.com/docs/)
+  - [Liquid Documentation](https://shopify.github.io/liquid/)
+  - [Snippets](SNIPPETS.md)
+  - [Excel Viewer by GrapeCity](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
+  - [Husky](https://typicode.github.io/husky/)
+  - [Docker](https://docs.docker.com/get-started/)
+    - [Docker Compose](https://docs.docker.com/compose/gettingstarted/)
+    - [Docker Desktop](https://docs.docker.com/install/) 
+
+<sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
