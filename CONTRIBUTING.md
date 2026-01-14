@@ -232,12 +232,16 @@ styles, and implementation details are defined and maintained in this repository
 ### Design Reference (Figma)
 - Material 3 Design Kit (Figma) is used to understand:
   - Review component structure
-  - Understand States, Classes and other variables
+  - Understand states, classes and other variants
   - Variants and behavior
+
+Link : https://www.figma.com/community/file/1035203688168086460/material-3-design-kit
 
 - The Figma Material Theme Builder is used to:
   - Preview themes and color systems
   - Export reference values for inspection
+
+Link : https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder
 
 - The exported JSON is used only as a reference and is not directly consumed by the codebase.
 
