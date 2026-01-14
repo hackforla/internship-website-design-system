@@ -232,7 +232,7 @@ styles, and implementation details are defined and maintained in this repository
 ### Design Reference (Figma)
 - Material 3 Design Kit (Figma) is used to understand:
   - Review component structure
-  - Understand States (default, hover, focus, disabled, error, etc.)
+  - Understand States, Classes and other variables
   - Variants and behavior
 
 - The Figma Material Theme Builder is used to:
