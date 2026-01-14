@@ -23,6 +23,7 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
       - [3. **Stopping Docker**](#3-stopping-docker)
       - [4. **Development Workflow**](#4-development-workflow)
       - [Docker Development Notes:](#docker-development-notes)
+  - [Code Standards](#code-standards)
   - [How the Internship Team works with GitHub Issues](#how-the-internship-team-works-with-github-issues)
     - [Hack for LA Contributor Expectations](#hack-for-la-contributor-expectations)
     - [Where can I find GitHub issues to work on?](#where-can-i-find-github-issues-to-work-on)
@@ -221,6 +222,65 @@ If you are using [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/
 <!-- TODO consider adding local codebase spell checker>-->
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
 ***
+
+## Code Standards
+
+This section outlines how to build new components in the TWE Design System using
+Material 3 as a **design baseline**, while implementing and maintaining our own
+production-ready token and component architecture.
+
+### Design source of truth
+- Material 3 Design Kit (Figma) is used to understand:
+  - Component anatomy
+  - States (default, hover, focus, disabled, error, etc.)
+  - Variants and behavior
+- The Figma Theme Builder is used to visualize themes and export reference values.
+  - The exported JSON is a **reference**, not a direct source of truth for runtime code.
+
+### Token workflow
+- All design tokens live in `docs/components/sass/abstracts/`.
+- Tokens are defined in `tokens.scss`.
+- Tokens are **semantic and component-scoped**, not raw values.
+- Tokens may reference existing values from `variables.scss` where appropriate.
+- New components should add their tokens to `tokens.scss` rather than creating
+  ad-hoc values inside component files.
+
+Example:
+```scss
+[data-theme="material"] {
+  --checkbox-unchecked-outline-color: var(--color-outline);
+  --checkbox-checked-fill-color: var(--color-primary);
+}
+```
+
+### SCSS structure
+
+- **abstracts**
+  - `variables.scss`  
+    Global, low-level values (colors, spacing, typography).
+  - `tokens.scss`  
+    Semantic, component-level design tokens.
+
+- **components**
+  - One SCSS file per component.
+  - Components consume tokens via CSS custom properties (CSS variables).
+
+- `main.scss`
+  - Imports all component styles.
+
+### Building a new component
+
+1. Review the component in the **Material 3 Figma design kit**
+2. Identify component states, variants, and required tokens
+3. Define component tokens in `tokens.scss`
+4. Implement component styles using tokens (**no hardcoded values**)
+5. Add or update the component documentation page (`docs*.md`)
+6. Include HTML, CSS, and JS snippets demonstrating usage
+7. Test locally and submit a pull request
+
+Material is used as a **design reference**, while all implementation details,
+tokens, and styling decisions live within this repository.
+
 
 ## How the Internship Team works with GitHub Issues
 
