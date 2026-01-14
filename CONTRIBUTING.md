@@ -225,25 +225,28 @@ If you are using [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/
 
 ## Code Standards
 
-This section outlines how to build new components in the TWE Design System using
-Material 3 as a **design baseline**, while implementing and maintaining our own
-production-ready token and component architecture.
+This section explains the standard process for building new components in the
+TWE Design System. Material 3 is used as a visual reference, while all tokens,
+styles, and implementation details are defined and maintained in this repository.
 
-### Design source of truth
+### Design Reference (Figma)
 - Material 3 Design Kit (Figma) is used to understand:
-  - Component anatomy
-  - States (default, hover, focus, disabled, error, etc.)
+  - Review component structure
+  - Understand States (default, hover, focus, disabled, error, etc.)
   - Variants and behavior
-- The Figma Theme Builder is used to visualize themes and export reference values.
-  - The exported JSON is a **reference**, not a direct source of truth for runtime code.
+
+- The Figma Material Theme Builder is used to:
+  - Preview themes and color systems
+  - Export reference values for inspection
+
+- The exported JSON is used only as a reference and is not directly consumed by the codebase.
 
 ### Token workflow
 - All design tokens live in `docs/components/sass/abstracts/`.
 - Tokens are defined in `tokens.scss`.
-- Tokens are **semantic and component-scoped**, not raw values.
+- Tokens represent component-level values, not raw design values.
 - Tokens may reference existing values from `variables.scss` where appropriate.
-- New components should add their tokens to `tokens.scss` rather than creating
-  ad-hoc values inside component files.
+- New components should define tokens instead of hardcoding values in component SCSS.
 
 Example:
 ```scss
@@ -274,13 +277,13 @@ Example:
 2. Identify component states, variants, and required tokens
 3. Define component tokens in `tokens.scss`
 4. Implement component styles using tokens (**no hardcoded values**)
-5. Add or update the component documentation page (`docs*.md`)
+5. Add or update the component documentation page (`docs/component.md`)
 6. Include HTML, CSS, and JS snippets demonstrating usage
-7. Test locally and submit a pull request
 
 Material is used as a **design reference**, while all implementation details,
 tokens, and styling decisions live within this repository.
 
+***
 
 ## How the Internship Team works with GitHub Issues
 
