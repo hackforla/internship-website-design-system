@@ -1,321 +1,233 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/tokens';
 
-// --8<-- [start:btn]
-.btn {
-  border: 0;
-  font-weight: 500;
-  font-size:  1rem;
-  font-family: $text-font-stack;
-  text-decoration: none;
-  transition: all 100ms ease-in;
-  white-space: nowrap;
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  margin: 0.5rem 0;
-  width: auto;
-  padding: 0.5rem 1.5rem;
-  height: 2.5rem; 
-  border-radius: 100px; 
-}
-// --8<-- [end:btn]
+[data-theme] {
 
-// --8<-- [start:btnFilled]
-.btn-filled {
-  background-color: var(--button-primary-color, $button-primary-color);
-  color: var(--color-white, $color-white);
-  --md-typeset-a-color: var(--color-white, #{$color-white});
-  position: relative;
-  overflow: hidden;
+  /* ============================================================
+     Base Button
+     ============================================================ */
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-white, $color-white);
-    opacity: 0;
-    pointer-events: none;
-  }
+  .button {
+    appearance: none;
+    border: 0;
+    background: transparent;
 
-  &:hover,
-  &.hover {
-    box-shadow: var(--button-shadow, $button-shadow);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 1.5rem;
+    height: 2.5rem;
+
+    border-radius: var(--token-button-radius);
+
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease;
 
     &::after {
-      opacity: var(--button-overlay-hover, $button-overlay-hover);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      pointer-events: none;
+      transition: background-color 0.15s ease;
+    }
+
+    &:disabled,
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
     }
   }
 
-  &:focus,
-  &.focus {
-    &::after {
-      color: var(--color-white, $color-white);
-      opacity: var(--button-overlay-focus, $button-overlay-focus);
-    }
-  }
-
-  &:active,
-  &.pressed {
-    &::after {
-      color: var(--color-white, $color-white);
-      opacity: var(--button-overlay-active, $button-overlay-active);
-    }
-  }
-
-  &:disabled, 
-  &.disabled {
-    background-color: var(--color-white, $color-white);
-    color: var(--button-disabled-text-secondary, $button-disabled-text-secondary);
-    pointer-events: none;
-
-    &::after {
-      background-color: var(--button-disabled-overlay, $button-disabled-overlay);
-      opacity: 0.12;
-    }
-  }
-}
-
-.md-typeset a.btn.btn-filled:hover,
-.md-typeset a.btn.btn-filled.hover {
-  color: var(--color-white, $color-white);
-}
-// --8<-- [end:btnFilled]
-
-// --8<-- [start:btnOutline]
-.btn-outline {
-  background-color: var(--color-white, $color-white);
-  color: var(--button-primary-color, $button-primary-color);
-  --md-typeset-a-color: var(--button-primary-color, #{$button-primary-color});
-  border: 1px solid #6F797A;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-green, $color-green);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &:hover,
-  &.hover {
-    &::after {
-      opacity: var(--button-overlay-hover, $button-overlay-hover);
-    }
-  }
-
-  &:focus,
-  &.focus {
-    border-color: var(--button-primary-color, $button-primary-color);
-
-    &::after {
-      opacity: var(--button-overlay-focus, $button-overlay-focus);
-    }
-  }
-
-  &:active,
-  &.pressed {
-    &::after {
-      opacity: var(--button-overlay-active, $button-overlay-active);
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: var(--button-disabled-text, $button-disabled-text);
-    --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
-    border-color: #E0E0E0;
-    pointer-events: none;
-  }
-}
-
-.md-typeset a.btn.btn-outline:hover,
-.md-typeset a.btn.btn-outline.hover {
-  color: var(--button-primary-color, $button-primary-color);
-}
-// --8<-- [end:btnOutline]
-
-// --8<-- [start:btnTonal]
-.btn-tonal {
-  background-color: var(--button-secondary-color, $button-secondary-color);
-  color: var(--button-tonal-text, $button-tonal-text);
-  --md-typeset-a-color: var(--button-tonal-text, #{$button-tonal-text});
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--button-tonal-overlay, $button-tonal-overlay);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &:hover,
-  &.hover {
-    box-shadow: var(--button-shadow, $button-shadow);
-
-    &::after {
-      opacity: var(--button-overlay-hover, $button-overlay-hover);
-    }
-  }
-
-  &:focus,
-  &.focus {
-    &::after {
-      opacity: var(--button-overlay-focus, $button-overlay-focus);
-    }
-  }
-
-  &:active,
-  &.pressed {
-    &::after {
-      opacity: var(--button-overlay-active, $button-overlay-active);
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: var(--button-disabled-text, $button-disabled-text);
-    --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
-    background-color: transparent;
-    pointer-events: none;
-  }
-}
-
-.md-typeset a.btn.btn-tonal:hover,
-.md-typeset a.btn.btn-tonal.hover {
-  color: var(--button-tonal-text, $button-tonal-text);
-}
-// --8<-- [end:btnTonal]
-
-// --8<-- [start:btnText]
-.btn-text {
-  color: var(--button-primary-color, $button-primary-color);
-  --md-typeset-a-color: var(--button-primary-color, #{$button-primary-color});
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-green, $color-green);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &:hover,
-  &.hover {
-    &::after {
-      opacity: var(--button-overlay-hover, $button-overlay-hover);
-    }
-  }
-
-  &:focus,
-  &.focus {
-    &::after {
-      opacity: var(--button-overlay-focus, $button-overlay-focus);
-    }
-  }
-
-  &:active,
-  &.pressed {
-    &::after {
-      opacity: var(--button-overlay-active, $button-overlay-active);
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    color: var(--button-disabled-text, $button-disabled-text);
-    --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
-    background-color: transparent;
-    pointer-events: none;
-  }
-}
-
-.md-typeset a.btn.btn-text:hover,
-.md-typeset a.btn.btn-text.hover {
-  color: var(--button-primary-color, $button-primary-color);
-}
-// --8<-- [end:btnText]
-
-// --8<-- [start:btnXlarge]
-.btn-xlarge {
-  background-color: $button-primary-color;
-  color: $color-white;
-  --md-typeset-a-color: #{$color-white};
-  font-size: 1.5rem;
-  padding: 1.5rem 2rem;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-white;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &:hover,
-  &.hover {
-    box-shadow: $button-shadow;
-
-    &::after {
-      opacity: $button-overlay-hover;
-    }
-  }
-
-  &:focus,
-  &.focus {
-    &::after {
-      opacity: $button-overlay-focus;
-    }
-  }
+  /* ============================================================
+     Filled
+     ============================================================ */
   
-  &:active,
-  &.pressed {
-    &::after {
-      opacity: $button-overlay-active;
+  // --8<-- [start:filled]
+  .button-filled {
+    background-color: var(--token-button-filled-bg);
+    color: var(--token-button-filled-text);
+
+    &:hover,
+    &.hover {
+      background-color: var(--token-button-filled-bg-hover);
+    }
+
+    &:focus-visible,
+    &.focus {
+      background-color: var(--token-button-filled-bg-focus);
+    }
+
+    &:active,
+    &.pressed {
+      background-color: var(--token-button-filled-bg-pressed);
+    }
+
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
     }
   }
+  // --8<-- [end:filled]
 
-  &:disabled, 
-  &.disabled {
-    background-color: $color-white;
-    color: $button-disabled-text-secondary;
-    pointer-events: none;
+  /* ============================================================
+     Outline
+     ============================================================ */
+  
+  // --8<-- [start:outline]
+  .button-outline {
+    background-color: transparent;
+    border: 1px solid var(--token-button-outline-border);
+    color: var(--token-button-outline-text);
 
-    &::after {
-      background-color: $button-disabled-overlay;
-      opacity: 0.12;
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      border-color: var(--token-outline-variant);
+      color: var(--token-button-disabled-text);
     }
   }
-}
+  // --8<-- [end:outline]
 
-.md-typeset a.btn.btn-xlarge:hover,
-.md-typeset a.btn.btn-xlarge.hover {
-  color: $color-white;
+  /* ============================================================
+     Tonal
+     ============================================================ */
+  // --8<-- [start:tonal]
+  .button-tonal {
+    background-color: var(--token-button-tonal-bg);
+    color: var(--token-button-tonal-text);
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:tonal]
+
+  /* ============================================================
+     Text
+     ============================================================ */
+  // --8<-- [start:text]
+  .button-text {
+    background-color: transparent;
+    color: var(--token-button-text-color);
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:text]
+
+  /* ============================================================
+     X-Large (size modifier)
+     ============================================================ */
+  // --8<-- [start:large]
+  .button-xl {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    height: auto;
+  }
+  // --8<-- [end:large]
 }
-// --8<-- [end:btnXlarge]

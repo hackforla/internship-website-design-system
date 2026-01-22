@@ -93,6 +93,92 @@
   --screen-tablet: 768px;
 }
 
+[data-theme] {
+  /* ------------------------------------------------------------
+     Core color tokens (map FROM variables.scss)
+     ------------------------------------------------------------ */
+  --token-primary: var(--color-green);
+  --token-on-primary: var(--color-on-primary);
+  --token-surface: var(--color-surface);
+  --token-on-surface: var(--color-on-surface);
+  --token-outline: var(--color-outline);
+  --token-outline-variant: var(--color-outline-variant);
+  --token-primary-container: var(--color-primary-container);
+  --token-on-primary-container: var(--color-on-primary-container);
+  --token-state-hover-strength: 0.08;
+  --token-state-focus-strength: 0.12;
+  --token-state-pressed-strength: 0.16;
+  --token-state-disabled-text-opacity: 0.38;
+  --token-state-disabled-container-opacity: 0.12;
+  --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
+  --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
+  --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
+  /* ------------------------------------------------------------
+     State layers
+     ------------------------------------------------------------ */
+  --token-state-hover-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-hover-strength) * 100%),
+    transparent
+  );
+  /* Filled button container variants */
+  --button-filled-bg-hover: color-mix(
+    in srgb,
+    var(--button-filled-bg) 92%,
+    white
+  );
+  --button-filled-bg-pressed: color-mix(
+    in srgb,
+    var(--button-filled-bg) 88%,
+    black
+  );
+  --token-state-focus-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-focus-strength) * 100%),
+    transparent
+  );
+  --token-state-pressed-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-pressed-strength) * 100%),
+    transparent
+  );
+  /* ------------------------------------------------------------
+     Button tokens
+     ------------------------------------------------------------ */
+  --token-button-radius: 9999px;
+  /* Filled */
+  --token-button-filled-bg: var(--token-primary);
+  --token-button-filled-text: var(--token-on-primary);
+  /* Outline */
+  --token-button-outline-border: var(--token-outline);
+  --token-button-outline-text: var(--token-primary);
+  /* Tonal */
+  --token-button-tonal-bg: color-mix(
+    in srgb,
+    var(--color-primary) 12%,
+    var(--color-surface)
+  );
+  --token-button-tonal-text: var(--token-on-primary-container);
+  /* Text */
+  --token-button-text-color: var(--token-primary);
+  /* Disabled */
+  --token-button-disabled-text: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-text-opacity) * 100%),
+    transparent
+  );
+  --token-button-disabled-bg: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-container-opacity) * 100%),
+    transparent
+  );
+}
+
 body {
   color: var(--text-color, #011F23);
   font: normal 100%/1.4 "Roboto", sans-serif;
@@ -144,239 +230,151 @@ body {
   color: var(--tab-text-color, #0D5761) !important;
 }
 
-.btn {
+[data-theme] {
+  /* ============================================================
+     Base Button
+     ============================================================ */
+}
+[data-theme] .button {
+  appearance: none;
   border: 0;
-  font-weight: 500;
+  background: transparent;
+  font-family: inherit;
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1;
   text-decoration: none;
-  transition: all 100ms ease-in;
   white-space: nowrap;
-  align-items: center;
   display: inline-flex;
+  align-items: center;
   justify-content: center;
-  margin: 0.5rem 0;
-  width: auto;
   padding: 0.5rem 1.5rem;
   height: 2.5rem;
-  border-radius: 100px;
-}
-
-.btn-filled {
-  background-color: var(--button-primary-color, #006973);
-  color: var(--color-white, #ffffff);
-  --md-typeset-a-color: var(--color-white, #ffffff);
+  border-radius: var(--token-button-radius);
+  cursor: pointer;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
-.btn-filled::after {
+[data-theme] .button::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-white, #ffffff);
-  opacity: 0;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  transition: background-color 0.15s ease;
+}
+[data-theme] .button:disabled, [data-theme] .button.disabled {
+  cursor: not-allowed;
   pointer-events: none;
 }
-.btn-filled:hover, .btn-filled.hover {
-  box-shadow: var(--button-shadow, 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843));
+[data-theme] {
+  /* ============================================================
+     Filled
+     ============================================================ */
 }
-.btn-filled:hover::after, .btn-filled.hover::after {
-  opacity: var(--button-overlay-hover, 0.08);
+[data-theme] .button-filled {
+  background-color: var(--token-button-filled-bg);
+  color: var(--token-button-filled-text);
 }
-.btn-filled:focus::after, .btn-filled.focus::after {
-  color: var(--color-white, #ffffff);
-  opacity: var(--button-overlay-focus, 0.12);
+[data-theme] .button-filled:hover, [data-theme] .button-filled.hover {
+  background-color: var(--token-button-filled-bg-hover);
 }
-.btn-filled:active::after, .btn-filled.pressed::after {
-  color: var(--color-white, #ffffff);
-  opacity: var(--button-overlay-active, 0.16);
+[data-theme] .button-filled:focus-visible, [data-theme] .button-filled.focus {
+  background-color: var(--token-button-filled-bg-focus);
 }
-.btn-filled:disabled, .btn-filled.disabled {
-  background-color: var(--color-white, #ffffff);
-  color: var(--button-disabled-text-secondary, #8B8E8E);
-  pointer-events: none;
+[data-theme] .button-filled:active, [data-theme] .button-filled.pressed {
+  background-color: var(--token-button-filled-bg-pressed);
 }
-.btn-filled:disabled::after, .btn-filled.disabled::after {
-  background-color: var(--button-disabled-overlay, #1E2324);
-  opacity: 0.12;
+[data-theme] .button-filled:hover::after, [data-theme] .button-filled.hover::after {
+  background-color: var(--token-state-hover-layer);
 }
-
-.md-typeset a.btn.btn-filled:hover,
-.md-typeset a.btn.btn-filled.hover {
-  color: var(--color-white, #ffffff);
+[data-theme] .button-filled:focus-visible::after, [data-theme] .button-filled.focus::after {
+  background-color: var(--token-state-focus-layer);
 }
-
-.btn-outline {
-  background-color: var(--color-white, #ffffff);
-  color: var(--button-primary-color, #006973);
-  --md-typeset-a-color: var(--button-primary-color, #006973);
-  border: 1px solid #6F797A;
-  position: relative;
-  overflow: hidden;
+[data-theme] .button-filled:active::after, [data-theme] .button-filled.pressed::after {
+  background-color: var(--token-state-pressed-layer);
 }
-.btn-outline::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-green, #247984);
-  opacity: 0;
-  pointer-events: none;
+[data-theme] .button-filled:disabled, [data-theme] .button-filled.disabled {
+  background-color: var(--token-button-disabled-bg);
+  color: var(--token-button-disabled-text);
 }
-.btn-outline:hover::after, .btn-outline.hover::after {
-  opacity: var(--button-overlay-hover, 0.08);
+[data-theme] {
+  /* ============================================================
+     Outline
+     ============================================================ */
 }
-.btn-outline:focus, .btn-outline.focus {
-  border-color: var(--button-primary-color, #006973);
-}
-.btn-outline:focus::after, .btn-outline.focus::after {
-  opacity: var(--button-overlay-focus, 0.12);
-}
-.btn-outline:active::after, .btn-outline.pressed::after {
-  opacity: var(--button-overlay-active, 0.16);
-}
-.btn-outline:disabled, .btn-outline.disabled {
-  color: var(--button-disabled-text, #9D9F9F);
-  --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
-  border-color: #E0E0E0;
-  pointer-events: none;
-}
-
-.md-typeset a.btn.btn-outline:hover,
-.md-typeset a.btn.btn-outline.hover {
-  color: var(--button-primary-color, #006973);
-}
-
-.btn-tonal {
-  background-color: var(--button-secondary-color, #CDE7EB);
-  color: var(--button-tonal-text, #051F22);
-  --md-typeset-a-color: var(--button-tonal-text, #051F22);
-  position: relative;
-  overflow: hidden;
-}
-.btn-tonal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--button-tonal-overlay, #19292B);
-  opacity: 0;
-  pointer-events: none;
-}
-.btn-tonal:hover, .btn-tonal.hover {
-  box-shadow: var(--button-shadow, 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843));
-}
-.btn-tonal:hover::after, .btn-tonal.hover::after {
-  opacity: var(--button-overlay-hover, 0.08);
-}
-.btn-tonal:focus::after, .btn-tonal.focus::after {
-  opacity: var(--button-overlay-focus, 0.12);
-}
-.btn-tonal:active::after, .btn-tonal.pressed::after {
-  opacity: var(--button-overlay-active, 0.16);
-}
-.btn-tonal:disabled, .btn-tonal.disabled {
-  color: var(--button-disabled-text, #9D9F9F);
-  --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
+[data-theme] .button-outline {
   background-color: transparent;
-  pointer-events: none;
+  border: 1px solid var(--token-button-outline-border);
+  color: var(--token-button-outline-text);
 }
-
-.md-typeset a.btn.btn-tonal:hover,
-.md-typeset a.btn.btn-tonal.hover {
-  color: var(--button-tonal-text, #051F22);
+[data-theme] .button-outline:hover::after, [data-theme] .button-outline.hover::after {
+  background-color: var(--token-state-hover-layer);
 }
-
-.btn-text {
-  color: var(--button-primary-color, #006973);
-  --md-typeset-a-color: var(--button-primary-color, #006973);
-  position: relative;
-  overflow: hidden;
+[data-theme] .button-outline:focus-visible::after, [data-theme] .button-outline.focus::after {
+  background-color: var(--token-state-focus-layer);
 }
-.btn-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-green, #247984);
-  opacity: 0;
-  pointer-events: none;
+[data-theme] .button-outline:active::after, [data-theme] .button-outline.pressed::after {
+  background-color: var(--token-state-pressed-layer);
 }
-.btn-text:hover::after, .btn-text.hover::after {
-  opacity: var(--button-overlay-hover, 0.08);
+[data-theme] .button-outline:disabled, [data-theme] .button-outline.disabled {
+  border-color: var(--token-outline-variant);
+  color: var(--token-button-disabled-text);
 }
-.btn-text:focus::after, .btn-text.focus::after {
-  opacity: var(--button-overlay-focus, 0.12);
+[data-theme] {
+  /* ============================================================
+     Tonal
+     ============================================================ */
 }
-.btn-text:active::after, .btn-text.pressed::after {
-  opacity: var(--button-overlay-active, 0.16);
+[data-theme] .button-tonal {
+  background-color: var(--token-button-tonal-bg);
+  color: var(--token-button-tonal-text);
 }
-.btn-text:disabled, .btn-text.disabled {
-  color: var(--button-disabled-text, #9D9F9F);
-  --md-typeset-a-color: var(--button-disabled-text, $button-disabled-text);
+[data-theme] .button-tonal:hover::after, [data-theme] .button-tonal.hover::after {
+  background-color: var(--token-state-hover-layer);
+}
+[data-theme] .button-tonal:focus-visible::after, [data-theme] .button-tonal.focus::after {
+  background-color: var(--token-state-focus-layer);
+}
+[data-theme] .button-tonal:active::after, [data-theme] .button-tonal.pressed::after {
+  background-color: var(--token-state-pressed-layer);
+}
+[data-theme] .button-tonal:disabled, [data-theme] .button-tonal.disabled {
+  background-color: var(--token-button-disabled-bg);
+  color: var(--token-button-disabled-text);
+}
+[data-theme] {
+  /* ============================================================
+     Text
+     ============================================================ */
+}
+[data-theme] .button-text {
   background-color: transparent;
-  pointer-events: none;
+  color: var(--token-button-text-color);
 }
-
-.md-typeset a.btn.btn-text:hover,
-.md-typeset a.btn.btn-text.hover {
-  color: var(--button-primary-color, #006973);
+[data-theme] .button-text:hover::after, [data-theme] .button-text.hover::after {
+  background-color: var(--token-state-hover-layer);
 }
-
-.btn-xlarge {
-  background-color: #006973;
-  color: #ffffff;
-  --md-typeset-a-color: #ffffff;
+[data-theme] .button-text:focus-visible::after, [data-theme] .button-text.focus::after {
+  background-color: var(--token-state-focus-layer);
+}
+[data-theme] .button-text:active::after, [data-theme] .button-text.pressed::after {
+  background-color: var(--token-state-pressed-layer);
+}
+[data-theme] .button-text:disabled, [data-theme] .button-text.disabled {
+  background-color: var(--token-button-disabled-bg);
+  color: var(--token-button-disabled-text);
+}
+[data-theme] {
+  /* ============================================================
+     X-Large (size modifier)
+     ============================================================ */
+}
+[data-theme] .button-xl {
   font-size: 1.5rem;
   padding: 1.5rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.btn-xlarge::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  opacity: 0;
-  pointer-events: none;
-}
-.btn-xlarge:hover, .btn-xlarge.hover {
-  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1490196078), 0px 1px 2px 0px rgba(0, 0, 0, 0.3019607843);
-}
-.btn-xlarge:hover::after, .btn-xlarge.hover::after {
-  opacity: 0.08;
-}
-.btn-xlarge:focus::after, .btn-xlarge.focus::after {
-  opacity: 0.12;
-}
-.btn-xlarge:active::after, .btn-xlarge.pressed::after {
-  opacity: 0.16;
-}
-.btn-xlarge:disabled, .btn-xlarge.disabled {
-  background-color: #ffffff;
-  color: #8B8E8E;
-  pointer-events: none;
-}
-.btn-xlarge:disabled::after, .btn-xlarge.disabled::after {
-  background-color: #1E2324;
-  opacity: 0.12;
-}
-
-.md-typeset a.btn.btn-xlarge:hover,
-.md-typeset a.btn.btn-xlarge.hover {
-  color: #ffffff;
+  height: auto;
 }
 
 input[type=radio] {

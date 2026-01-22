@@ -1,0 +1,114 @@
+
+[data-theme] {
+  /* ------------------------------------------------------------
+     Core color tokens (map FROM variables.scss)
+     ------------------------------------------------------------ */
+
+  --token-primary: var(--color-green);
+  --token-on-primary: var(--color-on-primary);
+
+  --token-surface: var(--color-surface);
+  --token-on-surface: var(--color-on-surface);
+
+  --token-outline: var(--color-outline);
+  --token-outline-variant: var(--color-outline-variant);
+
+  --token-primary-container: var(--color-primary-container);
+  --token-on-primary-container: var(--color-on-primary-container);
+
+ 
+
+  --token-state-hover-strength: 0.08;
+  --token-state-focus-strength: 0.12;
+  --token-state-pressed-strength: 0.16;
+
+  --token-state-disabled-text-opacity: 0.38;
+  --token-state-disabled-container-opacity: 0.12;
+
+  --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
+  --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
+  --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
+
+
+  /* ------------------------------------------------------------
+     State layers
+     ------------------------------------------------------------ */
+  
+  
+
+  --token-state-hover-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-hover-strength) * 100%),
+    transparent
+  );
+
+  /* Filled button container variants */
+  --button-filled-bg-hover: color-mix(
+    in srgb,
+    var(--button-filled-bg) 92%,
+    white
+  );
+
+  --button-filled-bg-pressed: color-mix(
+    in srgb,
+    var(--button-filled-bg) 88%,
+    black
+  );
+
+
+  --token-state-focus-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-focus-strength) * 100%),
+    transparent
+  );
+
+  --token-state-pressed-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-pressed-strength) * 100%),
+    transparent
+  );
+
+  /* ------------------------------------------------------------
+     Button tokens
+     ------------------------------------------------------------ */
+
+  --token-button-radius: 9999px;
+
+  /* Filled */
+  --token-button-filled-bg: var(--token-primary);
+  --token-button-filled-text: var(--token-on-primary);
+
+  /* Outline */
+  --token-button-outline-border: var(--token-outline);
+  --token-button-outline-text: var(--token-primary);
+
+  /* Tonal */
+  --token-button-tonal-bg: color-mix(
+  in srgb,
+  var(--color-primary) 12%,
+  var(--color-surface)
+);
+
+  --token-button-tonal-text: var(--token-on-primary-container);
+
+  /* Text */
+  --token-button-text-color: var(--token-primary);
+
+  /* Disabled */
+  --token-button-disabled-text: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-text-opacity) * 100%),
+    transparent
+  );
+
+  --token-button-disabled-bg: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-container-opacity) * 100%),
+    transparent
+  );
+}
