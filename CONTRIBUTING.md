@@ -273,6 +273,19 @@ Rules:
 - Variables describe raw values (e.g. `--color-primary`)
 - Components MUST consume tokens, never raw variables
 
+### When to create a new token vs reuse an existing one
+
+- Create a new token when:
+  - A visual value has component-specific meaning
+  - The behavior differs between components
+  - The value may evolve independently in the future
+
+- Reuse an existing token when:
+  - The behavior is shared across multiple components
+  - The interaction pattern is identical (e.g. hover state layers)
+
+Tokens should not be reused if doing so would limit future flexibility.
+
 ### SCSS structure
 
 - **abstracts**
