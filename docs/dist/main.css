@@ -146,7 +146,7 @@
     transparent
   );
   /* ------------------------------------------------------------
-     Button tokens
+     Button Component Tokens
      ------------------------------------------------------------ */
   --token-button-radius: 9999px;
   /* Filled */
