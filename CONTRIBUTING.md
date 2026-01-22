@@ -260,6 +260,19 @@ Example:
 }
 ```
 
+### How Tokens work
+
+Tokens act as a semantic layer between raw design values (`variables.scss`)
+and component implementation (`components/*.scss`).
+
+They exist to answer the question:
+**“What does this value mean in the UI?”**, not **“What is the value?”**
+
+Rules:
+- Tokens describe intent (e.g. `--token-button-filled-bg`)
+- Variables describe raw values (e.g. `--color-primary`)
+- Components MUST consume tokens, never raw variables
+
 ### SCSS structure
 
 - **abstracts**
@@ -280,7 +293,7 @@ Example:
 1. Review the component in the **Material 3 Figma design kit**
 2. Identify component states, variants, and required tokens
 3. Define component tokens in `tokens.scss`
-4. Implement component styles using tokens (**no hardcoded values**)
+4. Implement component styles using tokens
 5. Add or update the component documentation page (`docs/component.md`)
 6. Include HTML, CSS, and JS snippets demonstrating usage
 
