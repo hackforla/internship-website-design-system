@@ -27,15 +27,12 @@
     height: 2.5rem;
 
     border-radius: var(--token-button-radius);
-
     cursor: pointer;
+
     position: relative;
     overflow: hidden;
 
-    transition:
-      background-color 0.15s ease,
-      color 0.15s ease,
-      box-shadow 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease;
 
     &::after {
       content: '';
@@ -53,6 +50,8 @@
     }
   }
 
+
+
   /* ============================================================
      Filled
      ============================================================ */
@@ -62,20 +61,6 @@
     background-color: var(--token-button-filled-bg);
     color: var(--token-button-filled-text);
 
-    &:hover,
-    &.hover {
-      background-color: var(--token-button-filled-bg-hover);
-    }
-
-    &:focus-visible,
-    &.focus {
-      background-color: var(--token-button-filled-bg-focus);
-    }
-
-    &:active,
-    &.pressed {
-      background-color: var(--token-button-filled-bg-pressed);
-    }
 
 
     &:hover,

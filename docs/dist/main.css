@@ -105,9 +105,9 @@
   --token-outline-variant: var(--color-outline-variant);
   --token-primary-container: var(--color-primary-container);
   --token-on-primary-container: var(--color-on-primary-container);
-  --token-state-hover-strength: 0.08;
-  --token-state-focus-strength: 0.12;
-  --token-state-pressed-strength: 0.16;
+  --token-state-hover-strength: 0.20;
+  --token-state-focus-strength: 0.40;
+  --token-state-pressed-strength: 0.48;
   --token-state-disabled-text-opacity: 0.38;
   --token-state-disabled-container-opacity: 0.12;
   --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
@@ -254,7 +254,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 [data-theme] .button::after {
   content: "";
@@ -276,15 +276,6 @@ body {
 [data-theme] .button-filled {
   background-color: var(--token-button-filled-bg);
   color: var(--token-button-filled-text);
-}
-[data-theme] .button-filled:hover, [data-theme] .button-filled.hover {
-  background-color: var(--token-button-filled-bg-hover);
-}
-[data-theme] .button-filled:focus-visible, [data-theme] .button-filled.focus {
-  background-color: var(--token-button-filled-bg-focus);
-}
-[data-theme] .button-filled:active, [data-theme] .button-filled.pressed {
-  background-color: var(--token-button-filled-bg-pressed);
 }
 [data-theme] .button-filled:hover::after, [data-theme] .button-filled.hover::after {
   background-color: var(--token-state-hover-layer);
