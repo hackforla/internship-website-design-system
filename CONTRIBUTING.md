@@ -23,7 +23,6 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
       - [3. **Stopping Docker**](#3-stopping-docker)
       - [4. **Development Workflow**](#4-development-workflow)
       - [Docker Development Notes:](#docker-development-notes)
-  - [Code Standards](#code-standards)
   - [How the Internship Team works with GitHub Issues](#how-the-internship-team-works-with-github-issues)
     - [Hack for LA Contributor Expectations](#hack-for-la-contributor-expectations)
     - [Where can I find GitHub issues to work on?](#where-can-i-find-github-issues-to-work-on)
@@ -52,6 +51,7 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
         - [**If there are conflicting changes in the upstream repository**](#if-there-are-conflicting-changes-in-the-upstream-repository)
       - [**Incorporating changes from upstream**](#incorporating-changes-from-upstream)
         - [**Incorporating changes into your topic branch**](#incorporating-changes-into-your-topic-branch)
+  - [Code Standards](#code-standards)
   - [Pull Requests](#pull-requests)
     - [How to make a pull request](#how-to-make-a-pull-request)
       - [**Push all changes to your issue branch**](#push-all-changes-to-your-issue-branch)
@@ -273,18 +273,43 @@ Rules:
 - Variables describe raw values (e.g. `--color-primary`)
 - Components MUST consume tokens, never raw variables
 
-### When to create a new token vs reuse an existing one
+### New tokens vs existing tokens
 
-- Create a new token when:
-  - A visual value has component-specific meaning
-  - The behavior differs between components
-  - The value may evolve independently in the future
+Before creating a new token, always check whether an existing token already
+represents the value or concept you need. Tokens should represent **design
+decisions**, not one-off component styles.
 
-- Reuse an existing token when:
-  - The behavior is shared across multiple components
-  - The interaction pattern is identical (e.g. hover state layers)
+#### Use an existing token when:
+- The value already exists and is semantically correct
+- The same value is used (or likely to be used) across multiple components
+- The token represents a shared concept (color, spacing, radius, state layer, etc.)
 
-Tokens should not be reused if doing so would limit future flexibility.
+**Example:**
+- You need a hover overlay for a new component  
+  → Use `--token-state-hover-layer` instead of creating
+  `--token-new-component-hover-bg`
+
+- You need rounded corners for a button-like component  
+  → Use `--token-button-radius` if the visual intent matches
+
+#### Create a new token when:
+- The value represents a **new design decision**
+- The value is component-specific and not reusable elsewhere
+- Reusing an existing token would change the meaning of that token
+
+**Example:**
+- A pagination component introduces a new “selected page” background
+  that doesn’t match any existing surface or button state  
+  → Create a new pagination-specific token
+
+- A component requires a spacing value that does not align with existing spacing tokens  
+  → Introduce a new token rather than hardcoding the value
+
+#### General rule of thumb
+If you’re unsure:
+- Start by trying to reuse an existing token
+- Only introduce a new token if reuse would be misleading or restrictive
+
 
 ### SCSS structure
 
