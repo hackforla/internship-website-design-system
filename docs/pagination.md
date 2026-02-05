@@ -28,8 +28,8 @@ helping them navigate large sets of content in a clear and manageable way.
     </div>
     <br>
     ## Code
-    === "CSS"
 
+    === "CSS"
         ``` css
             --8<-- "components/sass/components/_pagination.scss:pagination"
         ```
