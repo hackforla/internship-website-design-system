@@ -110,4 +110,26 @@
       calc(var(--token-state-disabled-container-opacity) * 100%),
     transparent
   );
+
+    /* ------------------------------------------------------------
+     Pagination Component Tokens
+     ------------------------------------------------------------ */
+
+  --token-pagination-button-size: 2.5rem;
+  --token-pagination-icon-size: 1rem;
+
+  /* Colors */
+  --token-pagination-icon-default: var(--token-on-surface);
+  --token-pagination-icon-active: var(--token-on-primary);
+  --token-pagination-icon-disabled: var(--token-button-disabled-text);
+
+  /* Backgrounds */
+  --token-pagination-bg-hover: var(--token-state-hover-layer);
+  --token-pagination-bg-focus: var(--token-state-focus-layer);
+  --token-pagination-bg-selected: var(--token-primary);
+
+  /* Borders (for ctrl buttons) */
+  --token-pagination-border-default: 1px solid var(--token-outline);
+  --token-pagination-border-disabled: 1px solid var(--token-outline-variant);
+
 }
