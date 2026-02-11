@@ -1,7 +1,8 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/tokens';
 
-// --8<-- [start:pagination]
-nav.pagination ul.pagination-items {
+[data-theme] {
+  // --8<-- [start:pagination]
+  nav.pagination ul.pagination-items {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,77 +10,106 @@ nav.pagination ul.pagination-items {
     list-style: none;
     gap: 0.5rem;
     margin: 0;
-}
-.pagination .pagination-items .pagebutton {
-    width: $pagination-button-size;
-    height: $pagination-button-size;
+  }
+
+  .pagination .pagination-items .pagebutton {
+    width: var(--token-pagination-button-size);
+    height: var(--token-pagination-button-size);
     margin: 0;
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: none;
     border: none;
-    border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: 0.3s;
+
     transition: 0.3s;
 
+    /* pageicon can be <a> or <button> depending on JS */
     .pageicon {
-        display: flex;
-        color: $icon-color-default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--token-pagination-icon-default);
+
+      /* if it is a button, reset default button styles */
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      line-height: inherit;
+      cursor: inherit;
     }
+
     &:hover,
     &.hover {
-        background-color: $pagination-button-bg-hover;
+      background-color: var(--token-pagination-bg-hover);
     }
-    &:focus,
+
+    /* focus is usually on inner button, so use focus-within */
+    &:focus-within,
     &.focused {
-        background-color: $pagination-button-bg-focused;
+      background-color: var(--token-pagination-bg-focus);
     }
-    &:active, 
+
+    &:active,
     &.selected {
-        background-color: $pagination-button-bg-selected;
-        .pageicon {
-            color: $icon-color-active;
-        }
+      background-color: var(--token-pagination-bg-selected);
+
+      .pageicon {
+        color: var(--token-pagination-icon-active);
+      }
     }
+
     &:disabled,
     &.disabled {
-        cursor: not-allowed;
-        .pageicon {
-            color: $icon-color-disabled;
-        }
+      cursor: not-allowed;
+
+      .pageicon {
+        color: var(--token-pagination-icon-disabled);
+      }
     }
-}
-.pagination-items .pagebutton.-ctrl {
+  }
+
+  .pagination-items .pagebutton.-ctrl {
     background: none;
-    border: $pagination-button-border-default;
+    border: var(--token-pagination-border-default);
+
     .pageicon .twemoji {
-        height: $icon-size;
-        width: $icon-size;
+      height: var(--token-pagination-icon-size);
+      width: var(--token-pagination-icon-size);
     }
-    &:hover, 
+
+    &:hover,
     &.hover {
-        border: 0;
-        background-color: $pagination-button-bg-hover;
+      border: 0;
+      background-color: var(--token-pagination-bg-hover);
     }
+
     &:disabled,
     &.disabled {
-        border: $pagination-button-border-disabled;
-        background: none;
-        cursor: not-allowed;
-        .pageicon {
-            color: $icon-color-disabled;
-        }
+      border: var(--token-pagination-border-disabled);
+      background: none;
+      cursor: not-allowed;
+
+      .pageicon {
+        color: var(--token-pagination-icon-disabled);
+      }
     }
-}
-.pagination-items .pagebutton.-more {
+  }
+
+  .pagination-items .pagebutton.-more {
     cursor: default;
     pointer-events: none;
+
     .pageicon .twemoji {
-        width: $icon-size;
-        height: $icon-size;
+      width: var(--token-pagination-icon-size);
+      height: var(--token-pagination-icon-size);
     }
+  }
+  // --8<-- [end:pagination]
 }
-// --8<-- [end:pagination]

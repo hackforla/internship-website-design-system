@@ -1,5 +1,6 @@
 @use 'abstracts/variables' as *;
 @forward 'abstracts/variables';
+@use 'abstracts/tokens';
 
 @use 'base/typography';
 @use 'base/reset';

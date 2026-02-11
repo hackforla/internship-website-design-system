@@ -8,7 +8,7 @@ nav:
       - Typography: type-scale.md
   - Components:
     - Accordion: accordion.md
-    - Button: buttons.md
+    - Buttons: buttons.md
     - Checkbox: checkbox.md
     - Input Fields: input-fields.md
     - Grid System: grid-system.md
@@ -43,6 +43,7 @@ extra_css:
   - https://fonts.googleapis.com/icon?family=Material+Icons+Outlined
   - dist/main.css
   - stylesheets/extra.css
+  - dist/material-icons.css
   # - /bootstrap/css/bootstrap.min.css
 
 extra_javascript:
