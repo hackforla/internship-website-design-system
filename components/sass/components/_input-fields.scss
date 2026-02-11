@@ -1,0 +1,746 @@
+// -----------------------------------------------------------------------------
+// Input Fields – Shared Base Styles
+// -----------------------------------------------------------------------------
+
+.input-wrapper {
+  position: relative;
+  width: var(--input-field-box-width);
+  height: 56px; // fixed per Figma
+  font-family: var(--text-font-stack);
+
+  // ========================
+  // Input box (shared)
+  // ========================
+  .input-field {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--input-field-border-radius, 4px);
+    border: 1px solid var(--input-border-color-default, #C6C6C6);
+    padding: 0 16px;
+    font-size: 1rem;
+    font-weight: 600; // semibold
+    line-height: 56px; // center text vertically
+    color: var(--text-color);
+    background: #fff;
+
+    &::placeholder { color: var(--input-placeholder-color, #989898); }
+
+    // Hover
+    &:hover,
+    &.is-hover { border-color: var(--input-border-color-hover, #6F6F6F); }
+
+    // Focused
+    &:focus,
+    &.is-focused {
+      border: 2px solid var(--input-border-color-focus, #247984);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(36, 121, 132, 0.2);
+    }
+
+    // Error
+    &.error {
+      border-color: var(--input-border-color-error, #D32F2F);
+      color: var(--input-border-color-error, #D32F2F);
+    }
+    &.error::placeholder {
+      color: var(--input-border-color-error, #D32F2F);
+    }
+
+    // Disabled
+    &:disabled {
+      border-color: #C6C6C6;
+      background-color: var(--color-light-grey);
+      color: #9D9F9F;
+      cursor: not-allowed;
+    }
+  }
+
+  .input-field:disabled ~ .input-icon,
+  .input-field:disabled + .input-label ~ .input-icon {
+    color: #C6C6C6;   // grey
+    opacity: 0.6;
+  }
+
+
+  // ========================
+  // Labels (default position = unpopulated)
+  // ========================
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 510;
+    color: #333333;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  // Error label
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+
+  // Disabled label
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+
+  // Supporting/Helper text
+  .input-helper {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    color: #989898;
+
+    &.error { color: #D32F2F; }
+  }
+
+  // Icons
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    pointer-events: none;
+
+    &.leading { left: 12px; }
+    &.trailing { right: 12px; }
+  }
+
+  .input-field.leading-icon { padding-left: 36px; }
+  .input-field.trailing-icon { padding-right: 36px; }
+
+  // Simulation helpers for docs
+  .input-field.with-label::placeholder { color: transparent; }
+}
+
+// -----------------------------------------------------------------------------
+// No Icon Variant  (snippet target)
+// -----------------------------------------------------------------------------
+/* === SNIPPET START: no-icon === */
+
+
+// --8<-- [start:no-icon]
+.input-wrapper.no-icon {
+  // Populated: float label above input
+  .input-field.has-value + .input-label {
+    top: 0;                           // sit on top border
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;                 // a touch lighter than input text
+    color: var(--text-color);         // same color as input text
+    background: #fff;                 // mask the border behind label
+    padding: 0 4px;                   // small mask padding
+    line-height: 1;
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;                 // normal text line-height
+    padding-top: 16px;                // 16 + 16 = 32; with borders keeps 56px total
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Focused + populated label color
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label color (already sets input/helper via base)
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+
+  // Disabled label color
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+}
+// --8<-- [end:no-icon]
+
+/* === SNIPPET END: no-icon === */
+
+
+/* -------------------------------------------------------------------------- */
+/* Leading Icon Variant                                                       */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:leading-icon]
+.input-wrapper.leading-icon {
+  // Adjust input padding for icon + gap
+  .input-field {
+    padding-left: 52px;  // 12 (padding) + 24 (icon) + 16 (gap) = 52
+  }
+
+  // Icon placement
+  .input-icon.leading {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+  }
+
+  // Label default (unpopulated) → stays with text start
+  .input-label {
+    left: 52px;   // inline with input text when unpopulated
+  }
+
+  // Populated: float label above border (like No Icon)
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+
+    // ⬇️ shift back to match "No Icon" label position
+    left: 16px;   // instead of 52px
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Focused + populated label color
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+
+  // Disabled label
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+}
+// --8<-- [end:leading-icon]
+
+
+/* -------------------------------------------------------------------------- */
+/* Trailing Icon Variant                                                       */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:trailing-icon]
+.input-wrapper.trailing-icon {
+  // Input padding adjusted for icon
+  .input-field {
+    padding-right: 52px; // 12 (padding) + 24 (icon) + 16 (gap)
+  }
+
+  // Icon placement
+  .input-icon.trailing {
+    position: absolute;
+    top: 50%;
+    right: 12px;               // 12px from right edge
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Label default (centered when unpopulated)
+  .input-label {
+    left: 16px; // same as no-icon
+  }
+
+  // Label floats when populated
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Focused label
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+
+  // Disabled label
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+}
+// --8<-- [end:trailing-icon]
+
+
+/* -------------------------------------------------------------------------- */
+/* No Icon + Supporting Text Variant                                          */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:no-icon-supporting]
+.input-wrapper.no-icon-supporting {
+  // Float label when populated (same as no-icon)
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+  }
+
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Supporting text styles
+  .input-helper {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-top: 4px;           // 4px gap below box
+    margin-left: 16px;         // align with label/input text
+    margin-right: 16px;
+    color: #6F6F6F;
+  }
+
+  .input-helper.error {
+    color: var(--input-supporting-text-error, #D32F2F);
+  }
+
+  // Disabled state
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+  .input-field:disabled ~ .input-helper {
+    color: #C6C6C6;
+  }
+}
+// --8<-- [end:no-icon-supporting]
+
+/* -------------------------------------------------------------------------- */
+/* Leading Icon + Supporting Text Variant                                     */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:leading-icon-supporting]
+.input-wrapper.leading-icon-supporting {
+  // Adjust input padding for icon + gap
+  .input-field {
+    padding-left: 52px; // 12 (padding) + 24 (icon) + 16 (gap) = 52
+  }
+
+  // Leading icon placement
+  .input-icon.leading {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333; // dark by default
+  }
+
+  // Label (unpopulated, aligned with text start)
+  .input-label {
+    left: 52px; // after the icon
+  }
+
+  // Populated: float label above, shift back to 16px like "no icon"
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+    left: 16px; // matches no-icon float position
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Supporting text
+  .input-helper {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-top: 4px;   // 4px below field
+    margin-left: 16px; // inset matches label/input
+    margin-right: 16px;
+    color: #6F6F6F;
+  }
+
+  .input-helper.error {
+    color: var(--input-supporting-text-error, #D32F2F);
+  }
+
+  // Focused + populated label
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Disabled state
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+  .input-field:disabled ~ .input-helper {
+    color: #C6C6C6;
+  }
+  .input-field:disabled ~ .input-icon.leading {
+    color: #C6C6C6;
+  }
+}
+// --8<-- [end:leading-icon-supporting]
+
+/* -------------------------------------------------------------------------- */
+/* Trailing Icon + Supporting Text Variant                                    */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:trailing-icon-supporting]
+.input-wrapper.trailing-icon-supporting {
+  // Input box
+  .input-field {
+    padding-right: 52px;  // 12 (padding) + 24 (icon) + 16 (gap)
+  }
+
+  // Trailing icon
+  .input-icon.trailing {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Label (default: centered when unpopulated)
+  .input-label {
+    left: 16px; // same as No Icon
+  }
+
+  // Floating label when populated
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Focused label
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+
+  // Disabled label + icon
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+  .input-field:disabled ~ .input-icon.trailing {
+    color: #9D9F9F; // disabled grey
+  }
+
+  // Supporting / helper text
+  .input-helper {
+    font-size: 0.75rem;
+    margin-top: 4px;   // 4px gap under input box
+    margin-left: 16px; // 16px inset left
+    margin-right: 16px;
+    color: #989898;
+
+    &.error { color: #D32F2F; }
+    &.disabled { color: #C6C6C6; }
+  }
+}
+// --8<-- [end:trailing-icon-supporting]
+
+
+/* -------------------------------------------------------------------------- */
+/* Leading + Trailing Icons Variant                                           */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:leading-trailing-icon]
+.input-wrapper.leading-trailing-icon {
+  // Adjust input padding for both icons
+  .input-field {
+    padding-left: 52px;  // 12 + 24 + 16 = 52px before text
+    padding-right: 52px; // 12 + 24 + 16 = 52px after text
+  }
+
+  // Leading icon placement
+  .input-icon.leading {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Trailing icon placement
+  .input-icon.trailing {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Label (default)
+  .input-label {
+    left: 52px; // starts after leading icon
+  }
+
+  // Populated: float label above input
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+    left: 16px; // ⬅️ align same as No Icon when floating
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Focused + populated label
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label + icons
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+  .input-field.error ~ .input-icon.leading,
+  .input-field.error ~ .input-icon.trailing {
+    color: #D32F2F;
+  }
+
+  // Disabled label + icons
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+  .input-field:disabled ~ .input-icon.leading,
+  .input-field:disabled ~ .input-icon.trailing {
+    color: #C6C6C6;
+    opacity: 0.6;
+  }
+}
+// --8<-- [end:leading-trailing-icon]
+
+/* -------------------------------------------------------------------------- */
+/* Leading + Trailing Icons + Supporting Text Variant                          */
+/* -------------------------------------------------------------------------- */
+
+// --8<-- [start:leading-trailing-icon-supporting]
+.input-wrapper.leading-trailing-icon-supporting {
+  // Adjust input padding for both icons
+  .input-field {
+    padding-left: 52px;  // 12 + 24 + 16 = 52px before text
+    padding-right: 52px; // 12 + 24 + 16 = 52px after text
+  }
+
+  // Leading icon placement
+  .input-icon.leading {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Trailing icon placement
+  .input-icon.trailing {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+  }
+
+  // Label (default, when unpopulated)
+  .input-label {
+    left: 52px; // starts after leading icon
+  }
+
+  // Populated: float label above input
+  .input-field.has-value + .input-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #fff;
+    padding: 0 4px;
+    line-height: 1;
+    left: 16px; // ⬅️ align same as No Icon when floating
+  }
+
+  // Input text when populated
+  .input-field.has-value {
+    line-height: 1.5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 600;
+  }
+
+  // Supporting text
+  .input-helper {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    color: #989898;
+
+    &.error {
+      color: #D32F2F;
+    }
+  }
+
+  // Focused + populated label
+  .input-field.has-value.is-focused + .input-label {
+    color: var(--input-border-color-focus, #247984);
+  }
+
+  // Error label + icons
+  .input-field.error + .input-label {
+    color: var(--input-label-color-error, #D32F2F);
+  }
+  .input-field.error ~ .input-icon.leading,
+  .input-field.error ~ .input-icon.trailing {
+    color: #D32F2F;
+  }
+
+  // Disabled label + icons
+  .input-field:disabled + .input-label {
+    color: var(--input-label-color-disabled, #C6C6C6);
+  }
+  .input-field:disabled ~ .input-icon.leading,
+  .input-field:disabled ~ .input-icon.trailing {
+    color: #C6C6C6;
+    opacity: 0.6;
+  }
+}
+// --8<-- [end:leading-trailing-icon-supporting]
+
+
+
+// -----------------------------------------------------------------------------
+// State container (for docs only)
+// -----------------------------------------------------------------------------
+.state-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  margin: 8px 0 16px;
+
+  background: var(--md-code-bg-color, #f6f8fa);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Bold headings in docs */
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700 !important;
+}
+
+/* Thicker tab underline */
+.md-typeset .tabbed-labels > label[for].md-tabs__item--active::after,
+.md-typeset .tabbed-labels > label[for].md-tabs__link--active::after {
+  height: 4px !important;
+  background-color: var(--md-accent-fg-color, #247984) !important;
+}

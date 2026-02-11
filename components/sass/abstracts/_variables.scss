@@ -1,0 +1,281 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Colors as SASS variables
+$color-white: #ffffff;
+$color-black: #263238;
+$color-light-grey:#F8F9FC;
+$color-dark-grey: #989898;
+
+$color-old-grey: #C6C6C6;
+$color-old-light-grey: #DDD;
+$color-old-mid-grey: #6F6F6F;
+
+$color-black: #333333;
+$color-green: #247984;
+$color-darkgreen: #0D5761;
+$color-old-green:#247984;
+$color-whitegreen: #E7F0F1;
+
+$color-primary: #006973;
+$color-primary-hover: $color-whitegreen;
+$color-on-primary: #FFFFFF;
+$color-primary-container: #9FF0FA;
+$color-on-primary-container: #011F23;
+$color-primary-fixed: #9FF0FA;
+$color-primary-fixed-dim: #83D3DE;
+$color-on-primary-fixed: #011F23;
+$color-on-primary-fixed-variant: #044F57;
+
+$color-surface: #F5FAFB;
+$color-surface-dim: #DEDEDE;
+$color-on-surface: #171D1E;
+$color-on-surface-variant: #464B4C;
+$color-outline: #7E7E7E;
+$color-outline-variant: #CCCCCC;
+$color-surface-container-high: #EBEBEB;
+$color-surface-container-highest: #E5E5E5;
+
+/// Font family
+$text-font-stack: (
+  'Roboto',  
+  sans-serif
+);
+$text-color: $color-on-primary-container;
+$text-muted: $color-dark-grey;
+
+$line-height-base: 1.5;
+$line-height-computed: 1.5rem;
+$body-bg: $color-white;
+
+$button-primary-color: #006973;
+$button-secondary-color: #CDE7EB;
+$button-tonal-text: #051F22;
+$button-tonal-overlay: #19292B;
+$button-disabled-text: #9D9F9F;
+$button-disabled-text-secondary: #8B8E8E;
+$button-disabled-overlay: #1E2324;
+$button-shadow: 0px 1px 3px 1px #00000026, 0px 1px 2px 0px #0000004D;
+$button-overlay-hover: 0.08;
+$button-overlay-focus: 0.12;
+$button-overlay-active: 0.16;
+
+$radio-color: $color-green;
+$radio-hovercolor: $color-darkgreen;
+$radio-disabled: #c6c6c6;
+$radio-disabled-stroke: gray;
+$radio-button-width: 26px;
+$radio-button-height: 26px;
+
+$dropdown-hover-color: #CFE1E4;
+$dropdown-select-color: #A0C4C9;
+$dropdown-placeholder-color: $color-dark-grey;
+$drowpdown-border-color: $color-dark-grey;
+$dropdown-arrow-color: $color-dark-grey;
+
+$tab-text-color: $color-darkgreen;
+$tab-underline-color: $color-darkgreen;
+$tab-hover-color: $color-darkgreen;
+
+$toggle-color: $color-green;
+$toggle-shadow-color: #A0C4C980;
+$toggle-animation-duration: .4s;
+
+$input-field-box-width: 348px;
+$input-field-box-height: 48px;
+$input-field-border-radius: 4px;
+
+// Input field states
+$input-border-color-default: $color-dark-grey;
+$input-border-color-hover: #6F6F6F;   // or use $color-old-mid-grey
+$input-border-color-focus: $color-green;  // matches system accent
+$input-border-color-error: #B00020;   // add red tone if not defined yet
+$input-border-color-disabled: $color-old-light-grey;
+
+$input-label-color-default: $color-dark-grey;
+$input-label-color-error: #B00020;
+$input-label-color-disabled: $color-old-grey;
+
+$input-supporting-text-color: $color-dark-grey;
+$input-supporting-text-error: #B00020;
+
+$input-padding-x: 12px;   // horizontal padding
+$input-padding-y: 8px;    // vertical padding
+$input-icon-gap: 8px;     // space between icon and text
+$input-font-size: 16px;
+$input-label-font-size: 14px;
+$input-supporting-font-size: 12px;
+
+$icon-color-default: $color-on-surface;
+$icon-color-active: $color-surface;
+$icon-color-disabled: $color-outline;
+$icon-size: 0.75rem;
+
+$pagination-button-bg-hover: $color-surface-container-high;
+$pagination-button-bg-selected: $color-primary;
+$pagination-button-bg-focused: $color-surface-container-highest;
+$pagination-button-border-default: .0625rem solid $color-outline-variant;
+$pagination-button-border-disabled: .0625rem solid $color-outline-variant;
+$pagination-button-size: 2rem;
+
+$text-area-height: 122px;
+$text-area-width: 348px;
+$text-area-border-radius: 4px;
+$text-area-padding: 12px 0 0 12px;
+
+$screen-tablet: 768px;
+$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
+
+// CSS Custom Properties (CSS Variables)
+:root {
+  // Colors
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-light-grey: #{$color-light-grey};
+  --color-dark-grey: #{$color-dark-grey};
+  
+  --color-old-grey: #{$color-old-grey};
+  --color-old-light-grey: #{$color-old-light-grey};
+  --color-old-mid-grey: #{$color-old-mid-grey};
+  
+  --color-green: #{$color-green};
+  --color-darkgreen: #{$color-darkgreen};
+  --color-whitegreen: #{$color-whitegreen};
+
+  --color-primary: #{$color-primary};
+  --color-on-primary: #{$color-on-primary};
+  --color-primary-container: #{$color-primary-container};
+  --color-on-primary-container: #{$color-on-primary-container};
+  --color-primary-fixed: #{$color-primary-fixed};
+  --color-primary-fixed-dim: #{$color-primary-fixed-dim};
+  --color-on-primary-fixed: #{$color-on-primary-fixed};
+  --color-on-primary-fixed-variant: #{$color-on-primary-fixed-variant};
+
+
+  --color-surface: #{$color-surface};
+  --color-surface-dim: #{$color-surface-dim};
+  --color-on-surface: #{$color-on-surface};
+  --color-on-surface-variant: #{$color-on-surface-variant};
+  --color-outline: #{$color-outline};
+  --color-outline-variant: #{$color-outline-variant};
+  --color-surface-container-high: #{$color-surface-container-high};
+  --color-surface-container-highest: #{$color-surface-container-highest};
+  
+  // Typography
+  --text-color: #{$text-color};
+  --text-muted: #{$text-muted};
+  --line-height-base: #{$line-height-base};
+  --line-height-computed: #{$line-height-computed};
+  --body-bg: #{$body-bg};
+  
+  // Button styles
+  --button-primary-color: #{$button-primary-color};
+  --button-secondary-color: #{$button-secondary-color};
+  --button-tonal-text: #{$button-tonal-text};
+  --button-tonal-overlay: #{$button-tonal-overlay};
+  --button-disabled-text: #{$button-disabled-text};
+  --button-disabled-text-secondary: #{$button-disabled-text-secondary};
+  --button-disabled-overlay: #{$button-disabled-overlay};
+  --button-shadow: #{$button-shadow};
+  --button-overlay-hover: #{$button-overlay-hover};
+  --button-overlay-focus: #{$button-overlay-focus};
+  --button-overlay-active: #{$button-overlay-active};
+  
+  // Radio buttons
+  --radio-color: #{$radio-color};
+  --radio-hovercolor: #{$radio-hovercolor};
+  --radio-disabled: #{$radio-disabled};
+  --radio-disabled-stroke: #{$radio-disabled-stroke};
+  --radio-button-width: #{$radio-button-width};
+  --radio-button-height: #{$radio-button-height};
+  
+  // Dropdowns
+  --dropdown-hover-color: #{$dropdown-hover-color};
+  --dropdown-select-color: #{$dropdown-select-color};
+  --dropdown-placeholder-color: #{$dropdown-placeholder-color};
+  --drowpdown-border-color: #{$drowpdown-border-color};
+  --dropdown-arrow-color: #{$dropdown-arrow-color};
+  
+  // Tabs
+  --tab-text-color: #{$tab-text-color};
+  --tab-underline-color: #{$tab-underline-color};
+  --tab-hover-color: #{$tab-hover-color};
+  
+  // Toggle
+  --toggle-color: #{$toggle-color};
+  --toggle-shadow-color: #{$toggle-shadow-color};
+  --toggle-animation-duration: #{$toggle-animation-duration};
+  
+  // Input fields
+  --input-field-box-width: #{$input-field-box-width};
+  --input-field-box-height: #{$input-field-box-height};
+  --input-field-border-radius: #{$input-field-border-radius};
+
+  --input-border-color-default: #{$input-border-color-default};
+  --input-border-color-hover: #{$input-border-color-hover};
+  --input-border-color-focus: #{$input-border-color-focus};
+  --input-border-color-error: #{$input-border-color-error};
+  --input-border-color-disabled: #{$input-border-color-disabled};
+
+  --input-label-color-default: #{$input-label-color-default};
+  --input-label-color-error: #{$input-label-color-error};
+  --input-label-color-disabled: #{$input-label-color-disabled};
+
+  --input-supporting-text-color: #{$input-supporting-text-color};
+  --input-supporting-text-error: #{$input-supporting-text-error};
+
+  --input-padding-x: #{$input-padding-x};
+  --input-padding-y: #{$input-padding-y};
+  --input-icon-gap: #{$input-icon-gap};
+  --input-font-size: #{$input-font-size};
+  --input-label-font-size: #{$input-label-font-size};
+  --input-supporting-font-size: #{$input-supporting-font-size};
+
+  //Pagination
+  --icon-color-default: #{$color-on-surface};
+  --icon-color-active: #{$color-surface};
+  --icon-color-disabled: #{$color-on-surface-variant};
+
+  --pagination-button-bg-hover: #{$color-primary-fixed-dim};
+  --pagination-button-bg-selected: #{$color-primary};
+  --pagination-button-bg-focused: #{$color-primary-fixed};
+  --pagination-button-border-default: #{$pagination-button-border-default};
+  --pagination-button-border-disabled: #{$pagination-button-border-disabled};  
+  // Text area
+  --text-area-height: #{$text-area-height};
+  --text-area-width: #{$text-area-width};
+  --text-area-border-radius: #{$text-area-border-radius};
+  --text-area-padding: #{$text-area-padding};
+  
+  // Breakpoints
+  --screen-tablet: #{$screen-tablet};
+}
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+$screen-tablet: 768px;
+$bp-below-tablet: '(max-width: #{$screen-tablet - 1})';

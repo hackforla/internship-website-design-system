@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Basic typography style for copy text
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+
+body {
+    color: var(--text-color, $text-color);
+    font: normal 100% / 1.4 $text-font-stack;
+  }
+
+$font-weight: (
+  light: 300,
+  normal: 400,
+  semibold: 600,
+  bold: 700
+);

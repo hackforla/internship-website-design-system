@@ -1,0 +1,299 @@
+@use '../abstracts/variables' as *;
+
+// --8<-- [start:dropdown-base]
+
+.dropdown-wrapper {
+  position: relative;
+  width: var(--input-field-box-width);
+  height: 56px;
+  font-family: var(--text-font-stack);
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Field (closed state)                                                       */
+/* -------------------------------------------------------------------------- */
+.dropdown-field {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #C6C6C6;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &.is-hover {
+    border-color: #6F6F6F;
+  }
+
+  &.is-focused {
+    border: 2px solid #247984;
+    box-shadow: 0 0 0 2px rgba(36, 121, 132, 0.2);
+  }
+
+  &.error {
+    border-color: #D32F2F;
+    color: #D32F2F;
+  }
+
+  &.is-disabled {
+    background-color: #F2F2F2;
+    color: #9D9F9F;
+    cursor: not-allowed;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Explicit visual states for Populated Dropdowns                             */
+/* -------------------------------------------------------------------------- */
+
+/* Base enabled (default populated) */
+.dropdown-field.enabled {
+  border: 1px solid #C6C6C6;  /* neutral gray */
+  box-shadow: none;
+  color: #333;
+}
+
+/* Hovered (slightly darker gray) */
+.dropdown-field.hovered {
+  border: 1px solid #6F6F6F;  /* dark gray */
+  box-shadow: none;
+  color: #333;
+}
+
+/* Focused (green border + subtle glow) */
+.dropdown-field.focused {
+  border: 2px solid #247984;  /* green */
+  box-shadow: 0 0 0 2px rgba(36, 121, 132, 0.2);
+  color: #333;
+}
+
+/* Error (red border) */
+.dropdown-field.error {
+  border: 1px solid #D32F2F;
+  color: #D32F2F;
+  box-shadow: none;
+}
+
+/* Disabled (light gray background + neutral border) */
+.dropdown-field.disabled {
+  border: 1px solid #E0E0E0;
+  background-color: #F2F2F2;
+  color: #9D9F9F;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* When dropdown is open but not focused (Populated/Enabled) */
+.dropdown-wrapper.is-open .dropdown-field:not(.is-focused):not(.error) {
+  border-color: #C6C6C6; /* neutral gray */
+  box-shadow: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Text and Arrow                                                             */
+/* -------------------------------------------------------------------------- */
+.dropdown-value {
+  flex: 1;
+  text-align: left;
+  color: #333;
+}
+
+.dropdown-arrow {
+  margin-left: 8px;
+  font-size: 1rem;
+  color: #333;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.dropdown-wrapper.is-open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Label and Helper Text                                                      */
+/* -------------------------------------------------------------------------- */
+.dropdown-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 510;
+  color: #333;
+  background: #fff;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.dropdown-field.has-value + .dropdown-label,
+.dropdown-field.is-focused + .dropdown-label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Label Colors – accurate to Figma                                           */
+/* -------------------------------------------------------------------------- */
+
+/* Default (unfocused, enabled) */
+.dropdown-field.has-value + .dropdown-label {
+  color: #333333; /* dark gray / black */
+}
+
+/* Hovered (same dark gray, not green) */
+.dropdown-field.hovered + .dropdown-label,
+.dropdown-field.has-value.hovered + .dropdown-label {
+  color: #333333; /* stays black/dark gray */
+}
+
+/* Focused (green) */
+.dropdown-field.focused + .dropdown-label,
+.dropdown-field.has-value.focused + .dropdown-label {
+  color: #247984; /* green */
+}
+
+/* Error (red) */
+.dropdown-field.error + .dropdown-label,
+.dropdown-field.has-value.error + .dropdown-label {
+  color: #D32F2F; /* red */
+}
+
+/* Disabled (light gray) */
+.dropdown-field.disabled + .dropdown-label {
+  color: #9D9F9F;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Dropdown Menu (open state)                                                 */
+/* -------------------------------------------------------------------------- */
+.dropdown-wrapper.is-open .dropdown-field {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+}
+
+.dropdown-menu {
+  top: 100%; /* instead of calc(100% + 3px) */
+  margin-top: 4px; /* tiny visual space between boxes */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Dropdown Options – perfect spacing, no vertical gaps                       */
+/* -------------------------------------------------------------------------- */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* Slightly tinted border for that subtle 3D edge */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+
+  /* Layered shadow — light on top, deeper below */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),  /* soft top shadow */
+    0 6px 12px rgba(0, 0, 0, 0.12); /* deeper ambient shadow */
+
+  background: #fff;
+
+  max-height: 240px;
+  overflow-y: auto;
+  display: none !important;
+  z-index: 20;
+}
+
+.dropdown-wrapper.is-open .dropdown-menu {
+  display: block !important;
+}
+
+
+.dropdown-wrapper.is-open .dropdown-menu {
+  display: block !important;
+}
+
+/* Each option block */
+.dropdown-option {
+  width: 100%;
+  height: 56px; /* same as text field */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 16px;
+  font-size: 1rem;
+  color: #333;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border: none;
+  list-style: none;
+  margin: 0;
+  text-indent: 16px;
+}
+
+/* Full-width hover, flush edges */
+.dropdown-option:hover {
+  background-color: #F5F5F5;
+}
+
+/* Selected styling */
+.dropdown-option.is-selected {
+  background-color: #EAEFF0;
+  font-weight: 500;
+}
+
+/* Force MkDocs list resets to zero */
+.md-typeset .dropdown-wrapper ul.dropdown-menu,
+.dropdown-menu {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.md-typeset .dropdown-wrapper ul.dropdown-menu > li,
+.dropdown-menu > li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Kill any rogue ::marker */
+.dropdown-option::marker {
+  content: none !important;
+}
+
+.dropdown-helper {
+  position: absolute;
+  left: 16px;
+  top: 100%;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #989898;
+
+  &.error {
+    color: #D32F2F;
+  }
+}
+
+// --8<-- [end:dropdown-base]
