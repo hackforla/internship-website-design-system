@@ -132,4 +132,30 @@
   --token-pagination-border-default: 1px solid var(--token-outline);
   --token-pagination-border-disabled: 1px solid var(--token-outline-variant);
 
+  /* ------------------------------------------------------------
+    Checkbox Component Tokens
+  ------------------------------------------------------------ */
+
+  --token-checkbox-size: 1.125rem; /* 18px */
+  --token-checkbox-radius: 4px;
+  --token-checkbox-border-width: 2px;
+
+  /* Colors */
+  --token-checkbox-border: var(--token-outline);
+  --token-checkbox-bg: var(--token-surface);
+
+  --token-checkbox-checked-bg: var(--token-primary);
+  --token-checkbox-checkmark: var(--token-on-primary);
+
+  --token-checkbox-disabled-border: var(--token-outline-variant);
+
+  /* State layers */
+  --token-checkbox-hover-bg: var(--token-state-hover-layer);
+  --token-checkbox-focus-bg: var(--token-state-focus-layer);
+  --token-checkbox-pressed-bg: var(--token-state-pressed-layer);
+
+  /* Disabled */
+  --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
+
+
 }
