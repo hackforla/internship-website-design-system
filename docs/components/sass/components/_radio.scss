@@ -1,73 +1,110 @@
 @use '../abstracts/variables' as *;
 
+@mixin radio-defaults{
+    display:flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+
+
+    .icon {
+        width: 1.625rem;
+        height: 1.625rem;
+
+        //native styling for radio not yet available
+        appearance: none;
+        -webkit-appearance: none; 
+        outline: 0.0675rem solid #247984;
+        outline-offset: -0.03375rem;
+        border-radius: 50%;
+    }
+    .label {
+        color: #263238;
+        font-family: $text-font-stack;
+    }
+}
+
 // --8<-- [start:unchecked]
 .radio{
     @include radio-defaults;
-    border:1px solid $radio-color;
-    margin-right: 5px;
-    appearance: none;
-    -webkit-appearance: none;
+
+    &.hover > .icon,
+    &:hover > .icon{
+        outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
+        outline-offset: -0.0675rem;
+    }
+
+    &.selected > .icon, 
+    &:active > .icon {
+        outline: .125rem solid #247984;
+        outline-offset: -0.0675rem;
+    } 
 
     &.disabled,
     :disabled {
-        stroke: gray;
-        border-color: gray;
-        background-color: $radio-disabled;
+        > .icon {
+            outline: 0.0675rem solid #6F6F6F;
+            background-color: #DDDDDD;
+        }
+        > .label {
+            color: #C6C6C6;
+        }
     }
-    &.hover,
-    :hover{
-        opacity: .3;
-    }
-
-    
 }
 // --8<-- [end:unchecked]
 
 // --8<-- [start:checked]
-.radio .radio-checked {
+.radio-checked {
     @include radio-defaults;
-    border: 4px solid #FFF;
-    accent-color: $radio-color;
-    background-color: $radio-color;
-    box-shadow: 0 0 0 2px $radio-color;
-    
+    //border: 1px solid #FFF;
+    //accent-color: $radio-color;
+    //background-color: $radio-color;
+    //box-shadow: 0 0 0 2px $radio-color;
+    .icon {
+        border: .1875rem solid transparent;
+        display: grid;
+        place-content: center;
+        &::before {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #247984;
+        }
+
+    }
+    .label {
+        color: #263238;
+    }
+    &.hover > .icon,
+    &:hover > .icon{
+        outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
+        outline-offset: -0.0675rem;
+        &::before {
+            background-color: color-mix(in srgb, #247984 30%, transparent);
+        }
+    }
+    &.selected > .icon, 
+    &:active > .icon {
+        outline: .125rem solid #247984;
+        outline-offset: -0.0675rem;
+        &::before {
+            background-color: #247984;
+        }
+    } 
 
     &.disabled,
-    :disabled{
-        stroke: gray;
-        background-color: $radio-disabled;
-        color: gray;
+    :disabled {
+        > .icon {
+            outline: 0.0675rem solid #6F6F6F;
+            background-color: #DDDDDD;
+            &::before {
+                background-color: #6F6F6F;
+            }
+        }
+        > .label {
+            color: #C6C6C6;
+        }
     }
-    &.hover,
-    :hover{
-        opacity: .3;
-    }
-
 }
 // --8<-- [end:checked]
-
-@mixin radio-defaults{
-    font-weight: 2;
-    display:flex;
-    flex-direction: row;
-    align-content:center;
-
-    border-radius: $token-radio-radius;
-    width: $token-radio-size;
-    height: $token-radio-size;
-    
-    .icon, .label{
-        margin:5px;
-    }
-    &.disabled, &:disabled {
-        .label {
-            color: gray;
-        }
-    }
-    &.hover, &:hover {
-        .label {
-            opacity : .3;
-        }
-    }
-}
-// --8<-- [end:radio-box]
