@@ -1,4 +1,3 @@
-
 [data-theme] {
   /* ------------------------------------------------------------
      Core color tokens (map FROM variables.scss)
@@ -115,12 +114,38 @@
   /* ------------------------------------------------------------
      Radio tokens
      ------------------------------------------------------------ */
-     --token-radio-radius: 50%;
-     --token-radio-size: $
+  --token-radio-size: 1.625rem;
+  --token-radio-radius: 50%;
   
-     /* Unselected */
+  /* Custom radio parts */
+  --token-radio-outline-width: 0.0675rem;
+  --token-radio-outline-offset: -calc(var(--token-radio-outline-width)/2);
+  --token-radio-color: var(--token-primary);
+  --token-radio-label-color: var(--token-on-surface);
+  --token-radio-check-size: 1rem;
+  
+  /* Hover state */
+  --token-radio-outline-width-hover: 0.125rem;
+  --token-radio-outline-offset-hover: -calc(var(--token-radio-outline-width-hover)/2);
 
-      --token
-     /* Selected */
+  --token-radio-state-hover-strength: 0.3;
+  --token-radio-color-hover: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-radio-state-hover-strength) * 100%),
+    transparent
+  );
+  
+  /* Selected state*/
+  --token-radio-outline-width-selected: 0.125rem;
+  --token-radio-outline-offset-selected: -calc(var(--token-radio-outline-width-selected)/2);
+  --token-radio-color-selected: var(--token-primary);
+  
+  /* Disabled */
+  --token-radio-outline-width-disabled: var(--token-radio-outline-width);
+  --token-radio-outline-offset-disabled: var(--token-radio-outline-offset);
+  --token-radio-color-disabled: #6F6F6F;
+  --token-radio-bg-color-disabled: #DDDDDD;
+  --token-radio-label-color-disabled: #C6C6C6;
 
 }

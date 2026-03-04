@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/tokens';
 
 @mixin radio-defaults{
     display:flex;
@@ -8,19 +8,19 @@
 
 
     .icon {
-        width: 1.625rem;
-        height: 1.625rem;
+        width: var(--token-radio-size);
+        height: var(--token-radio-size);
 
         //native styling for radio not yet available
         appearance: none;
         -webkit-appearance: none; 
-        outline: 0.0675rem solid #247984;
-        outline-offset: -0.03375rem;
-        border-radius: 50%;
+        cursor: pointer;
+        outline: var(--token-radio-outline-width) solid var(--token-radio-color);
+        outline-offset: var(--token-radio-outline-offset);
+        border-radius: var(--token-radio-radius);
     }
     .label {
-        color: #263238;
-        font-family: $text-font-stack;
+        color: var(--token-radio-label-color);
     }
 }
 
@@ -30,24 +30,27 @@
 
     &.hover:not(.disabled) > .icon,
     &:hover:not(.disabled) > .icon{
-        outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
-        outline-offset: -0.0675rem;
+        outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color-hover);
+        outline-offset: var(--token-radio-outline-offset-hover);
     }
 
     &.selected:not(.disabled) > .icon, 
     &:active:not(.disabled) > .icon {
-        outline: .125rem solid #247984;
-        outline-offset: -0.0675rem;
+        outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color);
+        outline-offset: var(--token-radio-outline-offset-hover);
     } 
 
     &.disabled,
     :disabled {
         > .icon {
-            outline: 0.0675rem solid #6F6F6F;
-            background-color: #DDDDDD;
+            cursor: not-allowed;
+            pointer-events: none;
+            outline: var(--token-radio-outline-width-disabled) solid var(--token-radio-color-disabled);
+            outline-offset: var(--token-radio-outline-offset-disabled);
+            background-color: var(--token-radio-bg-color-disabled);
         }
         > .label {
-            color: #C6C6C6;
+            color: var(--token-radio-label-color-disabled);
         }
     }
 }
@@ -56,54 +59,52 @@
 // --8<-- [start:checked]
 .radio-checked, .radio:has(.icon:checked)  {
     @include radio-defaults;
-    //border: 1px solid #FFF;
-    //accent-color: $radio-color;
-    //background-color: $radio-color;
-    //box-shadow: 0 0 0 2px $radio-color;
     .icon {
-        border: .1875rem solid transparent;
+        border: var(--token-radio-outline-width) solid transparent;
         display: grid;
         place-content: center;
         &::before {
             content: "";
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background-color: #247984;
+            width: var(--token-radio-check-size);
+            height: var(--token-radio-check-size);
+            border-radius: var(--token-radio-radius);
+            background-color: var(--token-radio-color);
         }
 
     }
     .label {
-        color: #263238;
+        color: var(--token-radio-label-color);
     }
     &.hover:not(.disabled) > .icon,
     &:hover:not(.disabled) > .icon{
-        outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
-        outline-offset: -0.0675rem;
+        outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color-hover);
+        outline-offset: var(--token-radio-outline-offset-hover);
         &::before {
-            background-color: color-mix(in srgb, #247984 30%, transparent);
+            background-color: var(--token-radio-color-hover);
         }
     }
     &.selected:not(.disabled) > .icon, 
     &:active:not(.disabled) > .icon {
-        outline: .125rem solid #247984;
-        outline-offset: -0.0675rem;
+        outline: var(--token-radio-outline-width-selected) solid var(--token-radio-color-selected);
+        outline-offset: var(--token-radio-outline-offset-selected);
         &::before {
-            background-color: #247984;
+            background-color: var(--token-radio-color-selected);
         }
     } 
 
     &.disabled,
     :disabled {
         > .icon {
-            outline: 0.0675rem solid #6F6F6F;
-            background-color: #DDDDDD;
+            cursor: not-allowed;
+            pointer-events: none;
+            outline: var(--token-radio-outline-width-disabled) solid var(--token-radio-color-disabled);
+            background-color: var(--token-radio-bg-color-disabled);
             &::before {
-                background-color: #6F6F6F;
+                background-color: var(--token-radio-color-disabled);
             }
         }
         > .label {
-            color: #C6C6C6;
+            color: var(--token-radio-label-color-disabled);
         }
     }
 }

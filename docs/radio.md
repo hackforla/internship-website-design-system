@@ -7,7 +7,7 @@ hide:
 ## Class
 
 === "Unchecked"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items"> 
             <div class="radio"> 
                 <input type="radio" class="icon" id="unchecked-class" value="option" aria-label="example unchecked radio button">
@@ -17,7 +17,7 @@ hide:
     </div>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items"> 
                 <div class="radio"> 
                     <input type="radio" class="icon" id="unchecked-default" value="option" aria-label="example unchecked radio button">
@@ -41,7 +41,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:unchecked"
             ```
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="radio hover"> 
                     <input type="radio" class="icon" id="unchecked-hover" value="option" aria-label="example hovered, unchecked radio button">
@@ -65,7 +65,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:unchecked"
             ```
     === "Selected"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="radio selected"> 
                     <input type="radio" class="icon" id="unchecked-pressed" value="option" aria-label="example pressed radio button">
@@ -89,7 +89,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:unchecked"
             ```
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="radio disabled"> 
                     <input type="radio" class="icon" id="unchecked-disabled" value="option" aria-label="example disabled radio button" disabled>
@@ -114,7 +114,7 @@ hide:
             ```
         <br>
 === "Checked"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items"> 
             <div class="radio-checked">
                 <input type="radio" class="icon" id="checked-class" value="option" checked aria-label="example checked radio button">
@@ -124,7 +124,7 @@ hide:
     </div>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items"> 
                 <div class="radio-checked">
                     <input type="radio" class="icon" id="checked-default" value="option" checked aria-label="example checked radio button">
@@ -148,7 +148,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:checked"
             ``` 
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items"> 
                 <div class="radio-checked hover">
                     <input type="radio" class="icon" id="checked-hover" value="option" checked aria-label="example of hovered, selected radio button">
@@ -172,7 +172,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:checked"
             ``` 
     === "Selected"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="radio-checked selected"> 
                     <input type="radio" class="icon" id="checked-selected" value="option" checked aria-label="example pressed, selected radio button">
@@ -196,7 +196,7 @@ hide:
             --8<-- "components/sass/components/_radio.scss:checked"
             ``` 
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items"> 
                 <div class="radio-checked disabled">
                     <input disabled type="radio" class="icon" id="checked-disabled" value="option" aria-label="example of disabled checked radio button" checked disabled>
