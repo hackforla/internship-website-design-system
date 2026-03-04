@@ -27,8 +27,11 @@ RUN pip install -r requirements.txt
 # Copy the entire application
 COPY . .
 
+# Ensure entrypoint is executable
+RUN chmod +x /docs/entrypoint.sh
+
 # Expose the ports MkDocs will run on
 EXPOSE 8000 35729
 
-# Set the startup script as the entry point
-ENTRYPOINT ["./entrypoint.sh"]
+# Set the startup script as the entry point (run via sh to avoid exec bit issues)
+ENTRYPOINT ["sh", "/docs/entrypoint.sh"]

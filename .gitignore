@@ -20,5 +20,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Include CSS dist files
-!docs/dist/
+# Generated CSS artifacts
+docs/dist/main.css
+docs/dist/main.css.map

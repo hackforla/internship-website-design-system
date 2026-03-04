@@ -1,0 +1,115 @@
+@use '../abstracts/tokens';
+
+[data-theme] {
+  // --8<-- [start:pagination]
+  nav.pagination ul.pagination-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .pagination .pagination-items .pagebutton {
+    width: var(--token-pagination-button-size);
+    height: var(--token-pagination-button-size);
+    margin: 0;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    /* pageicon can be <a> or <button> depending on JS */
+    .pageicon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--token-pagination-icon-default);
+
+      /* if it is a button, reset default button styles */
+      background: transparent;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      line-height: inherit;
+      cursor: inherit;
+    }
+
+    &:hover,
+    &.hover {
+      background-color: var(--token-pagination-bg-hover);
+    }
+
+    /* focus is usually on inner button, so use focus-within */
+    &:focus-within,
+    &.focused {
+      background-color: var(--token-pagination-bg-focus);
+    }
+
+    &:active,
+    &.selected {
+      background-color: var(--token-pagination-bg-selected);
+
+      .pageicon {
+        color: var(--token-pagination-icon-active);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      cursor: not-allowed;
+
+      .pageicon {
+        color: var(--token-pagination-icon-disabled);
+      }
+    }
+  }
+
+  .pagination-items .pagebutton.-ctrl {
+    background: none;
+    border: var(--token-pagination-border-default);
+
+    .pageicon .twemoji {
+      height: var(--token-pagination-icon-size);
+      width: var(--token-pagination-icon-size);
+    }
+
+    &:hover,
+    &.hover {
+      border: 0;
+      background-color: var(--token-pagination-bg-hover);
+    }
+
+    &:disabled,
+    &.disabled {
+      border: var(--token-pagination-border-disabled);
+      background: none;
+      cursor: not-allowed;
+
+      .pageicon {
+        color: var(--token-pagination-icon-disabled);
+      }
+    }
+  }
+
+  .pagination-items .pagebutton.-more {
+    cursor: default;
+    pointer-events: none;
+
+    .pageicon .twemoji {
+      width: var(--token-pagination-icon-size);
+      height: var(--token-pagination-icon-size);
+    }
+  }
+  // --8<-- [end:pagination]
+}
