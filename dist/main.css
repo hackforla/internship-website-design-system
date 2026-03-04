@@ -47,8 +47,7 @@
   --radio-hovercolor: #0D5761;
   --radio-disabled: #c6c6c6;
   --radio-disabled-stroke: gray;
-  --radio-button-width: 26px;
-  --radio-button-height: 26px;
+  --radio-button-size: 2.125rem;
   --dropdown-hover-color: #CFE1E4;
   --dropdown-select-color: #A0C4C9;
   --dropdown-placeholder-color: #989898;
@@ -192,6 +191,42 @@
       calc(var(--token-state-disabled-container-opacity) * 100%),
     transparent
   );
+  /* ------------------------------------------------------------
+       Input Component Tokens
+       ------------------------------------------------------------ */
+  --token-input-label-size: .75rem;
+  --token-input-label-weight: 600;
+  /* ------------------------------------------------------------
+     Radio tokens
+     ------------------------------------------------------------ */
+  --token-radio-size: 1rem;
+  --token-radio-radius: 50%;
+  /* Custom radio parts */
+  --token-radio-outline-width: 0.0625rem;
+  --token-radio-outline-offset: -calc(var(--token-radio-outline-width)/2);
+  --token-radio-color: var(--token-primary);
+  --token-radio-label-color: var(--token-on-surface);
+  --token-radio-check-size: calc(0.625*var(--token-radio-size));
+  /* Hover state */
+  --token-radio-outline-width-hover: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-hover: -calc(var(--token-radio-outline-width-hover)/2);
+  --token-radio-state-hover-strength: 0.3;
+  --token-radio-color-hover: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-radio-state-hover-strength) * 100%),
+    transparent
+  );
+  /* Selected state*/
+  --token-radio-outline-width-selected: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-selected: -calc(var(--token-radio-outline-width-selected)/2);
+  --token-radio-color-selected: var(--token-primary);
+  /* Disabled */
+  --token-radio-outline-width-disabled: var(--token-radio-outline-width);
+  --token-radio-outline-offset-disabled: var(--token-radio-outline-offset);
+  --token-radio-color-disabled: #6F6F6F;
+  --token-radio-bg-color-disabled: #DDDDDD;
+  --token-radio-label-color-disabled: #C6C6C6;
   /* ------------------------------------------------------------
    Pagination Component Tokens
    ------------------------------------------------------------ */
@@ -417,62 +452,115 @@ body {
   height: auto;
 }
 
-input[type=radio] {
-  border: 1px solid #247984;
-  border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  margin-right: 5px;
-  appearance: none;
-  -webkit-appearance: none;
-}
-input[type=radio]:disabled {
-  stroke: gray;
-  border-color: gray;
-  background-color: #c6c6c6;
-}
-input[type=radio].hover,
-input[type=radio] :hover {
-  opacity: 0.3;
-}
-
-input[type=radio]:checked {
-  border: 4px solid #FFF;
-  font-weight: 2;
-  accent-color: #247984;
-  background-color: #247984;
-  box-shadow: 0 0 0 2px #247984;
-}
-input[type=radio]:checked.disabled,
-input[type=radio]:checked :disabled {
-  stroke: gray;
-  background-color: #c6c6c6;
-  color: gray;
-}
-input[type=radio]:checked.hover,
-input[type=radio]:checked :hover {
-  opacity: 0.3;
-}
-
-.radio-box {
-  font-weight: bold;
+.radio {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  gap: 0.5rem;
+  align-items: center;
 }
-.radio-box input {
-  margin: 5px;
+.radio .icon {
+  width: var(--token-radio-size);
+  height: var(--token-radio-size);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: var(--token-radio-outline-width) solid var(--token-radio-color);
+  outline-offset: var(--token-radio-outline-offset);
+  border-radius: var(--token-radio-radius);
 }
-.radio-box label {
-  margin: 5px;
+.radio .label {
+  color: var(--token-radio-label-color);
+  font-size: var(--token-input-label-size);
+  font-weight: var(--token-input-label-weight);
+}
+.radio.hover:not(.disabled) > .icon, .radio:hover:not(.disabled) > .icon {
+  outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color-hover);
+  outline-offset: var(--token-radio-outline-offset-hover);
+}
+.radio.selected:not(.disabled) > .icon, .radio:active:not(.disabled) > .icon {
+  outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color);
+  outline-offset: var(--token-radio-outline-offset-hover);
+}
+.radio.disabled > .icon,
+.radio :disabled > .icon {
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: var(--token-radio-outline-width-disabled) solid var(--token-radio-color-disabled);
+  outline-offset: var(--token-radio-outline-offset-disabled);
+  background-color: var(--token-radio-bg-color-disabled);
+}
+.radio.disabled > .label,
+.radio :disabled > .label {
+  color: var(--token-radio-label-color-disabled);
 }
 
-.radio-box input[disabled] + label {
-  color: gray;
+.radio-checked, .radio:has(.icon:checked) {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
 }
-
-.radio-box input:hover {
-  opacity: 0.3;
+.radio-checked .icon, .radio:has(.icon:checked) .icon {
+  width: var(--token-radio-size);
+  height: var(--token-radio-size);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: var(--token-radio-outline-width) solid var(--token-radio-color);
+  outline-offset: var(--token-radio-outline-offset);
+  border-radius: var(--token-radio-radius);
+}
+.radio-checked .label, .radio:has(.icon:checked) .label {
+  color: var(--token-radio-label-color);
+  font-size: var(--token-input-label-size);
+  font-weight: var(--token-input-label-weight);
+}
+.radio-checked .icon, .radio:has(.icon:checked) .icon {
+  border: var(--token-radio-outline-width) solid transparent;
+  display: grid;
+  place-content: center;
+}
+.radio-checked .icon::before, .radio:has(.icon:checked) .icon::before {
+  content: "";
+  width: var(--token-radio-check-size);
+  height: var(--token-radio-check-size);
+  border-radius: var(--token-radio-radius);
+  background-color: var(--token-radio-color);
+}
+.radio-checked .label, .radio:has(.icon:checked) .label {
+  color: var(--token-radio-label-color);
+}
+.radio-checked.hover:not(.disabled) > .icon, .radio-checked:hover:not(.disabled) > .icon, .radio:has(.icon:checked).hover:not(.disabled) > .icon, .radio:has(.icon:checked):hover:not(.disabled) > .icon {
+  outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color-hover);
+  outline-offset: var(--token-radio-outline-offset-hover);
+}
+.radio-checked.hover:not(.disabled) > .icon::before, .radio-checked:hover:not(.disabled) > .icon::before, .radio:has(.icon:checked).hover:not(.disabled) > .icon::before, .radio:has(.icon:checked):hover:not(.disabled) > .icon::before {
+  background-color: var(--token-radio-color-hover);
+}
+.radio-checked.selected:not(.disabled) > .icon, .radio-checked:active:not(.disabled) > .icon, .radio:has(.icon:checked).selected:not(.disabled) > .icon, .radio:has(.icon:checked):active:not(.disabled) > .icon {
+  outline: var(--token-radio-outline-width-selected) solid var(--token-radio-color-selected);
+  outline-offset: var(--token-radio-outline-offset-selected);
+}
+.radio-checked.selected:not(.disabled) > .icon::before, .radio-checked:active:not(.disabled) > .icon::before, .radio:has(.icon:checked).selected:not(.disabled) > .icon::before, .radio:has(.icon:checked):active:not(.disabled) > .icon::before {
+  background-color: var(--token-radio-color-selected);
+}
+.radio-checked.disabled > .icon,
+.radio-checked :disabled > .icon, .radio:has(.icon:checked).disabled > .icon,
+.radio:has(.icon:checked) :disabled > .icon {
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: var(--token-radio-outline-width-disabled) solid var(--token-radio-color-disabled);
+  background-color: var(--token-radio-bg-color-disabled);
+}
+.radio-checked.disabled > .icon::before,
+.radio-checked :disabled > .icon::before, .radio:has(.icon:checked).disabled > .icon::before,
+.radio:has(.icon:checked) :disabled > .icon::before {
+  background-color: var(--token-radio-color-disabled);
+}
+.radio-checked.disabled > .label,
+.radio-checked :disabled > .label, .radio:has(.icon:checked).disabled > .label,
+.radio:has(.icon:checked) :disabled > .label {
+  color: var(--token-radio-label-color-disabled);
 }
 
 .input-wrapper {

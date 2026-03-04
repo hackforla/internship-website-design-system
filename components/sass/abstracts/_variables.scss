@@ -66,8 +66,7 @@ $radio-color: $color-green;
 $radio-hovercolor: $color-darkgreen;
 $radio-disabled: #c6c6c6;
 $radio-disabled-stroke: gray;
-$radio-button-width: 26px;
-$radio-button-height: 26px;
+$radio-button-size: 2.125rem;
 
 $dropdown-divider-color: $color-old-grey;
 
@@ -201,8 +200,7 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --radio-hovercolor: #{$radio-hovercolor};
   --radio-disabled: #{$radio-disabled};
   --radio-disabled-stroke: #{$radio-disabled-stroke};
-  --radio-button-width: #{$radio-button-width};
-  --radio-button-height: #{$radio-button-height};
+  --radio-button-size: #{$radio-button-size};
   
   // Dropdowns
   --dropdown-divider-color: #{$dropdown-divider-color};

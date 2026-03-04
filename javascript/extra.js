@@ -75,10 +75,18 @@ observer.observe(document.body, {
 // Accordion JS
 var acc = document.getElementsByClassName("accordion-button");
 
-for (let i = 0; i < acc.length; i++) {
+for (let i = 0; i < acc.length; i (unchecked)++) {
   acc[i].addEventListener("click", function() {
     /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
+    to highlight the button 'input[data-demo-input]''.radio > .icon'that controls the panel */
     this.classList.toggle("active");
   });
 }
+
+// Reset demo radio inputs on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const demoInputs = document.querySelectorAll('.radio > .icon');
+  demoInputs.forEach(input => {
+    input.checked = false;
+  });
+});
