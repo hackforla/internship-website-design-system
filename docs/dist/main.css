@@ -177,18 +177,23 @@
     transparent
   );
   /* ------------------------------------------------------------
+       Input Component Tokens
+       ------------------------------------------------------------ */
+  --token-input-label-size: .75rem;
+  --token-input-label-weight: 600;
+  /* ------------------------------------------------------------
      Radio tokens
      ------------------------------------------------------------ */
-  --token-radio-size: 1.625rem;
+  --token-radio-size: 1rem;
   --token-radio-radius: 50%;
   /* Custom radio parts */
-  --token-radio-outline-width: 0.0675rem;
+  --token-radio-outline-width: 0.0625rem;
   --token-radio-outline-offset: -calc(var(--token-radio-outline-width)/2);
   --token-radio-color: var(--token-primary);
   --token-radio-label-color: var(--token-on-surface);
-  --token-radio-check-size: 1rem;
+  --token-radio-check-size: calc(0.625*var(--token-radio-size));
   /* Hover state */
-  --token-radio-outline-width-hover: 0.125rem;
+  --token-radio-outline-width-hover: calc(2*var(--token-radio-outline-width));
   --token-radio-outline-offset-hover: -calc(var(--token-radio-outline-width-hover)/2);
   --token-radio-state-hover-strength: 0.3;
   --token-radio-color-hover: color-mix(
@@ -198,7 +203,7 @@
     transparent
   );
   /* Selected state*/
-  --token-radio-outline-width-selected: 0.125rem;
+  --token-radio-outline-width-selected: calc(2*var(--token-radio-outline-width));
   --token-radio-outline-offset-selected: -calc(var(--token-radio-outline-width-selected)/2);
   --token-radio-color-selected: var(--token-primary);
   /* Disabled */
@@ -432,6 +437,8 @@ body {
 }
 .radio .label {
   color: var(--token-radio-label-color);
+  font-size: var(--token-input-label-size);
+  font-weight: var(--token-input-label-weight);
 }
 .radio.hover:not(.disabled) > .icon, .radio:hover:not(.disabled) > .icon {
   outline: var(--token-radio-outline-width-hover) solid var(--token-radio-color-hover);
@@ -472,6 +479,8 @@ body {
 }
 .radio-checked .label, .radio:has(.icon:checked) .label {
   color: var(--token-radio-label-color);
+  font-size: var(--token-input-label-size);
+  font-weight: var(--token-input-label-weight);
 }
 .radio-checked .icon, .radio:has(.icon:checked) .icon {
   border: var(--token-radio-outline-width) solid transparent;

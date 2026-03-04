@@ -21,6 +21,8 @@
     }
     .label {
         color: var(--token-radio-label-color);
+        font-size: var(--token-input-label-size);
+        font-weight: var(--token-input-label-weight);
     }
 }
 
