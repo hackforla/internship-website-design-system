@@ -28,14 +28,14 @@
 .radio{
     @include radio-defaults;
 
-    &.hover > .icon,
-    &:hover > .icon{
+    &.hover:not(.disabled) > .icon,
+    &:hover:not(.disabled) > .icon{
         outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
         outline-offset: -0.0675rem;
     }
 
-    &.selected > .icon, 
-    &:active > .icon {
+    &.selected:not(.disabled) > .icon, 
+    &:active:not(.disabled) > .icon {
         outline: .125rem solid #247984;
         outline-offset: -0.0675rem;
     } 
@@ -54,7 +54,7 @@
 // --8<-- [end:unchecked]
 
 // --8<-- [start:checked]
-.radio-checked {
+.radio-checked, .radio:has(.icon:checked)  {
     @include radio-defaults;
     //border: 1px solid #FFF;
     //accent-color: $radio-color;
@@ -76,16 +76,16 @@
     .label {
         color: #263238;
     }
-    &.hover > .icon,
-    &:hover > .icon{
+    &.hover:not(.disabled) > .icon,
+    &:hover:not(.disabled) > .icon{
         outline: .125rem solid color-mix(in srgb, #247984 30%, transparent);
         outline-offset: -0.0675rem;
         &::before {
             background-color: color-mix(in srgb, #247984 30%, transparent);
         }
     }
-    &.selected > .icon, 
-    &:active > .icon {
+    &.selected:not(.disabled) > .icon, 
+    &:active:not(.disabled) > .icon {
         outline: .125rem solid #247984;
         outline-offset: -0.0675rem;
         &::before {

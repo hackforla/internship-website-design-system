@@ -404,11 +404,11 @@ body {
   color: #263238;
   font-family: "Roboto", sans-serif;
 }
-.radio.hover > .icon, .radio:hover > .icon {
+.radio.hover:not(.disabled) > .icon, .radio:hover:not(.disabled) > .icon {
   outline: 0.125rem solid color-mix(in srgb, #247984 30%, transparent);
   outline-offset: -0.0675rem;
 }
-.radio.selected > .icon, .radio:active > .icon {
+.radio.selected:not(.disabled) > .icon, .radio:active:not(.disabled) > .icon {
   outline: 0.125rem solid #247984;
   outline-offset: -0.0675rem;
 }
@@ -422,13 +422,13 @@ body {
   color: #C6C6C6;
 }
 
-.radio-checked {
+.radio-checked, .radio:has(.icon:checked) {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
 }
-.radio-checked .icon {
+.radio-checked .icon, .radio:has(.icon:checked) .icon {
   width: 1.625rem;
   height: 1.625rem;
   appearance: none;
@@ -437,50 +437,53 @@ body {
   outline-offset: -0.03375rem;
   border-radius: 50%;
 }
-.radio-checked .label {
+.radio-checked .label, .radio:has(.icon:checked) .label {
   color: #263238;
   font-family: "Roboto", sans-serif;
 }
-.radio-checked .icon {
+.radio-checked .icon, .radio:has(.icon:checked) .icon {
   border: 0.1875rem solid transparent;
   display: grid;
   place-content: center;
 }
-.radio-checked .icon::before {
+.radio-checked .icon::before, .radio:has(.icon:checked) .icon::before {
   content: "";
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background-color: #247984;
 }
-.radio-checked .label {
+.radio-checked .label, .radio:has(.icon:checked) .label {
   color: #263238;
 }
-.radio-checked.hover > .icon, .radio-checked:hover > .icon {
+.radio-checked.hover:not(.disabled) > .icon, .radio-checked:hover:not(.disabled) > .icon, .radio:has(.icon:checked).hover:not(.disabled) > .icon, .radio:has(.icon:checked):hover:not(.disabled) > .icon {
   outline: 0.125rem solid color-mix(in srgb, #247984 30%, transparent);
   outline-offset: -0.0675rem;
 }
-.radio-checked.hover > .icon::before, .radio-checked:hover > .icon::before {
+.radio-checked.hover:not(.disabled) > .icon::before, .radio-checked:hover:not(.disabled) > .icon::before, .radio:has(.icon:checked).hover:not(.disabled) > .icon::before, .radio:has(.icon:checked):hover:not(.disabled) > .icon::before {
   background-color: color-mix(in srgb, #247984 30%, transparent);
 }
-.radio-checked.selected > .icon, .radio-checked:active > .icon {
+.radio-checked.selected:not(.disabled) > .icon, .radio-checked:active:not(.disabled) > .icon, .radio:has(.icon:checked).selected:not(.disabled) > .icon, .radio:has(.icon:checked):active:not(.disabled) > .icon {
   outline: 0.125rem solid #247984;
   outline-offset: -0.0675rem;
 }
-.radio-checked.selected > .icon::before, .radio-checked:active > .icon::before {
+.radio-checked.selected:not(.disabled) > .icon::before, .radio-checked:active:not(.disabled) > .icon::before, .radio:has(.icon:checked).selected:not(.disabled) > .icon::before, .radio:has(.icon:checked):active:not(.disabled) > .icon::before {
   background-color: #247984;
 }
 .radio-checked.disabled > .icon,
-.radio-checked :disabled > .icon {
+.radio-checked :disabled > .icon, .radio:has(.icon:checked).disabled > .icon,
+.radio:has(.icon:checked) :disabled > .icon {
   outline: 0.0675rem solid #6F6F6F;
   background-color: #DDDDDD;
 }
 .radio-checked.disabled > .icon::before,
-.radio-checked :disabled > .icon::before {
+.radio-checked :disabled > .icon::before, .radio:has(.icon:checked).disabled > .icon::before,
+.radio:has(.icon:checked) :disabled > .icon::before {
   background-color: #6F6F6F;
 }
 .radio-checked.disabled > .label,
-.radio-checked :disabled > .label {
+.radio-checked :disabled > .label, .radio:has(.icon:checked).disabled > .label,
+.radio:has(.icon:checked) :disabled > .label {
   color: #C6C6C6;
 }
 
