@@ -17,9 +17,9 @@
 
  
 
-  --token-state-hover-strength: 0.08;
-  --token-state-focus-strength: 0.12;
-  --token-state-pressed-strength: 0.16;
+  --token-state-hover-strength: 0.20;
+  --token-state-focus-strength: 0.40;
+  --token-state-pressed-strength: 0.48;
 
   --token-state-disabled-text-opacity: 0.38;
   --token-state-disabled-container-opacity: 0.12;
@@ -32,7 +32,6 @@
   /* ------------------------------------------------------------
      State layers
      ------------------------------------------------------------ */
-  
   
 
   --token-state-hover-layer: color-mix(
@@ -71,7 +70,7 @@
   );
 
   /* ------------------------------------------------------------
-     Button tokens
+     Button Component Tokens
      ------------------------------------------------------------ */
 
   --token-button-radius: 9999px;
@@ -147,5 +146,25 @@
   --token-radio-color-disabled: #6F6F6F;
   --token-radio-bg-color-disabled: #DDDDDD;
   --token-radio-label-color-disabled: #C6C6C6;
+    /* ------------------------------------------------------------
+     Pagination Component Tokens
+     ------------------------------------------------------------ */
+
+  --token-pagination-button-size: 2.5rem;
+  --token-pagination-icon-size: 1rem;
+
+  /* Colors */
+  --token-pagination-icon-default: var(--token-on-surface);
+  --token-pagination-icon-active: var(--token-on-primary);
+  --token-pagination-icon-disabled: var(--token-button-disabled-text);
+
+  /* Backgrounds */
+  --token-pagination-bg-hover: var(--token-state-hover-layer);
+  --token-pagination-bg-focus: var(--token-state-focus-layer);
+  --token-pagination-bg-selected: var(--token-primary);
+
+  /* Borders (for ctrl buttons) */
+  --token-pagination-border-default: 1px solid var(--token-outline);
+  --token-pagination-border-disabled: 1px solid var(--token-outline-variant);
 
 }

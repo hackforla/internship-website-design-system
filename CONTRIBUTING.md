@@ -51,6 +51,7 @@ If you need a text editor to work on code, VS Code is recommended by the team, b
         - [**If there are conflicting changes in the upstream repository**](#if-there-are-conflicting-changes-in-the-upstream-repository)
       - [**Incorporating changes from upstream**](#incorporating-changes-from-upstream)
         - [**Incorporating changes into your topic branch**](#incorporating-changes-into-your-topic-branch)
+  - [Code Standards](#code-standards)
   - [Pull Requests](#pull-requests)
     - [How to make a pull request](#how-to-make-a-pull-request)
       - [**Push all changes to your issue branch**](#push-all-changes-to-your-issue-branch)
@@ -220,6 +221,123 @@ If you are using [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/
   ```
 <!-- TODO consider adding local codebase spell checker>-->
 <sub>[Back to Table of Contents](#table-of-contents)</sub>
+***
+
+## Code Standards
+
+This section explains the standard process for building new components in the
+TWE Design System. Material 3 is used as a visual reference, while all tokens,
+styles, and implementation details are defined and maintained in this repository.
+
+### Design Reference (Figma)
+- Material 3 Design Kit (Figma) is used to understand:
+  - Review component structure
+  - Understand states, classes and other variants
+  - Variants and behavior
+
+Link : https://www.figma.com/community/file/1035203688168086460/material-3-design-kit
+
+- The Figma Material Theme Builder is used to:
+  - Preview themes and color systems
+  - Export reference values for inspection
+
+Link : https://www.figma.com/community/plugin/1034969338659738588/material-theme-builder
+
+- The exported JSON is used only as a reference and is not directly consumed by the codebase.
+
+### Token workflow
+- All design tokens live in `docs/components/sass/abstracts/`.
+- Tokens are defined in `tokens.scss`.
+- Tokens represent component-level values, not raw design values.
+- Tokens may reference existing values from `variables.scss` where appropriate.
+- New components should define tokens instead of hardcoding values in component SCSS.
+
+Example:
+```scss
+[data-theme="material"] {
+  --checkbox-unchecked-outline-color: var(--color-outline);
+  --checkbox-checked-fill-color: var(--color-primary);
+}
+```
+
+### How Tokens work
+
+Tokens act as a semantic layer between raw design values (`variables.scss`)
+and component implementation (`components/*.scss`).
+
+They exist to answer the question:
+**“What does this value mean in the UI?”**, not **“What is the value?”**
+
+Rules:
+- Tokens describe intent (e.g. `--token-button-filled-bg`)
+- Variables describe raw values (e.g. `--color-primary`)
+- Components MUST consume tokens, never raw variables
+
+### New tokens vs existing tokens
+
+Before creating a new token, always check whether an existing token already
+represents the value or concept you need. Tokens should represent **design
+decisions**, not one-off component styles.
+
+#### Use an existing token when:
+- The value already exists and is semantically correct
+- The same value is used (or likely to be used) across multiple components
+- The token represents a shared concept (color, spacing, radius, state layer, etc.)
+
+**Example:**
+- You need a hover overlay for a new component  
+  → Use `--token-state-hover-layer` instead of creating
+  `--token-new-component-hover-bg`
+
+- You need rounded corners for a button-like component  
+  → Use `--token-button-radius` if the visual intent matches
+
+#### Create a new token when:
+- The value represents a **new design decision**
+- The value is component-specific and not reusable elsewhere
+- Reusing an existing token would change the meaning of that token
+
+**Example:**
+- A pagination component introduces a new “selected page” background
+  that doesn’t match any existing surface or button state  
+  → Create a new pagination-specific token
+
+- A component requires a spacing value that does not align with existing spacing tokens  
+  → Introduce a new token rather than hardcoding the value
+
+#### General rule of thumb
+If you’re unsure:
+- Start by trying to reuse an existing token
+- Only introduce a new token if reuse would be misleading or restrictive
+
+
+### SCSS structure
+
+- **abstracts**
+  - `variables.scss`  
+    Global, low-level values (colors, spacing, typography).
+  - `tokens.scss`  
+    Semantic, component-level design tokens.
+
+- **components**
+  - One SCSS file per component.
+  - Components consume tokens via CSS custom properties (CSS variables).
+
+- `main.scss`
+  - Imports all component styles.
+
+### Building a new component
+
+1. Review the component in the **Material 3 Figma design kit**
+2. Identify component states, variants, and required tokens
+3. Define component tokens in `tokens.scss`
+4. Implement component styles using tokens
+5. Add or update the component documentation page (`docs/component.md`)
+6. Include HTML, CSS, and JS snippets demonstrating usage
+
+Material is used as a **design reference**, while all implementation details,
+tokens, and styling decisions live within this repository.
+
 ***
 
 ## How the Internship Team works with GitHub Issues
