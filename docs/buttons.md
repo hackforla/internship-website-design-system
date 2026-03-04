@@ -4,298 +4,636 @@ hide:
 ---
 
 # **Buttons**
+
 ## Class
+
 === "Filled"
-    <div class="btn-grid-1">
-        <div class="grid-items">
-            <a href="#" class="btn btn-filled">Label</a>
+    <div data-theme>
+        <div class="btn-grid-1">
+            <div class="grid-items">
+                <button class="button button-filled">Label</button>
+            </div>
         </div>
     </div>
-    <br>
     ## States
     === "Enabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-filled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-filled">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-filled">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:filled"
+            ```
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-filled hover">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-filled hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-filled hover">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:filled"
+            ```
+
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-filled focus">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-filled focus">Label</button>
+                </div>
             </div>
         </div>
+
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-filled focus">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:filled"
+            ```
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-filled pressed">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-filled pressed">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-filled pressed">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:filled"
+            ```
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-filled disabled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-filled"disabled>Label</button>
+                </div>
             </div>
         </div>
-    <br>
-    ## Code
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_buttons.scss:btn"
-
-        --8<-- "components/sass/components/_buttons.scss:btnFilled"
-        ```
-    === "HTML"
-        ``` html
-        <a href="#" class="btn btn-filled">Label</a>
-
-        <a href="#" class="btn btn-filled hover">Label</a>
-
-        <a href="#" class="btn btn-filled focus">Label</a>
-
-        <a href="#" class="btn btn-filled pressed">Label</a>
-
-        <a href="#" class="btn btn-filled disabled">Label</a>
-        ```
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-filled"disabled>Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:filled"
+            ```
 
 === "Outline"
-    <div class="btn-grid-1">
-        <div class="grid-items">
-            <a href="#" class="btn btn-outline">Label</a>
+    <div data-theme>
+        <div class="btn-grid-1">
+            <div class="grid-items">
+                <button class="button button-outline">Label</button>
+            </div>
         </div>
     </div>
-    <br>
     ## States
     === "Enabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-outline">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-outline">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-outline">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:outline"
+            ```
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-outline hover">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-outline hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-outline hover">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:outline"
+            ```
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-outline focus">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-outline focus">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-outline focus">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:outline"
+            ```
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-outline pressed">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-outline pressed">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-outline pressed">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:outline"
+            ```
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-outline disabled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-outline disabled">Label</button>
+                </div>
             </div>
         </div>
-    <br>
-    ## Code
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_buttons.scss:btn"
-
-        --8<-- "components/sass/components/_buttons.scss:btnOutline"
-        ```
-    === "HTML"
-        ``` html
-        <a href="#" class="btn btn-outline">Label</a>
-
-        <a href="#" class="btn btn-outline hover">Label</a>
-
-        <a href="#" class="btn btn-outline focus">Label</a>
-
-        <a href="#" class="btn btn-outline pressed">Label</a>
-
-        <a href="#" class="btn btn-outline disabled">Label</a>
-        ```
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-outline"disabled>Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:outline"
+            ```
 
 === "Tonal"
-    <div class="btn-grid-1">
-        <div class="grid-items">
-            <a href="#" class="btn btn-tonal">Label</a>
+    <div data-theme>
+        <div class="btn-grid-1">
+            <div class="grid-items">
+                <button class="button button-tonal">Label</button>
+            </div>
         </div>
     </div>
-    <br>
     ## States
     === "Enabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-tonal">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:tonal"
+            ```
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-tonal hover">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal hover">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:tonal"
+            ```
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-tonal focus">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal focus">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal focus">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:tonal"
+            ```
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-tonal pressed">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal pressed">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal pressed">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:tonal"
+            ```
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-tonal disabled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal"disabled>Label</button>
+                </div>
             </div>
         </div>
-    <br>
-    ## Code
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_buttons.scss:btn"
-
-        --8<-- "components/sass/components/_buttons.scss:btnTonal"
-        ```
-    === "HTML"
-        ``` html
-        <a href="#" class="btn btn-tonal">Label</a>
-
-        <a href="#" class="btn btn-tonal hover">Label</a>
-
-        <a href="#" class="btn btn-tonal focus">Label</a>
-
-        <a href="#" class="btn btn-tonal pressed">Label</a>
-
-        <a href="#" class="btn btn-tonal disabled">Label</a>
-        ```
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal"disabled>Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:tonal"
+            ```
 
 === "Text"
-    <div class="btn-grid-1">
-        <div class="grid-items">
-            <a href="#" class="btn btn-text">Label</a>
+    <div data-theme>
+        <div class="btn-grid-1">
+            <div class="grid-items">
+                <button class="button button-text hover">Label</button>
+            </div>
         </div>
     </div>
-    <br>
     ## States
     === "Enabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-text">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-text hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-text">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:text"
+            ```
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-text hover">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-text hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-text hover">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:text"
+            ```
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-text focus">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-text focus">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-text focus">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:text"
+            ```
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-text pressed">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-text pressed">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-text pressed">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:text"
+            ```
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-text disabled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-text" disabled>Label</button>
+                </div>
             </div>
         </div>
-    <br>
-    ## Code
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_buttons.scss:btn"
-
-        --8<-- "components/sass/components/_buttons.scss:btnText"
-        ```
-    === "HTML"
-        ``` html
-        <a href="#" class="btn btn-text">Label</a>
-
-        <a href="#" class="btn btn-text hover">Label</a>
-
-        <a href="#" class="btn btn-text focus">Label</a>
-
-        <a href="#" class="btn btn-text pressed">Label</a>
-
-        <a href="#" class="btn btn-text disabled">Label</a>
-        ```
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-text" disabled>Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:text"
+            ```
 
 === "X-Large"
-    <div class="btn-grid-1">
-        <div class="grid-items">
-            <a href="#" class="btn btn-xlarge">Label</a>
+    <div data-theme>
+        <div class="btn-grid-1">
+            <div class="grid-items">
+                <button class="button button-tonal button-xl">Label</button>
+            </div>
         </div>
     </div>
-    <br>
     ## States
     === "Enabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-xlarge">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal button-xl">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal button-xl">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:large"
+            ```
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-xlarge hover">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal button-xl hover">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal button-xl hover">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:large"
+            ```
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-xlarge focus">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal button-xl focus">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal button-xl focus">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:large"
+            ```
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-xlarge pressed">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal button-xl pressed">Label</button>
+                </div>
             </div>
         </div>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal button-xl pressed">Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:large"
+            ```
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <a href="#" class="btn btn-xlarge disabled">Label</a>
+        <div data-theme>
+            <div class="btn-grid-1">
+                <div class="grid-items">
+                    <button class="button button-tonal button-xl" disabled>Label</button>
+                </div>
             </div>
         </div>
-    <br>
-    ## Code
-    === "CSS"
-        ``` css
-        --8<-- "components/sass/components/_buttons.scss:btn"
-        
-        --8<-- "components/sass/components/_buttons.scss:btnXlarge"
-        ```
-    === "HTML"
-        ``` html
-        <a href="#" class="btn btn-xlarge">Label</a>
+        ## Code
+        === "HTML"
+            ```html
+            <div data-theme>
+                <div class="btn-grid-1">
+                    <div class="grid-items">
+                        <button class="button button-tonal button-xl"disabled>Label</button>
+                    </div>
+                </div>
+            </div>
+            ```
+        === "CSS"
+            ```css
+            --8<-- "components/sass/components/_buttons.scss:large"
+            ```
 
-        <a href="#" class="btn btn-xlarge hover">Label</a>
+---
 
-        <a href="#" class="btn btn-xlarge focus">Label</a>
 
-        <a href="#" class="btn btn-xlarge pressed">Label</a>
-
-        <a href="#" class="btn btn-xlarge disabled">Label</a>
-        ```
