@@ -1,4 +1,3 @@
-
 [data-theme] {
   /* ------------------------------------------------------------
      Core color tokens (map FROM variables.scss)
@@ -113,6 +112,50 @@
   );
 
   /* ------------------------------------------------------------
+/* ------------------------------------------------------------
+     Input Component Tokens
+     ------------------------------------------------------------ */
+  --token-input-label-size: .75rem;
+  --token-input-label-weight: 600;
+
+
+  /* ------------------------------------------------------------
+     Radio tokens
+     ------------------------------------------------------------ */
+  --token-radio-size: 1rem;
+  --token-radio-radius: 50%;
+  
+  /* Custom radio parts */
+  --token-radio-outline-width: 0.0625rem;
+  --token-radio-outline-offset: -calc(var(--token-radio-outline-width)/2);
+  --token-radio-color: var(--token-primary);
+  --token-radio-label-color: var(--token-on-surface);
+  --token-radio-check-size: calc(0.625*var(--token-radio-size));
+  
+  /* Hover state */
+  --token-radio-outline-width-hover: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-hover: -calc(var(--token-radio-outline-width-hover)/2);
+
+  --token-radio-state-hover-strength: 0.3;
+  --token-radio-color-hover: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-radio-state-hover-strength) * 100%),
+    transparent
+  );
+  
+  /* Selected state*/
+  --token-radio-outline-width-selected: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-selected: -calc(var(--token-radio-outline-width-selected)/2);
+  --token-radio-color-selected: var(--token-primary);
+  
+  /* Disabled */
+  --token-radio-outline-width-disabled: var(--token-radio-outline-width);
+  --token-radio-outline-offset-disabled: var(--token-radio-outline-offset);
+  --token-radio-color-disabled: #6F6F6F;
+  --token-radio-bg-color-disabled: #DDDDDD;
+  --token-radio-label-color-disabled: #C6C6C6;
+    /* ------------------------------------------------------------
      Pagination Component Tokens
   ------------------------------------------------------------ */
 
@@ -193,4 +236,30 @@
   --token-input-supporting-font-size: 0.75rem;
   --token-input-supporting-gap: 8px;
   --token-input-width: 360px;
+  /* ------------------------------------------------------------
+    Checkbox Component Tokens
+  ------------------------------------------------------------ */
+
+  --token-checkbox-size: 1.125rem; /* 18px */
+  --token-checkbox-radius: 4px;
+  --token-checkbox-border-width: 2px;
+
+  /* Colors */
+  --token-checkbox-border: var(--token-outline);
+  --token-checkbox-bg: var(--token-surface);
+
+  --token-checkbox-checked-bg: var(--token-primary);
+  --token-checkbox-checkmark: var(--token-on-primary);
+
+  --token-checkbox-disabled-border: var(--token-outline-variant);
+
+  /* State layers */
+  --token-checkbox-hover-bg: var(--token-state-hover-layer);
+  --token-checkbox-focus-bg: var(--token-state-focus-layer);
+  --token-checkbox-pressed-bg: var(--token-state-pressed-layer);
+
+  /* Disabled */
+  --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
+
+
 }

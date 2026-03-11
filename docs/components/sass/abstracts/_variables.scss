@@ -34,6 +34,7 @@ $color-on-surface: #171D1E;
 $color-on-surface-variant: #464B4C;
 $color-outline: #7E7E7E;
 $color-outline-variant: #CCCCCC;
+$color-surface-container: #F0F0F0;
 $color-surface-container-high: #EBEBEB;
 $color-surface-container-highest: #E5E5E5;
 
@@ -65,14 +66,9 @@ $radio-color: $color-green;
 $radio-hovercolor: $color-darkgreen;
 $radio-disabled: #c6c6c6;
 $radio-disabled-stroke: gray;
-$radio-button-width: 26px;
-$radio-button-height: 26px;
+$radio-button-size: 2.125rem;
 
-$dropdown-hover-color: #CFE1E4;
-$dropdown-select-color: #A0C4C9;
-$dropdown-placeholder-color: $color-dark-grey;
-$drowpdown-border-color: $color-dark-grey;
-$dropdown-arrow-color: $color-dark-grey;
+$dropdown-divider-color: $color-old-grey;
 
 $tab-text-color: $color-darkgreen;
 $tab-underline-color: $color-darkgreen;
@@ -119,6 +115,22 @@ $pagination-button-border-default: .0625rem solid $color-outline-variant;
 $pagination-button-border-disabled: .0625rem solid $color-outline-variant;
 $pagination-button-size: 2rem;
 
+$chip-bg-hover: $color-surface-container;
+$chip-bg-selected: $color-surface-container-highest;
+$chip-bg-focused: $color-surface-container-high;
+$chip-border-color-disabled: $color-outline-variant;
+$chip-label-disabled: $color-outline-variant;
+$chip-gap: 0.5rem;
+$chip-height: 2rem;
+$chip-border-radius: 0.5rem;
+$chip-border: 0.0625rem solid $color-outline;
+$chip-icon-size: 1.125rem;
+$chip-avatar-size: 1.5rem;
+$chip-padding-default: 0.375rem 0.75rem;
+$chip-padding-avatar: 0.25rem;
+$chip-padding-icon: 0.5rem;
+
+
 $text-area-height: 122px;
 $text-area-width: 348px;
 $text-area-border-radius: 4px;
@@ -159,6 +171,7 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --color-on-surface-variant: #{$color-on-surface-variant};
   --color-outline: #{$color-outline};
   --color-outline-variant: #{$color-outline-variant};
+  --color-surface-container: #{$color-surface-container};
   --color-surface-container-high: #{$color-surface-container-high};
   --color-surface-container-highest: #{$color-surface-container-highest};
   
@@ -187,15 +200,10 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --radio-hovercolor: #{$radio-hovercolor};
   --radio-disabled: #{$radio-disabled};
   --radio-disabled-stroke: #{$radio-disabled-stroke};
-  --radio-button-width: #{$radio-button-width};
-  --radio-button-height: #{$radio-button-height};
+  --radio-button-size: #{$radio-button-size};
   
   // Dropdowns
-  --dropdown-hover-color: #{$dropdown-hover-color};
-  --dropdown-select-color: #{$dropdown-select-color};
-  --dropdown-placeholder-color: #{$dropdown-placeholder-color};
-  --drowpdown-border-color: #{$drowpdown-border-color};
-  --dropdown-arrow-color: #{$dropdown-arrow-color};
+  --dropdown-divider-color: #{$dropdown-divider-color};
   
   // Tabs
   --tab-text-color: #{$tab-text-color};
@@ -242,6 +250,22 @@ $bp-below-tablet: '(max-width: #{$screen-tablet - 1})';
   --pagination-button-bg-focused: #{$color-primary-fixed};
   --pagination-button-border-default: #{$pagination-button-border-default};
   --pagination-button-border-disabled: #{$pagination-button-border-disabled};  
+
+  --chip-bg-hover: #{$chip-bg-hover};
+  --chip-bg-selected: #{$chip-bg-selected};
+  --chip-bg-focused: #{$chip-bg-focused};
+  --chip-border-color-disabled: #{$chip-border-color-disabled};
+  --chip-label-disabled: #{$chip-label-disabled};
+  --chip-gap: #{$chip-gap};
+  --chip-height: #{$chip-height};
+  --chip-border-radius: #{$chip-border-radius};
+  --chip-border: #{$chip-border};
+  --chip-icon-size: #{$chip-icon-size};
+  --chip-avatar-size: #{$chip-avatar-size};
+  --chip-padding-default: #{$chip-padding-default};
+  --chip-padding-avatar: #{$chip-padding-avatar};
+  --chip-padding-icon: #{$chip-padding-icon};
+
   // Text area
   --text-area-height: #{$text-area-height};
   --text-area-width: #{$text-area-width};
