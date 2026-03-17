@@ -48,11 +48,7 @@
   --radio-disabled: #c6c6c6;
   --radio-disabled-stroke: gray;
   --radio-button-size: 2.125rem;
-  --dropdown-hover-color: #CFE1E4;
-  --dropdown-select-color: #A0C4C9;
-  --dropdown-placeholder-color: #989898;
-  --drowpdown-border-color: #989898;
-  --dropdown-arrow-color: #989898;
+  --dropdown-divider-color: #C6C6C6;
   --tab-text-color: #0D5761;
   --tab-underline-color: #0D5761;
   --tab-hover-color: #0D5761;
@@ -2152,6 +2148,7 @@ label {
   border: 0.0625rem solid #7E7E7E;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 .chip .label {
   color: #464B4C;
