@@ -110,7 +110,11 @@
   --token-primary: var(--color-green);
   --token-on-primary: var(--color-on-primary);
   --token-surface: var(--color-surface);
+  --token-surface-container: var(--color-surface-container);
+  --token-surface-container-high: var(--color-surface-container-high);
+  --token-surface-container-highest: var(--color-surface-container-highest);
   --token-on-surface: var(--color-on-surface);
+  --token-on-surface-variant: var(--color-on-surface-variant);
   --token-outline: var(--color-outline);
   --token-outline-variant: var(--color-outline-variant);
   --token-primary-container: var(--color-primary-container);
@@ -278,7 +282,17 @@
   --token-chip-avatar-size: 1.5rem;
   --token-chip-corners: var(--token-shape-corner-small);
   --token-chip-border-width: 0.0625rem;
+  --token-chip-color-label: var(--token-on-surface-variant);
+  --token-chip-color-label-disabled: var(--token-outline-variant);
   --token-chip-color-outline: var(--token-outline);
+  --token-chip-color-outline-disabled: var(--token-outline-variant);
+  --token-chip-color-bg: none;
+  --token-chip-color-bg-hovered: var(--token-surface-container);
+  --token-chip-color-bg-focused: var(--token-surface-container-high);
+  --token-chip-color-bg-selected: var(--token-surface-container-highest);
+  --token-chip-color-icon-secondary: var(--token-on-surface-variant);
+  --token-chip-color-icon-primary: var(--token-primary);
+  --token-chip-transition: 0.2s;
 }
 
 body {
@@ -2166,30 +2180,31 @@ label {
   gap: var(--token-chip-spacing);
   height: var(--token-chip-height);
   padding: var(--token-chip-padding-defaults);
+  background-color: var(--token-chip-color-bg);
   border-radius: var(--token-chip-corners);
   border: var(--token-chip-border-width) solid var(--token-chip-color-outline);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: var(--token-chip-transition);
+  transition: var(--token-chip-transition);
   cursor: pointer;
 }
 .chip .label {
-  color: #464B4C;
+  color: var(--token-chip-color-label);
 }
 .chip:hover, .chip.hover {
-  background-color: #F0F0F0;
+  background-color: var(--token-chip-color-bg-hovered);
 }
 .chip:focus, .chip.focus {
-  background-color: #EBEBEB;
+  background-color: var(--token-chip-color-bg-focused);
 }
 .chip:active, .chip.pressed {
-  background-color: #E5E5E5;
+  background-color: var(--token-chip-color-bg-selected);
 }
 .chip:disabled, .chip.disabled {
-  border-color: #CCCCCC;
+  border-color: var(--token-chip-color-outline-disabled);
   pointer-events: none;
 }
 .chip:disabled .label, .chip:disabled .icon, .chip.disabled .label, .chip.disabled .icon {
-  color: #CCCCCC;
+  color: var(--token-chip-color-label-disabled);
 }
 
 .chip-trailing {
@@ -2197,7 +2212,7 @@ label {
 }
 .chip-trailing .icon.-trailing {
   --md-icon-size: var(--token-chip-icon-size);
-  color: #464B4C;
+  color: var(--token-chip-color-icon-secondary);
 }
 
 .chip-leading {
@@ -2205,7 +2220,7 @@ label {
 }
 .chip-leading .icon.-leading {
   --md-icon-size: var(--token-chip-icon-size);
-  color: #006973;
+  color: var(--token-chip-color-icon-primary);
 }
 
 .chip-leading-trailing {
@@ -2213,11 +2228,11 @@ label {
 }
 .chip-leading-trailing .icon.-leading {
   --md-icon-size: var(--token-chip-icon-size);
-  color: #006973;
+  color: var(--token-chip-color-icon-primary);
 }
 .chip-leading-trailing .icon.-trailing {
   --md-icon-size: var(--token-chip-icon-size);
-  color: #464B4C;
+  color: var(--token-chip-color-icon-secondary);
 }
 
 .chip-avatar {
@@ -2250,7 +2265,7 @@ label {
 }
 .chip-avatar-trailing .icon.-trailing {
   --md-icon-size: var(--token-chip-icon-size);
-  color: #464B4C;
+  color: var(--token-chip-color-icon-secondary);
 }
 
 /* --------------------------------------------------------------------------

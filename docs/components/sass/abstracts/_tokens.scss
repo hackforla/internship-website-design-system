@@ -7,7 +7,11 @@
   --token-on-primary: var(--color-on-primary);
 
   --token-surface: var(--color-surface);
+  --token-surface-container: var(--color-surface-container);
+  --token-surface-container-high: var(--color-surface-container-high);
+  --token-surface-container-highest: var(--color-surface-container-highest);
   --token-on-surface: var(--color-on-surface);
+  --token-on-surface-variant: var(--color-on-surface-variant);
 
   --token-outline: var(--color-outline);
   --token-outline-variant: var(--color-outline-variant);
@@ -218,8 +222,20 @@
   --token-chip-avatar-size: 1.5rem;
 
   --token-chip-corners: var(--token-shape-corner-small);
-  --token-chip-border-width: 0.0625rem;
-  --token-chip-color-outline: var(--token-outline); //TODO: naming tokens for outline vs border
+  --token-chip-border-width: 0.0625rem;   //TODO: naming tokens for outline vs border
+
+  --token-chip-color-label: var(--token-on-surface-variant);
+  --token-chip-color-label-disabled: var(--token-outline-variant);
+  --token-chip-color-outline: var(--token-outline);   //TODO: naming tokens for outline vs border
+  --token-chip-color-outline-disabled: var(--token-outline-variant);
+  --token-chip-color-bg: none;
+  --token-chip-color-bg-hovered: var(--token-surface-container);
+  --token-chip-color-bg-focused: var(--token-surface-container-high);
+  --token-chip-color-bg-selected: var(--token-surface-container-highest);
+  --token-chip-color-icon-secondary: var(--token-on-surface-variant);
+  --token-chip-color-icon-primary: var(--token-primary);
+
+  --token-chip-transition: 0.2s;
 
 
 }

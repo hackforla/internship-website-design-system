@@ -4,13 +4,13 @@
 @mixin leading-icon {
   .icon.-leading {
     --md-icon-size: var(--token-chip-icon-size);
-    color: $color-primary;
+    color: var(--token-chip-color-icon-primary);
   }
 }
 @mixin trailing-icon {
   .icon.-trailing {
     --md-icon-size: var(--token-chip-icon-size);
-    color: $color-on-surface-variant;
+    color: var(--token-chip-color-icon-secondary)
   }
 }
 @mixin avatar-icon {
@@ -34,35 +34,36 @@
     gap: var(--token-chip-spacing);
     height: var(--token-chip-height);
     padding: var(--token-chip-padding-defaults);
+    background-color: var(--token-chip-color-bg);
     border-radius: var(--token-chip-corners);
     border: var(--token-chip-border-width) solid var(--token-chip-color-outline);
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: var(--token-chip-transition);
+    transition: var(--token-chip-transition);
     cursor: pointer;
     .label {
-      color: $color-on-surface-variant;
+      color: var(--token-chip-color-label);
     }
     &:hover,
     &.hover {
-      background-color: $chip-bg-hover;
+      background-color: var(--token-chip-color-bg-hovered);
     }
 
     &:focus,
     &.focus {
-      background-color: $chip-bg-focused;
+      background-color: var(--token-chip-color-bg-focused);
     }
 
     &:active,
     &.pressed {
-      background-color: $chip-bg-selected;
+      background-color: var(--token-chip-color-bg-selected);
     }
 
     &:disabled, 
     &.disabled {
-      border-color: $chip-border-color-disabled;
+      border-color: var(--token-chip-color-outline-disabled);
       pointer-events:none;
       .label, .icon {
-        color: $chip-label-disabled;
+        color: var(--token-chip-color-label-disabled)
       }
     }
 }
