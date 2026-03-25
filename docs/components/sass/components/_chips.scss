@@ -3,13 +3,13 @@
 
 @mixin leading-icon {
   .icon.-leading {
-    --md-icon-size: var(--chip-icon-size);
+    --md-icon-size: var(--token-chip-icon-size);
     color: $color-primary;
   }
 }
 @mixin trailing-icon {
   .icon.-trailing {
-    --md-icon-size: var(--chip-icon-size);
+    --md-icon-size: var(--token-chip-icon-size);
     color: $color-on-surface-variant;
   }
 }
@@ -21,9 +21,9 @@
    }
    
  .icon.-avatar{
-        --md-icon-size: var(--chip-avatar-size);
-        width: $chip-avatar-size;
-        height: $chip-avatar-size;
+        --md-icon-size: var(--token-chip-avatar-size);
+        width: var(--token-chip-avatar-size);
+        height: var(--token-chip-avatar-size);
   }
 }
 
@@ -34,8 +34,8 @@
     gap: var(--token-chip-spacing);
     height: var(--token-chip-height);
     padding: var(--token-chip-padding-defaults);
-    border-radius: $chip-border-radius;
-    border: $chip-border;
+    border-radius: var(--token-chip-corners);
+    border: var(--token-chip-border-width) solid var(--token-chip-color-outline);
     -webkit-transition: 0.2s;
     transition: 0.2s;
     cursor: pointer;

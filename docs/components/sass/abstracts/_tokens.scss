@@ -15,7 +15,8 @@
   --token-primary-container: var(--color-primary-container);
   --token-on-primary-container: var(--color-on-primary-container);
 
- 
+  --token-shape-corner-full: 50%;
+  --token-shape-corner-small: 0.5rem;
 
   --token-state-hover-strength: 0.20;
   --token-state-focus-strength: 0.40;
@@ -212,5 +213,13 @@
   --token-chip-padding-defaults: var(--token-spacing-xs) var(--token-spacing-md);
   --token-chip-padding-avatar: var(--token-spacing-xxs);
   --token-chip-padding-icon: var(--token-spacing-sm);
+
+  --token-chip-icon-size: 1.125rem;
+  --token-chip-avatar-size: 1.5rem;
+
+  --token-chip-corners: var(--token-shape-corner-small);
+  --token-chip-border-width: 0.0625rem;
+  --token-chip-color-outline: var(--token-outline); //TODO: naming tokens for outline vs border
+
 
 }
