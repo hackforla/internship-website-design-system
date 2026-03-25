@@ -27,7 +27,13 @@
   --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
   --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
   --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
-
+  /* ------------------------------------------------------------
+     Global Spacing
+     ------------------------------------------------------------ */
+  --token-spacing-xxs: 0.25rem;   // eg. avatar vertical/horizontal, dense areas
+  --token-spacing-xs: 0.375rem;   // eg. default vertical padding
+  --token-spacing-sm: 0.5rem;     // eg. horizontal padding with icons, item spacing
+  --token-spacing-md: 0.75rem;    // eg. default horizontal padding
 
   /* ------------------------------------------------------------
      State layers
@@ -197,6 +203,14 @@
 
   /* Disabled */
   --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
-
+  
+  /* ------------------------------------------------------------
+    Chips (Tags) Component Tokens
+  ------------------------------------------------------------ */
+  --token-chip-height: 2rem;
+  --token-chip-spacing: var(--token-spacing-sm);
+  --token-chip-padding-defaults: var(--token-spacing-xs) var(--token-spacing-md);
+  --token-chip-padding-avatar: var(--token-spacing-xxs);
+  --token-chip-padding-icon: var(--token-spacing-sm);
 
 }
