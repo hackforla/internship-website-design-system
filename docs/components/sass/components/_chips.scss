@@ -2,7 +2,7 @@
 @use '../abstracts/tokens';
 
 @mixin leading-icon {
-  .icon.-leading {
+  .-leading {
     --md-icon-size: var(--token-chip-icon-size);
     color: var(--token-chip-color-icon-primary);
   }
@@ -63,7 +63,7 @@
       border-color: var(--token-chip-color-outline-disabled);
       pointer-events:none;
       .label, .icon {
-        color: var(--token-chip-color-label-disabled);
+        color: var(--token-chip-color-label-disabled) !important;
       }
     }
 }

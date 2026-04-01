@@ -130,7 +130,7 @@
   --token-state-layer-opacity-pressed: 0.16;
   --token-state-layer-opacity-disabled: 0.12;
   --token-state-text-opacity-disabled: 0.38;
-  --token-button-filled-bg-hover: (in srgb, var(--token-button-filled-bg) 92%, white);
+  --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
   --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-fillecolor-mixd-bg) 88%, white);
   --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
   /* ------------------------------------------------------------
@@ -291,7 +291,6 @@
   --token-chip-color-outline: var(--token-outline);
   --token-chip-color-outline-disabled: var(--token-outline-variant);
   --token-chip-color-bg: none;
-  --token-chip-color-hovered: c
   --token-chip-color-bg-focused: var(--token-surface-container-high);
   --token-chip-color-bg-selected: var(--token-surface-container-highest);
   --token-chip-color-icon-secondary: var(--token-on-surface-variant);
@@ -2208,7 +2207,7 @@ label {
   pointer-events: none;
 }
 .chip:disabled .label, .chip:disabled .icon, .chip.disabled .label, .chip.disabled .icon {
-  color: var(--token-chip-color-label-disabled);
+  color: var(--token-chip-color-label-disabled) !important;
 }
 
 .chip-trailing {
@@ -2222,7 +2221,7 @@ label {
 .chip-leading {
   padding-left: var(--token-chip-padding-icon);
 }
-.chip-leading .icon.-leading {
+.chip-leading .-leading {
   --md-icon-size: var(--token-chip-icon-size);
   color: var(--token-chip-color-icon-primary);
 }
@@ -2230,7 +2229,7 @@ label {
 .chip-leading-trailing {
   padding-left: var(--token-chip-padding-icon);
 }
-.chip-leading-trailing .icon.-leading {
+.chip-leading-trailing .-leading {
   --md-icon-size: var(--token-chip-icon-size);
   color: var(--token-chip-color-icon-primary);
 }
