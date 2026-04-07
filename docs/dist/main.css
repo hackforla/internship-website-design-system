@@ -124,14 +124,13 @@
   --token-state-hover-strength: 0.20;
   --token-state-focus-strength: 0.40;
   --token-state-pressed-strength: 0.48;
-  --token-state-disabled-container-opacity: 0.12;
   --token-state-layer-opacity-hovered: 0.08;
   --token-state-layer-opacity-focused: 0.12;
   --token-state-layer-opacity-pressed: 0.16;
-  --token-state-layer-opacity-disabled: 0.12;
-  --token-state-text-opacity-disabled: 0.38;
+  --token-stroke-opacity-disabled: 0.12;
+  --token-content-opacity-disabled: 0.38;
   --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
-  --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-fillecolor-mixd-bg) 88%, white);
+  --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
   --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
   /* ------------------------------------------------------------
      Global Spacing
@@ -286,11 +285,34 @@
   --token-chip-avatar-size: 1.5rem;
   --token-chip-corners: var(--token-shape-corner-small);
   --token-chip-border-width: 0.0625rem;
-  --token-chip-color-label: var(--token-on-surface-variant);
-  --token-chip-color-label-disabled: var(--token-outline-variant);
-  --token-chip-color-outline: var(--token-outline);
-  --token-chip-color-outline-disabled: var(--token-outline-variant);
-  --token-chip-color-bg: none;
+  --token-chip-color-content: var(--token-on-surface-variant);
+  --token-chip-color-content-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-content-opacity-disabled) * 100%),
+    transparent
+  );
+  --token-chip-color-stroke: var(--token-outline);
+  --token-chip-color-state-layer: none;
+  --token-chip-color-state-layer-hovered: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-hovered) * 100%),
+    transparent
+  );
+  --token-chip-color-state-layer-focused: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-focused) * 100%),
+    transparent
+  );
+  --token-chip-color-state-layer-pressed: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-pressed) * 100%),
+    transparent
+  );
+  --token-chip-color-stroke-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-stroke-opacity-disabled) * 100%),
+    transparent
+  );
   --token-chip-color-bg-focused: var(--token-surface-container-high);
   --token-chip-color-bg-selected: var(--token-surface-container-highest);
   --token-chip-color-icon-secondary: var(--token-on-surface-variant);
@@ -2183,31 +2205,31 @@ label {
   gap: var(--token-chip-spacing);
   height: var(--token-chip-height);
   padding: var(--token-chip-padding-defaults);
-  background-color: var(--token-chip-color-bg);
+  background-color: var(--token-chip-color-state-layer);
   border-radius: var(--token-chip-corners);
-  border: var(--token-chip-border-width) solid var(--token-chip-color-outline);
+  border: var(--token-chip-border-width) solid var(--token-chip-color-stroke);
   -webkit-transition: var(--token-chip-transition);
   transition: var(--token-chip-transition);
   cursor: pointer;
 }
 .chip .label {
-  color: var(--token-chip-color-label);
+  color: var(--token-chip-color-content);
 }
 .chip:hover, .chip.hover {
-  background-color: var(--token-chip-color-bg-hovered);
+  background-color: var(--token-chip-color-state-layer-hovered);
 }
 .chip:focus, .chip.focus {
-  background-color: var(--token-chip-color-bg-focused);
+  background-color: var(--token-chip-color-state-layer-focused);
 }
 .chip:active, .chip.pressed {
-  background-color: var(--token-chip-color-bg-selected);
+  background-color: var(--token-chip-color-state-layer-pressed);
 }
 .chip:disabled, .chip.disabled {
-  border-color: var(--token-chip-color-outline-disabled);
+  border-color: var(--token-chip-color-stroke-disabled);
   pointer-events: none;
 }
 .chip:disabled .label, .chip:disabled .icon, .chip.disabled .label, .chip.disabled .icon {
-  color: var(--token-chip-color-label-disabled) !important;
+  color: var(--token-chip-color-content-disabled) !important;
 }
 
 .chip-trailing {

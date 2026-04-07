@@ -34,36 +34,36 @@
     gap: var(--token-chip-spacing);
     height: var(--token-chip-height);
     padding: var(--token-chip-padding-defaults);
-    background-color: var(--token-chip-color-bg);
+    background-color: var(--token-chip-color-state-layer);
     border-radius: var(--token-chip-corners);
-    border: var(--token-chip-border-width) solid var(--token-chip-color-outline);
+    border: var(--token-chip-border-width) solid var(--token-chip-color-stroke);
     -webkit-transition: var(--token-chip-transition);
     transition: var(--token-chip-transition);
     cursor: pointer;
     .label {
-      color: var(--token-chip-color-label);
+      color: var(--token-chip-color-content);
     }
     &:hover,
     &.hover {
-      background-color: var(--token-chip-color-bg-hovered);
+      background-color: var(--token-chip-color-state-layer-hovered);
     }
 
     &:focus,
     &.focus {
-      background-color: var(--token-chip-color-bg-focused);
+      background-color: var(--token-chip-color-state-layer-focused);
     }
 
     &:active,
     &.pressed {
-      background-color: var(--token-chip-color-bg-selected);
+      background-color: var(--token-chip-color-state-layer-pressed);
     }
 
     &:disabled, 
     &.disabled {
-      border-color: var(--token-chip-color-outline-disabled);
+      border-color: var(--token-chip-color-stroke-disabled);
       pointer-events:none;
       .label, .icon {
-        color: var(--token-chip-color-label-disabled) !important;
+        color: var(--token-chip-color-content-disabled) !important;
       }
     }
 }
