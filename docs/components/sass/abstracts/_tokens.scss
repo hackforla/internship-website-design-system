@@ -8,7 +8,11 @@
 
 
   --token-surface: var(--color-surface);
+  --token-surface-container: var(--color-surface-container);
+  --token-surface-container-high: var(--color-surface-container-high);
+  --token-surface-container-highest: var(--color-surface-container-highest);
   --token-on-surface: var(--color-on-surface);
+  --token-on-surface-variant: var(--color-on-surface-variant);
 
   --token-outline: var(--color-outline);
   --token-outline-variant: var(--color-outline-variant);
@@ -16,19 +20,30 @@
   --token-primary-container: var(--color-primary-container);
   --token-on-primary-container: var(--color-on-primary-container);
 
- 
+  --token-shape-corner-full: 50%;
+  --token-shape-corner-small: 0.5rem;
 
   --token-state-hover-strength: 0.20;
   --token-state-focus-strength: 0.40;
   --token-state-pressed-strength: 0.48;
 
-  --token-state-disabled-text-opacity: 0.38;
-  --token-state-disabled-container-opacity: 0.12;
+
+  --token-state-layer-opacity-hovered: 0.08;
+  --token-state-layer-opacity-focused: 0.12;
+  --token-state-layer-opacity-pressed: 0.16;
+  --token-stroke-opacity-disabled: 0.12;
+  --token-content-opacity-disabled: 0.38;
 
   --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
   --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
   --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
-
+  /* ------------------------------------------------------------
+     Global Spacing
+     ------------------------------------------------------------ */
+  --token-spacing-xxs: 0.25rem;   // eg. avatar vertical/horizontal, dense areas
+  --token-spacing-xs: 0.375rem;   // eg. default vertical padding
+  --token-spacing-sm: 0.5rem;     // eg. horizontal padding with icons, item spacing
+  --token-spacing-md: 0.75rem;    // eg. default horizontal padding
 
   /* ------------------------------------------------------------
      State layers
@@ -260,6 +275,63 @@
 
   /* Disabled */
   --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
+  
+  /* ------------------------------------------------------------
+    Chips (Tags) Component Tokens
+  ------------------------------------------------------------ */
+  --token-chip-height: 2rem;
+  --token-chip-spacing: var(--token-spacing-sm);
+  --token-chip-padding-defaults: var(--token-spacing-xs) var(--token-spacing-md);
+  --token-chip-padding-avatar: var(--token-spacing-xxs);
+  --token-chip-padding-icon: var(--token-spacing-sm);
+
+  --token-chip-icon-size: 1.125rem;
+  --token-chip-avatar-size: 1.5rem;
+
+  --token-chip-corners: var(--token-shape-corner-small);
+  --token-chip-border-width: 0.0625rem;   //TODO: naming tokens for outline vs border
+
+  --token-chip-color-content: var(--token-on-surface-variant);
+  --token-chip-color-content-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-content-opacity-disabled) * 100%),
+    transparent
+  );
+
+  --token-chip-color-stroke: var(--token-outline);   //TODO: naming tokens for outline vs border
+
+  --token-chip-color-state-layer: none;
+  --token-chip-color-state-layer-hovered: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-hovered) * 100%),
+    transparent
+  );
+
+  --token-chip-color-state-layer-focused: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-focused) * 100%),
+    transparent
+  );
+
+  --token-chip-color-state-layer-pressed: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-pressed) * 100%),
+    transparent
+  );
+
+  --token-chip-color-stroke-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-stroke-opacity-disabled) * 100%),
+    transparent
+  ); 
+   
+                                                
+  --token-chip-color-bg-focused: var(--token-surface-container-high);
+  --token-chip-color-bg-selected: var(--token-surface-container-highest);
+  --token-chip-color-icon-secondary: var(--token-on-surface-variant);
+  --token-chip-color-icon-primary: var(--token-primary);
+
+  --token-chip-transition: 0.2s;
 
 
 }

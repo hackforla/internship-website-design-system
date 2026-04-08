@@ -6,9 +6,9 @@ hide:
 # Chips
 ## Class
 === "Label Only"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
-            <div class="chip chip-label">
+            <div class="chip">
                 <span class="label">Label</span>
             </div>
         </div>
@@ -16,41 +16,41 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
-                <div class="chip chip-label">
+                <div class="chip">
                     <span class="label">Label</span>
                 </div>
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
-                <div class="chip chip-label hover">
+                <div class="chip hover">
                     <span class="label">Label</span>
                 </div>
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
-                <div class="chip chip-label focus">
+                <div class="chip focus">
                     <span class="label">Label</span>
                 </div>
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
-                <div class="chip chip-label pressed">
+                <div class="chip pressed">
                     <span class="label">Label</span>
                 </div>
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
-                <div class="chip chip-label disabled">
+                <div class="chip disabled">
                     <span class="label">Label</span>
                 </div>
             </div>
@@ -61,17 +61,16 @@ hide:
         ``` css
         --8<-- "components/sass/components/_chips.scss:chip"
 
-        --8<-- "components/sass/components/_chips.scss:chipLabel"
         ```
     === "HTML"
         ``` html
-            <div class="chip chip-label">
+            <div class="chip">
                 <span class="label">Label</span>
             </div>
         ```
 
 === "w/ Trailing Icon"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
             <div class="chip chip-trailing">
                 <span class="label">Label</span>
@@ -82,7 +81,7 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-trailing">
                     <span class="label">Label</span>
@@ -91,7 +90,7 @@ hide:
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-trailing hover">
                     <span class="label">Label</span>
@@ -100,7 +99,7 @@ hide:
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-trailing focus">
                     <span class="label">Label</span>
@@ -109,7 +108,7 @@ hide:
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-trailing pressed">
                     <span class="label">Label</span>
@@ -118,7 +117,7 @@ hide:
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-trailing disabled">
                     <span class="label">Label</span>
@@ -143,7 +142,7 @@ hide:
         ```
 
 === "w/ Leading Icon"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
             <div class="chip chip-leading">
                 :material-taxi:{.icon .-leading}
@@ -154,7 +153,7 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading">
                     :material-taxi:{.icon .-leading}
@@ -163,7 +162,7 @@ hide:
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading hover">
                     :material-taxi:{.icon .-leading}
@@ -172,7 +171,7 @@ hide:
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading focus">
                     :material-taxi:{.icon .-leading}
@@ -181,7 +180,7 @@ hide:
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading pressed">
                     :material-taxi:{.icon .-leading}
@@ -190,7 +189,7 @@ hide:
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading disabled">
                     :material-taxi:{.icon .-leading}
@@ -214,8 +213,8 @@ hide:
             </div>
         ```
 
-=== "w/ Trailing + Leading Icon"
-    <div class="btn-grid-1">
+=== "w/ Leading + Trailing Icon"
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
             <div class="chip chip-leading-trailing">
                 :material-taxi:{.icon .-leading}
@@ -227,7 +226,7 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading-trailing">
                     :material-taxi:{.icon .-leading}
@@ -237,7 +236,7 @@ hide:
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading-trailing hover">
                     :material-taxi:{.icon .-leading}
@@ -247,7 +246,7 @@ hide:
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading-trailing focus">
                     :material-taxi:{.icon .-leading}
@@ -257,7 +256,7 @@ hide:
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading-trailing pressed">
                     :material-taxi:{.icon .-leading}
@@ -267,7 +266,7 @@ hide:
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-leading-trailing disabled">
                     :material-taxi:{.icon .-leading}
@@ -282,7 +281,7 @@ hide:
         ``` css
         --8<-- "components/sass/components/_chips.scss:chip"
 
-        --8<-- "components/sass/components/_chips.scss:chipTrailingLeading"
+        --8<-- "components/sass/components/_chips.scss:chipLeadingTrailing"
         ```
     === "HTML"
         ``` html
@@ -294,7 +293,7 @@ hide:
         ```
 
 === "w/ Avatar"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
             <div class="chip chip-avatar">
                 <img src="" class="icon -avatar">
@@ -306,7 +305,7 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar">
                     <img src="" class="icon -avatar">
@@ -316,7 +315,7 @@ hide:
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar hover">
                     <img src="" class="icon -avatar">
@@ -326,7 +325,7 @@ hide:
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar focus">
                     <img src="" class="icon -avatar">
@@ -336,7 +335,7 @@ hide:
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar pressed">
                     <img class="icon -avatar">
@@ -346,7 +345,7 @@ hide:
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar disabled">
                     <img src="" class="icon -avatar">
@@ -372,7 +371,7 @@ hide:
                 </div>
         ```
 === "w/ Avatar + Trailing Icon"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items">
             <div class="chip chip-avatar-trailing">
                 <img src="" class="icon -avatar">
@@ -385,7 +384,7 @@ hide:
     <br>
     ## States
     === "Default"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing">
                     <img src="" class="icon -avatar">
@@ -396,7 +395,7 @@ hide:
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing hover">
                     <img src="" class="icon -avatar">
@@ -407,7 +406,7 @@ hide:
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing focus">
                     <img src="" class="icon -avatar">
@@ -418,7 +417,7 @@ hide:
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing pressed">
                     <img src="" class="icon -avatar">
@@ -429,7 +428,7 @@ hide:
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
+        <div class="btn-grid-1" data-theme>
             <div class="grid-items">
                 <div class="chip chip-avatar-trailing disabled">
                     <img src="" class="icon -avatar">
