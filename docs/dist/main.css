@@ -49,6 +49,7 @@
   --radio-disabled-stroke: gray;
   --radio-button-size: 2.125rem;
   --dropdown-divider-color: #C6C6C6;
+  --dropdown-divider-color: #C6C6C6;
   --tab-text-color: #0D5761;
   --tab-underline-color: #0D5761;
   --tab-hover-color: #0D5761;
@@ -110,19 +111,35 @@
   --token-primary: var(--color-green);
   --token-on-primary: var(--color-on-primary);
   --token-surface: var(--color-surface);
+  --token-surface-container: var(--color-surface-container);
+  --token-surface-container-high: var(--color-surface-container-high);
+  --token-surface-container-highest: var(--color-surface-container-highest);
   --token-on-surface: var(--color-on-surface);
+  --token-on-surface-variant: var(--color-on-surface-variant);
   --token-outline: var(--color-outline);
   --token-outline-variant: var(--color-outline-variant);
   --token-primary-container: var(--color-primary-container);
   --token-on-primary-container: var(--color-on-primary-container);
+  --token-shape-corner-full: 50%;
+  --token-shape-corner-small: 0.5rem;
   --token-state-hover-strength: 0.20;
   --token-state-focus-strength: 0.40;
   --token-state-pressed-strength: 0.48;
-  --token-state-disabled-text-opacity: 0.38;
-  --token-state-disabled-container-opacity: 0.12;
+  --token-state-layer-opacity-hovered: 0.08;
+  --token-state-layer-opacity-focused: 0.12;
+  --token-state-layer-opacity-pressed: 0.16;
+  --token-stroke-opacity-disabled: 0.12;
+  --token-content-opacity-disabled: 0.38;
   --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
   --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
   --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
+  /* ------------------------------------------------------------
+     Global Spacing
+     ------------------------------------------------------------ */
+  --token-spacing-xxs: 0.25rem;
+  --token-spacing-xs: 0.375rem;
+  --token-spacing-sm: 0.5rem;
+  --token-spacing-md: 0.75rem;
   /* ------------------------------------------------------------
      State layers
      ------------------------------------------------------------ */
@@ -304,6 +321,51 @@
   --token-checkbox-pressed-bg: var(--token-state-pressed-layer);
   /* Disabled */
   --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
+  /* ------------------------------------------------------------
+    Chips (Tags) Component Tokens
+  ------------------------------------------------------------ */
+  --token-chip-height: 2rem;
+  --token-chip-spacing: var(--token-spacing-sm);
+  --token-chip-padding-defaults: var(--token-spacing-xs) var(--token-spacing-md);
+  --token-chip-padding-avatar: var(--token-spacing-xxs);
+  --token-chip-padding-icon: var(--token-spacing-sm);
+  --token-chip-icon-size: 1.125rem;
+  --token-chip-avatar-size: 1.5rem;
+  --token-chip-corners: var(--token-shape-corner-small);
+  --token-chip-border-width: 0.0625rem;
+  --token-chip-color-content: var(--token-on-surface-variant);
+  --token-chip-color-content-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-content-opacity-disabled) * 100%),
+    transparent
+  );
+  --token-chip-color-stroke: var(--token-outline);
+  --token-chip-color-state-layer: none;
+  --token-chip-color-state-layer-hovered: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-hovered) * 100%),
+    transparent
+  );
+  --token-chip-color-state-layer-focused: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-focused) * 100%),
+    transparent
+  );
+  --token-chip-color-state-layer-pressed: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-pressed) * 100%),
+    transparent
+  );
+  --token-chip-color-stroke-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-stroke-opacity-disabled) * 100%),
+    transparent
+  );
+  --token-chip-color-bg-focused: var(--token-surface-container-high);
+  --token-chip-color-bg-selected: var(--token-surface-container-highest);
+  --token-chip-color-icon-secondary: var(--token-on-surface-variant);
+  --token-chip-color-icon-primary: var(--token-primary);
+  --token-chip-transition: 0.2s;
   /* ------------------------------------------------------------
    Dropdown / Menu Tokens
   ------------------------------------------------------------ */
@@ -1687,161 +1749,95 @@ label {
 .chip {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  height: 2rem;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 0.0625rem solid #7E7E7E;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  gap: var(--token-chip-spacing);
+  height: var(--token-chip-height);
+  padding: var(--token-chip-padding-defaults);
+  background-color: var(--token-chip-color-state-layer);
+  border-radius: var(--token-chip-corners);
+  border: var(--token-chip-border-width) solid var(--token-chip-color-stroke);
+  -webkit-transition: var(--token-chip-transition);
+  transition: var(--token-chip-transition);
+  cursor: pointer;
 }
 .chip .label {
-  color: #464B4C;
+  color: var(--token-chip-color-content);
 }
-
-.chip .icon.-leading {
-  --md-icon-size: var(--chip-icon-size);
-  color: #006973;
+.chip:hover, .chip.hover {
+  background-color: var(--token-chip-color-state-layer-hovered);
 }
-.chip .icon.-trailing {
-  --md-icon-size: var(--chip-icon-size);
-  color: #464B4C;
+.chip:focus, .chip.focus {
+  background-color: var(--token-chip-color-state-layer-focused);
 }
-.chip .icon.-avatar {
-  --md-icon-size: var(--chip-avatar-size);
-  width: 1.5rem;
-  height: 1.5rem;
+.chip:active, .chip.pressed {
+  background-color: var(--token-chip-color-state-layer-pressed);
 }
-.chip .icon.hidden {
-  display: none;
-}
-
-.chip-label:hover, .chip-label.hover {
-  background-color: #F0F0F0;
-}
-.chip-label:focus, .chip-label.focus {
-  background-color: #EBEBEB;
-}
-.chip-label:active, .chip-label.pressed {
-  background-color: #E5E5E5;
-}
-.chip-label:disabled, .chip-label.disabled {
-  border-color: #CCCCCC;
+.chip:disabled, .chip.disabled {
+  border-color: var(--token-chip-color-stroke-disabled);
   pointer-events: none;
 }
-.chip-label:disabled .label, .chip-label:disabled .icon, .chip-label.disabled .label, .chip-label.disabled .icon {
-  color: #CCCCCC;
+.chip:disabled .label, .chip:disabled .icon, .chip.disabled .label, .chip.disabled .icon {
+  color: var(--token-chip-color-content-disabled) !important;
 }
 
 .chip-trailing {
-  padding-right: 0.5rem;
+  padding-right: var(--token-chip-padding-icon);
 }
-.chip-trailing:hover, .chip-trailing.hover {
-  background-color: #F0F0F0;
-}
-.chip-trailing:focus, .chip-trailing.focus {
-  background-color: #EBEBEB;
-}
-.chip-trailing:active, .chip-trailing.pressed {
-  background-color: #E5E5E5;
-}
-.chip-trailing:disabled, .chip-trailing.disabled {
-  border-color: #CCCCCC;
-  pointer-events: none;
-}
-.chip-trailing:disabled .label, .chip-trailing:disabled .icon, .chip-trailing.disabled .label, .chip-trailing.disabled .icon {
-  color: #CCCCCC;
+.chip-trailing .icon.-trailing {
+  --md-icon-size: var(--token-chip-icon-size);
+  color: var(--token-chip-color-icon-secondary);
 }
 
 .chip-leading {
-  padding-left: 0.5rem;
+  padding-left: var(--token-chip-padding-icon);
 }
-.chip-leading:hover, .chip-leading.hover {
-  background-color: #F0F0F0;
-}
-.chip-leading:focus, .chip-leading.focus {
-  background-color: #EBEBEB;
-}
-.chip-leading:active, .chip-leading.pressed {
-  background-color: #E5E5E5;
-}
-.chip-leading:disabled, .chip-leading.disabled {
-  border-color: #CCCCCC;
-  pointer-events: none;
-}
-.chip-leading:disabled .label, .chip-leading:disabled .icon, .chip-leading.disabled .label, .chip-leading.disabled .icon {
-  color: #CCCCCC;
+.chip-leading .-leading {
+  --md-icon-size: var(--token-chip-icon-size);
+  color: var(--token-chip-color-icon-primary);
 }
 
 .chip-leading-trailing {
-  padding-left: 0.5rem;
+  padding-left: var(--token-chip-padding-icon);
 }
-.chip-leading-trailing:hover, .chip-leading-trailing.hover {
-  background-color: #F0F0F0;
+.chip-leading-trailing .-leading {
+  --md-icon-size: var(--token-chip-icon-size);
+  color: var(--token-chip-color-icon-primary);
 }
-.chip-leading-trailing:focus, .chip-leading-trailing.focus {
-  background-color: #EBEBEB;
-}
-.chip-leading-trailing:active, .chip-leading-trailing.pressed {
-  background-color: #E5E5E5;
-}
-.chip-leading-trailing:disabled, .chip-leading-trailing.disabled {
-  border-color: #CCCCCC;
-  pointer-events: none;
-}
-.chip-leading-trailing:disabled .label, .chip-leading-trailing:disabled .icon, .chip-leading-trailing.disabled .label, .chip-leading-trailing.disabled .icon {
-  color: #CCCCCC;
+.chip-leading-trailing .icon.-trailing {
+  --md-icon-size: var(--token-chip-icon-size);
+  color: var(--token-chip-color-icon-secondary);
 }
 
 .chip-avatar {
-  padding-top: 0.25rem;
-  padding-left: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: var(--token-chip-padding-avatar);
+  padding-left: var(--token-chip-padding-avatar);
+  padding-bottom: var(--token-chip-padding-avatar);
 }
 .chip-avatar img.icon.-avatar[src=""], .chip-avatar img.icon.-avatar:not([src]),
 .chip-avatar img[src]:not([src=""]) + .icon.-avatar {
   display: none;
 }
-.chip-avatar:hover, .chip-avatar.hover {
-  background-color: #F0F0F0;
-}
-.chip-avatar:focus, .chip-avatar.focus {
-  background-color: #EBEBEB;
-}
-.chip-avatar:active, .chip-avatar.pressed {
-  background-color: #E5E5E5;
-}
-.chip-avatar:disabled, .chip-avatar.disabled {
-  border-color: #CCCCCC;
-  pointer-events: none;
-}
-.chip-avatar:disabled .label, .chip-avatar:disabled .icon, .chip-avatar.disabled .label, .chip-avatar.disabled .icon {
-  color: #CCCCCC;
+.chip-avatar .icon.-avatar {
+  --md-icon-size: var(--token-chip-avatar-size);
+  width: var(--token-chip-avatar-size);
+  height: var(--token-chip-avatar-size);
 }
 
 .chip-avatar-trailing {
-  padding: 0.25rem;
-  padding-right: 0.5rem;
+  padding: var(--token-chip-padding-avatar);
+  padding-right: var(--token-chip-padding-icon);
 }
 .chip-avatar-trailing img.icon.-avatar[src=""], .chip-avatar-trailing img.icon.-avatar:not([src]),
 .chip-avatar-trailing img[src]:not([src=""]) + .icon.-avatar {
   display: none;
 }
-.chip-avatar-trailing:hover, .chip-avatar-trailing.hover {
-  background-color: #F0F0F0;
+.chip-avatar-trailing .icon.-avatar {
+  --md-icon-size: var(--token-chip-avatar-size);
+  width: var(--token-chip-avatar-size);
+  height: var(--token-chip-avatar-size);
 }
-.chip-avatar-trailing:focus, .chip-avatar-trailing.focus {
-  background-color: #EBEBEB;
-}
-.chip-avatar-trailing:active, .chip-avatar-trailing.pressed {
-  background-color: #E5E5E5;
-}
-.chip-avatar-trailing:disabled, .chip-avatar-trailing.disabled {
-  border-color: #CCCCCC;
-  pointer-events: none;
-}
-.chip-avatar-trailing:disabled .label, .chip-avatar-trailing:disabled .icon, .chip-avatar-trailing.disabled .label, .chip-avatar-trailing.disabled .icon {
-  color: #CCCCCC;
+.chip-avatar-trailing .icon.-trailing {
+  --md-icon-size: var(--token-chip-icon-size);
+  color: var(--token-chip-color-icon-secondary);
 }
 
 /* --------------------------------------------------------------------------
