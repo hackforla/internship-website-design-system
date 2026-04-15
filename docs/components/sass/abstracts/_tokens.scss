@@ -333,5 +333,16 @@
 
   --token-chip-transition: 0.2s;
 
+  /* ------------------------------------------------------------
+   Dropdown / Menu Tokens
+  ------------------------------------------------------------ */
+
+  --token-menu-container-color: var(--token-surface);
+  --token-menu-container-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  --token-menu-item-label-text: var(--token-on-surface);
+
+  --token-menu-item-hover-state-layer: var(--token-state-hover-layer);
+  --token-menu-item-focus-state-layer: var(--token-state-focus-layer);
 
 }

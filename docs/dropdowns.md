@@ -8,322 +8,579 @@ hide:
 ## Class
 
 === "Dropdown Base"
-    <div class="state-box">
-        <div class="dropdown-wrapper">
-            <div id="dropdown-preview" class="dropdown-field with-label">
-                <span class="dropdown-value"></span>
-                <span class="dropdown-arrow">▾</span>
+
+    <div data-theme>
+        <div class="state-box">
+            <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                <div class="input-field dropdown-field trailing-icon">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10"
+                                    stroke="currentColor"
+                                    stroke-width="2"/>
+                            <path d="M9 9L15 15M15 9L9 15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </div> 
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
             </div>
-            <label class="dropdown-label" for="dropdown-preview">Label Text</label>
         </div>
     </div>
 
-    <h2 class="no-toc">States</h2>
 
-    === "Unpopulated/Enabled"
+
+
+<h2 class="no-toc">States</h2>
+
+=== "Filled / Enabled"
+
+    <div data-theme>
         <div class="state-box">
-            <div class="dropdown-wrapper">
-                <div id="dropdown-ue" class="dropdown-field with-label">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
+            <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                <div class="input-field dropdown-field trailing-icon">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
                 </div>
-                <label class="dropdown-label" for="dropdown-ue">Label Text</label>
-            </div>
-        </div>
-
-        <h2 class="no-toc">Code</h2>
-
-        === "HTML"
-            ```html
-            <div class="dropdown-wrapper">
-                <div id="dropdown-ue" class="dropdown-field with-label">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-ue">Label Text</label>
-            </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
-
-    === "Populated/Enabled"
-        <div class="state-box">
-            <div class="dropdown-wrapper js-dropdown">
-                <div id="dropdown-enabled" class="dropdown-field enabled has-value">
-                    <span class="dropdown-value">Selected Item</span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                <label class="input-label">Label</label>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                    <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                    <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <h2 class="no-toc">Code</h2>
+    <h2 class="no-toc">Code</h2>
 
-        === "HTML"
-            ```html
-            <div class="state-box">
-                <div class="dropdown-wrapper js-dropdown">
-                    <div id="dropdown-enabled" class="dropdown-field enabled has-value">
-                        <span class="dropdown-value">Selected Item</span>
-                        <span class="dropdown-arrow">▾</span>
-                    </div>
-                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
-                    </ul>
-                </div>
+    === "HTML"
+        ```html
+        <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+            <div class="input-field dropdown-field trailing-icon">
+                <span class="dropdown-value">Select option</span>
+                <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
             </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
-
-    === "Unpopulated/Hovered"
-        <div class="state-box">
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uh" class="dropdown-field with-label is-hover">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uh">Label Text</label>
-            </div>
+            <label class="input-label">Label</label>
+            <ul class="dropdown-menu">
+                <li class="dropdown-option">Option 1</li>
+                <li class="dropdown-option">Option 2</li>
+                <li class="dropdown-option">Option 3</li>
+            </ul>
         </div>
+        ```
 
-        <h2 class="no-toc">Code</h2>
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
 
-        === "HTML"
-            ```html
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uh" class="dropdown-field with-label is-hover">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uh">Label Text</label>
-            </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
 
-    === "Populated/Hovered"
+=== "Outlined / Enabled"
+
+    <div data-theme>
         <div class="state-box">
-            <div class="dropdown-wrapper js-dropdown">
-                <div id="dropdown-enabled" class="dropdown-field hovered has-value">
-                    <span class="dropdown-value">Selected Item</span>
-                    <span class="dropdown-arrow">▾</span>
+            <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+                <div class="input-field dropdown-field trailing-icon">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
                 </div>
-                <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                <label class="input-label">Label</label>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                    <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                    <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <h2 class="no-toc">Code</h2>
+    <h2 class="no-toc">Code</h2>
 
-        === "HTML"
-            ```html
-            <div class="state-box">
-                <div class="dropdown-wrapper js-dropdown">
-                    <div id="dropdown-enabled" class="dropdown-field hovered has-value">
-                        <span class="dropdown-value">Selected Item</span>
-                        <span class="dropdown-arrow">▾</span>
-                    </div>
-                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
-                    </ul>
-                </div>
+    === "HTML"
+        ```html
+        <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+            <div class="input-field dropdown-field trailing-icon">
+                <span class="dropdown-value">Select option</span>
+                <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
             </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
-
-    === "Unpopulated/Focused"
-        <div class="state-box">
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uf" class="dropdown-field with-label is-focused">
-                    <span class="dropdown-value">Label Text</span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uf"></label>
-            </div>
+            <label class="input-label">Label</label>
+            <ul class="dropdown-menu">
+                <li class="dropdown-option">Option 1</li>
+                <li class="dropdown-option">Option 2</li>
+                <li class="dropdown-option">Option 3</li>
+            </ul>
         </div>
+        ```
 
-        <h2 class="no-toc">Code</h2>
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
 
-        === "HTML"
-            ```html
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uf" class="dropdown-field with-label is-focused">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uf">Label Text</label>
-            </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
 
-    === "Populated/Focused"
+=== "Filled / Hovered"
+
+    <div data-theme>
         <div class="state-box">
-            <div class="dropdown-wrapper js-dropdown">
-                <div id="dropdown-enabled" class="dropdown-field focused has-value">
-                    <span class="dropdown-value">Selected Item</span>
-                    <span class="dropdown-arrow">▾</span>
+            <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                <div class="input-field dropdown-field trailing-icon is-hover">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
                 </div>
-                <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                <label class="input-label">Label</label>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                    <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                    <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <h2 class="no-toc">Code</h2>
+    <h2 class="no-toc">Code</h2>
 
-        === "HTML"
-            ```html
+    === "HTML"
+        ```html
+        <div data-theme>
             <div class="state-box">
-                <div class="dropdown-wrapper js-dropdown">
-                    <div id="dropdown-enabled" class="dropdown-field focused has-value">
-                        <span class="dropdown-value">Selected Item</span>
-                        <span class="dropdown-arrow">▾</span>
+                <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                    <div class="input-field dropdown-field trailing-icon is-hover">
+                        <span class="dropdown-value">Select option</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10"
+                                    stroke="currentColor"
+                                    stroke-width="2"/>
+                            <path d="M9 9L15 15M15 9L9 15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
                     </div>
-                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                    <label class="input-label">Label</label>
                     <ul class="dropdown-menu">
-                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
                     </ul>
                 </div>
-            </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
-
-    === "Unpopulated/Error"
-        <div class="state-box">
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uee" class="dropdown-field error with-label">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uee">Label Text</label>
-                <div class="dropdown-helper error">Supporting text</div>
             </div>
         </div>
+        ```
 
-        <h2 class="no-toc">Code</h2>
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
 
-        === "HTML"
-            ```html
-            <div class="dropdown-wrapper">
-                <div id="dropdown-uee" class="dropdown-field error with-label">
-                    <span class="dropdown-value"></span>
-                    <span class="dropdown-arrow">▾</span>
-                </div>
-                <label class="dropdown-label" for="dropdown-uee">Label Text</label>
-                <div class="dropdown-helper error">Supporting text</div>
-            </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
 
-    === "Populated/Error"
+=== "Outlined / Hovered"
+
+    <div data-theme>
         <div class="state-box">
-                <div class="dropdown-wrapper js-dropdown">
-                    <div id="dropdown-enabled" class="dropdown-field error has-value">
-                        <span class="dropdown-value">Selected Item</span>
-                        <span class="dropdown-arrow">▾</span>
-                    </div>
-                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
-                    </ul>
-                    <div class="dropdown-helper error">Supporting text</div>
+            <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+                <div class="input-field dropdown-field trailing-icon is-hover">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
                 </div>
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
+            </div>
         </div>
+    </div>
 
+    <h2 class="no-toc">Code</h2>
 
-        <h2 class="no-toc">Code</h2>
-
-        === "HTML"
-            ```html
+    === "HTML"
+        ```html
+        <div data-theme>
             <div class="state-box">
-                <div class="dropdown-wrapper js-dropdown">
-                    <div id="dropdown-enabled" class="dropdown-field error has-value">
-                        <span class="dropdown-value">Selected Item</span>
-                        <span class="dropdown-arrow">▾</span>
+                <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+                    <div class="input-field dropdown-field trailing-icon is-hover">
+                        <span class="dropdown-value">Select option</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10"
+                                    stroke="currentColor"
+                                    stroke-width="2"/>
+                            <path d="M9 9L15 15M15 9L9 15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
                     </div>
-                    <label class="dropdown-label" for="dropdown-enabled">Label text</label>
+                    <label class="input-label">Label</label>
                     <ul class="dropdown-menu">
-                        <li class="dropdown-option" data-value="Option 1">Option 1</li>
-                        <li class="dropdown-option" data-value="Option 2">Option 2</li>
-                        <li class="dropdown-option" data-value="Option 3">Option 3</li>
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
                     </ul>
                 </div>
             </div>
-            ```
-        === "CSS"
-            ```css
-            --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
-            ```
-        === "JS"
-            ```js
-            --8<-- "javascript/dropdown.js:dropdown-js"
-            ```
+        </div>
+        ```
+
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
+
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
+
+=== "Filled / Focused"
+
+    <div data-theme>
+        <div class="state-box">
+            <div class="dropdown-wrapper input-wrapper input-filled trailing-icon open">
+                <div class="input-field dropdown-field trailing-icon is-focus">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
+                </div>
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="no-toc">Code</h2>
+
+    === "HTML"
+        ```html
+        <div data-theme>
+            <div class="state-box">
+                <div class="dropdown-wrapper input-wrapper input-filled trailing-icon open">
+                    <div class="input-field dropdown-field trailing-icon is-focus">
+                        <span class="dropdown-value">Select option</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10"
+                                    stroke="currentColor"
+                                    stroke-width="2"/>
+                            <path d="M9 9L15 15M15 9L9 15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    </div>
+                    <label class="input-label">Label</label>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        ```
+
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
+
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
+
+=== "Outlined / Focused"
+
+    <div data-theme>
+        <div class="state-box">
+            <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon open">
+                <div class="input-field dropdown-field trailing-icon is-focus">
+                    <span class="dropdown-value">Selected Item</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10"
+                                stroke="currentColor"
+                                stroke-width="2"/>
+                        <path d="M9 9L15 15M15 9L9 15"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"/>
+                    </svg>
+                </span>
+                </div>
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option is-selected">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="no-toc">Code</h2>
+
+    === "HTML"
+        ```html
+        <div data-theme>
+            <div class="state-box">
+                <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon open">
+                    <div class="input-field dropdown-field trailing-icon is-focus">
+                        <span class="dropdown-value">Selected Item</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10"
+                                    stroke="currentColor"
+                                    stroke-width="2"/>
+                            <path d="M9 9L15 15M15 9L9 15"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    </div>
+                    <label class="input-label">Label</label>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-option is-selected">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        ```
+
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
+
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
+
+=== "Filled / Error"
+
+    <div data-theme>
+        <div class="state-box">
+            <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                <div class="input-field dropdown-field trailing-icon error">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                            <rect x="11" y="6" width="2" height="8" fill="#fff" rx="1"/>
+                            <circle cx="12" cy="17" r="1.2" fill="#fff"/>
+                        </svg>
+                    </span>
+                </div>
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="no-toc">Code</h2>
+
+    === "HTML"
+        ```html
+        <div data-theme>
+            <div class="state-box">
+                <div class="dropdown-wrapper input-wrapper input-filled trailing-icon">
+                    <div class="input-field dropdown-field trailing-icon error">
+                        <span class="dropdown-value">Select option</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                                <rect x="11" y="6" width="2" height="8" fill="#fff" rx="1"/>
+                                <circle cx="12" cy="17" r="1.2" fill="#fff"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <label class="input-label">Label</label>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        ```
+
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
+
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
+
+=== "Outlined / Error"
+
+    <div data-theme>
+        <div class="state-box">
+            <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+                <div class="input-field dropdown-field trailing-icon error">
+                    <span class="dropdown-value">Select option</span>
+                    <span class="input-icon trailing" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                            <rect x="11" y="6" width="2" height="8" fill="#fff" rx="1"/>
+                            <circle cx="12" cy="17" r="1.2" fill="#fff"/>
+                        </svg>
+                    </span>
+                </div>
+                <label class="input-label">Label</label>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-option">Option 1</li>
+                    <li class="dropdown-option">Option 2</li>
+                    <li class="dropdown-option">Option 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="no-toc">Code</h2>
+
+    === "HTML"
+        ```html
+        <div data-theme>
+            <div class="state-box">
+                <div class="dropdown-wrapper input-wrapper input-outlined trailing-icon">
+                    <div class="input-field dropdown-field trailing-icon error">
+                        <span class="dropdown-value">Select option</span>
+                        <span class="input-icon trailing" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                                <rect x="11" y="6" width="2" height="8" fill="#fff" rx="1"/>
+                                <circle cx="12" cy="17" r="1.2" fill="#fff"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <label class="input-label">Label</label>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-option">Option 1</li>
+                        <li class="dropdown-option">Option 2</li>
+                        <li class="dropdown-option">Option 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        ```
+
+    === "CSS"
+        ```css
+        --8<-- "components/sass/components/_dropdowns.scss:dropdown-base"
+        ```
+
+    === "JS"
+        ```js
+        --8<-- "javascript/dropdown.js:dropdown-js"
+        ```
