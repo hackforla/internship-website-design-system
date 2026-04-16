@@ -6,12 +6,12 @@
   border-bottom: 2px solid $color-old-green;
 }
 
-.panel {
+.description {
   font-size: 16px;
   padding: 0px 12px 16px;
 }
 
-.accordion-button {
+.summary {
   font-size: 24px;
   color: $text-color;
   cursor: pointer;
@@ -34,7 +34,7 @@
   }
 }
 
-.accordion .panel {
+.accordion .description {
   padding: 0px 20px 24px;
   display: none;
   overflow: hidden;
@@ -45,12 +45,12 @@
   } 
 }
 
-.accordion-button.active + .panel {
+.accordion-button.active + .description {
   display: block;
   text-align: left;
 }
 
-.accordion .accordion-button {
+.accordion .summary {
   &.active {
     margin-bottom: 16px;
   }
@@ -76,14 +76,14 @@
 }
 
 .accordion.mobile {
-  & .accordion-button{
+  & .summary{
     font-size: 20px;
     height: 44px;
     padding: 16px 12px 0px;
     margin-bottom: 16px;
   }
 
-  .panel {
+  .description {
     font-size: 16px;
     padding: 0px 12px 16px;
   }

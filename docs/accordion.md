@@ -7,52 +7,46 @@ hide:
 The Desktop Accordion Component for FAQ sections organizes frequently asked questions into collapsible sections. Each section to reveal the answer when clicked, providing users with an efficient way to access information without overwhelming the interface.
 ## Class
 === "FAQ/Desktop"
-    <div class="btn-grid-1">
+    <div class="btn-grid-1" data-theme>
         <div class="grid-items"> 
-            <div class="accordion">
-                <button class="accordion-button">
-                    <span class='accordion-title'>Accordion Title</span>
-                    :material-chevron-up:{ .open }
-                    :material-chevron-down:{ .close }
+            <details class="accordion">
+                <summary class="summary">
+                    <span class='title'>Accordion Title</span>
+                    :material-chevron-up:{.icon .-open }
+                    :material-chevron-down:{.icon .-close }
                 </button>
-                <div class="panel">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>    
         </div>
     </div>
     <br>
     # **States**
     === "Collapsed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <div class="accordion">
-                    <button class="accordion-button">
-                        <span class='accordion-title'>Accordion Title</span>
-                        :material-chevron-up:{ .open }
-                        :material-chevron-down:{ .close }
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="btn-grid-1" data-theme>
+        <div class="grid-items"> 
+            <details class="accordion">
+                <summary class="summary">
+                    <span class='title'>Accordion Title</span>
+                    :material-chevron-up:{.icon .-open }
+                    :material-chevron-down:{.icon .-close }
+                </button>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>    
         </div>
+    </div>
     === "Expanded"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <div class="accordion">
-                    <button class="accordion-button active">
-                        <span class='accordion-title'>Accordion Title</span>
-                        :material-chevron-up:{ .open }
-                        :material-chevron-down:{ .close }
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="btn-grid-1" data-theme>
+        <div class="grid-items"> 
+            <details class="accordion" open>
+                <summary class="summary active">
+                    <span class='title'>Accordion Title</span>
+                    :material-chevron-up:{.icon .-open }
+                    :material-chevron-down:{.icon .-close }
+                </button>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>    
         </div>
+    </div>
     <br>
     # **Code**
     === "CSS"
@@ -64,64 +58,61 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
     === "HTML"
 
         ``` html
-        <div class="accordion">
-            <button class="accordion-button">
-                <span class='accordion-title'>Accordion Title</span>
-                :material-chevron-up:{ .open }
-                :material-chevron-down:{ .close }
-            </button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
+        <div class="btn-grid-1" data-theme>
+        <div class="grid-items"> 
+            <details class="accordion">
+                <summary class="summary">
+                    <span class='title'>Accordion Title</span>
+                    :material-chevron-up:{.icon .-open }
+                    :material-chevron-down:{.icon .-close }
+                </button>
+                <p class="description">Lorem ipsum dolor sit amet...</p>
+            </details>    
         </div>
+    </div>
         ```
 === "FAQ/Mobile"
     <div class="btn-grid-1">
         <div class="grid-items"> 
-            <div class="accordion mobile">
-                    <button class="accordion-button">
-                        <span class='accordion-title'>Accordion Title</span>
-                        :material-chevron-up:{ .open }
-                        :material-chevron-down:{ .close }
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
+            <details class="accordion mobile">
+                <summary class="summary">
+                    <span class='accordion-title'>Accordion Title</span>
+                    :material-chevron-up:{ .open }
+                    :material-chevron-down:{ .close }
+                </summary>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
         </div>
     </div>
     <br>
     # **States**
     === "Collapsed"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <div class="accordion mobile">
-                    <button class="accordion-button">
-                        <span class='accordion-title'>Accordion Title</span>
-                        :material-chevron-up:{ .open }
-                        :material-chevron-down:{ .close }
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="btn-grid-1">
+        <div class="grid-items"> 
+            <details class="accordion mobile">
+                <summary class="summary">
+                    <span class='accordion-title'>Accordion Title</span>
+                    :material-chevron-up:{ .open }
+                    :material-chevron-down:{ .close }
+                </summary>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
         </div>
+    </div>
+    <br>
     === "Expanded"
-        <div class="btn-grid-1">
-            <div class="grid-items">
-                <div class="accordion mobile">
-                    <button class="accordion-button active">
-                        <span class='accordion-title'>Accordion Title</span>
-                        :material-chevron-up:{ .open }
-                        :material-chevron-down:{ .close }
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="btn-grid-1">
+        <div class="grid-items"> 
+            <details class="accordion mobile" open>
+                <summary class="summary active">
+                    <span class='accordion-title'>Accordion Title</span>
+                    :material-chevron-up:{ .open }
+                    :material-chevron-down:{ .close }
+                </summary>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </details>
         </div>
+    </div>
     <br>
     === "CSS"
 
@@ -132,14 +123,13 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
     === "HTML"
 
         ``` html
-        <div class="accordion">
-            <button class="accordion-button">
+        <details class="accordion mobile">
+            <summary class="summary">
                 <span class='accordion-title'>Accordion Title</span>
                 :material-chevron-up:{ .open }
                 :material-chevron-down:{ .close }
-            </button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet...</p>
-            </div>
-        </div>
+            </summary>
+            <p class="description">Lorem ipsum dolor sit amet...</p>
+        </details>
+
         ```
