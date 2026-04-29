@@ -1,0 +1,348 @@
+[data-theme] {
+  /* ------------------------------------------------------------
+     Core color tokens (map FROM variables.scss)
+     ------------------------------------------------------------ */
+
+  --token-primary: var(--color-green);
+  --token-on-primary: var(--color-on-primary);
+
+
+  --token-surface: var(--color-surface);
+  --token-surface-container: var(--color-surface-container);
+  --token-surface-container-high: var(--color-surface-container-high);
+  --token-surface-container-highest: var(--color-surface-container-highest);
+  --token-on-surface: var(--color-on-surface);
+  --token-on-surface-variant: var(--color-on-surface-variant);
+
+  --token-outline: var(--color-outline);
+  --token-outline-variant: var(--color-outline-variant);
+
+  --token-primary-container: var(--color-primary-container);
+  --token-on-primary-container: var(--color-on-primary-container);
+
+  --token-shape-corner-full: 50%;
+  --token-shape-corner-small: 0.5rem;
+
+  --token-state-hover-strength: 0.20;
+  --token-state-focus-strength: 0.40;
+  --token-state-pressed-strength: 0.48;
+
+
+  --token-state-layer-opacity-hovered: 0.08;
+  --token-state-layer-opacity-focused: 0.12;
+  --token-state-layer-opacity-pressed: 0.16;
+  --token-stroke-opacity-disabled: 0.12;
+  --token-content-opacity-disabled: 0.38;
+
+  --token-button-filled-bg-hover: color-mix(in srgb, var(--token-button-filled-bg) 92%, white);
+  --token-button-filled-bg-focus: color-mix(in srgb, var(--token-button-filled-bg) 88%, white);
+  --token-button-filled-bg-pressed: color-mix(in srgb, var(--token-button-filled-bg) 84%, white);
+  /* ------------------------------------------------------------
+     Global Spacing
+     ------------------------------------------------------------ */
+  --token-spacing-xxs: 0.25rem;   // eg. avatar vertical/horizontal, dense areas
+  --token-spacing-xs: 0.375rem;   // eg. default vertical padding
+  --token-spacing-sm: 0.5rem;     // eg. horizontal padding with icons, item spacing
+  --token-spacing-md: 0.75rem;    // eg. default horizontal padding
+
+  /* ------------------------------------------------------------
+     State layers
+     ------------------------------------------------------------ */
+  
+
+  --token-state-hover-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-hover-strength) * 100%),
+    transparent
+  );
+
+  /* Filled button container variants */
+  --button-filled-bg-hover: color-mix(
+    in srgb,
+    var(--button-filled-bg) 92%,
+    white
+  );
+
+  --button-filled-bg-pressed: color-mix(
+    in srgb,
+    var(--button-filled-bg) 88%,
+    black
+  );
+
+
+  --token-state-focus-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-focus-strength) * 100%),
+    transparent
+  );
+
+  --token-state-pressed-layer: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-state-pressed-strength) * 100%),
+    transparent
+  );
+
+  /* ------------------------------------------------------------
+     Button Component Tokens
+     ------------------------------------------------------------ */
+
+  --token-button-radius: 9999px;
+
+  /* Filled */
+  --token-button-filled-bg: var(--token-primary);
+  --token-button-filled-text: var(--token-on-primary);
+
+  /* Outline */
+  --token-button-outline-border: var(--token-outline);
+  --token-button-outline-text: var(--token-primary);
+
+  /* Tonal */
+  --token-button-tonal-bg: color-mix(
+  in srgb,
+  var(--color-primary) 12%,
+  var(--color-surface)
+);
+
+  --token-button-tonal-text: var(--token-on-primary-container);
+
+  /* Text */
+  --token-button-text-color: var(--token-primary);
+
+  /* Disabled */
+  --token-button-disabled-text: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-text-opacity) * 100%),
+    transparent
+  );
+
+  --token-button-disabled-bg: color-mix(
+    in srgb,
+    var(--token-on-surface)
+      calc(var(--token-state-disabled-container-opacity) * 100%),
+    transparent
+  );
+
+  /* ------------------------------------------------------------
+/* ------------------------------------------------------------
+     Input Component Tokens
+     ------------------------------------------------------------ */
+  --token-input-label-size: .75rem;
+  --token-input-label-weight: 600;
+
+
+  /* ------------------------------------------------------------
+     Radio tokens
+     ------------------------------------------------------------ */
+  --token-radio-size: 1rem;
+  --token-radio-radius: 50%;
+  
+  /* Custom radio parts */
+  --token-radio-outline-width: 0.0625rem;
+  --token-radio-outline-offset: -calc(var(--token-radio-outline-width)/2);
+  --token-radio-color: var(--token-primary);
+  --token-radio-label-color: var(--token-on-surface);
+  --token-radio-check-size: calc(0.625*var(--token-radio-size));
+  
+  /* Hover state */
+  --token-radio-outline-width-hover: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-hover: -calc(var(--token-radio-outline-width-hover)/2);
+
+  --token-radio-state-hover-strength: 0.3;
+  --token-radio-color-hover: color-mix(
+    in srgb,
+    var(--token-primary)
+      calc(var(--token-radio-state-hover-strength) * 100%),
+    transparent
+  );
+  
+  /* Selected state*/
+  --token-radio-outline-width-selected: calc(2*var(--token-radio-outline-width));
+  --token-radio-outline-offset-selected: -calc(var(--token-radio-outline-width-selected)/2);
+  --token-radio-color-selected: var(--token-primary);
+  
+  /* Disabled */
+  --token-radio-outline-width-disabled: var(--token-radio-outline-width);
+  --token-radio-outline-offset-disabled: var(--token-radio-outline-offset);
+  --token-radio-color-disabled: #6F6F6F;
+  --token-radio-bg-color-disabled: #DDDDDD;
+  --token-radio-label-color-disabled: #C6C6C6;
+    /* ------------------------------------------------------------
+     Pagination Component Tokens
+  ------------------------------------------------------------ */
+
+  --token-pagination-button-size: 2.5rem;
+  --token-pagination-icon-size: 1rem;
+
+  /* Colors */
+  --token-pagination-icon-default: var(--token-on-surface);
+  --token-pagination-icon-active: var(--token-on-primary);
+  --token-pagination-icon-disabled: var(--token-button-disabled-text);
+
+  /* Backgrounds */
+  --token-pagination-bg-hover: var(--token-state-hover-layer);
+  --token-pagination-bg-focus: var(--token-state-focus-layer);
+  --token-pagination-bg-selected: var(--token-primary);
+
+  /* Borders (for ctrl buttons) */
+  --token-pagination-border-default: 1px solid var(--token-outline);
+  --token-pagination-border-disabled: 1px solid var(--token-outline-variant);
+
+  /* ------------------------------------------------------------
+     Input Field Component Tokens
+  ------------------------------------------------------------ */
+
+  --token-input-width: var(--input-field-box-width);
+  --token-input-height: 56px;
+  --token-input-radius: var(--input-field-border-radius);
+
+  --token-input-text-color: var(--color-on-surface);
+  --token-input-text-disabled: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+
+  --token-input-label-color: var(--color-on-surface-variant);
+  --token-input-label-color-focus: var(--color-primary);
+  --token-input-label-color-error: var(--input-border-color-error);
+  --token-input-label-color-disabled: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+
+  --token-input-supporting-color: var(--color-on-surface-variant);
+  --token-input-supporting-color-error: var(--input-border-color-error);
+  --token-input-supporting-color-disabled: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+
+  --token-input-icon-color: var(--color-on-surface-variant);
+  --token-input-icon-color-error: var(--input-border-color-error);
+  --token-input-icon-color-disabled: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+
+  --token-input-filled-background: color-mix(in srgb, var(--color-primary) 8%, white);
+  --token-input-filled-background-disabled: color-mix(in srgb, var(--color-on-surface) 12%, transparent);
+
+  --token-input-active-indicator-color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+  --token-input-active-indicator-hover: var(--color-on-surface);
+  --token-input-active-indicator-focus: var(--color-primary);
+  --token-input-active-indicator-error: var(--input-border-color-error);
+  --token-input-active-indicator-disabled: color-mix(in srgb, var(--color-on-surface) 12%, transparent);
+
+  --token-input-active-indicator-thickness: 1px;
+  --token-input-active-indicator-thickness-focus: 2px;
+
+  --token-input-outline-color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+  --token-input-outline-hover: var(--color-on-surface);
+  --token-input-outline-focus: var(--color-primary);
+  --token-input-outline-error: var(--input-border-color-error);
+  --token-input-filled-background-hover: color-mix(in srgb, var(--color-primary) 16%, white);
+  --token-input-outline-disabled: color-mix(in srgb, var(--color-on-surface) 12%, transparent);
+
+  --token-input-outline-width: 1px;
+  --token-input-outline-width-focus: 2px;
+
+  --token-input-padding-x: 16px;
+  --token-input-padding-top: 18px;
+  --token-input-padding-bottom: 10px;
+
+  --token-input-icon-size: 24px;
+  --token-input-icon-offset: 12px;
+  --token-input-icon-gap: 16px;
+
+  --token-input-label-font-size: 0.875rem;
+  --token-input-label-font-size-floating: 0.75rem;
+
+  --token-input-supporting-font-size: 0.75rem;
+  --token-input-supporting-gap: 8px;
+  --token-input-width: 360px;
+  /* ------------------------------------------------------------
+    Checkbox Component Tokens
+  ------------------------------------------------------------ */
+
+  --token-checkbox-size: 1.125rem; /* 18px */
+  --token-checkbox-radius: 4px;
+  --token-checkbox-border-width: 2px;
+
+  /* Colors */
+  --token-checkbox-border: var(--token-outline);
+  --token-checkbox-bg: var(--token-surface);
+
+  --token-checkbox-checked-bg: var(--token-primary);
+  --token-checkbox-checkmark: var(--token-on-primary);
+
+  --token-checkbox-disabled-border: var(--token-outline-variant);
+
+  /* State layers */
+  --token-checkbox-hover-bg: var(--token-state-hover-layer);
+  --token-checkbox-focus-bg: var(--token-state-focus-layer);
+  --token-checkbox-pressed-bg: var(--token-state-pressed-layer);
+
+  /* Disabled */
+  --token-checkbox-disabled-opacity: var(--token-state-disabled-text-opacity);
+  
+  /* ------------------------------------------------------------
+    Chips (Tags) Component Tokens
+  ------------------------------------------------------------ */
+  --token-chip-height: 2rem;
+  --token-chip-spacing: var(--token-spacing-sm);
+  --token-chip-padding-defaults: var(--token-spacing-xs) var(--token-spacing-md);
+  --token-chip-padding-avatar: var(--token-spacing-xxs);
+  --token-chip-padding-icon: var(--token-spacing-sm);
+
+  --token-chip-icon-size: 1.125rem;
+  --token-chip-avatar-size: 1.5rem;
+
+  --token-chip-corners: var(--token-shape-corner-small);
+  --token-chip-border-width: 0.0625rem;   //TODO: naming tokens for outline vs border
+
+  --token-chip-color-content: var(--token-on-surface-variant);
+  --token-chip-color-content-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-content-opacity-disabled) * 100%),
+    transparent
+  );
+
+  --token-chip-color-stroke: var(--token-outline);   //TODO: naming tokens for outline vs border
+
+  --token-chip-color-state-layer: none;
+  --token-chip-color-state-layer-hovered: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-hovered) * 100%),
+    transparent
+  );
+
+  --token-chip-color-state-layer-focused: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-focused) * 100%),
+    transparent
+  );
+
+  --token-chip-color-state-layer-pressed: color-mix(
+    in srgb,
+    var(--token-on-surface-variant) calc(var(--token-state-layer-opacity-pressed) * 100%),
+    transparent
+  );
+
+  --token-chip-color-stroke-disabled: color-mix(
+    in srgb,
+    var(--token-on-surface) calc(var(--token-stroke-opacity-disabled) * 100%),
+    transparent
+  ); 
+   
+                                                
+  --token-chip-color-bg-focused: var(--token-surface-container-high);
+  --token-chip-color-bg-selected: var(--token-surface-container-highest);
+  --token-chip-color-icon-secondary: var(--token-on-surface-variant);
+  --token-chip-color-icon-primary: var(--token-primary);
+
+  --token-chip-transition: 0.2s;
+
+  /* ------------------------------------------------------------
+   Dropdown / Menu Tokens
+  ------------------------------------------------------------ */
+
+  --token-menu-container-color: var(--token-surface);
+  --token-menu-container-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  --token-menu-item-label-text: var(--token-on-surface);
+
+  --token-menu-item-hover-state-layer: var(--token-state-hover-layer);
+  --token-menu-item-focus-state-layer: var(--token-state-focus-layer);
+
+}

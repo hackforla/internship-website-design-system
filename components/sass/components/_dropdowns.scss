@@ -1,0 +1,133 @@
+@use '../abstracts/tokens';
+
+/* --8<-- [start:dropdown-base] */
+
+[data-theme] {
+
+  /* ================= WRAPPER ================= */
+
+  .dropdown-wrapper {
+    position: relative;
+    width: var(--token-input-width);
+    font-family: var(--text-font-stack);
+  }
+
+  /* if dropdown also carries input-wrapper styles, remove inherited side padding */
+  .dropdown-wrapper.input-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ================= FIELD ================= */
+
+  .dropdown-field {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-value {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* ================= MENU ================= */
+
+  .dropdown-wrapper .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--token-menu-container-color);
+    border: 1px solid var(--token-outline);
+    border-radius: var(--token-input-radius);
+    box-shadow: var(--token-menu-container-shadow);
+
+    list-style: none;
+    display: none;
+    z-index: 20;
+    overflow: hidden;
+  }
+
+  /* ================= OPEN STATE ================= */
+
+  .dropdown-wrapper.is-open .dropdown-menu {
+    display: block;
+  }
+
+  /* ================= OPTIONS ================= */
+
+  .dropdown-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+
+    margin: 0;
+    padding: 0 16px; // horizontal only; keeps list continuous
+
+    box-sizing: border-box;
+    border-radius: 0;
+    background: transparent;
+    color: var(--token-menu-item-label-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .dropdown-option:hover {
+    background: rgba(36, 121, 132, 0.05);
+  }
+
+  .dropdown-option.is-selected {
+    background: rgba(36, 121, 132, 0.10);
+  }
+
+  /* ================= MKDOCS HARD RESET ================= */
+
+  .md-typeset .dropdown-wrapper ul.dropdown-menu,
+  .md-typeset .dropdown-wrapper ul.dropdown-menu li {
+    list-style: none !important;
+
+    margin: 0 !important;
+    margin-left: 0 !important;   // 🔥 THIS fixes your issue
+    padding: 0 !important;
+
+    padding-left: 0 !important;
+  }
+
+  .md-typeset .dropdown-wrapper ul.dropdown-menu li {
+    display: block !important;
+  }
+
+  .md-typeset .dropdown-wrapper .dropdown-menu li.dropdown-option {
+    text-indent: 0 !important;
+  }
+
+  .dropdown-option {
+    justify-content: flex-start;
+  }
+
+  .dropdown-option::marker {
+    content: none;
+  }
+}
+
+/* --8<-- [end:dropdown-base] */
+
+/* ================= NUCLEAR FIX ================= */
+
+[data-theme] .dropdown-wrapper .dropdown-menu > li.dropdown-option {
+  margin-left: 0 !important;
+  padding-left: 16px !important;
+  text-indent: 0 !important;
+
+  list-style: none !important;
+}
