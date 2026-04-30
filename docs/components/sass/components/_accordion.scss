@@ -30,6 +30,14 @@
     display: none;
   }
 }
+.accordion:not([open]) > .summary {
+  .icon.-open {
+    display: none;
+  }
+  .icon.-close {
+    display: block;
+  }
+}
 
 .accordion.-desktop > .summary {
   background-color: transparent;
@@ -53,13 +61,6 @@
     --md-icon-size: 2.5rem;
     height: 2.5rem;
     color: $color-primary;
-
-    &.-open {
-      display: none;
-    }
-    &.-close {
-      display: block; 
-    }
   }
   &::before, &::after, &::marker {
     content: none;

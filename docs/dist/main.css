@@ -1491,6 +1491,13 @@ label {
   display: none;
 }
 
+.accordion:not([open]) > .summary .icon.-open {
+  display: none;
+}
+.accordion:not([open]) > .summary .icon.-close {
+  display: block;
+}
+
 .accordion.-desktop > .summary {
   background-color: transparent;
   padding: 1.5rem 1.25rem 0 1.25rem;
@@ -1514,12 +1521,6 @@ label {
   --md-icon-size: 2.5rem;
   height: 2.5rem;
   color: #006973;
-}
-.accordion.-desktop > .summary > .icon.-open {
-  display: none;
-}
-.accordion.-desktop > .summary > .icon.-close {
-  display: block;
 }
 .accordion.-desktop > .summary::before, .accordion.-desktop > .summary::after, .accordion.-desktop > .summary::marker {
   content: none;
