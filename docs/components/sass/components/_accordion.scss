@@ -1,8 +1,27 @@
 @use '../abstracts/variables' as *;
+
+@mixin icon-behavior {
+  &[open] > .summary {
+    .icon.-open {
+      display: flex;
+    }
+    .icon.-close {
+      display: none;
+    }
+  }
+  &:not([open]) > .summary {
+    .icon.-open {
+      display: none;
+    }
+    .icon.-close {
+      display: flex;
+    }
+  }
+}
 // --8<-- [start:accordion-desktop]
 .accordion.-desktop{
-  border: none;
-  border-radius: 0;
+  border: none; 
+  border-radius: 0; 
   border-bottom: .125rem solid $color-primary;
   padding: 0;
   height: 5.5rem;
@@ -20,31 +39,26 @@
     height: 17rem;
     box-shadow: none;
   }
+  @include icon-behavior;
+  & > .summary {
+    box-sizing: border-box;
+    width: 32rem;
+    min-height: 4rem;
+  }
+  & > .description {
+    font-size: 1rem;
+    line-height: 150%;
+    font-family: 'Roboto Regular', sans-serif;
+    font-weight: 400;
+    padding: 0; 
+    width: 29.5rem;
 }
-.accordion[open] > .summary {
-  
-  .icon.-open {
-    display: flex;
-  }
-  .icon.-close {
-    display: none;
-  }
-}
-.accordion:not([open]) > .summary {
-  .icon.-open {
-    display: none;
-  }
-  .icon.-close {
-    display: flex;
-  }
 }
 
 .accordion.-desktop > .summary {
   background-color: transparent;
   padding: 1.5rem 1.25rem 0 1.25rem;
   gap: 1.25rem;
-  width: 32rem;
-  min-height: 4rem;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -71,15 +85,6 @@
     content: none;
     list-style: none;
   }
-  
-}
-.accordion > .description {
-  font-size: 1rem;
-  line-height: 150%;
-  font-family: 'Robot Regular', sans-serif;
-  font-weight: 400;
-  padding: 0;
-  width: 29.5rem;
 }
 // --8<-- [end:accordion-desktop]
 // --8<-- [start:accordion-mobile]
@@ -103,22 +108,19 @@
     height: 25.5rem;
     box-shadow: none;
   }
-}
-.accordion[open] > .summary {
-  
-  .icon.-open {
-    display: flex;
+  @include icon-behavior;
+  & > .summary {
+    box-sizing: border-box;
+    width: 17.5rem;
+    min-height: 2.75rem;
   }
-  .icon.-close {
-    display: none;
-  }
-}
-.accordion:not([open]) > .summary {
-  .icon.-open {
-    display: none;
-  }
-  .icon.-close {
-    display: flex;
+  & > .description {
+    font-size: 1rem;
+    line-height: 150%;
+    font-family: 'Roboto Regular', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    width: 16rem;
   }
 }
 
@@ -126,13 +128,10 @@
   background-color: transparent;
   padding: 1rem 0.75rem 0 0.75rem;
   gap: 1.25rem;
-  width: 17.5rem;
-  min-height: 2.75rem;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  box-sizing: border-box;
 
   &> .title {
     margin: 0;
@@ -154,14 +153,5 @@
     content: none;
     list-style: none;
   }
-  
-}
-.accordion > .description {
-  font-size: 1rem;
-  line-height: 150%;
-  font-family: 'Robot Regular', sans-serif;
-  font-weight: 400;
-  padding: 0;
-  width: 16rem;
 }
 // --8<-- [end:accordion-mobile]
