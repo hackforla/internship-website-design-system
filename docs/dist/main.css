@@ -1485,7 +1485,7 @@ label {
 }
 
 .accordion[open] > .summary .icon.-open {
-  display: block;
+  display: flex;
 }
 .accordion[open] > .summary .icon.-close {
   display: none;
@@ -1495,7 +1495,7 @@ label {
   display: none;
 }
 .accordion:not([open]) > .summary .icon.-close {
-  display: block;
+  display: flex;
 }
 
 .accordion.-desktop > .summary {
@@ -1520,6 +1520,7 @@ label {
   line-height: 130%;
 }
 .accordion.-desktop > .summary > .icon {
+  align-items: center;
   --md-icon-size: 2.5rem;
   height: 2.5rem;
   color: #006973;
@@ -1560,7 +1561,7 @@ label {
 }
 
 .accordion[open] > .summary .icon.-open {
-  display: block;
+  display: flex;
 }
 .accordion[open] > .summary .icon.-close {
   display: none;
@@ -1570,7 +1571,7 @@ label {
   display: none;
 }
 .accordion:not([open]) > .summary .icon.-close {
-  display: block;
+  display: flex;
 }
 
 .accordion.-mobile > .summary {
@@ -1578,7 +1579,7 @@ label {
   padding: 1rem 0.75rem 0 0.75rem;
   gap: 1.25rem;
   width: 17.5rem;
-  min-height: 1.75rem;
+  min-height: 2.75rem;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1595,8 +1596,9 @@ label {
   line-height: 135%;
 }
 .accordion.-mobile > .summary > .icon {
+  align-items: center;
   --md-icon-size: 1.25rem;
-  height: 1.5rem;
+  height: 1.75rem;
   color: #006973;
 }
 .accordion.-mobile > .summary::before, .accordion.-mobile > .summary::after, .accordion.-mobile > .summary::marker {
