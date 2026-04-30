@@ -5,8 +5,9 @@
   border: none;
   border-radius: 0;
   border-bottom: .125rem solid $color-primary;
-  padding-bottom: 1.5rem;
+  padding: 0 0 1.5rem;
   height: 5.5rem;
+  margin: 0;
   width: 32rem;
   background-color: transparent;
   gap: 1rem;
@@ -15,6 +16,7 @@
   align-items: center;
   justify-content: start;
   box-shadow: none;
+  box-sizing: border-box;
   
   &[open] {
     height: 17rem;
@@ -44,10 +46,13 @@
   padding: 1.5rem 1.25rem 0 1.25rem;
   gap: 1.25rem;
   width: 32rem;
+  min-height: 4rem;
   display: flex;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
+
   &> .title {
     margin: 0;
     width: 25.75rem;
@@ -56,6 +61,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 130%;
+    
   }
   &> .icon {
     --md-icon-size: 2.5rem;

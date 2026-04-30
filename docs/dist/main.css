@@ -1468,8 +1468,9 @@ label {
   border: none;
   border-radius: 0;
   border-bottom: 0.125rem solid #006973;
-  padding-bottom: 1.5rem;
+  padding: 0 0 1.5rem;
   height: 5.5rem;
+  margin: 0;
   width: 32rem;
   background-color: transparent;
   gap: 1rem;
@@ -1478,6 +1479,7 @@ label {
   align-items: center;
   justify-content: start;
   box-shadow: none;
+  box-sizing: border-box;
 }
 .accordion.-desktop[open] {
   height: 17rem;
@@ -1503,10 +1505,12 @@ label {
   padding: 1.5rem 1.25rem 0 1.25rem;
   gap: 1.25rem;
   width: 32rem;
+  min-height: 4rem;
   display: flex;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .accordion.-desktop > .summary > .title {
   margin: 0;
