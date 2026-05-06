@@ -1,16 +1,18 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/tokens';
 
 // --8<-- [start:accordion-desktop]
 .accordion.-desktop{
-  border: none; 
+  border: none;
   border-radius: 0; 
-  border-bottom: .125rem solid $color-primary;
+  border-bottom: var(--accordion-border);
   padding: 0;
+  padding-bottom: var(--accordion-desktop-spacing-vertical);
   margin: 0;
-  min-height: 5.5rem;
-  width: 32rem;
+  min-height: var(--accordion-desktop-height-collapsed);
+  width: var(--accordion-desktop-width);
   background-color: transparent;
-  gap: 1rem;
+  gap: var(--accordion-desktop-spacing-vertical-expanded);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +21,7 @@
   
   
   &[open] {
-    min-height: 8rem;
+    min-height: var(--accordion-desktop-height-expanded);
     box-shadow: none;
     & > .summary > .icon {
       transform: rotate(180deg);
@@ -28,23 +30,20 @@
 
   & > .summary {
     box-sizing: border-box;
-    width: 32rem;
-    min-height: 4rem;
+    width: var(--accordion-desktop-width);
+    min-height: var(--accordion-desktop-summary-minheight);
   }
   & > .description {
-    font-size: 1rem;
-    line-height: 150%;
-    font-family: 'Roboto Regular', sans-serif;
-    font-weight: 400;
+    font: var(--accordion-desktop-paragraph-fontstyle);
     padding: 0; 
-    width: 29.5rem;
+    width: var(--accordion-desktop-paragraph-width);
 }
 }
 
 .accordion.-desktop > .summary {
   background-color: transparent;
-  padding: 1.5rem 1.25rem 0 1.25rem;
-  gap: 1.25rem;
+  padding: var(--accordion-desktop-summary-padding);
+  gap: var(--accordion-desktop-spacing-horizontal);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -53,21 +52,17 @@
 
   &> .title {
     margin: 0;
-    width: 25.75rem;
-    font-family: 'Roboto Semibold', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 130%;
+    width: var(--accordion-desktop-title-width);
+    font: var(--accordion-desktop-title-fontstyle);
     
   }
   &> .icon {
-    font-family: 'Material Icons Outlined';
+    font: var(--accordion-desktop-icon-fontstyle);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: var(--accordion-desktop-icon-size);
+    height: var(--accordion-desktop-icon-size);
     color: $color-primary;
     content: 'expand_more';
     transition: transform 0.3s ease 0.1s;
@@ -88,15 +83,15 @@
 // --8<-- [end:accordion-desktop]
 // --8<-- [start:accordion-mobile]
 .accordion.-mobile{
-  border: none;
   border-radius: 0;
-  border-bottom: .125rem solid $color-primary;
+  border-bottom: var(--accordion-border);
   padding: 0;
-  min-height: 3.75rem;
+  padding-bottom: var(--accordion-mobile-spacing-vertical);
+  min-height: var(--accordion-mobile-height-collapsed);
   margin: 0;
-  width: 17.5rem;
+  width: var(--accordion-mobile-width);
   background-color: transparent;
-  gap: 1rem;
+  gap: var(--accordion-mobile-spacing-vertical-expanded);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +99,7 @@
   box-sizing: border-box;
   
   &[open] {
-    min-height: 6.25rem;
+    min-height: var(--accordion-mobile-height-expanded);
     box-shadow: none;
     & > .summary > .icon {
       transform: rotate(180deg);
@@ -112,23 +107,21 @@
   }
   & > .summary {
     box-sizing: border-box;
-    width: 17.5rem;
-    min-height: 2.75rem;
+    width: var(--accordion-mobile-width);
+    min-height: var(--accordion-mobile-summary-minheight);
+
   }
   & > .description {
-    font-size: 1rem;
-    line-height: 150%;
-    font-family: 'Roboto Regular', sans-serif;
-    font-weight: 400;
+    font: var(--accordion-mobile-paragraph-fontstyle);
     padding: 0;
-    width: 16rem;
+    width: var(--accordion-mobile-paragraph-width);
   }
 }
 
 .accordion.-mobile > .summary {
   background-color: transparent;
   padding: 1rem 0.75rem 0 0.75rem;
-  gap: 1.25rem;
+  gap: var(--accordion-mobile-spacing-horizontal);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -136,29 +129,22 @@
 
   &> .title {
     margin: 0;
-    width: 13.25rem;
-    height: 1.75rem;
-    font-family: 'Roboto Semibold', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 135%;
-    
+    width: var(--accordion-mobile-title-width);
+    font: var(--accordion-mobile-title-fontstyle);
   }
   &> .icon {
-    font-family: 'Material Icons Outlined';
+    font: var(--accordion-mobile-icon-fontstyle);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    width: 1.75rem;
-    height: 1.75rem;
+    width: var(--accordion-mobile-icon-size);
+    height: var(--accordion-mobile-icon-size);
     color: $color-primary;
 
     content: 'expand_more';
     transition: transform 0.3s ease;
     transform: rotate(0deg); 
   }
-
   list-style: none;
   &::-webkit-details-marker {
     display: none;
