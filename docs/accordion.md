@@ -12,10 +12,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <details class="accordion -desktop">
                 <summary class="summary">
                     <h4 class='title'>Accordion Title</h4>
-                    <span class="icon material-icons"></span>
-                
-                    <!--:material-chevron-up:{.icon .-open }
-                    :material-chevron-down:{.icon .-close }-->
+                    <span class="icon">expand_more</span>
                 </summary>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </details>    
@@ -29,8 +26,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
                 <details class="accordion -desktop">
                     <summary class="summary">
                         <h4 class='title'>Accordion Title</h4>
-                        :material-chevron-up:{.icon .-open }
-                        :material-chevron-down:{.icon .-close }
+                        <span class="icon">expand_more</span>
                     </summary>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>    
@@ -42,8 +38,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
                 <details class="accordion -desktop" open>
                     <summary class="summary active">
                         <h4 class='title'>Accordion Title</h4>
-                        :material-chevron-up:{.icon .-open }
-                        :material-chevron-down:{.icon .-close }
+                        <span class="icon">expand_less</span>
                     </summary>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>    
@@ -60,8 +55,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
         <details class="accordion -desktop">
             <summary class="summary">
                 <h4 class='title'>Accordion Title</h4>
-                :material-chevron-up:{.icon .-open }
-                :material-chevron-down:{.icon .-close }
+                <span class="icon"></span>
             </summary>
             <p class="description">Lorem ipsum dolor sit amet...</p>
         </details>    
@@ -72,8 +66,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <details class="accordion -mobile">
                 <summary class="summary">
                     <h5 class='title'>Accordion Title</h5>
-                    :material-chevron-up:{.icon .-open }
-                    :material-chevron-down:{.icon .-close }
+                    <span class="icon">expand_more</span>
                 </summary>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </details>
@@ -87,8 +80,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
                 <details class="accordion -mobile">
                     <summary class="summary">
                         <h5 class='title'>Accordion Title</h5>
-                        :material-chevron-up:{.icon .-open }
-                        :material-chevron-down:{.icon .-close }
+                        <span class="icon">expand_more</span>
                     </summary>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
@@ -100,11 +92,12 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
                 <details class="accordion -mobile" open>
                     <summary class="summary active">
                         <h5 class='title'>Accordion Title</h5>
-                        :material-chevron-up:{.icon .-open }
-                        :material-chevron-down:{.icon .-close }
+                        <span class="icon">expand_less</span>
                     </summary>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
+            </div>
+        </div>
             </div>
         </div>
     <br>
@@ -118,8 +111,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
         <details class="accordion -mobile">
             <summary class="summary">
                 <h5 class='title'>Accordion Title</h5>
-                :material-chevron-up:{.icon .-open }
-                :material-chevron-down:{.icon .-close }
+                <span class="icon">expand_more</span>
             </summary>
             <p class="description">Lorem ipsum dolor sit amet...</p>
         </details>

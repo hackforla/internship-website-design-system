@@ -6,8 +6,8 @@
   border-radius: 0; 
   border-bottom: .125rem solid $color-primary;
   padding: 0;
-  height: 5.5rem;
   margin: 0;
+  min-height: 5.5rem;
   width: 32rem;
   background-color: transparent;
   gap: 1rem;
@@ -17,16 +17,13 @@
   justify-content: start;
   box-sizing: border-box;
   
-  &[open] {
-    height: 17rem;
-    box-shadow: none;
-    & > .summary > .icon{
-      content: 'material-chevron-up';
-    }
-  }
   
-  &:not([open]) > .summary > .icon {
-      content: 'material-chevron-down';
+  &[open] {
+    min-height: 8rem;
+    box-shadow: none;
+    & > .summary > .icon {
+      transform: rotate(180deg);
+    }
   }
 
   & > .summary {
@@ -57,7 +54,6 @@
   &> .title {
     margin: 0;
     width: 25.75rem;
-    height: 2.5rem;
     font-family: 'Roboto Semibold', sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
@@ -65,15 +61,28 @@
     
   }
   &> .icon {
-    font-family: 'Material Symbols Outlined';
+    font-family: 'Material Icons Outlined';
+    display: flex;
     align-items: center;
-    --md-icon-size: 2.5rem;
+    justify-content: center;
+    font-size: 2.5rem;
+    width: 2.5rem;
     height: 2.5rem;
     color: $color-primary;
+    content: 'expand_more';
+    transition: transform 0.3s ease 0.1s;
+    transform: rotate(0deg);
   }
-  &::before, &::after, &::marker {
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::marker {
     content: none;
-    list-style: none;
+  }
+  &::before,
+  &::after {
+    content: none;
   }
 }
 // --8<-- [end:accordion-desktop]
@@ -83,7 +92,7 @@
   border-radius: 0;
   border-bottom: .125rem solid $color-primary;
   padding: 0;
-  height: 3.75rem;
+  min-height: 3.75rem;
   margin: 0;
   width: 17.5rem;
   background-color: transparent;
@@ -95,10 +104,12 @@
   box-sizing: border-box;
   
   &[open] {
-    height: 25.5rem;
+    min-height: 6.25rem;
     box-shadow: none;
+    & > .summary > .icon {
+      transform: rotate(180deg);
+    }
   }
-  @include icon-behavior;
   & > .summary {
     box-sizing: border-box;
     width: 17.5rem;
@@ -134,14 +145,30 @@
     
   }
   &> .icon {
+    font-family: 'Material Icons Outlined';
+    display: flex;
     align-items: center;
-    --md-icon-size: 1.25rem;
+    justify-content: center;
+    font-size: 1.25rem;
+    width: 1.75rem;
     height: 1.75rem;
     color: $color-primary;
+
+    content: 'expand_more';
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); 
   }
-  &::before, &::after, &::marker {
+
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::marker {
     content: none;
-    list-style: none;
+  }
+  &::before,
+  &::after {
+    content: none;
   }
 }
 // --8<-- [end:accordion-mobile]
