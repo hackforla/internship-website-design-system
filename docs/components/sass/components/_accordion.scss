@@ -1,23 +1,5 @@
 @use '../abstracts/variables' as *;
 
-@mixin icon-behavior {
-  &[open] > .summary {
-    .icon.-open {
-      display: flex;
-    }
-    .icon.-close {
-      display: none;
-    }
-  }
-  &:not([open]) > .summary {
-    .icon.-open {
-      display: none;
-    }
-    .icon.-close {
-      display: flex;
-    }
-  }
-}
 // --8<-- [start:accordion-desktop]
 .accordion.-desktop{
   border: none; 
@@ -38,8 +20,15 @@
   &[open] {
     height: 17rem;
     box-shadow: none;
+    & > .summary > .icon{
+      content: 'material-chevron-up';
+    }
   }
-  @include icon-behavior;
+  
+  &:not([open]) > .summary > .icon {
+      content: 'material-chevron-down';
+  }
+
   & > .summary {
     box-sizing: border-box;
     width: 32rem;
@@ -76,6 +65,7 @@
     
   }
   &> .icon {
+    font-family: 'Material Symbols Outlined';
     align-items: center;
     --md-icon-size: 2.5rem;
     height: 2.5rem;
