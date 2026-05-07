@@ -348,7 +348,7 @@
   /* ------------------------------------------------------------
    Accordion Tokens
   ------------------------------------------------------------ */
-  --accordion-border: .125rem solid $color-primary;
+  --accordion-border: .125rem solid var(--color-primary);
   --accordion-desktop-height-collapsed: 5.5rem;
   --accordion-desktop-width: 32rem;
   --accordion-desktop-height-expanded: calc(var(--accordion-desktop-height-collapsed) 

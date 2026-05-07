@@ -104,7 +104,7 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
     ## Code
     === "CSS"
         ``` css
-            --8<-- "components/sass/components/_accordion.scss:accordion-desktop"
+            --8<-- "components/sass/components/_accordion.scss:accordion-mobile"
         ```
     === "HTML"
         ``` html
