@@ -25,6 +25,7 @@
     box-shadow: none;
     & > .summary > .icon {
       transform: rotate(180deg);
+      //content: 'expand_less';
     }
   }
 
@@ -64,7 +65,7 @@
     width: var(--accordion-desktop-icon-size);
     height: var(--accordion-desktop-icon-size);
     color: $color-primary;
-    content: 'expand_more';
+    //content: 'expand_more';
     transition: transform 0.3s ease 0.1s;
     transform: rotate(0deg);
   }
@@ -83,6 +84,7 @@
 // --8<-- [end:accordion-desktop]
 // --8<-- [start:accordion-mobile]
 .accordion.-mobile{
+  border: none;
   border-radius: 0;
   border-bottom: var(--accordion-border);
   padding: 0;
@@ -141,7 +143,7 @@
     height: var(--accordion-mobile-icon-size);
     color: $color-primary;
 
-    content: 'expand_more';
+    //content: 'expand_more';
     transition: transform 0.3s ease;
     transform: rotate(0deg); 
   }

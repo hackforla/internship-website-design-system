@@ -1520,7 +1520,6 @@ label {
   width: var(--accordion-desktop-icon-size);
   height: var(--accordion-desktop-icon-size);
   color: #006973;
-  content: "expand_more";
   transition: transform 0.3s ease 0.1s;
   transform: rotate(0deg);
 }
@@ -1535,6 +1534,7 @@ label {
 }
 
 .accordion.-mobile {
+  border: none;
   border-radius: 0;
   border-bottom: var(--accordion-border);
   padding: 0;
@@ -1591,7 +1591,6 @@ label {
   width: var(--accordion-mobile-icon-size);
   height: var(--accordion-mobile-icon-size);
   color: #006973;
-  content: "expand_more";
   transition: transform 0.3s ease;
   transform: rotate(0deg);
 }
