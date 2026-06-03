@@ -3,14 +3,17 @@ li.md-tabs__item:hover {
   box-shadow: inset 0 -3px 0 0 rgb(123, 178, 162);
 }
 
-/* Hide most icons, except clipboard */
+/* Hide most icons, except clipboard and header buttons (hamburger, search toggle) */
 .md-icon {
   visibility: hidden;
 }
 
-.md-clipboard.md-icon {
+.md-clipboard.md-icon,
+.md-header__button.md-icon,
+.md-source__icon.md-icon {
   visibility: visible !important;
 }
+
 
 /* Active nav link color */
 .md-nav__item .md-nav__link--active {
@@ -121,10 +124,110 @@ li.md-tabs__item:hover {
   gap: 0.5rem;
 }
 
-.md-search__form,
-.md-source {
+.md-search__form {
   height: 2rem;
   border-radius: 999px;
   display: flex;
   align-items: center;
+}
+
+/* GitHub source — never shrink, always show fully */
+.md-header__source {
+  flex-shrink: 0;
+}
+
+.md-source {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.md-source__repository {
+  overflow: visible;
+  max-width: none;
+}
+
+/* Below ~960px: collapse GitHub to icon only */
+@media screen and (max-width: 60em) {
+  .md-source__repository {
+    display: none !important;
+  }
+}
+
+
+/* Show back-arrows and expand chevrons inside the mobile drawer */
+.md-nav--primary .md-nav__icon {
+  visibility: visible !important;
+}
+
+/* Keep GitHub button in the header on mobile, remove it from the drawer */
+@media screen and (max-width: 76.1875em) {
+  .md-header__source {
+    display: flex !important;
+  }
+  .md-nav--primary .md-source {
+    display: none !important;
+  }
+}
+
+/* ── Mobile drawer back button fix ── */
+@media screen and (max-width: 76.1875em) {
+  /* Reveal the "< Section Name" back button in sub-navs */
+  .md-nav__item--nested > .md-nav > .md-nav__title {
+    display: block !important;
+  }
+
+  /* Reveal the left-arrow icon inside the back button */
+  .md-nav--primary .md-nav__title .md-nav__icon {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+/* Hide duplicate active-page TOC label in mobile drawer */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__item--active > label.md-nav__link--active {
+    display: none !important;
+  }
+  .md-nav--primary .md-nav--secondary {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .md-source__repository {
+    display: none !important;
+  }
+
+  .md-source {
+    min-width: 0;
+    padding: 0 0.4rem;
+  }
+
+  .md-source__icon {
+    margin: 0;
+  }
+}
+
+/* Tighten gap between search icon and GitHub icon */
+[dir=ltr] .md-header__source {
+  margin-left: 0.5rem !important;
+}
+
+/* Use more of the page width */
+.md-grid {
+  max-width: 80rem !important;
+}
+
+/* Collapse the search form container on mobile so it doesn't gap search icon from GitHub */
+@media screen and (max-width: 76.1875em) {
+  .md-search {
+    width: 0;
+    overflow: visible;
+  }
+}
+
+/* Search back arrow (shown when search is active) */
+.md-search__icon.md-icon {
+  visibility: visible !important;
 }
