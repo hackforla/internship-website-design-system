@@ -1,0 +1,218 @@
+@use '../abstracts/tokens';
+
+[data-theme] {
+
+  /* ============================================================
+     Base Button
+     ============================================================ */
+
+  .button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 1.5rem;
+    height: 2.5rem;
+
+    border-radius: var(--token-button-radius);
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      pointer-events: none;
+      transition: background-color 0.15s ease;
+    }
+
+    &:disabled,
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+
+
+  /* ============================================================
+     Filled
+     ============================================================ */
+  
+  // --8<-- [start:filled]
+  .button-filled {
+    background-color: var(--token-button-filled-bg);
+    color: var(--token-button-filled-text);
+
+
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:filled]
+
+  /* ============================================================
+     Outline
+     ============================================================ */
+  
+  // --8<-- [start:outline]
+  .button-outline {
+    background-color: transparent;
+    border: 1px solid var(--token-button-outline-border);
+    color: var(--token-button-outline-text);
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      border-color: var(--token-outline-variant);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:outline]
+
+  /* ============================================================
+     Tonal
+     ============================================================ */
+  // --8<-- [start:tonal]
+  .button-tonal {
+    background-color: var(--token-button-tonal-bg);
+    color: var(--token-button-tonal-text);
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:tonal]
+
+  /* ============================================================
+     Text
+     ============================================================ */
+  // --8<-- [start:text]
+  .button-text {
+    background-color: transparent;
+    color: var(--token-button-text-color);
+
+    &:hover,
+    &.hover {
+      &::after {
+        background-color: var(--token-state-hover-layer);
+      }
+    }
+
+    &:focus-visible,
+    &.focus {
+      &::after {
+        background-color: var(--token-state-focus-layer);
+      }
+    }
+
+    &:active,
+    &.pressed {
+      &::after {
+        background-color: var(--token-state-pressed-layer);
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: var(--token-button-disabled-bg);
+      color: var(--token-button-disabled-text);
+    }
+  }
+  // --8<-- [end:text]
+
+  /* ============================================================
+     X-Large (size modifier)
+     ============================================================ */
+  // --8<-- [start:large]
+  .button-xl {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    height: auto;
+  }
+  // --8<-- [end:large]
+}
