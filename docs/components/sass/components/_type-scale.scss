@@ -1,5 +1,40 @@
 @use '../abstracts/variables' as *;
 
+.type-grid-6 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.8fr;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+
+  .type-grid-items {
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    color: #37474f;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+
+    &:nth-child(-n+6) {
+      background-color: #f5f5f5;
+      color: #757575;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    &:nth-child(12n+13),
+    &:nth-child(12n+14),
+    &:nth-child(12n+15),
+    &:nth-child(12n+16),
+    &:nth-child(12n+17),
+    &:nth-child(12n+18) {
+      background-color: #fafafa;
+    }
+  }
+}
+
 .desktop-examples {
 // --8<-- [start:desktop-hero-h1]
   .desktop-hero-h1 {
