@@ -345,4 +345,53 @@
   --token-menu-item-hover-state-layer: var(--token-state-hover-layer);
   --token-menu-item-focus-state-layer: var(--token-state-focus-layer);
 
+  /* ------------------------------------------------------------
+   Accordion Tokens
+  ------------------------------------------------------------ */
+  --accordion-border: .125rem solid var(--color-primary);
+  --accordion-desktop-height-collapsed: 5.5rem;
+  --accordion-desktop-width: 32rem;
+  --accordion-desktop-height-expanded: calc(var(--accordion-desktop-height-collapsed) 
+                                        + var(--accordion-desktop-spacing-vertical-expanded) 
+                                        +( var(--accordion-desktop-paragraph-fontsize) 
+                                        * var(--accordion-desktop-paragraph-lineheight) ));
+  --accordion-desktop-summary-padding: 1.5rem 1.25rem 0 1.25rem;
+  --accordion-desktop-spacing-vertical: 1.5rem;
+  --accordion-desktop-spacing-vertical-expanded: 1rem;
+  --accordion-desktop-spacing-horizontal: 1.25rem;
+  --accordion-desktop-summary-minheight: 4rem;
+  --accordion-desktop-paragraph-fontsize: 1rem;
+  --accordion-desktop-paragraph-lineheight: 1.5;
+  --accordion-desktop-paragraph-fontstyle: 400 var(--accordion-desktop-paragraph-fontsize)/var(--accordion-desktop-paragraph-lineheight)
+                                    'Roboto Regular', sans-serif;
+  --accordion-desktop-paragraph-width: 29.5rem;
+  --accordion-desktop-title-fontstyle: 600 1.25rem/1.3 'Roboto Semibold', sans-serif;
+  --accordion-desktop-title-width: 25.75rem;
+  --accordion-desktop-icon-size: 2.5rem;
+  --accordion-desktop-icon-fontstyle: var(--accordion-desktop-icon-size) 'Material Icons Outlined';
+
+  --accordion-mobile-height-collapsed: 3.75rem;
+  --accordion-mobile-height-expanded: calc(var(--accordion-mobile-height-collapsed) 
+                                        + var(--accordion-mobile-spacing-vertical-expanded) 
+                                        +( var(--accordion-mobile-paragraph-fontsize) 
+                                        * var(--accordion-mobile-paragraph-lineheight) ));
+  --accordion-mobile-width: 17.5rem;
+  --accordion-mobile-summary-padding: 1rem 0.75rem 0 0.75rem;
+  --accordion-mobile-spacing-vertical: 1rem;
+  --accordion-mobile-spacing-vertical-expanded: 1rem;
+  --accordion-mobile-spacing-horizontal: 1.25rem;
+  --accordion-mobile-summary-minheight: 2.75rem;
+  --accordion-mobile-paragraph-fontsize: 1rem;
+  --accordion-mobile-paragraph-lineheight: 1.5;
+  --accordion-mobile-paragraph-fontstyle: 400 var(--accordion-mobile-paragraph-fontsize)/var(--accordion-mobile-paragraph-lineheight)
+                                    'Roboto Regular', sans-serif;
+  --accordion-mobile-paragraph-width: 16rem;
+  --accordion-mobile-title-fontstyle: 600 1.25rem/1.35 'Roboto Semibold', sans-serif;
+  --accordion-mobile-title-width: 13.25rem;
+  --accordion-mobile-icon-size: 1.75rem;
+  --accordion-mobile-icon-fontstyle: var(--accordion-mobile-icon-size) 'Material Icons Outlined';
+
+
+
+
 }

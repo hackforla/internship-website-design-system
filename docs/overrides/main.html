@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<style>
+  /* Widen page grid */
+  .md-grid {
+    max-width: 80rem !important;
+  }
+
+  /* Remove gap between search and GitHub icons */
+  [dir=ltr] .md-header__source {
+    margin-left: 0 !important;
+  }
+</style>
+{% endblock %}
