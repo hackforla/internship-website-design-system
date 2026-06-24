@@ -31,7 +31,7 @@ hide:
         <p class="type-grid-items">130%</p>
         <p class="type-grid-items">Regular</p>
         <p class="type-grid-items">-</p>
-        <!-- Hero Section / p/bold -->
+        <!-- Hero Section / p/semibold -->
         <p class="type-grid-items">Hero Section/<br/>p/semibold</p>
         <p class="type-grid-items">Roboto</p>
         <p class="type-grid-items">24px / 1.5rem</p>
@@ -123,278 +123,6 @@ hide:
         <p class="type-grid-items">Regular</p>
         <p class="type-grid-items">Italic</p>
     </div>
-    <br/>
-
-    <h2 class="template-h2">Example</h2>
-
-    === "Hero Section/H1"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <h1 class="desktop-hero-h1">This is a heading 1 for the Hero Section Desktop Size</h1>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-hero-h1"
-            </style>
-
-            <h1 class="desktop-hero-h1">This is a heading 1 for the Hero Section Desktop Size<h1>
-        ```
-
-    === "Hero Section/p"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-hero-p">This is a paragraph for the Hero Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-hero-p"
-            </style>
-
-            <p class="desktop-hero-p">This is a paragraph for the Hero Section Desktop Size<p>
-        ```
-    === "Hero Section/p/semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-hero-p-semibold">This is a semibold paragraph for the Hero Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-hero-p-semibold"
-            </style>
-
-            <p class="desktop-hero-p-semibold">This is a semibold paragraph for the Hero Section Desktop Size<p>
-        ```
-
-    === "Hero Section/p/italic"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-hero-p-italic">This is an italic paragraph for the Hero Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-hero-p-italic"
-            </style>
-
-            <p class="desktop-hero-p-italic">This is an italic paragraph for the Hero Section Desktop Size<p>
-        ```
-
-    === "Body/H1"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-h1">This is a heading 1 for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-h1"
-            </style>
-
-            <h1 class="desktop-body-h1">This is a heading 1 for the Body Section Desktop Size<h1>
-        ```
-
-    === "Body/H2"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <h2 class="desktop-body-h2">This is a heading 2 for the Body Section Desktop Size</h2>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-h2"
-            </style>
-
-            <h2 class="desktop-body-h2">This is a heading 2 for the Body Section Desktop Size<h2>
-        ```
-
-    === "Body/H3"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <h3 class="desktop-body-h3">This is a heading 3 for the Body Section Desktop Size</h3>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-h3"
-            </style>
-
-            <h3 class="desktop-body-h3">This is a heading 3 for the Body Section Desktop Size<h3>
-        ```
-
-    === "Body/H4"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <h4 class="desktop-body-h4">This is a heading 4 for the Body Section Desktop Size</h4>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-h4"
-            </style>
-
-            <h4 class="desktop-body-h4">This is a heading 4 for the Body Section Desktop Size<h4>
-        ```
-
-    === "Body/H5"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <h5 class="desktop-body-h5">This is a heading 5 for the Body Section Desktop Size</h5>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-h5"
-            </style>
-
-            <h5 class="desktop-body-h5">This is a heading 5 for the Body Section Desktop Size<h5>
-        ```
-
-    === "Body/p"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p">This is a paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p"
-            </style>
-
-            <p class="desktop-body-p">This is a paragraph for the Body Section Desktop Size<p>
-        ```
-
-    === "Body/p/semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p-semibold">This is a semibold paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p-semibold"
-            </style>
-
-            <p class="desktop-body-p-semibold">This is a semibold paragraph for the Body Section Desktop Size<p>
-        ```
-
-    === "Body/p/italic"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p-italic">This is an italic paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p-italic"
-            </style>
-
-            <p class="desktop-body-p-italic">This is an italic paragraph for the Body Section Desktop Size<p>
-        ```
-
-    === "Body/p/small"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p-small">This is a small paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p-small"
-            </style>
-
-            <p class="desktop-body-p-small">This is a small paragraph for the Body Section Desktop Size<p>
-        ```
-
-    === "Body/p/small-semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p-small-semibold">This is a small semibold paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p-small-semibold"
-            </style>
-
-            <p class="desktop-body-p-small-semibold">This is a small semibold paragraph for the Body Section Desktop Size<p>
-        ```
-
-    === "Body/p/small-italic"
-        <div class="btn-grid-1">
-            <div class="grid-items desktop-examples">
-                <p class="desktop-body-p-small-italic">This is a small italic paragraph for the Body Section Desktop Size</p>
-            </div>
-        </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:desktop-body-p-small-italic"
-            </style>
-
-            <p class="desktop-body-p-small-italic">This is a small italic paragraph for the Body Section Desktop Size<p>
-        ```
 
 === "Tablet / Mobile"
     <div class="type-grid-6">
@@ -418,7 +146,7 @@ hide:
         <p class="type-grid-items">130%</p>
         <p class="type-grid-items">Regular</p>
         <p class="type-grid-items">-</p>
-        <!-- Hero Section / p/bold -->
+        <!-- Hero Section / p/semibold -->
         <p class="type-grid-items">Hero Section/<br/>p/semibold</p>
         <p class="type-grid-items">Roboto</p>
         <p class="type-grid-items">20px / 1.25rem</p>
@@ -510,275 +238,251 @@ hide:
         <p class="type-grid-items">Regular</p>
         <p class="type-grid-items">Italic</p>
     </div>
-    <br/>
 
-    <h2 class="template-h2">Example</h2>
+<br/>
 
-    === "Hero Section/H1"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <h1 class="tablet-hero-h1">This is a heading 1 for the Hero Section Tablet Size</h1>
-            </div>
+<h2 class="template-h2">Code</h2>
+
+=== "Hero Section/H1"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-hero-h1"
+        </style>
+
+        <h1 class="desktop-hero-h1">This is a heading 1 for the Hero Section Desktop Size</h1>
+    ```
+
+=== "Hero Section/p"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-hero-p"
+        </style>
+
+        <p class="desktop-hero-p">This is a paragraph for the Hero Section Desktop Size</p>
+    ```
+
+=== "Hero Section/p/semibold"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-hero-p-semibold"
+        </style>
+
+        <p class="desktop-hero-p-semibold">This is a semibold paragraph for the Hero Section Desktop Size</p>
+    ```
+
+=== "Hero Section/p/italic"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-hero-p-italic"
+        </style>
+
+        <p class="desktop-hero-p-italic">This is an italic paragraph for the Hero Section Desktop Size</p>
+    ```
+
+=== "Body/H1"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-h1"
+        </style>
+
+        <h1 class="desktop-body-h1">This is a heading 1 for the Body Section Desktop Size</h1>
+    ```
+
+=== "Body/H2"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-h2"
+        </style>
+
+        <h2 class="desktop-body-h2">This is a heading 2 for the Body Section Desktop Size</h2>
+    ```
+
+=== "Body/H3"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-h3"
+        </style>
+
+        <h3 class="desktop-body-h3">This is a heading 3 for the Body Section Desktop Size</h3>
+    ```
+
+=== "Body/H4"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-h4"
+        </style>
+
+        <h4 class="desktop-body-h4">This is a heading 4 for the Body Section Desktop Size</h4>
+    ```
+
+=== "Body/H5"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-h5"
+        </style>
+
+        <h5 class="desktop-body-h5">This is a heading 5 for the Body Section Desktop Size</h5>
+    ```
+
+=== "Body/p"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p"
+        </style>
+
+        <p class="desktop-body-p">This is a paragraph for the Body Section Desktop Size</p>
+    ```
+
+=== "Body/p/semibold"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p-semibold"
+        </style>
+
+        <p class="desktop-body-p-semibold">This is a semibold paragraph for the Body Section Desktop Size</p>
+    ```
+
+=== "Body/p/italic"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p-italic"
+        </style>
+
+        <p class="desktop-body-p-italic">This is an italic paragraph for the Body Section Desktop Size</p>
+    ```
+
+=== "Body/p/small"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p-small"
+        </style>
+
+        <p class="desktop-body-p-small">This is a small paragraph for the Body Section Desktop Size</p>
+    ```
+
+=== "Body/p/small-semibold"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p-small-semibold"
+        </style>
+
+        <p class="desktop-body-p-small-semibold">This is a small semibold paragraph for the Body Section Desktop Size</p>
+    ```
+
+=== "Body/p/small-italic"
+    ```html
+        <style>
+        --8<-- "_type-scale.scss:desktop-body-p-small-italic"
+        </style>
+
+        <p class="desktop-body-p-small-italic">This is a small italic paragraph for the Body Section Desktop Size</p>
+    ```
+
+<br/>
+
+<h2 class="template-h2">Example</h2>
+
+=== "Hero Section/H1"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h1 class="desktop-hero-h1">This is a heading 1 for the Hero Section Desktop Size</h1>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-hero-h1"
-            </style>
-
-            <h1 class="tablet-hero-h1">This is a heading 1 for the Hero Section Tablet Size<h1>
-        ```
-
-    === "Hero Section/p"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-hero-p">This is a paragraph for the Hero Section Tablet Size</p>
-            </div>
+=== "Hero Section/p"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-hero-p">This is a paragraph for the Hero Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-hero-p"
-            </style>
-
-            <p class="tablet-hero-p">This is a paragraph for the Hero Section Tablet Size<p>
-        ```
-    === "Hero Section/p/semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-hero-p-semibold">This is a semibold paragraph for the Hero Section Tablet Size</p>
-            </div>
+=== "Hero Section/p/semibold"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-hero-p-semibold">This is a semibold paragraph for the Hero Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-hero-p-semibold"
-            </style>
-
-            <p class="tablet-hero-p-semibold">This is a semibold paragraph for the Hero Section Tablet Size<p>
-        ```
-
-    === "Hero Section/p/italic"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-hero-p-italic">This is an italic paragraph for the Hero Section Tablet Size</p>
-            </div>
+=== "Hero Section/p/italic"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-hero-p-italic">This is an italic paragraph for the Hero Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-hero-p-italic"
-            </style>
-
-            <p class="tablet-hero-p-italic">This is an italic paragraph for the Hero Section Tablet Size<p>
-        ```
-
-    === "Body/H1"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-h1">This is a heading 1 for the Body Section Tablet Size</p>
-            </div>
+=== "Body/H1"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h1 class="desktop-body-h1">This is a heading 1 for the Body Section Desktop Size</h1>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-h1"
-            </style>
-
-            <h1 class="tablet-body-h1">This is a heading 1 for the Body Section Tablet Size<h1>
-        ```
-
-    === "Body/H2"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <h2 class="tablet-body-h2">This is a heading 2 for the Body Section Tablet Size</h2>
-            </div>
+=== "Body/H2"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h2 class="desktop-body-h2">This is a heading 2 for the Body Section Desktop Size</h2>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-h2"
-            </style>
-
-            <h2 class="tablet-body-h2">This is a heading 2 for the Body Section Tablet Size<h2>
-        ```
-
-    === "Body/H3"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <h3 class="tablet-body-h3">This is a heading 3 for the Body Section Tablet Size</h3>
-            </div>
+=== "Body/H3"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h3 class="desktop-body-h3">This is a heading 3 for the Body Section Desktop Size</h3>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-h3"
-            </style>
-
-            <h3 class="tablet-body-h3">This is a heading 3 for the Body Section Tablet Size<h3>
-        ```
-
-    === "Body/H4"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <h4 class="tablet-body-h4">This is a heading 4 for the Body Section Tablet Size</h4>
-            </div>
+=== "Body/H4"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h4 class="desktop-body-h4">This is a heading 4 for the Body Section Desktop Size</h4>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-h4"
-            </style>
-
-            <h4 class="tablet-body-h4">This is a heading 4 for the Body Section Tablet Size<h4>
-        ```
-
-    === "Body/H5"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <h5 class="tablet-body-h5">This is a heading 5 for the Body Section Tablet Size</h5>
-            </div>
+=== "Body/H5"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <h5 class="desktop-body-h5">This is a heading 5 for the Body Section Desktop Size</h5>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-h5"
-            </style>
-
-            <h5 class="tablet-body-h5">This is a heading 5 for the Body Section Tablet Size<h5>
-        ```
-
-    === "Body/p"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p">This is a paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p">This is a paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p"
-            </style>
-
-            <p class="tablet-body-p">This is a paragraph for the Body Section Tablet Size<p>
-        ```
-
-    === "Body/p/semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p-semibold">This is a semibold paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p/semibold"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p-semibold">This is a semibold paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p-semibold"
-            </style>
-
-            <p class="tablet-body-p-semibold">This is a semibold paragraph for the Body Section Tablet Size<p>
-        ```
-
-    === "Body/p/italic"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p-italic">This is an italic paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p/italic"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p-italic">This is an italic paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p-italic"
-            </style>
-
-            <p class="tablet-body-p-italic">This is an italic paragraph for the Body Section Tablet Size<p>
-        ```
-
-    === "Body/p/small"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p-small">This is a small paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p/small"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p-small">This is a small paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p-small"
-            </style>
-
-            <p class="tablet-body-p-small">This is a small paragraph for the Body Section Tablet Size<p>
-        ```
-
-    === "Body/p/small-semibold"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p-small-semibold">This is a small semibold paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p/small-semibold"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p-small-semibold">This is a small semibold paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
+    </div>
 
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p-small-semibold"
-            </style>
-
-            <p class="tablet-body-p-small-semibold">This is a small semibold paragraph for the Body Section Tablet Size<p>
-        ```
-
-    === "Body/p/small-italic"
-        <div class="btn-grid-1">
-            <div class="grid-items tablet-example">
-                <p class="tablet-body-p-small-italic">This is a small italic paragraph for the Body Section Tablet Size</p>
-            </div>
+=== "Body/p/small-italic"
+    <div class="btn-grid-1">
+        <div class="grid-items desktop-examples">
+            <p class="desktop-body-p-small-italic">This is a small italic paragraph for the Body Section Desktop Size</p>
         </div>
-        <br/>
-
-        <h2 class="template-h2">Code</h2>
-
-        ```html
-            <style>
-            --8<-- "_type-scale.scss:tablet-body-p-small-italic"
-            </style>
-
-            <p class="tablet-body-p-small-italic">This is a small italic paragraph for the Body Section Tablet Size<p>
-        ```
+    </div>
