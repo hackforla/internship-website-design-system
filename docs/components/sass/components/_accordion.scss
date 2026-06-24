@@ -9,7 +9,6 @@
   padding: 0;
   padding-bottom: var(--accordion-desktop-spacing-vertical);
   margin: 0;
-  min-height: var(--accordion-desktop-height-collapsed);
   width: var(--accordion-desktop-width);
   background-color: transparent;
   gap: var(--accordion-desktop-spacing-vertical-expanded);
@@ -23,7 +22,7 @@
   &::details-content {
     overflow: hidden;
     height: 0;
-    transition: height 0.3s, content-visibility 0.3s;
+    transition: var(--accordion-drawer-animation);
     transition-behavior: allow-discrete; // smoother transition on hidden content
 
     font: var(--accordion-desktop-paragraph-fontstyle);
@@ -32,7 +31,6 @@
   }
 
   &[open] {
-    min-height: var(--accordion-desktop-height-expanded);
     box-shadow: none;
     & > .summary > .icon {
       transform: rotate(180deg);
@@ -74,7 +72,7 @@
     height: var(--accordion-desktop-icon-size);
     color: $color-primary;
     //content: 'expand_more';
-    transition: transform 0.25s ease-in-out;
+    transition: var(--accordion-icon-animation);
   }
   list-style: none;
   &::-webkit-details-marker {
@@ -96,7 +94,6 @@
   border-bottom: var(--accordion-border);
   padding: 0;
   padding-bottom: var(--accordion-mobile-spacing-vertical);
-  min-height: var(--accordion-mobile-height-collapsed);
   margin: 0;
   width: var(--accordion-mobile-width);
   background-color: transparent;
@@ -111,7 +108,7 @@
   &::details-content {
     overflow: hidden;
     height: 0;
-    transition: height 0.3s, content-visibility 0.3s;
+    transition: var(--accordion-drawer-animation);
     transition-behavior: allow-discrete; // smoother transition on hidden content
 
     font: var(--accordion-mobile-paragraph-fontstyle);
@@ -132,7 +129,6 @@
     box-sizing: border-box;
     width: var(--accordion-mobile-width);
     min-height: var(--accordion-mobile-summary-minheight);
-
   }
 }
 
@@ -158,7 +154,7 @@
     width: var(--accordion-mobile-icon-size);
     height: var(--accordion-mobile-icon-size);
     color: $color-primary;
-    transition:  transform 0.25s ease-in-out;
+    transition: var(--accordion-icon-animation);
   }
   list-style: none;
   &::-webkit-details-marker {

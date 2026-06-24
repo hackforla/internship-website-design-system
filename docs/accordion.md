@@ -71,10 +71,6 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <p>Lorem ipsum dolor sit amet...</p>
         </details>    
         ```
-    === "JS"
-        ``` js
-        --8<-- "javascript/accordion.js:accordion-js"
-        ```
 
 === "FAQ/Mobile"
     <div class="btn-grid-1" data-theme>
@@ -140,8 +136,4 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             </summary>
             <p>Lorem ipsum dolor sit amet...</p>
         </details>
-        ```
-    === "JS"
-        ``` js
-        --8<-- "javascript/accordion.js:accordion-js"
         ```
