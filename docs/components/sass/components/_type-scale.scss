@@ -1,8 +1,9 @@
 @use '../abstracts/variables' as *;
 
-.type-grid-6 {
+// Reference table grid (Class / Font Family / Size / Line height / Weight)
+.type-grid-5 {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   overflow: hidden;
@@ -17,372 +18,71 @@
     align-items: center;
     background-color: #fff;
 
-    &:nth-child(-n+6) {
+    // header row
+    &:nth-child(-n+5) {
       background-color: #f5f5f5;
       color: #757575;
       font-size: 0.8rem;
       border-bottom: 1px solid #d0d0d0;
     }
 
-    &:nth-child(12n+13),
-    &:nth-child(12n+14),
-    &:nth-child(12n+15),
-    &:nth-child(12n+16),
-    &:nth-child(12n+17),
-    &:nth-child(12n+18) {
+    // zebra-stripe every other data row (5 cells per row)
+    &:nth-child(10n+11),
+    &:nth-child(10n+12),
+    &:nth-child(10n+13),
+    &:nth-child(10n+14),
+    &:nth-child(10n+15) {
       background-color: #fafafa;
     }
   }
 }
 
+// Shared base for every type token. Variants only override what changes
+// (size / weight / style), so there is no per-class boilerplate.
+%type-base {
+  display: block;
+  margin: 0.67em 0;
+  color: $text-color;
+}
+
+// Typography attaches to semantic elements — a consumer writes plain HTML
+// (<h1>, <p>, <strong>, <em>, <small>) and gets the correct token. No
+// utility classes required. "Hero" is a section context, not a per-line class.
+@mixin type-scale(
+  $h1, $h2, $h3, $h4, $h5, $p,
+  $hero-h1, $hero-p
+) {
+  h1 { @extend %type-base; font-size: $h1; font-weight: 700; }
+  h2 { @extend %type-base; font-size: $h2; font-weight: 600; }
+  h3 { @extend %type-base; font-size: $h3; font-weight: 600; }
+  h4 { @extend %type-base; font-size: $h4; font-weight: 600; }
+  h5 { @extend %type-base; font-size: $h5; font-weight: 600; }
+  p  { @extend %type-base; font-size: $p;  font-weight: 400; }
+
+  // inline variants via native semantic elements
+  small     { font-size: 0.75rem; }
+  strong, b { font-weight: 600; }
+  em, i     { font-style: italic; }
+
+  // hero section context
+  &.hero {
+    h1 { font-size: $hero-h1; font-weight: 700; }
+    p  { font-size: $hero-p; }
+  }
+}
+
 .desktop-examples {
-// --8<-- [start:desktop-hero-h1]
-  .desktop-hero-h1 {
-    display: block;
-    font-size: 3.25rem;
-    font-weight: bold;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-hero-h1]
-// --8<-- [start:desktop-hero-p]
-  .desktop-hero-p, .h1, h1{
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-hero-p]
-// --8<-- [start:desktop-hero-p-semibold]
-  .desktop-hero-p-semibold{
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-hero-p-semibold]
-// --8<-- [start:desktop-hero-p-italic]
-  .desktop-hero-p-italic{
-    display: block;
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-hero-p-italic]
-// --8<-- [start:desktop-body-h1]
-  .desktop-body-h1, .h1, h1{
-    display: block;
-    font-size: 2.5rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-h1]
-// --8<-- [start:desktop-body-h2]
-  .desktop-body-h2, .h2, h2{
-    display: block;
-    font-size: 2.25rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-h2]
-// --8<-- [start:desktop-body-h3]
-  .desktop-body-h3, .h3, h3{
-    display: block;
-    font-size: 1.75rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-h3]
-// --8<-- [start:desktop-body-h4]
-  .desktop-body-h4, .h4, h4{
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-h4]
-// --8<-- [start:desktop-body-h5]
-  .desktop-body-h5, .h5, h5{
-    display: block;
-    font-size: 1.25rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-h5]
-// --8<-- [start:desktop-body-p]
-  .desktop-body-p, .p, p{
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p]
-// --8<-- [start:desktop-body-p-semibold]
-  .desktop-body-p-semibold{
-    display: block;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p-semibold]
-// --8<-- [start:desktop-body-p-italic]
-  .desktop-body-p-italic{
-    display: block;
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p-italic]
-// --8<-- [start:desktop-body-p-small]
-  .desktop-body-p-small{
-    display: block;
-    font-size: 0.75rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p-small]
-// --8<-- [start:desktop-body-p-small-semibold]
-  .desktop-body-p-small-semibold{
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p-small-semibold]
-// --8<-- [start:desktop-body-p-small-italic]
-  .desktop-body-p-small-italic{
-    display: block;
-    font-size: 0.75rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:desktop-body-p-small-italic]
+  @include type-scale(
+    $h1: 3rem, $h2: 2.5rem, $h3: 2rem, $h4: 1.5rem, $h5: 1.25rem, $p: 1rem,
+    $hero-h1: 3.75rem, $hero-p: 1.5rem
+  );
 }
 
 .tablet-example {
-  // --8<-- [start:tablet-hero-h1]
-  .tablet-hero-h1 {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-hero-h1]
-// --8<-- [start:tablet-hero-p]
-  .tablet-hero-p{
-    display: block;
-    font-size: 1.25rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-hero-p]
-// --8<-- [start:tablet-hero-p-semibold]
-  .tablet-hero-p-semibold{
-    display: block;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-hero-p-semibold]
-// --8<-- [start:tablet-hero-p-italic]
-  .tablet-hero-p-italic{
-    display: block;
-    font-size: 1.25rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-hero-p-italic]
-// --8<-- [start:tablet-body-h1]
-  .tablet-body-h1{
-    display: block;
-    font-size: 2.5rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-h1]
-// --8<-- [start:tablet-body-h2]
-  .tablet-body-h2{
-    display: block;
-    font-size: 2rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-h2]
-// --8<-- [start:tablet-body-h3]
-  .tablet-body-h3{
-    display: block;
-    font-size: 1.5rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-h3]
-// --8<-- [start:tablet-body-h4]
-  .tablet-body-h4{
-    display: block;
-    font-size: 1.25rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-h4]
-// --8<-- [start:tablet-body-h5]
-  .tablet-body-h5{
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-h5]
-// --8<-- [start:tablet-body-p]
-  .tablet-body-p{
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p]
-// --8<-- [start:tablet-body-p-semibold]
-  .tablet-body-p-semibold{
-    display: block;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p-semibold]
-// --8<-- [start:tablet-body-p-italic]
-  .tablet-body-p-italic{
-    display: block;
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p-italic]
-// --8<-- [start:tablet-body-p-small]
-  .tablet-body-p-small{
-    display: block;
-    font-size: 0.75rem;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p-small]
-// --8<-- [start:tablet-body-p-small-semibold]
-  .tablet-body-p-small-semibold{
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p-small-semibold]
-// --8<-- [start:tablet-body-p-small-italic]
-  .tablet-body-p-small-italic{
-    display: block;
-    font-size: 0.75rem;
-    font-style: italic;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
-    color: $text-color;
-  }
-// --8<-- [end:tablet-body-p-small-italic]
+  @include type-scale(
+    $h1: 2.5rem, $h2: 2rem, $h3: 1.5rem, $h4: 1.25rem, $h5: 1rem, $p: 1rem,
+    $hero-h1: 3rem, $hero-p: 1.25rem
+  );
 }
 
 // styles for template page
