@@ -1,0 +1,121 @@
+[data-md-color-scheme] {
+
+  .md-sidebar--primary {
+    border-right: none;
+    --md-typeset-a-color: var(--token-on-surface, #1c1b1f);
+    --md-accent-fg-color: var(--token-on-surface, #1c1b1f);
+  }
+
+  .md-sidebar--primary .md-sidebar__inner {
+    padding: 16px 12px;
+  }
+
+  /* Reset nav spacing */
+  .md-sidebar--primary .md-nav,
+  .md-sidebar--primary .md-nav__list,
+  .md-sidebar--primary .md-nav__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove Material decorative title markers */
+  .md-sidebar--primary .md-nav__title::before,
+  .md-sidebar--primary .md-nav__title::after {
+    display: none;
+    content: none;
+  }
+
+  /* Hide duplicate nested back/title rows */
+  .md-sidebar--primary .md-nav .md-nav__title {
+    display: none;
+  }
+
+  /* Hide TOC toggle label that duplicates the page title when active */
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > label.md-nav__link--active {
+    display: none !important;
+  }
+
+  /* Hide inline TOC nav inside leaf items (Getting Started, FAQ) — TOC belongs in secondary sidebar */
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav {
+    display: none !important;
+  }
+
+  /* ── Top-level items: Getting Started, FAQ (a), Styles, Components (label) ── */
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > a.md-nav__link,
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > label.md-nav__link {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: 0;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--token-on-surface, #1c1b1f) !important;
+    text-decoration: none;
+    background: transparent !important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* No hover background on top-level items */
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > a.md-nav__link:hover,
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > a.md-nav__link:focus,
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > label.md-nav__link:hover,
+  .md-sidebar--primary .md-nav[data-md-level="0"] > .md-nav__list > .md-nav__item > label.md-nav__link:focus {
+    background-color: transparent !important;
+    color: var(--token-on-surface, #1c1b1f) !important;
+  }
+
+  /* ── Child leaf links: Accordion, Buttons, Typography, etc. ── */
+  .md-sidebar--primary .md-nav[data-md-level="1"] a.md-nav__link {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px 0 18px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--token-on-surface-variant, #49454f) !important;
+    text-decoration: none;
+    background: transparent !important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .md-sidebar--primary .md-nav[data-md-level="1"] a.md-nav__link:visited {
+    color: var(--token-on-surface-variant, #49454f) !important;
+  }
+
+  /* Hover only for child links */
+  .md-sidebar--primary .md-nav[data-md-level="1"] a.md-nav__link:hover,
+  .md-sidebar--primary .md-nav[data-md-level="1"] a.md-nav__link:focus {
+    background-color: #d9e8eb !important;
+    color: var(--token-on-surface, #1c1b1f) !important;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  /* Active page highlight */
+  .md-sidebar--primary a.md-nav__link--active,
+  .md-sidebar--primary .md-nav__item--active > a.md-nav__link,
+  .md-sidebar--primary a.md-nav__link--active:visited,
+  .md-sidebar--primary a.md-nav__link--active:hover,
+  .md-sidebar--primary a.md-nav__link--active:focus {
+    background-color: #b7d3d9 !important;
+    color: var(--token-on-surface, #1c1b1f) !important;
+    font-weight: 600;
+    box-shadow: none;
+    border: 0;
+  }
+
+  /* Arrow icon */
+  .md-sidebar--primary .md-nav__icon {
+    color: var(--token-on-surface, #1c1b1f) !important;
+    opacity: 1;
+  }
+}
+

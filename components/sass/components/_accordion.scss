@@ -1,0 +1,162 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/tokens';
+
+// --8<-- [start:accordion-desktop]
+.accordion.-desktop{
+  border: none;
+  border-radius: 0; 
+  border-bottom: var(--accordion-border);
+  padding: 0;
+  padding-bottom: var(--accordion-desktop-spacing-vertical);
+  margin: 0;
+  min-height: var(--accordion-desktop-height-collapsed);
+  width: var(--accordion-desktop-width);
+  background-color: transparent;
+  gap: var(--accordion-desktop-spacing-vertical-expanded);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  box-sizing: border-box;
+  
+  
+  &[open] {
+    min-height: var(--accordion-desktop-height-expanded);
+    box-shadow: none;
+    & > .summary > .icon {
+      transform: rotate(180deg);
+      //content: 'expand_less';
+    }
+  }
+
+  & > .summary {
+    box-sizing: border-box;
+    width: var(--accordion-desktop-width);
+    min-height: var(--accordion-desktop-summary-minheight);
+  }
+  & > .description {
+    font: var(--accordion-desktop-paragraph-fontstyle);
+    padding: 0; 
+    width: var(--accordion-desktop-paragraph-width);
+}
+}
+
+.accordion.-desktop > .summary {
+  background-color: transparent;
+  padding: var(--accordion-desktop-summary-padding);
+  gap: var(--accordion-desktop-spacing-horizontal);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &> .title {
+    margin: 0;
+    width: var(--accordion-desktop-title-width);
+    font: var(--accordion-desktop-title-fontstyle);
+    
+  }
+  &> .icon {
+    font: var(--accordion-desktop-icon-fontstyle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--accordion-desktop-icon-size);
+    height: var(--accordion-desktop-icon-size);
+    color: $color-primary;
+    //content: 'expand_more';
+    transition: transform 0.3s ease 0.1s;
+    transform: rotate(0deg);
+  }
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::marker {
+    content: none;
+  }
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+// --8<-- [end:accordion-desktop]
+// --8<-- [start:accordion-mobile]
+.accordion.-mobile{
+  border: none;
+  border-radius: 0;
+  border-bottom: var(--accordion-border);
+  padding: 0;
+  padding-bottom: var(--accordion-mobile-spacing-vertical);
+  min-height: var(--accordion-mobile-height-collapsed);
+  margin: 0;
+  width: var(--accordion-mobile-width);
+  background-color: transparent;
+  gap: var(--accordion-mobile-spacing-vertical-expanded);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  box-sizing: border-box;
+  
+  &[open] {
+    min-height: var(--accordion-mobile-height-expanded);
+    box-shadow: none;
+    & > .summary > .icon {
+      transform: rotate(180deg);
+    }
+  }
+  & > .summary {
+    box-sizing: border-box;
+    width: var(--accordion-mobile-width);
+    min-height: var(--accordion-mobile-summary-minheight);
+
+  }
+  & > .description {
+    font: var(--accordion-mobile-paragraph-fontstyle);
+    padding: 0;
+    width: var(--accordion-mobile-paragraph-width);
+  }
+}
+
+.accordion.-mobile > .summary {
+  background-color: transparent;
+  padding: 1rem 0.75rem 0 0.75rem;
+  gap: var(--accordion-mobile-spacing-horizontal);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &> .title {
+    margin: 0;
+    width: var(--accordion-mobile-title-width);
+    font: var(--accordion-mobile-title-fontstyle);
+  }
+  &> .icon {
+    font: var(--accordion-mobile-icon-fontstyle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--accordion-mobile-icon-size);
+    height: var(--accordion-mobile-icon-size);
+    color: $color-primary;
+
+    //content: 'expand_more';
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); 
+  }
+  list-style: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::marker {
+    content: none;
+  }
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+// --8<-- [end:accordion-mobile]
