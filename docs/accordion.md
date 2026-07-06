@@ -12,17 +12,17 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <div style="display:flex; flex-direction: column;"> 
                 <details class="accordion -desktop" name="desktop">
                     <summary class="summary">
-                        <h4 class='title'>Accordion Title</h4>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="4">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Only one accordion can be opened at a time! Expand the other accordion and this accordion will collapse. </p>
+                    <p>Only one accordion can be opened at a time! Expand the other accordion and this accordion will collapse. </p>
                 </details> 
                 <details class="accordion -desktop" name="desktop">
                     <summary class="summary">
-                        <h4 class='title'>Accordion Title</h4>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="4">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>   
             </div>
         </div>
@@ -34,10 +34,10 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <div class="grid-items"> 
                 <details class="accordion -desktop">
                     <summary class="summary">
-                        <h4 class='title'>Accordion Title</h4>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="4">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>    
             </div>
         </div>
@@ -46,10 +46,10 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <div class="grid-items"> 
                 <details class="accordion -desktop" open>
                     <summary class="summary active">
-                        <h4 class='title'>Accordion Title</h4>
-                        <span class="icon">expand_less</span>
+                        <div class='title' role="heading" aria-level="4">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>    
             </div>
         </div>
@@ -64,29 +64,31 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
         <!-- For exclusive accordions, add a common "name" attribute to each component -->
         <details class="accordion -desktop">
             <summary class="summary">
-                <h4 class='title'>Accordion Title</h4>
-                <span class="icon"></span>
+                <!-- Change heading level to match your project's structure needs -->
+                <div class='title' role="heading" aria-level="4">Accordion Title</div>
+                <span class="icon" aria-hidden="true">expand_more</span>
             </summary>
-            <p class="description">Lorem ipsum dolor sit amet...</p>
+            <p>Lorem ipsum dolor sit amet...</p>
         </details>    
         ```
+
 === "FAQ/Mobile"
     <div class="btn-grid-1" data-theme>
         <div class="grid-items"> 
             <div style="display:flex; flex-direction: column;">
                 <details class="accordion -mobile" name="mobile">
                     <summary class="summary">
-                        <h5 class='title'>Accordion Title</h5>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="5">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Only one accordion can be opened at a time! Expand the other accordion and this accordion will collapse.</p>
+                    <p>Only one accordion can be opened at a time! Expand the other accordion and this accordion will collapse.</p>
                 </details>
                 <details class="accordion -mobile" name="mobile">
                     <summary class="summary">
-                        <h5 class='title'>Accordion Title</h5>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="5">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
             </div>
         </div>
@@ -98,10 +100,10 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <div class="grid-items"> 
                 <details class="accordion -mobile">
                     <summary class="summary">
-                        <h5 class='title'>Accordion Title</h5>
-                        <span class="icon">expand_more</span>
+                        <div class='title' role="heading" aria-level="5">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
             </div>
         </div>
@@ -110,13 +112,11 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
             <div class="grid-items"> 
                 <details class="accordion -mobile" open>
                     <summary class="summary active">
-                        <h5 class='title'>Accordion Title</h5>
-                        <span class="icon">expand_less</span>
+                        <div class='title' role="heading" aria-level="5">Accordion Title</div>
+                        <span class="icon" aria-hidden="true">expand_more</span>
                     </summary>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
-            </div>
-        </div>
             </div>
         </div>
     <br>
@@ -130,9 +130,10 @@ The Desktop Accordion Component for FAQ sections organizes frequently asked ques
         <!-- For exclusive accordions, add a common "name" attribute to each component -->
         <details class="accordion -mobile" name="mobile">
             <summary class="summary">
-                <h5 class='title'>Accordion Title</h5>
-                <span class="icon">expand_more</span>
+                <!-- Change heading level to match your project's structure needs -->
+                <div class='title' role="heading" aria-level="5">Accordion Title</div>
+                <span class="icon" aria-hidden="true">expand_more</span>
             </summary>
-            <p class="description">Lorem ipsum dolor sit amet...</p>
+            <p>Lorem ipsum dolor sit amet...</p>
         </details>
         ```
